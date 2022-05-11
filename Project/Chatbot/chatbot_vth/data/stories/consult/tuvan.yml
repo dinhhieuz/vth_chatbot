@@ -1,0 +1,75 @@
+#Feature: --------------- TƯ VẤN
+
+version: "2.0"
+
+stories:
+
+#---> 1. Menu tư vấn
+- story: Menu tư vấn
+  steps:
+  - intent: ask_tuvan_menu
+  - action: utter_tuvan_menu
+
+#---> 1.1 Menu tư vấn (Theo sản phẩm)
+- story: Menu tư vấn (Theo sản phẩm)
+  steps:
+  - intent: ask_tuvan_sanpham
+  - action: utter_tuvan_sanpham
+
+#---> 1.1.1 Tư vấn (Dung cụ làm vườn)
+- story: Tư vấn (Dung cụ làm vườn)
+  steps:
+  - intent: ask_tuvan_dungcu
+  - action: act_tuvan_web
+
+- story: Tư vấn (Dung cụ làm vườn) - Chi tiết
+  steps:
+  - intent: ask_tuvan_dungcu_details
+  - action: act_tuvan_web_details
+
+#---> 1.1.2 Menu (loại Hạt giống)
+- story: Menu (loại Hạt giống)
+  steps:
+  - intent: ask_tuvan_hatgiong
+  - action: utter_tuvan_hatgiong
+
+#---> 1.1.2.1 Tư vấn (Củ quả)
+- story: Tư vấn (Củ quả)
+  steps:
+  - intent: ask_tuvan_cuqua
+  - action: act_tuvan_web
+
+- story: Tư vấn (Củ quả) - Chi tiết
+  steps:
+  - intent: ask_tuvan_cuqua_details
+  - action: act_tuvan_web_details
+
+#---> 1.1.2.2 Tư vấn (Rau xanh)
+- story: Tư vấn (Rau xanh)
+  steps:
+  - intent: ask_tuvan_rauxanh
+  - action: act_tuvan_web
+
+- story: Tư vấn (Rau xanh) - Chi tiết
+  steps:
+  - intent: ask_tuvan_rauxanh_details
+  - action: act_tuvan_web_details
+
+#---> 1.1.2.3 Tư vấn (Sen đá)
+- story: Tư vấn (Sen đá)
+  steps:
+  - intent: ask_khuyenmai_senda
+  - action: act_tuvan_web
+
+- story: Tư vấn (Sen đá) - Chi tiết
+  steps:
+  - intent: ask_khuyenmai_senda_details
+  - action: act_tuvan_web_details
+
+
+
+#---> 1.2 Tư vấn theo câu hỏi
+- story: Tư vấn theo câu hỏi
+  steps:
+  - intent: ask_khuyenmai_menu
+  - action: utter_plc_khuyenmai_menu

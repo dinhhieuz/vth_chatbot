@@ -1,0 +1,488 @@
+#!----------------------------- " TƯ VẤN DỤNG CỤ" 
+version: "2.0"
+nlu:
+#-> Thông tin tư vấn DỤNG CỤ
+- intent: ask_tuvan_dungcu
+  examples: |
+    - sản phẩm công cụ bên mình như nào ấy nhỉ
+    - Tôi muốn biết thông tin về công cụ
+    - công cụ có còn bán không
+    - Hiện tại bên mình có công cụ không
+    - Bạn cho tôi biết thêm về công cụ đi
+    - công cụ thì có bán không
+    - công cụ bên mình bán như nào ấy nhỉ?
+    - cho mình hỏi ni chút về công cụ với?
+    - tôi muốn biết các công cụ bên bạn
+    - tư vấn công cụ cho mình đi
+    - tôi muốn tư vấn công cụ , oke?
+    - tư vấn công cụ đi
+    - shop có đó không, tư vấn công cụ cho mình với
+    - mình chưa bt nên mua công cụ như nào bạn giúp mình với
+    - bạn ơi, bạn giúp mình tư vấn công cụ được không, mình không biết nên mua như nào cả
+    - tôi muốn được tư vấn công cụ
+    - tôi muốn bạn tư vấn công cụ cho tôi
+    - tôi có thể được tư vấn công cụ chứ
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn công cụ
+    - tư vấn công cụ cho tôi được chứ
+    - Mình đang phân vân k biết nên mua công cụ như nào, bạn có thể tư vấn giúp mình được không
+    - bên mình có hỗ trợ tư vấn công cụ không
+    - Bạn có thể tư vấn sản phẩm công cụ bên mình cho mình được không
+    - bạn gì đó ơi, bạn giúp mình tư vấn công cụ với
+    - bạn ơi, mình muốn mua sản phẩm công cụ bên bạn nhưng không biết nó như nào
+    - Shop mình có bán công cụ không?
+    - Shop còn bán công cụ không nhỉ
+    - Shop còn hàng công cụ không
+    - sản phẩm dụng cụ bên mình như nào ấy nhỉ
+    - Tôi muốn biết thông tin về dụng cụ
+    - dụng cụ có còn bán không
+    - Hiện tại bên mình có dụng cụ không
+    - Bạn cho tôi biết thêm về dụng cụ đi
+    - dụng cụ thì có bán không
+    - dụng cụ bên mình bán như nào ấy nhỉ?
+    - cho mình hỏi ni chút về dụng cụ với?
+    - tôi muốn biết các dụng cụ bên bạn
+    - tư vấn dụng cụ cho mình đi
+    - tôi muốn tư vấn dụng cụ , oke?
+    - tư vấn dụng cụ đi
+    - shop có đó không, tư vấn dụng cụ cho mình với
+    - mình chưa bt nên mua dụng cụ như nào bạn giúp mình với
+    - bạn ơi, bạn giúp mình tư vấn dụng cụ được không, mình không biết nên mua như nào cả
+    - tôi muốn được tư vấn dụng cụ
+    - tôi muốn bạn tư vấn dụng cụ cho tôi
+    - tôi có thể được tư vấn dụng cụ chứ
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn dụng cụ
+    - tư vấn dụng cụ cho tôi được chứ
+    - Mình đang phân vân k biết nên mua dụng cụ như nào, bạn có thể tư vấn giúp mình được không
+    - bên mình có hỗ trợ tư vấn dụng cụ không
+    - Bạn có thể tư vấn sản phẩm dụng cụ bên mình cho mình được không
+    - bạn gì đó ơi, bạn giúp mình tư vấn dụng cụ với
+    - bạn ơi, mình muốn mua sản phẩm dụng cụ bên bạn nhưng không biết nó như nào
+    - Shop mình có bán dụng cụ không?
+    - Shop còn bán dụng cụ không nhỉ
+    - Shop còn hàng dụng cụ không
+
+
+
+#-> Tư vấn chi tiết cho DỤNG CỤ
+- intent: ask_tuvan_dungcu_details
+  examples: |
+    - sản phẩm bình tưới cây bên mình như nào ấy nhỉ
+    - sản phẩm bình xịt áp suất cầm tay bên mình như nào ấy nhỉ
+    - sản phẩm bình xịt tưới cây 2 lít bên mình như nào ấy nhỉ
+    - sản phẩm bộ cưa tay đa năng tiện dụng 6 lưỡi cưa bên mình như nào ấy nhỉ
+    - sản phẩm găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn bên mình như nào ấy nhỉ
+    - sản phẩm kéo cắt cỏ cầm tay bên mình như nào ấy nhỉ
+    - sản phẩm kéo tỉa cây gardena bên mình như nào ấy nhỉ
+    - sản phẩm kìm cắt tỉa cành gardena bên mình như nào ấy nhỉ
+    - sản phẩm kìm tỉa cành cán dài gardena bên mình như nào ấy nhỉ
+    - sản phẩm lưới làm giàn leo cây bên mình như nào ấy nhỉ
+    - sản phẩm tấm lót sàn nhựa ban công 3t-eco bên mình như nào ấy nhỉ
+    - sản phẩm xẻng làm vườn không gỉ jpk bên mình như nào ấy nhỉ
+    - sản phẩm xẻng trồng cây mini gardena bên mình như nào ấy nhỉ
+    - sản phẩm xẻng xới đất mini thép không gỉ cao cấp bên mình như nào ấy nhỉ
+    - Tôi muốn biết thông tin về bình tưới cây
+    - Tôi muốn biết thông tin về bình xịt áp suất cầm tay
+    - Tôi muốn biết thông tin về bình xịt tưới cây 2 lít
+    - Tôi muốn biết thông tin về bộ cưa tay đa năng tiện dụng 6 lưỡi cưa
+    - Tôi muốn biết thông tin về găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn
+    - Tôi muốn biết thông tin về kéo cắt cỏ cầm tay
+    - Tôi muốn biết thông tin về kéo tỉa cây gardena
+    - Tôi muốn biết thông tin về kìm cắt tỉa cành gardena
+    - Tôi muốn biết thông tin về kìm tỉa cành cán dài gardena
+    - Tôi muốn biết thông tin về lưới làm giàn leo cây
+    - Tôi muốn biết thông tin về tấm lót sàn nhựa ban công 3t-eco
+    - Tôi muốn biết thông tin về xẻng làm vườn không gỉ jpk
+    - Tôi muốn biết thông tin về xẻng trồng cây mini gardena
+    - Tôi muốn biết thông tin về xẻng xới đất mini thép không gỉ cao cấp
+    - bình tưới cây có còn bán không
+    - bình xịt áp suất cầm tay có còn bán không
+    - bình xịt tưới cây 2 lít có còn bán không
+    - bộ cưa tay đa năng tiện dụng 6 lưỡi cưa có còn bán không
+    - găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn có còn bán không
+    - kéo cắt cỏ cầm tay có còn bán không
+    - kéo tỉa cây gardena có còn bán không
+    - kìm cắt tỉa cành gardena có còn bán không
+    - kìm tỉa cành cán dài gardena có còn bán không
+    - lưới làm giàn leo cây có còn bán không
+    - tấm lót sàn nhựa ban công 3t-eco có còn bán không
+    - xẻng làm vườn không gỉ jpk có còn bán không
+    - xẻng trồng cây mini gardena có còn bán không
+    - xẻng xới đất mini thép không gỉ cao cấp có còn bán không
+    - Hiện tại bên mình có bình tưới cây không
+    - Hiện tại bên mình có bình xịt áp suất cầm tay không
+    - Hiện tại bên mình có bình xịt tưới cây 2 lít không
+    - Hiện tại bên mình có bộ cưa tay đa năng tiện dụng 6 lưỡi cưa không
+    - Hiện tại bên mình có găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn không
+    - Hiện tại bên mình có kéo cắt cỏ cầm tay không
+    - Hiện tại bên mình có kéo tỉa cây gardena không
+    - Hiện tại bên mình có kìm cắt tỉa cành gardena không
+    - Hiện tại bên mình có kìm tỉa cành cán dài gardena không
+    - Hiện tại bên mình có lưới làm giàn leo cây không
+    - Hiện tại bên mình có tấm lót sàn nhựa ban công 3t-eco không
+    - Hiện tại bên mình có xẻng làm vườn không gỉ jpk không
+    - Hiện tại bên mình có xẻng trồng cây mini gardena không
+    - Hiện tại bên mình có xẻng xới đất mini thép không gỉ cao cấp không
+    - Bạn cho tôi biết thêm về bình tưới cây đi
+    - Bạn cho tôi biết thêm về bình xịt áp suất cầm tay đi
+    - Bạn cho tôi biết thêm về bình xịt tưới cây 2 lít đi
+    - Bạn cho tôi biết thêm về bộ cưa tay đa năng tiện dụng 6 lưỡi cưa đi
+    - Bạn cho tôi biết thêm về găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn đi
+    - Bạn cho tôi biết thêm về kéo cắt cỏ cầm tay đi
+    - Bạn cho tôi biết thêm về kéo tỉa cây gardena đi
+    - Bạn cho tôi biết thêm về kìm cắt tỉa cành gardena đi
+    - Bạn cho tôi biết thêm về kìm tỉa cành cán dài gardena đi
+    - Bạn cho tôi biết thêm về lưới làm giàn leo cây đi
+    - Bạn cho tôi biết thêm về tấm lót sàn nhựa ban công 3t-eco đi
+    - Bạn cho tôi biết thêm về xẻng làm vườn không gỉ jpk đi
+    - Bạn cho tôi biết thêm về xẻng trồng cây mini gardena đi
+    - Bạn cho tôi biết thêm về xẻng xới đất mini thép không gỉ cao cấp đi
+    - bình tưới cây thì có bán không
+    - bình xịt áp suất cầm tay thì có bán không
+    - bình xịt tưới cây 2 lít thì có bán không
+    - bộ cưa tay đa năng tiện dụng 6 lưỡi cưa thì có bán không
+    - găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn thì có bán không
+    - kéo cắt cỏ cầm tay thì có bán không
+    - kéo tỉa cây gardena thì có bán không
+    - kìm cắt tỉa cành gardena thì có bán không
+    - kìm tỉa cành cán dài gardena thì có bán không
+    - lưới làm giàn leo cây thì có bán không
+    - tấm lót sàn nhựa ban công 3t-eco thì có bán không
+    - xẻng làm vườn không gỉ jpk thì có bán không
+    - xẻng trồng cây mini gardena thì có bán không
+    - xẻng xới đất mini thép không gỉ cao cấp thì có bán không
+    - bình tưới cây bên mình bán như nào ấy nhỉ?
+    - bình xịt áp suất cầm tay bên mình bán như nào ấy nhỉ?
+    - bình xịt tưới cây 2 lít bên mình bán như nào ấy nhỉ?
+    - bộ cưa tay đa năng tiện dụng 6 lưỡi cưa bên mình bán như nào ấy nhỉ?
+    - găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn bên mình bán như nào ấy nhỉ?
+    - kéo cắt cỏ cầm tay bên mình bán như nào ấy nhỉ?
+    - kéo tỉa cây gardena bên mình bán như nào ấy nhỉ?
+    - kìm cắt tỉa cành gardena bên mình bán như nào ấy nhỉ?
+    - kìm tỉa cành cán dài gardena bên mình bán như nào ấy nhỉ?
+    - lưới làm giàn leo cây bên mình bán như nào ấy nhỉ?
+    - tấm lót sàn nhựa ban công 3t-eco bên mình bán như nào ấy nhỉ?
+    - xẻng làm vườn không gỉ jpk bên mình bán như nào ấy nhỉ?
+    - xẻng trồng cây mini gardena bên mình bán như nào ấy nhỉ?
+    - xẻng xới đất mini thép không gỉ cao cấp bên mình bán như nào ấy nhỉ?
+    - cho mình hỏi ni chút về bình tưới cây với? 
+    - cho mình hỏi ni chút về bình xịt áp suất cầm tay với? 
+    - cho mình hỏi ni chút về bình xịt tưới cây 2 lít với? 
+    - cho mình hỏi ni chút về bộ cưa tay đa năng tiện dụng 6 lưỡi cưa với? 
+    - cho mình hỏi ni chút về găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn với? 
+    - cho mình hỏi ni chút về kéo cắt cỏ cầm tay với? 
+    - cho mình hỏi ni chút về kéo tỉa cây gardena với? 
+    - cho mình hỏi ni chút về kìm cắt tỉa cành gardena với? 
+    - cho mình hỏi ni chút về kìm tỉa cành cán dài gardena với? 
+    - cho mình hỏi ni chút về lưới làm giàn leo cây với? 
+    - cho mình hỏi ni chút về tấm lót sàn nhựa ban công 3t-eco với? 
+    - cho mình hỏi ni chút về xẻng làm vườn không gỉ jpk với? 
+    - cho mình hỏi ni chút về xẻng trồng cây mini gardena với? 
+    - cho mình hỏi ni chút về xẻng xới đất mini thép không gỉ cao cấp với? 
+    - tôi muốn biết các bình tưới cây bên bạn
+    - tôi muốn biết các bình xịt áp suất cầm tay bên bạn
+    - tôi muốn biết các bình xịt tưới cây 2 lít bên bạn
+    - tôi muốn biết các bộ cưa tay đa năng tiện dụng 6 lưỡi cưa bên bạn
+    - tôi muốn biết các găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn bên bạn
+    - tôi muốn biết các kéo cắt cỏ cầm tay bên bạn
+    - tôi muốn biết các kéo tỉa cây gardena bên bạn
+    - tôi muốn biết các kìm cắt tỉa cành gardena bên bạn
+    - tôi muốn biết các kìm tỉa cành cán dài gardena bên bạn
+    - tôi muốn biết các lưới làm giàn leo cây bên bạn
+    - tôi muốn biết các tấm lót sàn nhựa ban công 3t-eco bên bạn
+    - tôi muốn biết các xẻng làm vườn không gỉ jpk bên bạn
+    - tôi muốn biết các xẻng trồng cây mini gardena bên bạn
+    - tôi muốn biết các xẻng xới đất mini thép không gỉ cao cấp bên bạn
+    - tư vấn bình tưới cây cho mình đi
+    - tư vấn bình xịt áp suất cầm tay cho mình đi
+    - tư vấn bình xịt tưới cây 2 lít cho mình đi
+    - tư vấn bộ cưa tay đa năng tiện dụng 6 lưỡi cưa cho mình đi
+    - tư vấn găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn cho mình đi
+    - tư vấn kéo cắt cỏ cầm tay cho mình đi
+    - tư vấn kéo tỉa cây gardena cho mình đi
+    - tư vấn kìm cắt tỉa cành gardena cho mình đi
+    - tư vấn kìm tỉa cành cán dài gardena cho mình đi
+    - tư vấn lưới làm giàn leo cây cho mình đi
+    - tư vấn tấm lót sàn nhựa ban công 3t-eco cho mình đi
+    - tư vấn xẻng làm vườn không gỉ jpk cho mình đi
+    - tư vấn xẻng trồng cây mini gardena cho mình đi
+    - tư vấn xẻng xới đất mini thép không gỉ cao cấp cho mình đi
+    - tôi muốn tư vấn bình tưới cây , oke?
+    - tôi muốn tư vấn bình xịt áp suất cầm tay , oke?
+    - tôi muốn tư vấn bình xịt tưới cây 2 lít , oke?
+    - tôi muốn tư vấn bộ cưa tay đa năng tiện dụng 6 lưỡi cưa , oke?
+    - tôi muốn tư vấn găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn , oke?
+    - tôi muốn tư vấn kéo cắt cỏ cầm tay , oke?
+    - tôi muốn tư vấn kéo tỉa cây gardena , oke?
+    - tôi muốn tư vấn kìm cắt tỉa cành gardena , oke?
+    - tôi muốn tư vấn kìm tỉa cành cán dài gardena , oke?
+    - tôi muốn tư vấn lưới làm giàn leo cây , oke?
+    - tôi muốn tư vấn tấm lót sàn nhựa ban công 3t-eco , oke?
+    - tôi muốn tư vấn xẻng làm vườn không gỉ jpk , oke?
+    - tôi muốn tư vấn xẻng trồng cây mini gardena , oke?
+    - tôi muốn tư vấn xẻng xới đất mini thép không gỉ cao cấp , oke?
+    - tư vấn bình tưới cây đi
+    - tư vấn bình xịt áp suất cầm tay đi
+    - tư vấn bình xịt tưới cây 2 lít đi
+    - tư vấn bộ cưa tay đa năng tiện dụng 6 lưỡi cưa đi
+    - tư vấn găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn đi
+    - tư vấn kéo cắt cỏ cầm tay đi
+    - tư vấn kéo tỉa cây gardena đi
+    - tư vấn kìm cắt tỉa cành gardena đi
+    - tư vấn kìm tỉa cành cán dài gardena đi
+    - tư vấn lưới làm giàn leo cây đi
+    - tư vấn tấm lót sàn nhựa ban công 3t-eco đi
+    - tư vấn xẻng làm vườn không gỉ jpk đi
+    - tư vấn xẻng trồng cây mini gardena đi
+    - tư vấn xẻng xới đất mini thép không gỉ cao cấp đi
+    - shop có đó không, tư vấn bình tưới cây cho mình với
+    - shop có đó không, tư vấn bình xịt áp suất cầm tay cho mình với
+    - shop có đó không, tư vấn bình xịt tưới cây 2 lít cho mình với
+    - shop có đó không, tư vấn bộ cưa tay đa năng tiện dụng 6 lưỡi cưa cho mình với
+    - shop có đó không, tư vấn găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn cho mình với
+    - shop có đó không, tư vấn kéo cắt cỏ cầm tay cho mình với
+    - shop có đó không, tư vấn kéo tỉa cây gardena cho mình với
+    - shop có đó không, tư vấn kìm cắt tỉa cành gardena cho mình với
+    - shop có đó không, tư vấn kìm tỉa cành cán dài gardena cho mình với
+    - shop có đó không, tư vấn lưới làm giàn leo cây cho mình với
+    - shop có đó không, tư vấn tấm lót sàn nhựa ban công 3t-eco cho mình với
+    - shop có đó không, tư vấn xẻng làm vườn không gỉ jpk cho mình với
+    - shop có đó không, tư vấn xẻng trồng cây mini gardena cho mình với
+    - shop có đó không, tư vấn xẻng xới đất mini thép không gỉ cao cấp cho mình với
+    - mình chưa bt nên mua bình tưới cây như nào bạn giúp mình với
+    - mình chưa bt nên mua bình xịt áp suất cầm tay như nào bạn giúp mình với
+    - mình chưa bt nên mua bình xịt tưới cây 2 lít như nào bạn giúp mình với
+    - mình chưa bt nên mua bộ cưa tay đa năng tiện dụng 6 lưỡi cưa như nào bạn giúp mình với
+    - mình chưa bt nên mua găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn như nào bạn giúp mình với
+    - mình chưa bt nên mua kéo cắt cỏ cầm tay như nào bạn giúp mình với
+    - mình chưa bt nên mua kéo tỉa cây gardena như nào bạn giúp mình với
+    - mình chưa bt nên mua kìm cắt tỉa cành gardena như nào bạn giúp mình với
+    - mình chưa bt nên mua kìm tỉa cành cán dài gardena như nào bạn giúp mình với
+    - mình chưa bt nên mua lưới làm giàn leo cây như nào bạn giúp mình với
+    - mình chưa bt nên mua tấm lót sàn nhựa ban công 3t-eco như nào bạn giúp mình với
+    - mình chưa bt nên mua xẻng làm vườn không gỉ jpk như nào bạn giúp mình với
+    - mình chưa bt nên mua xẻng trồng cây mini gardena như nào bạn giúp mình với
+    - mình chưa bt nên mua xẻng xới đất mini thép không gỉ cao cấp như nào bạn giúp mình với
+    - bạn ơi, bạn giúp mình tư vấn bình tưới cây được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn bình xịt áp suất cầm tay được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn bình xịt tưới cây 2 lít được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn bộ cưa tay đa năng tiện dụng 6 lưỡi cưa được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn kéo cắt cỏ cầm tay được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn kéo tỉa cây gardena được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn kìm cắt tỉa cành gardena được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn kìm tỉa cành cán dài gardena được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn lưới làm giàn leo cây được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn tấm lót sàn nhựa ban công 3t-eco được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn xẻng làm vườn không gỉ jpk được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn xẻng trồng cây mini gardena được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn xẻng xới đất mini thép không gỉ cao cấp được không, mình không biết nên mua như nào cả
+    - tôi muốn được tư vấn bình tưới cây
+    - tôi muốn được tư vấn bình xịt áp suất cầm tay
+    - tôi muốn được tư vấn bình xịt tưới cây 2 lít
+    - tôi muốn được tư vấn bộ cưa tay đa năng tiện dụng 6 lưỡi cưa
+    - tôi muốn được tư vấn găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn
+    - tôi muốn được tư vấn kéo cắt cỏ cầm tay
+    - tôi muốn được tư vấn kéo tỉa cây gardena
+    - tôi muốn được tư vấn kìm cắt tỉa cành gardena
+    - tôi muốn được tư vấn kìm tỉa cành cán dài gardena
+    - tôi muốn được tư vấn lưới làm giàn leo cây
+    - tôi muốn được tư vấn tấm lót sàn nhựa ban công 3t-eco
+    - tôi muốn được tư vấn xẻng làm vườn không gỉ jpk
+    - tôi muốn được tư vấn xẻng trồng cây mini gardena
+    - tôi muốn được tư vấn xẻng xới đất mini thép không gỉ cao cấp
+    - tôi muốn bạn tư vấn bình tưới cây cho tôi
+    - tôi muốn bạn tư vấn bình xịt áp suất cầm tay cho tôi
+    - tôi muốn bạn tư vấn bình xịt tưới cây 2 lít cho tôi
+    - tôi muốn bạn tư vấn bộ cưa tay đa năng tiện dụng 6 lưỡi cưa cho tôi
+    - tôi muốn bạn tư vấn găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn cho tôi
+    - tôi muốn bạn tư vấn kéo cắt cỏ cầm tay cho tôi
+    - tôi muốn bạn tư vấn kéo tỉa cây gardena cho tôi
+    - tôi muốn bạn tư vấn kìm cắt tỉa cành gardena cho tôi
+    - tôi muốn bạn tư vấn kìm tỉa cành cán dài gardena cho tôi
+    - tôi muốn bạn tư vấn lưới làm giàn leo cây cho tôi
+    - tôi muốn bạn tư vấn tấm lót sàn nhựa ban công 3t-eco cho tôi
+    - tôi muốn bạn tư vấn xẻng làm vườn không gỉ jpk cho tôi
+    - tôi muốn bạn tư vấn xẻng trồng cây mini gardena cho tôi
+    - tôi muốn bạn tư vấn xẻng xới đất mini thép không gỉ cao cấp cho tôi
+    - tôi có thể được tư vấn bình tưới cây chứ
+    - tôi có thể được tư vấn bình xịt áp suất cầm tay chứ
+    - tôi có thể được tư vấn bình xịt tưới cây 2 lít chứ
+    - tôi có thể được tư vấn bộ cưa tay đa năng tiện dụng 6 lưỡi cưa chứ
+    - tôi có thể được tư vấn găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn chứ
+    - tôi có thể được tư vấn kéo cắt cỏ cầm tay chứ
+    - tôi có thể được tư vấn kéo tỉa cây gardena chứ
+    - tôi có thể được tư vấn kìm cắt tỉa cành gardena chứ
+    - tôi có thể được tư vấn kìm tỉa cành cán dài gardena chứ
+    - tôi có thể được tư vấn lưới làm giàn leo cây chứ
+    - tôi có thể được tư vấn tấm lót sàn nhựa ban công 3t-eco chứ
+    - tôi có thể được tư vấn xẻng làm vườn không gỉ jpk chứ
+    - tôi có thể được tư vấn xẻng trồng cây mini gardena chứ
+    - tôi có thể được tư vấn xẻng xới đất mini thép không gỉ cao cấp chứ
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn bình tưới cây
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn bình xịt áp suất cầm tay
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn bình xịt tưới cây 2 lít
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn bộ cưa tay đa năng tiện dụng 6 lưỡi cưa
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn kéo cắt cỏ cầm tay
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn kéo tỉa cây gardena
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn kìm cắt tỉa cành gardena
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn kìm tỉa cành cán dài gardena
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn lưới làm giàn leo cây
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn tấm lót sàn nhựa ban công 3t-eco
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn xẻng làm vườn không gỉ jpk
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn xẻng trồng cây mini gardena
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn xẻng xới đất mini thép không gỉ cao cấp
+    - tư vấn bình tưới cây cho tôi được chứ
+    - tư vấn bình xịt áp suất cầm tay cho tôi được chứ
+    - tư vấn bình xịt tưới cây 2 lít cho tôi được chứ
+    - tư vấn bộ cưa tay đa năng tiện dụng 6 lưỡi cưa cho tôi được chứ
+    - tư vấn găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn cho tôi được chứ
+    - tư vấn kéo cắt cỏ cầm tay cho tôi được chứ
+    - tư vấn kéo tỉa cây gardena cho tôi được chứ
+    - tư vấn kìm cắt tỉa cành gardena cho tôi được chứ
+    - tư vấn kìm tỉa cành cán dài gardena cho tôi được chứ
+    - tư vấn lưới làm giàn leo cây cho tôi được chứ
+    - tư vấn tấm lót sàn nhựa ban công 3t-eco cho tôi được chứ
+    - tư vấn xẻng làm vườn không gỉ jpk cho tôi được chứ
+    - tư vấn xẻng trồng cây mini gardena cho tôi được chứ
+    - tư vấn xẻng xới đất mini thép không gỉ cao cấp cho tôi được chứ
+    - Mình đang phân vân k biết nên mua bình tưới cây như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua bình xịt áp suất cầm tay như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua bình xịt tưới cây 2 lít như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua bộ cưa tay đa năng tiện dụng 6 lưỡi cưa như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua kéo cắt cỏ cầm tay như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua kéo tỉa cây gardena như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua kìm cắt tỉa cành gardena như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua kìm tỉa cành cán dài gardena như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua lưới làm giàn leo cây như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua tấm lót sàn nhựa ban công 3t-eco như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua xẻng làm vườn không gỉ jpk như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua xẻng trồng cây mini gardena như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua xẻng xới đất mini thép không gỉ cao cấp như nào, bạn có thể tư vấn giúp mình được không
+    - Bạn có thể tư vấn sản phẩm bình tưới cây bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm bình xịt áp suất cầm tay bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm bình xịt tưới cây 2 lít bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm bộ cưa tay đa năng tiện dụng 6 lưỡi cưa bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm kéo cắt cỏ cầm tay bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm kéo tỉa cây gardena bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm kìm cắt tỉa cành gardena bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm kìm tỉa cành cán dài gardena bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm lưới làm giàn leo cây bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm tấm lót sàn nhựa ban công 3t-eco bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm xẻng làm vườn không gỉ jpk bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm xẻng trồng cây mini gardena bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm xẻng xới đất mini thép không gỉ cao cấp bên mình cho mình được không
+    - bạn gì đó ơi, bạn giúp mình tư vấn bình tưới cây với
+    - bạn gì đó ơi, bạn giúp mình tư vấn bình xịt áp suất cầm tay với
+    - bạn gì đó ơi, bạn giúp mình tư vấn bình xịt tưới cây 2 lít với
+    - bạn gì đó ơi, bạn giúp mình tư vấn bộ cưa tay đa năng tiện dụng 6 lưỡi cưa với
+    - bạn gì đó ơi, bạn giúp mình tư vấn găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn với
+    - bạn gì đó ơi, bạn giúp mình tư vấn kéo cắt cỏ cầm tay với
+    - bạn gì đó ơi, bạn giúp mình tư vấn kéo tỉa cây gardena với
+    - bạn gì đó ơi, bạn giúp mình tư vấn kìm cắt tỉa cành gardena với
+    - bạn gì đó ơi, bạn giúp mình tư vấn kìm tỉa cành cán dài gardena với
+    - bạn gì đó ơi, bạn giúp mình tư vấn lưới làm giàn leo cây với
+    - bạn gì đó ơi, bạn giúp mình tư vấn tấm lót sàn nhựa ban công 3t-eco với
+    - bạn gì đó ơi, bạn giúp mình tư vấn xẻng làm vườn không gỉ jpk với
+    - bạn gì đó ơi, bạn giúp mình tư vấn xẻng trồng cây mini gardena với
+    - bạn gì đó ơi, bạn giúp mình tư vấn xẻng xới đất mini thép không gỉ cao cấp với
+    - bạn ơi, mình muốn mua sản phẩm bình tưới cây bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm bình xịt áp suất cầm tay bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm bình xịt tưới cây 2 lít bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm bộ cưa tay đa năng tiện dụng 6 lưỡi cưa bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm kéo cắt cỏ cầm tay bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm kéo tỉa cây gardena bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm kìm cắt tỉa cành gardena bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm kìm tỉa cành cán dài gardena bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm lưới làm giàn leo cây bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm tấm lót sàn nhựa ban công 3t-eco bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm xẻng làm vườn không gỉ jpk bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm xẻng trồng cây mini gardena bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm xẻng xới đất mini thép không gỉ cao cấp bên bạn nhưng không biết nó như nào
+    - Shop mình có bán bình tưới cây không?
+    - Shop mình có bán bình xịt áp suất cầm tay không?
+    - Shop mình có bán bình xịt tưới cây 2 lít không?
+    - Shop mình có bán bộ cưa tay đa năng tiện dụng 6 lưỡi cưa không?
+    - Shop mình có bán găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn không?
+    - Shop mình có bán kéo cắt cỏ cầm tay không?
+    - Shop mình có bán kéo tỉa cây gardena không?
+    - Shop mình có bán kìm cắt tỉa cành gardena không?
+    - Shop mình có bán kìm tỉa cành cán dài gardena không?
+    - Shop mình có bán lưới làm giàn leo cây không?
+    - Shop mình có bán tấm lót sàn nhựa ban công 3t-eco không?
+    - Shop mình có bán xẻng làm vườn không gỉ jpk không?
+    - Shop mình có bán xẻng trồng cây mini gardena không?
+    - Shop mình có bán xẻng xới đất mini thép không gỉ cao cấp không?
+    - Shop còn bán bình tưới cây không nhỉ
+    - Shop còn bán bình xịt áp suất cầm tay không nhỉ
+    - Shop còn bán bình xịt tưới cây 2 lít không nhỉ
+    - Shop còn bán bộ cưa tay đa năng tiện dụng 6 lưỡi cưa không nhỉ
+    - Shop còn bán găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn không nhỉ
+    - Shop còn bán kéo cắt cỏ cầm tay không nhỉ
+    - Shop còn bán kéo tỉa cây gardena không nhỉ
+    - Shop còn bán kìm cắt tỉa cành gardena không nhỉ
+    - Shop còn bán kìm tỉa cành cán dài gardena không nhỉ
+    - Shop còn bán lưới làm giàn leo cây không nhỉ
+    - Shop còn bán tấm lót sàn nhựa ban công 3t-eco không nhỉ
+    - Shop còn bán xẻng làm vườn không gỉ jpk không nhỉ
+    - Shop còn bán xẻng trồng cây mini gardena không nhỉ
+    - Shop còn bán xẻng xới đất mini thép không gỉ cao cấp không nhỉ
+    - Shop còn hàng bình tưới cây không
+    - Shop còn hàng bình xịt áp suất cầm tay không
+    - Shop còn hàng bình xịt tưới cây 2 lít không
+    - Shop còn hàng bộ cưa tay đa năng tiện dụng 6 lưỡi cưa không
+    - Shop còn hàng găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn không
+    - Shop còn hàng kéo cắt cỏ cầm tay không
+    - Shop còn hàng kéo tỉa cây gardena không
+    - Shop còn hàng kìm cắt tỉa cành gardena không
+    - Shop còn hàng kìm tỉa cành cán dài gardena không
+    - Shop còn hàng lưới làm giàn leo cây không
+    - Shop còn hàng tấm lót sàn nhựa ban công 3t-eco không
+    - Shop còn hàng xẻng làm vườn không gỉ jpk không
+    - Shop còn hàng xẻng trồng cây mini gardena không
+    - Shop còn hàng xẻng xới đất mini thép không gỉ cao cấp không
+    - Mình muốn mua bình tưới cây nhưng không biết nó như nào
+    - Mình muốn mua bình xịt áp suất cầm tay nhưng không biết nó như nào
+    - Mình muốn mua bình xịt tưới cây 2 lít nhưng không biết nó như nào
+    - Mình muốn mua bộ cưa tay đa năng tiện dụng 6 lưỡi cưa nhưng không biết nó như nào
+    - Mình muốn mua găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn nhưng không biết nó như nào
+    - Mình muốn mua kéo cắt cỏ cầm tay nhưng không biết nó như nào
+    - Mình muốn mua kéo tỉa cây gardena nhưng không biết nó như nào
+    - Mình muốn mua kìm cắt tỉa cành gardena nhưng không biết nó như nào
+    - Mình muốn mua kìm tỉa cành cán dài gardena nhưng không biết nó như nào
+    - Mình muốn mua lưới làm giàn leo cây nhưng không biết nó như nào
+    - Mình muốn mua tấm lót sàn nhựa ban công 3t-eco nhưng không biết nó như nào
+    - Mình muốn mua xẻng làm vườn không gỉ jpk nhưng không biết nó như nào
+    - Mình muốn mua xẻng trồng cây mini gardena nhưng không biết nó như nào
+    - Mình muốn mua xẻng xới đất mini thép không gỉ cao cấp nhưng không biết nó như nào
+    - Bên mình còn bán bình tưới cây không ta
+    - Bên mình còn bán bình xịt áp suất cầm tay không ta
+    - Bên mình còn bán bình xịt tưới cây 2 lít không ta
+    - Bên mình còn bán bộ cưa tay đa năng tiện dụng 6 lưỡi cưa không ta
+    - Bên mình còn bán găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn không ta
+    - Bên mình còn bán kéo cắt cỏ cầm tay không ta
+    - Bên mình còn bán kéo tỉa cây gardena không ta
+    - Bên mình còn bán kìm cắt tỉa cành gardena không ta
+    - Bên mình còn bán kìm tỉa cành cán dài gardena không ta
+    - Bên mình còn bán lưới làm giàn leo cây không ta
+    - Bên mình còn bán tấm lót sàn nhựa ban công 3t-eco không ta
+    - Bên mình còn bán xẻng làm vườn không gỉ jpk không ta
+    - Bên mình còn bán xẻng trồng cây mini gardena không ta
+    - Bên mình còn bán xẻng xới đất mini thép không gỉ cao cấp không ta
+    - Cho tôi biết thêm về bình tưới cây đi
+    - Cho tôi biết thêm về bình xịt áp suất cầm tay đi
+    - Cho tôi biết thêm về bình xịt tưới cây 2 lít đi
+    - Cho tôi biết thêm về bộ cưa tay đa năng tiện dụng 6 lưỡi cưa đi
+    - Cho tôi biết thêm về găng tay nông nghiệp có móng vuốt chuyên dụng làm vườn đi
+    - Cho tôi biết thêm về kéo cắt cỏ cầm tay đi
+    - Cho tôi biết thêm về kéo tỉa cây gardena đi
+    - Cho tôi biết thêm về kìm cắt tỉa cành gardena đi
+    - Cho tôi biết thêm về kìm tỉa cành cán dài gardena đi
+    - Cho tôi biết thêm về lưới làm giàn leo cây đi
+    - Cho tôi biết thêm về tấm lót sàn nhựa ban công 3t-eco đi
+    - Cho tôi biết thêm về xẻng làm vườn không gỉ jpk đi
+    - Cho tôi biết thêm về xẻng trồng cây mini gardena đi
+    - Cho tôi biết thêm về xẻng xới đất mini thép không gỉ cao cấp đi

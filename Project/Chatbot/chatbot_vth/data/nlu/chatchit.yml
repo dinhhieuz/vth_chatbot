@@ -1,0 +1,111 @@
+
+version: "2.0"
+
+nlu:
+
+- intent: chat_greating
+  examples: |
+    - Xin chào
+    - Chào admin
+    - Chào
+    - chào fen
+    - Hello
+    - Chào shop nhá
+    - Chào shop cho mình hỏi cái này với
+    - Shop ơi hỏi tí với
+    - Shop ơi
+    - admin ơi
+    - Vũ trụ hạt ơi
+    - bot ơi
+    - Chatbot ơi
+    - Shop có đó không nhỉ
+    - Xin chào shop nhá
+    - Shop có đó không ta
+    - alo bạn ơi
+    - alo
+    - ê
+    - ê bạn ơi
+    - ê ê
+    - êy
+    - ey
+    - hey dau
+    - hey
+    - fen ơi 
+    - Xin chào fen 
+
+- intent: chat_praise
+  examples: |
+    - Đẹp quá
+    - Xịn quá
+    - Hay quá admin ơi
+    - Bé này đẹp quá 
+    - Con hàng này xinh quá
+    - con hàng này ngon quá
+    - Hàng chất lượng quá fen ơi
+
+- intent: chat_damn
+  examples: |
+    - Xấu quá đi
+    - sao mà xấu thế nhỉ
+    - Xấu quá admin ơi
+    - Hàng gì trong chán thế nhở
+    - Hàng trong phèn quá
+
+- intent: chat_bye
+  examples: |
+    - Bái bai
+    - Tạm biệt
+    - Bye
+    - Chào tạm biệt
+    - Hẹn gặp lại sau
+    - Khi khác mình nói chuyện tiếp nhá
+    - Tôi đang bận
+    - Bận rồi, mình nói sâu nha bot
+    - mình nhắn lại sau nhá
+    - Bái bai bạn nhá
+
+- intent: chat_thank
+  examples: |
+    - Cảm ơn shop nhiều nhá
+    - thank fen
+    - cảm ơn nha
+    - Cảm ơn hỉ
+    - cảm ơn
+    - được quá cảm ơn nhá
+    - Rất cảm ơn
+    - cảm và ơn
+
+- intent: chat_positive
+  examples: |
+    - Shop bạn đồ xịn ghê
+    - Shop bán toàn đồ xịn thôi
+    - Vũ trụ hạt có vẻ xịn nhỉ
+    - Chatbot xịn quá ta
+
+- intent: chat_negative
+  examples: |
+    - Chán shop quá
+    - Làm ăn tệ quá
+    - Shop như cái quần
+    - Shop như qq
+    - Nghỉ mẹ đi
+    - Làm ăn ri thôi nghỉ mẹ đi
+    - cút mẹ đi
+    - biết mẹ đi
+    - Tệ quá shop ơi
+    - Trong chán thật sự
+    - Thôi dẹp mẹ đi không mua gì hết
+
+- intent: chat_agree
+  examples: |
+    - ok bạn
+    - ok luôn
+    - ok fen
+    - okey
+    - okay
+    - ừm
+    - umk
+    - ừa
+    - ok nhá
+    - đồng ý 
+

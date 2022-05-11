@@ -1,0 +1,38 @@
+#NOTE: CÓ Thể sẽ gọp các intent chính sách lại để xữ lý chung 1 thông tin nội dung
+version: "2.0"
+nlu:
+#-> Chính sách đổi trả (Trả lời hết thông tin)
+- intent: ask_plc_doitra_menu
+  examples: |
+    - Tôi muốn đổi tra hàng
+    - Tôi muốn trả hàng
+    - Tôi muốn trả hàng thì phải làm sao
+    - Trả hàng thì có được không
+    - Làm thế nào mới trả được hàng
+    - Hàng này tệ quá tôi muốn trả lại hàng
+    - Hàng hư rồi, cho trả lại hàng với
+
+#-> Chính sách đổi trả (alone)
+- intent: ask_plc_doitra_when
+  examples: |
+    - Khi nào thì tôi được trả hàng
+    - Bao lâu thì tôi trả được hàng
+    - Trả hàng trong bao lâu
+    - Đến bao giờ tôi mới trả được hàng
+    - Thời gian trả hàng là khi nào
+    - Bao nhiêu ngày thì tôi mới trả được hàng
+
+#-> Chính sách phí trả hàng (alone)
+- intent: ask_plc_doitra_fee
+  examples: |
+    - Nếu hoàn lại hàng thì tôi có mất phí không?
+    - Tôi có phải trả phí nào nếu tôi hoàn tiền lại không
+    - Tôi phải trả bao nhiêu để được trả hàng
+    - Tôi muốn trả hàng nhưng không muốn mất phí
+    - Trả hàng có bị mất phí không
+    - Trả hàng có phải tốn phí vận chuyển không
+    - Nếu tôi trả hàng thì ai là người chịu phí vận chuyển
+    - Phí vận chuyển là tôi trả hay là bạn trả
+    - Có cần phải trả phí vận chuyển nếu như trả hàng không
+
+    

@@ -1,0 +1,43 @@
+version: "2.0"
+nlu:
+
+- intent: ask_plc_thanhtoan_menu
+  examples: |
+    - Tôi có thể hỏi chính sách thanh toán nào
+    - Chính sách thanh toán này như nào ấy nhỉ
+    - Tôi muốn hiểu hơn về chính sách thanh toán bên mình
+    - Mình muốn hiểu hơn về thanh toán bên mình 
+
+#-> Chính sách thanh toán của VTH
+- intent: ask_plc_thanhtoan_opt
+  examples: |
+    - Có các loại hình thức thanh toán nào
+    - Tôi muốn thanh toán thì phải làm thế nào
+    - Nếu thanh toán tôi phải trả bằng cách nào
+    - Thế làm sao để thanh toán
+    - Trả tiền cho shipper hay là phải chuyển tiền mặt shop nhỉ
+    - Trả tiền qua thẻ hay là nhận hàng rồi mới trả shop nhỉ
+    - Cửa hàng có những hình thức thanh toán nào
+
+
+#-> Chính sách trả tiền Online
+
+- intent: ask_plc_thanhtoan_onl
+  examples: |
+    - Thanh toán online bằng cách nào
+    - Xin thông tin thẻ để thanh toán online shop ơi
+    - Mình muốn chuyển tiền bằng thẻ bạn ơi
+    - Bạn cho mình trả tiền bằng thẻ đi
+    - Shop có cho trả tiền bằng thẻ không
+    - Tôi muốn thanh toán trực tuyến
+    - Thanh toán online đi
+    - Thanh toán online
+    - Trả tiền online
+    - Tôi muốn chuyển tiền 
+    - Chuyển tiền sang ngân hàng
+  
+#-> Cửa hàng có những hình thức thanh toán nào
+- intent: ask_plc_thanhtoan_opt
+  examples: |
+    - Tôi có thể thanh toán bằng cách nào nhỉ
+    - Làm sao để thanh toán nhỉ

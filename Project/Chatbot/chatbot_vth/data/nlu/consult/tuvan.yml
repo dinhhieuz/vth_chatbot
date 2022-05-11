@@ -1,0 +1,79 @@
+# Feature: tư vấn
+    1. Theo nhóm: đưa ra các loại cây theo nhóm và link
+    2. Theo chi tiết: người dùng hỏi chi tiết cây cần tư vấn
+    3. Tư vấn theo từng nhóm: Người dùng chưa bt và trả lời theo từng nhóm
+# NOTE: 
+    1. Không crawl làm file cứng: K cần thiết chỉ dùng 1 lần
+    2. Dựa trên 2 yêu cầu như khuyến mãi: tương tự
+    3. Tạo các câu hỏi theo nhóm: lấy câu hỏi bằng class để lưu trữ
+
+#!----------------------------- " TƯ VẤN CHUNG " 
+version: "2.0"
+nlu:
+#-> Thông tin tư vấn
+- intent: ask_tuvan_menu
+  examples: |
+    - cho mình hỏi ni chút về sản phẩm với?
+    - bên mình hỗ trợ tư vấn gì đấy
+    - tư vấn cho mình đi
+    - tôi muốn tư vấn, oke?
+    - tư vấn đi
+    - shop có đó không, tư vấn cho mình với
+    - mình chưa bt nên mua như nào bạn cho mình hỏi với
+    - bạn ơi, bạn giúp mình tư vấn được không, mình không biết nên mua như nào
+    - tôi muốn được tư vấn
+    - tôi muốn bạn tư vấn cho tôi
+    - tôi có thể được tư vấn chứ
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn
+    - tư vấn cho tôi được chứ
+    - Mình đang phân vân k biết nên mua như nào, bạn có thể tư vấn giúp mình được không
+    - bên mình có hỗ trợ tư vấn không
+    - bạn gì đó ơi, bạn giúp mình tư vấn với
+
+#-> Tư vấn sản phẩm
+- intent: ask_tuvan_sanpham
+  examples: |
+    - tôi muốn biết các sản phẩm bên bạn
+    - bạn ơi, mình muốn mua sản phẩm bên bạn nhưng không biết nên mua gì
+    - Bạn có thể tư vấn sản phẩm bên mình cho mình được không
+    - sản phẩm bên mình bán như nào ấy nhỉ?
+    - tư vấn sản phẩm cho mình đi
+    - Mặt hàng bên mình bán như thế nào vậy ta
+    - Sản phẩm bên mình có mấy loại đấy
+    - Các sản phẩm bên mình có còn bán không
+    
+#-> Tư vấn hạt giống
+- intent: ask_tuvan_hatgiong
+  examples: |
+    - sản phẩm hạt giống bên mình như nào ấy nhỉ
+    - Tôi muốn biết thông tin về hạt giống
+    - hạt giống có còn bán không
+    - Hiện tại bên mình có hạt giống không
+    - Bạn cho tôi biết thêm về hạt giống đi
+    - hạt giống thì có bán không
+    - hạt giống bên mình bán như nào ấy nhỉ?
+    - cho mình hỏi ni chút về với? hạt giống sản phẩm
+    - tôi muốn biết các hạt giống bên bạn
+    - tư vấn hạt giống cho mình đi
+    - tôi muốn tư vấn hạt giống , oke?
+    - tư vấn hạt giống đi
+    - shop có đó không, tư vấn hạt giống cho mình với
+    - mình chưa bt nên mua hạt giống như nào bạn giúp mình với
+    - bạn ơi, bạn giúp mình tư vấn hạt giống được không, mình không biết nên mua như nào cả
+    - tôi muốn được tư vấn hạt giống
+    - tôi muốn bạn tư vấn hạt giống cho tôi
+    - tôi có thể được tư vấn hạt giống chứ
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn hạt giống
+    - tư vấn hạt giống cho tôi được chứ
+    - Mình đang phân vân k biết nên mua hạt giống như nào, bạn có thể tư vấn giúp mình được không
+    - bên mình có hỗ trợ tư vấn hạt giống không
+    - Bạn có thể tư vấn sản phẩm hạt giống bên mình cho mình được không
+    - bạn gì đó ơi, bạn giúp mình tư vấn hạt giống với
+    - bạn ơi, mình muốn mua sản phẩm hạt giống bên bạn nhưng không biết nó như nào
+
+
+#-> Tư vấn theo nhóm câu hỏi
+- intent: ask_tuvan_question
+  examples: |
+
+  #Hỏi có muốn tiến hành tư vấn hay không, yes hoặc no

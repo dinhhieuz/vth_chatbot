@@ -1,0 +1,270 @@
+version: "2.0"
+
+#Feature: List of Intents
+
+intents:
+  
+# INF OF COMMERCIAL
+  - ask_page_intro
+  - ask_page_contact
+  - ask_page_timework
+
+# CHÍNH SÁCH 
+  - ask_plc_menu
+  - ask_plc_thanhtoan_menu
+  - ask_plc_thanhtoan_opt
+  - ask_plc_thanhtoan_onl
+  
+  - ask_plc_doitra_menu
+  - ask_plc_doitra_when
+  - ask_plc_doitra_fee
+
+  - ask_plc_vanchuyen_menu
+  - ask_plc_vanchuyen_check
+  - ask_plc_vanchuyen_howlong
+  - ask_plc_vanchuyen_fee
+
+# KHUYẾN MÃI
+
+  - ask_khuyenmai_hatgiong_menu
+  - ask_khuyenmai_hatgiong_rauxanh
+  - ask_khuyenmai_hatgiong_rauxanh_details
+  - ask_khuyenmai_hatgiong_cuqua
+  - ask_khuyenmai_hatgiong_cuqua_details
+  - ask_khuyenmai_senda
+  - ask_khuyenmai_senda_details
+  - ask_khuyenmai_dungcu
+  - ask_khuyenmai_dungcu_details
+  - ask_khuyenmai_others
+  - ask_khuyenmai_menu
+
+# CHATCHIT
+  - chat_bye
+  - chat_damn
+  - chat_greating
+  - chat_thank
+  - chat_negative
+  - chat_positive
+  - chat_praise
+  - chat_agree
+
+
+  
+  
+  
+#Feature: LIST OF RESPONSES
+
+responses:
+  #-> CHATCHIT
+  utter_chat_bye:
+  - text: "Tạm biệt bạn, chúc bạn một ngày tốt lành 🧡 !!!"
+  - text: "Tạm biệt nhá, hãy liên hệ chúng tôi nếu bạn cần gì đó 🧡"
+
+  utter_chat_praise:
+  - text: "Cảm ơn, chúng tôi rất vui vì bạn thích nó 😚\nHãy chia sẽ chúng cho bạn bè cùng biết nhé!!!"
+
+  utter_chat_damn:
+  - text: "Rất xin lỗi bạn, chúng tôi sẽ lưu ý và cải thiện chúng 😩"
+
+  utter_chat_thank:
+  - text: "Không có gì, shop cũng rất vui khi giúp được một chút gì đó cho bạn"
+
+  utter_chat_positive:
+  - text: "Cảm ơn bạn đã thích Shop, rất vui và cảm kích bạn 🤗"
+
+  utter_chat_negative:
+  - text: "Xin lỗi, chúng tôi rất tiết vì đã khiến bạn không vui 😭"
+
+  utter_chat_agree:
+  - text: 👍👍👍
+
+  #-> CONSULT TO CUSTOMES
+  utter_tuvan_menu:
+  - text: "Các thông tin có thể được tư vấn của Vũ Trụ Hạt: "
+    buttons: 
+    - title: "Tư vấn theo sản phẩm"
+      payload: "/ask_tuvan_sanpham"
+    - title: "Tư vấn bằng câu hỏi"
+      payload: "/ask_tuvan_question"
+
+  utter_tuvan_sanpham:
+  - text: "Các nhóm sản phẩm của Vũ Trụ Hạt: "
+    buttons: 
+    - title: "Hạt giống và Sen"
+      payload: "/ask_tuvan_hatgiong"
+    - title: "Dụng cụ làm vườn"
+      payload: "/ask_tuvan_dungcu"
+  
+  utter_tuvan_hatgiong:
+  - text: "Các loại hạt giống của Vũ Trụ Hạt: "
+    buttons:
+    - title: "Sen đá"
+      payload: "/ask_tuvan_senda"
+    - title: "Hạt giống rau xanh"
+      payload: "/ask_tuvan_rauxanh"
+    - title: "Hạt giống củ quả"
+      payload: "/ask_tuvan_cuqua"
+
+
+
+
+  #-> PAGE OF INFORMATIONS 
+  utter_page_intro:
+  - text: |
+      Vũ Trụ Hạt là một trang thương mại điện tử.
+      Là đơn vị cung cấp các sản phẩm làm vườn tại Đà Nẵng như:
+        - Cây cảnh sen đá 🎍
+        - Hạt giống cây trồng 🌱
+        - Dụng cụ làm vườn. ⛏
+      Thông tin chi tiết có thể xem ở website: https://vutruhat.com/
+
+  utter_page_contact:
+  - text: |
+      Các phương thức liên lạc đến Vũ Trụ Hạt:
+        - Phone 📞: 0778328735
+        - Email 📧: vutruhat.com
+        - Address 🏡: 71 Ngũ Hành Sơn, Đà Nẵng
+        - Instagram ⭐: vutruhat
+      Hãy liên hệ cho chúng tôi, mọi thắc mắc đều được giải quyết!!! 
+  
+  utter_page_timework:
+  - text: |
+      Hiện tại tình trạng bên shop mình gồm:
+        - Pages: Luôn luôn hoạt động
+        - Cơ sở: Mở từ 08:00 🌝 đến 21:00 🌚
+            -------------
+      Bạn có thể nhắn tin trực tiếp với chúng tôi.
+      Nếu không hãy đến hoặc gọi trực tiếp trong khung giờ hành chính.
+      Chúng tôi sẽ hỗ trợ bạn hết mình nhất có thể!!!
+  #-> CHÍNH SÁCH
+  utter_plc_menu:
+  - text: "Các gợi ý liên quan đến chính sách:"
+    buttons: 
+    - title: "Đổi trả"
+      payload: "/ask_plc_doitra_menu"
+    - title: "Thanh toán"
+      payload: "/ask_plc_thanhtoan_menu"
+    - title: "Vận chuyển"
+      payload: "/ask_plc_vanchuyen_menu"
+
+  #? Thanh toán
+  utter_plc_thanhtoan_menu:
+  - text: "Các câu hỏi thường gặp về thanh toán" 
+    buttons:
+    - title: "Có những hình thức thanh toán nào?"
+      payload: "/ask_plc_thanhtoan_opt"
+    - title: "Làm sao để thanh toán online?"
+      payload: "/ask_plc_thanhtoan_onl"
+
+  utter_plc_thanhtoan_opt:
+  - text: |
+      Chính sách thanh toán quý khách có 2 hình thức lựa chọn: 
+        1. thanh toán online 
+        2. Hình thức COD (thanh toán ngay khi nhận hàng)
+      Đặc biệt, khi thực hiện thanh toán online khách hàng sẽ được giảm 5% giá trị tổng đơn hàng
+      
+  utter_plc_thanhtoan_onl:
+  - text: |
+      Để thanh toán onl, quý khách sẽ có các lưa chọn khi thanh toán online: Paypal, thẻ ngân hàng.
+      Trường hợp thanh toán: 
+        - Nếu trên website thì chỉ cần làm đúng các bước thanh toán là thành công
+        - Trường hợp nếu page xin vui lòng liên hệ nhân viên để được trợ giúp, tránh xẩy ra sai sót trong quá trình giao dịch
+
+  #?Đổi trả
+  utter_plc_doitra_menu:
+  - text: "Các câu hỏi thường gặp về đổi trả:"
+    buttons: 
+    - title: "Khi nào thì trả hàng?"
+      payload: "/ask_plc_doitra_when"
+    - title: "Trả hàng mất phí?"
+      payload: "/ask_plc_doitra_fee"
+
+  utter_plc_doitra_when:
+  - text: "Với chính sách đổi trả\nCửa hàng thực hiện chính sách hoàn trả áp dụng đối với những sản phẩm đã được giao không trùng với những gì khách hàng đã đặt. \nThời gian liên hệ hoàn trả trong vòng 24h sau khi quý khách xác nhận đã nhận hàng."
+
+  utter_plc_doitra_fee:
+  - text: "Cửa hàng sẽ là bên chịu phí vận chuyển khi khách hàng thực hiện hoàn trả."
+
+  #?Khuyến mãi
+  utter_plc_khuyenmai_menu: #NOTE: Sữ dụng slot để lưu trữ và dùng chung 1 action 
+  - text: "Các nhóm khuyển mãi:"
+    buttons:
+    - title: "Sen đá & Hạt giống"
+      payload: "/ask_khuyenmai_hatgiong_menu"
+    - title: "Dụng cụ làm vườn"
+      payload: "/ask_khuyenmai_dungcu"
+    - title: "Khác..."
+      payload: "/ask_khuyenmai_others"
+
+  #-> Menu khuyến mãi vạy hạt giống
+  utter_plc_khuyenmai_hatgiong_menu: 
+  - text: "Các nhóm khuyến mãi Sen và Hạt:"
+    buttons:
+    - title: "Sen đá"
+      payload: "/ask_khuyenmai_senda"
+    - title: "Hạt giống rau xanh"
+      payload: "/ask_khuyenmai_hatgiong_rauxanh"
+    - title: "Hạt giống củ quả"
+      payload: "/ask_khuyenmai_hatgiong_cuqua"
+
+  #-> Menu khuyến mãi khác 
+  #NOTE: Thay khuyến mãi bằng template và call 
+  utter_plc_khuyenmai_others:
+  - text: |
+      Các khuyến mãi khác:
+        ⭐ Vận chuyển miễn phí: 
+            Miễn phí vận chuyển toàn quốc
+            Áp dụng với hóa đơn >200.000đ
+        ⭐ Giảm 5% tổng hóa đơn:
+            Khi KH thực hiện thanh toán online
+            Giảm tối đa 20.000đ
+        ⭐ Tư vấn miễn phí
+            Nhân viên nhiệt tình, tư vấn 24/7
+            Hotline: 0835481872
+
+  #?Vận chuyển 
+  #NOTE: DÙng slot và entity cho thông tin cứng
+  utter_plc_vanchuyen_menu:
+  - text: "Các câu hỏi thường gặp về vận chuyển: "
+    buttons:
+    - title: "Có được kiểm tra hàng?"
+      payload: "/ask_plc_vanchuyen_check"
+    - title: "Phí vận chuyển mất bao nhiêu?"
+      payload: "/ask_plc_vanchuyen_fee"
+    - title: "Hàng được giao bao lâu?"
+      payload: "/ask_plc_vanchuyen_howlong"
+  
+  utter_plc_vanchuyen_fee:
+  - text: |
+      Sản phẩm sẽ được giao đến tận nơi cho khách hàng. 
+      Phí vận chuyển dao động từ 10.000đ – 30.000đ tùy vào từng khu vực và số lượng.
+
+  utter_plc_vanchuyen_howlong:
+  - text: |
+      Thời gian vận chuyển đến tay quý khách sẽ phụ thuộc vào từng khu vực được giao. 
+        - Khu vực miền Bắc: Từ 3-5 ngày
+        - Khu vực miền Trung: Từ 2-3 ngày
+        - Khu vực miền Nam: Từ 3-5 ngày
+  
+  utter_plc_vanchuyen_check:
+  - text: |
+      Hoàn toàn có thể nếu quý khách muốn. 
+      Vũ Trụ Hạt luôn tạo điều kiện tốt nhất cho khách hàng. 
+
+#Feature: CẤU HÌNH HỘI THOẠI
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+#Feature: CUSTOM ACTIONS
+actions:
+  - act_chat_greating
+  - act_plc_khuyenmai_web
+  - act_plc_khuyenmai_web_details
+  - act_tuvan_web
+  - act_tuvan_web_details
+  - act_unknown
+
+

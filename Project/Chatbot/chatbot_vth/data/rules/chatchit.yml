@@ -1,0 +1,10 @@
+version: "2.0"
+
+rules:
+- rule: don't get intent user and bot fallback
+  steps:
+  - intent: nlu_fallback
+  - action: act_unknown
+  - action: utter_page_contact
+# - rule: Don't specifically intent but chatbot is still determined intent "chat_agree"
+ 

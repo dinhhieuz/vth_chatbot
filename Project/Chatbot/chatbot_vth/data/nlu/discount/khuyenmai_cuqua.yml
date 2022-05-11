@@ -1,0 +1,195 @@
+version: "2.0"
+nlu:
+#-> Thông tin khuyến mãi củ quả
+
+- intent: ask_khuyenmai_hatgiong_cuqua
+  examples: |
+    - Củ có khuyến mãi nào không
+    - Cây củ nào đang khuyến mãi vậy
+    - Đang có khuyến mãi cây củ quả nào không
+    - Hôm nay củ quả có giảm giá không nhỉ 
+    - củ quả gì đấy có giảm giá không
+    - khuyến mãi gì khi mua củ quả không
+    - Nếu mua củ quả thì có được giảm giá chứ
+    - tôi muốn mua củ quả thế có được giảm giá không 
+    - giảm giá gì cho củ quả không
+    - Hàng củ quả bên mình có giải giám chút nào không
+    - giảm giá củ quả đi
+    - discount với củ quả không?
+    - khuyến mãi gì với củ quả không vậy
+    - Tôi muốn biết thông tin giảm giá củ quả được không 
+    - Về mặt hàng củ quả có giảm giá gì không?
+    - khi mua củ quả nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng củ quả được không 
+    - khi mua củ quả thì giảm bao nhiêu %
+    - Hôm nay cây củ có giảm giá không nhỉ 
+    - cây củ gì đấy có giảm giá không
+    - khuyến mãi gì khi mua cây củ không
+    - Nếu mua cây củ thì có được giảm giá chứ
+    - tôi muốn mua cây củ thế có được giảm giá không 
+    - giảm giá gì cho cây củ không
+    - Hàng cây củ bên mình có giải giám chút nào không
+    - giảm giá cây củ đi
+    - discount với cây củ không?
+    - khuyến mãi gì với cây củ không vậy
+    - Tôi muốn biết thông tin giảm giá cây củ được không 
+    - Về mặt hàng cây củ có giảm giá gì không?
+    - khi mua cây củ nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng cây củ được không 
+    - khi mua cây củ thì giảm bao nhiêu %
+
+
+- intent: ask_khuyenmai_hatgiong_cuqua_details
+  examples: |
+    - Hôm nay Hạt Giống Bí Đỏ Hồ Lô có giảm giá không nhỉ 
+    - Hạt Giống Bí Đỏ Hồ Lô gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Hạt Giống Bí Đỏ Hồ Lô không
+    - Nếu mua Hạt Giống Bí Đỏ Hồ Lô thì có được giảm giá chứ
+    - tôi muốn mua Hạt Giống Bí Đỏ Hồ Lô thế có được giảm giá không 
+    - giảm giá gì cho Hạt Giống Bí Đỏ Hồ Lô không
+    - Hàng Hạt Giống Bí Đỏ Hồ Lô bên mình có giải giám chút nào không
+    - giảm giá Hạt Giống Bí Đỏ Hồ Lô đi
+    - discount với Hạt Giống Bí Đỏ Hồ Lô không?
+    - khuyến mãi gì với Hạt Giống Bí Đỏ Hồ Lô không vậy
+    - Tôi muốn biết thông tin giảm giá Hạt Giống Bí Đỏ Hồ Lô được không 
+    - Về mặt hàng Hạt Giống Bí Đỏ Hồ Lô có giảm giá gì không?
+    - khi mua Hạt Giống Bí Đỏ Hồ Lô nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Hạt Giống Bí Đỏ Hồ Lô được không 
+    - khi mua Hạt Giống Bí Đỏ Hồ Lô thì giảm bao nhiêu %
+    - Hôm nay Hạt Giống Dưa Leo có giảm giá không nhỉ 
+    - Hạt Giống Dưa Leo gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Hạt Giống Dưa Leo không
+    - Nếu mua Hạt Giống Dưa Leo thì có được giảm giá chứ
+    - tôi muốn mua Hạt Giống Dưa Leo thế có được giảm giá không 
+    - giảm giá gì cho Hạt Giống Dưa Leo không
+    - Hàng Hạt Giống Dưa Leo bên mình có giải giám chút nào không
+    - giảm giá Hạt Giống Dưa Leo đi
+    - discount với Hạt Giống Dưa Leo không?
+    - khuyến mãi gì với Hạt Giống Dưa Leo không vậy
+    - Tôi muốn biết thông tin giảm giá Hạt Giống Dưa Leo được không 
+    - Về mặt hàng Hạt Giống Dưa Leo có giảm giá gì không?
+    - khi mua Hạt Giống Dưa Leo nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Hạt Giống Dưa Leo được không 
+    - khi mua Hạt Giống Dưa Leo thì giảm bao nhiêu %
+    - Hôm nay Hạt Giống Khổ Qua có giảm giá không nhỉ 
+    - Hạt Giống Khổ Qua gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Hạt Giống Khổ Qua không
+    - Nếu mua Hạt Giống Khổ Qua thì có được giảm giá chứ
+    - tôi muốn mua Hạt Giống Khổ Qua thế có được giảm giá không 
+    - giảm giá gì cho Hạt Giống Khổ Qua không
+    - Hàng Hạt Giống Khổ Qua bên mình có giải giám chút nào không
+    - giảm giá Hạt Giống Khổ Qua đi
+    - discount với Hạt Giống Khổ Qua không?
+    - khuyến mãi gì với Hạt Giống Khổ Qua không vậy
+    - Tôi muốn biết thông tin giảm giá Hạt Giống Khổ Qua được không 
+    - Về mặt hàng Hạt Giống Khổ Qua có giảm giá gì không?
+    - khi mua Hạt Giống Khổ Qua nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Hạt Giống Khổ Qua được không 
+    - khi mua Hạt Giống Khổ Qua thì giảm bao nhiêu %
+    - Hôm nay Hạt Giống Mướp Ngọt có giảm giá không nhỉ 
+    - Hạt Giống Mướp Ngọt gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Hạt Giống Mướp Ngọt không
+    - Nếu mua Hạt Giống Mướp Ngọt thì có được giảm giá chứ
+    - tôi muốn mua Hạt Giống Mướp Ngọt thế có được giảm giá không 
+    - giảm giá gì cho Hạt Giống Mướp Ngọt không
+    - Hàng Hạt Giống Mướp Ngọt bên mình có giải giám chút nào không
+    - giảm giá Hạt Giống Mướp Ngọt đi
+    - discount với Hạt Giống Mướp Ngọt không?
+    - khuyến mãi gì với Hạt Giống Mướp Ngọt không vậy
+    - Tôi muốn biết thông tin giảm giá Hạt Giống Mướp Ngọt được không 
+    - Về mặt hàng Hạt Giống Mướp Ngọt có giảm giá gì không?
+    - khi mua Hạt Giống Mướp Ngọt nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Hạt Giống Mướp Ngọt được không 
+    - khi mua Hạt Giống Mướp Ngọt thì giảm bao nhiêu %
+    - Hôm nay Hạt Giống Ớt Hiểm có giảm giá không nhỉ 
+    - Hạt Giống Ớt Hiểm gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Hạt Giống Ớt Hiểm không
+    - Nếu mua Hạt Giống Ớt Hiểm thì có được giảm giá chứ
+    - tôi muốn mua Hạt Giống Ớt Hiểm thế có được giảm giá không 
+    - giảm giá gì cho Hạt Giống Ớt Hiểm không
+    - Hàng Hạt Giống Ớt Hiểm bên mình có giải giám chút nào không
+    - giảm giá Hạt Giống Ớt Hiểm đi
+    - discount với Hạt Giống Ớt Hiểm không?
+    - khuyến mãi gì với Hạt Giống Ớt Hiểm không vậy
+    - Tôi muốn biết thông tin giảm giá Hạt Giống Ớt Hiểm được không 
+    - Về mặt hàng Hạt Giống Ớt Hiểm có giảm giá gì không?
+    - khi mua Hạt Giống Ớt Hiểm nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Hạt Giống Ớt Hiểm được không 
+    - khi mua Hạt Giống Ớt Hiểm thì giảm bao nhiêu %
+    - Hôm nay Bí Đỏ Hồ Lô có giảm giá không nhỉ 
+    - Bí Đỏ Hồ Lô gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Bí Đỏ Hồ Lô không
+    - Nếu mua Bí Đỏ Hồ Lô thì có được giảm giá chứ
+    - tôi muốn mua Bí Đỏ Hồ Lô thế có được giảm giá không 
+    - giảm giá gì cho Bí Đỏ Hồ Lô không
+    - Hàng Bí Đỏ Hồ Lô bên mình có giải giám chút nào không
+    - giảm giá Bí Đỏ Hồ Lô đi
+    - discount với Bí Đỏ Hồ Lô không?
+    - khuyến mãi gì với Bí Đỏ Hồ Lô không vậy
+    - Tôi muốn biết thông tin giảm giá Bí Đỏ Hồ Lô được không 
+    - Về mặt hàng Bí Đỏ Hồ Lô có giảm giá gì không?
+    - khi mua Bí Đỏ Hồ Lô nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Bí Đỏ Hồ Lô được không 
+    - khi mua Bí Đỏ Hồ Lô thì giảm bao nhiêu %
+    - Hôm nay Dưa Leo có giảm giá không nhỉ 
+    - Dưa Leo gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Dưa Leo không
+    - Nếu mua Dưa Leo thì có được giảm giá chứ
+    - tôi muốn mua Dưa Leo thế có được giảm giá không 
+    - giảm giá gì cho Dưa Leo không
+    - Hàng Dưa Leo bên mình có giải giám chút nào không
+    - giảm giá Dưa Leo đi
+    - discount với Dưa Leo không?
+    - khuyến mãi gì với Dưa Leo không vậy
+    - Tôi muốn biết thông tin giảm giá Dưa Leo được không 
+    - Về mặt hàng Dưa Leo có giảm giá gì không?
+    - khi mua Dưa Leo nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Dưa Leo được không 
+    - khi mua Dưa Leo thì giảm bao nhiêu %
+    - Hôm nay Khổ Qua có giảm giá không nhỉ 
+    - Khổ Qua gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Khổ Qua không
+    - Nếu mua Khổ Qua thì có được giảm giá chứ
+    - tôi muốn mua Khổ Qua thế có được giảm giá không 
+    - giảm giá gì cho Khổ Qua không
+    - Hàng Khổ Qua bên mình có giải giám chút nào không
+    - giảm giá Khổ Qua đi
+    - discount với Khổ Qua không?
+    - khuyến mãi gì với Khổ Qua không vậy
+    - Tôi muốn biết thông tin giảm giá Khổ Qua được không 
+    - Về mặt hàng Khổ Qua có giảm giá gì không?
+    - khi mua Khổ Qua nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Khổ Qua được không 
+    - khi mua Khổ Qua thì giảm bao nhiêu %
+    - Hôm nay Mướp Ngọt có giảm giá không nhỉ 
+    - Mướp Ngọt gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Mướp Ngọt không
+    - Nếu mua Mướp Ngọt thì có được giảm giá chứ
+    - tôi muốn mua Mướp Ngọt thế có được giảm giá không 
+    - giảm giá gì cho Mướp Ngọt không
+    - Hàng Mướp Ngọt bên mình có giải giám chút nào không
+    - giảm giá Mướp Ngọt đi
+    - discount với Mướp Ngọt không?
+    - khuyến mãi gì với Mướp Ngọt không vậy
+    - Tôi muốn biết thông tin giảm giá Mướp Ngọt được không 
+    - Về mặt hàng Mướp Ngọt có giảm giá gì không?
+    - khi mua Mướp Ngọt nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Mướp Ngọt được không 
+    - khi mua Mướp Ngọt thì giảm bao nhiêu %
+    - Hôm nay Ớt Hiểm có giảm giá không nhỉ 
+    - Ớt Hiểm gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Ớt Hiểm không
+    - Nếu mua Ớt Hiểm thì có được giảm giá chứ
+    - tôi muốn mua Ớt Hiểm thế có được giảm giá không 
+    - giảm giá gì cho Ớt Hiểm không
+    - Hàng Ớt Hiểm bên mình có giải giám chút nào không
+    - giảm giá Ớt Hiểm đi
+    - discount với Ớt Hiểm không?
+    - khuyến mãi gì với Ớt Hiểm không vậy
+    - Tôi muốn biết thông tin giảm giá Ớt Hiểm được không 
+    - Về mặt hàng Ớt Hiểm có giảm giá gì không?
+    - khi mua Ớt Hiểm nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Ớt Hiểm được không 
+    - khi mua Ớt Hiểm thì giảm bao nhiêu %
+
+

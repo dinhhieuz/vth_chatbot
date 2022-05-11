@@ -1,0 +1,242 @@
+version: "2.0"
+nlu:
+#-> Thông tin khuyến mãi dụng cụ
+
+- intent: ask_khuyenmai_dungcu
+  examples: |
+    - Dụng cụ bên mình có giảm giá không
+    - Dụng cụ giảm giá thì tốt quá
+    - Chẳn biết nay shop có dụng cụ nào giảm giá không
+    - Hôm nay dụng cụ có giảm giá không nhỉ 
+    - dụng cụ gì đấy có giảm giá không
+    - khuyến mãi gì khi mua dụng cụ không
+    - Nếu mua dụng cụ thì có được giảm giá chứ
+    - tôi muốn mua dụng cụ thế có được giảm giá không 
+    - giảm giá gì cho dụng cụ không
+    - Hàng dụng cụ bên mình có giải giám chút nào không
+    - giảm giá dụng cụ đi
+    - discount với dụng cụ không?
+    - khuyến mãi gì với dụng cụ không vậy
+    - Tôi muốn biết thông tin giảm giá dụng cụ được không 
+    - Về mặt hàng dụng cụ có giảm giá gì không?
+    - khi mua dụng cụ nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng dụng cụ được không 
+    - khi mua dụng cụ thì giảm bao nhiêu %
+    - Hôm nay công cụ có giảm giá không nhỉ 
+    - công cụ gì đấy có giảm giá không
+    - khuyến mãi gì khi mua công cụ không
+    - Nếu mua công cụ thì có được giảm giá chứ
+    - tôi muốn mua công cụ thế có được giảm giá không 
+    - giảm giá gì cho công cụ không
+    - Hàng công cụ bên mình có giải giám chút nào không
+    - giảm giá công cụ đi
+    - discount với công cụ không?
+    - khuyến mãi gì với công cụ không vậy
+    - Tôi muốn biết thông tin giảm giá công cụ được không 
+    - Về mặt hàng công cụ có giảm giá gì không?
+    - khi mua công cụ nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng công cụ được không 
+    - khi mua công cụ thì giảm bao nhiêu %
+
+
+- intent: ask_khuyenmai_dungcu_details
+  examples: |
+    - Hôm nay bình tưới cây có giảm giá không nhỉ 
+    - bình tưới cây gì đấy có giảm giá không
+    - khuyến mãi gì khi mua bình tưới cây không
+    - Nếu mua bình tưới cây thì có được giảm giá chứ
+    - tôi muốn mua bình tưới cây thế có được giảm giá không 
+    - giảm giá gì cho bình tưới cây không
+    - Hàng bình tưới cây bên mình có giải giám chút nào không
+    - giảm giá bình tưới cây đi
+    - discount với bình tưới cây không?
+    - khuyến mãi gì với bình tưới cây không vậy
+    - Tôi muốn biết thông tin giảm giá bình tưới cây được không 
+    - Về mặt hàng bình tưới cây có giảm giá gì không?
+    - khi mua bình tưới cây được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng bình tưới cây được không 
+    - khi mua bình tưới cây thì giảm bao nhiêu %
+    - Hôm nay Bình Xịt Áp Suất Cầm Tay có giảm giá không nhỉ 
+    - Bình Xịt Áp Suất Cầm Tay gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Bình Xịt Áp Suất Cầm Tay không
+    - Nếu mua Bình Xịt Áp Suất Cầm Tay thì có được giảm giá chứ
+    - tôi muốn mua Bình Xịt Áp Suất Cầm Tay thế có được giảm giá không 
+    - giảm giá gì cho Bình Xịt Áp Suất Cầm Tay không
+    - Hàng Bình Xịt Áp Suất Cầm Tay bên mình có giải giám chút nào không
+    - giảm giá Bình Xịt Áp Suất Cầm Tay đi
+    - discount với Bình Xịt Áp Suất Cầm Tay không?
+    - khuyến mãi gì với Bình Xịt Áp Suất Cầm Tay không vậy
+    - Tôi muốn biết thông tin giảm giá Bình Xịt Áp Suất Cầm Tay được không 
+    - Về mặt hàng Bình Xịt Áp Suất Cầm Tay có giảm giá gì không?
+    - khi mua Bình Xịt Áp Suất Cầm Tay được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Bình Xịt Áp Suất Cầm Tay được không 
+    - khi mua Bình Xịt Áp Suất Cầm Tay thì giảm bao nhiêu %
+    - Nếu mua Bình Xịt Tưới Cây 2 Lít thì có được giảm giá chứ
+    - tôi muốn mua Bình Xịt Tưới Cây 2 Lít thế có được giảm giá không 
+    - giảm giá gì cho Bình Xịt Tưới Cây 2 Lít không
+    - Hàng Bình Xịt Tưới Cây 2 Lít bên mình có giải giám chút nào không
+    - giảm giá Bình Xịt Tưới Cây 2 Lít đi
+    - discount với Bình Xịt Tưới Cây 2 Lít không?
+    - khuyến mãi gì với Bình Xịt Tưới Cây 2 Lít không vậy
+    - Tôi muốn biết thông tin giảm giá Bình Xịt Tưới Cây 2 Lít được không 
+    - Về mặt hàng Bình Xịt Tưới Cây 2 Lít có giảm giá gì không?
+    - khi mua Bình Xịt Tưới Cây 2 Lít nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Bình Xịt Tưới Cây 2 Lít được không 
+    - khi mua Bình Xịt Tưới Cây 2 Lít thì giảm bao nhiêu %
+    - Nếu mua Bộ Cưa Tay Đa Năng Tiện Dụng 6 Lưỡi Cưa thì có được giảm giá chứ
+    - tôi muốn mua Bộ Cưa Tay Đa Năng Tiện Dụng 6 Lưỡi Cưa thế có được giảm giá không 
+    - giảm giá gì cho Bộ Cưa Tay Đa Năng Tiện Dụng 6 Lưỡi Cưa không
+    - Hàng Bộ Cưa Tay Đa Năng Tiện Dụng 6 Lưỡi Cưa bên mình có giải giám chút nào không
+    - giảm giá Bộ Cưa Tay Đa Năng Tiện Dụng 6 Lưỡi Cưa đi
+    - discount với Bộ Cưa Tay Đa Năng Tiện Dụng 6 Lưỡi Cưa không?
+    - khuyến mãi gì với Bộ Cưa Tay Đa Năng Tiện Dụng 6 Lưỡi Cưa không vậy
+    - Tôi muốn biết thông tin giảm giá Bộ Cưa Tay Đa Năng Tiện Dụng 6 Lưỡi Cưa được không 
+    - Về mặt hàng Bộ Cưa Tay Đa Năng Tiện Dụng 6 Lưỡi Cưa có giảm giá gì không?
+    - khi mua Bộ Cưa Tay Đa Năng Tiện Dụng 6 Lưỡi Cưa nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Bộ Cưa Tay Đa Năng Tiện Dụng 6 Lưỡi Cưa được không 
+    - khi mua Bộ Cưa Tay Đa Năng Tiện Dụng 6 Lưỡi Cưa thì giảm bao nhiêu %
+    - Nếu mua Găng Tay Nông Nghiệp thì có được giảm giá chứ
+    - tôi muốn mua Găng Tay Nông Nghiệp thế có được giảm giá không 
+    - giảm giá gì cho Găng Tay Nông Nghiệp không
+    - Hàng Găng Tay Nông Nghiệp bên mình có giải giám chút nào không
+    - giảm giá Găng Tay Nông Nghiệp đi
+    - discount với Găng Tay Nông Nghiệp không?
+    - khuyến mãi gì với Găng Tay Nông Nghiệp không vậy
+    - Tôi muốn biết thông tin giảm giá Găng Tay Nông Nghiệp được không 
+    - Về mặt hàng Găng Tay Nông Nghiệp có giảm giá gì không?
+    - khi mua Găng Tay Nông Nghiệp nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Găng Tay Nông Nghiệp được không 
+    - khi mua Găng Tay Nông Nghiệp thì giảm bao nhiêu %
+    - Nếu mua Móng Vuốt Chuyên Dụng Làm Vườn thì có được giảm giá chứ
+    - tôi muốn mua Móng Vuốt Chuyên Dụng Làm Vườn thế có được giảm giá không 
+    - giảm giá gì cho Móng Vuốt Chuyên Dụng Làm Vườn không
+    - Hàng Móng Vuốt Chuyên Dụng Làm Vườn bên mình có giải giám chút nào không
+    - giảm giá Móng Vuốt Chuyên Dụng Làm Vườn đi
+    - discount với Móng Vuốt Chuyên Dụng Làm Vườn không?
+    - khuyến mãi gì với Móng Vuốt Chuyên Dụng Làm Vườn không vậy
+    - Tôi muốn biết thông tin giảm giá Móng Vuốt Chuyên Dụng Làm Vườn được không 
+    - Về mặt hàng Móng Vuốt Chuyên Dụng Làm Vườn có giảm giá gì không?
+    - khi mua Móng Vuốt Chuyên Dụng Làm Vườn nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Móng Vuốt Chuyên Dụng Làm Vườn được không 
+    - khi mua Móng Vuốt Chuyên Dụng Làm Vườn thì giảm bao nhiêu %
+    - Nếu mua Kéo Cắt Cỏ Cầm Tay thì có được giảm giá chứ
+    - tôi muốn mua Kéo Cắt Cỏ Cầm Tay thế có được giảm giá không 
+    - giảm giá gì cho Kéo Cắt Cỏ Cầm Tay không
+    - Hàng Kéo Cắt Cỏ Cầm Tay bên mình có giải giám chút nào không
+    - giảm giá Kéo Cắt Cỏ Cầm Tay đi
+    - discount với Kéo Cắt Cỏ Cầm Tay không?
+    - khuyến mãi gì với Kéo Cắt Cỏ Cầm Tay không vậy
+    - Tôi muốn biết thông tin giảm giá Kéo Cắt Cỏ Cầm Tay được không 
+    - Về mặt hàng Kéo Cắt Cỏ Cầm Tay có giảm giá gì không?
+    - khi mua Kéo Cắt Cỏ Cầm Tay nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Kéo Cắt Cỏ Cầm Tay được không 
+    - khi mua Kéo Cắt Cỏ Cầm Tay thì giảm bao nhiêu %
+    - Nếu mua Kéo Tỉa Cây Gardena thì có được giảm giá chứ
+    - tôi muốn mua Kéo Tỉa Cây Gardena thế có được giảm giá không 
+    - giảm giá gì cho Kéo Tỉa Cây Gardena không
+    - Hàng Kéo Tỉa Cây Gardena bên mình có giải giám chút nào không
+    - giảm giá Kéo Tỉa Cây Gardena đi
+    - discount với Kéo Tỉa Cây Gardena không?
+    - khuyến mãi gì với Kéo Tỉa Cây Gardena không vậy
+    - Tôi muốn biết thông tin giảm giá Kéo Tỉa Cây Gardena được không 
+    - Về mặt hàng Kéo Tỉa Cây Gardena có giảm giá gì không?
+    - khi mua Kéo Tỉa Cây Gardena nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Kéo Tỉa Cây Gardena được không 
+    - khi mua Kéo Tỉa Cây Gardena thì giảm bao nhiêu %
+    - Nếu mua Kìm Cắt Tỉa Cành Gardena thì có được giảm giá chứ
+    - tôi muốn mua Kìm Cắt Tỉa Cành Gardena thế có được giảm giá không 
+    - giảm giá gì cho Kìm Cắt Tỉa Cành Gardena không
+    - Hàng Kìm Cắt Tỉa Cành Gardena bên mình có giải giám chút nào không
+    - giảm giá Kìm Cắt Tỉa Cành Gardena đi
+    - discount với Kìm Cắt Tỉa Cành Gardena không?
+    - khuyến mãi gì với Kìm Cắt Tỉa Cành Gardena không vậy
+    - Tôi muốn biết thông tin giảm giá Kìm Cắt Tỉa Cành Gardena được không 
+    - Về mặt hàng Kìm Cắt Tỉa Cành Gardena có giảm giá gì không?
+    - khi mua Kìm Cắt Tỉa Cành Gardena nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Kìm Cắt Tỉa Cành Gardena được không 
+    - khi mua Kìm Cắt Tỉa Cành Gardena thì giảm bao nhiêu %
+    - Nếu mua Kìm Tỉa Cành Cán Dài Gardena thì có được giảm giá chứ
+    - tôi muốn mua Kìm Tỉa Cành Cán Dài Gardena thế có được giảm giá không 
+    - giảm giá gì cho Kìm Tỉa Cành Cán Dài Gardena không
+    - Hàng Kìm Tỉa Cành Cán Dài Gardena bên mình có giải giám chút nào không
+    - giảm giá Kìm Tỉa Cành Cán Dài Gardena đi
+    - discount với Kìm Tỉa Cành Cán Dài Gardena không?
+    - khuyến mãi gì với Kìm Tỉa Cành Cán Dài Gardena không vậy
+    - Tôi muốn biết thông tin giảm giá Kìm Tỉa Cành Cán Dài Gardena được không 
+    - Về mặt hàng Kìm Tỉa Cành Cán Dài Gardena có giảm giá gì không?
+    - khi mua Kìm Tỉa Cành Cán Dài Gardena nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Kìm Tỉa Cành Cán Dài Gardena được không 
+    - khi mua Kìm Tỉa Cành Cán Dài Gardena thì giảm bao nhiêu %
+    - Nếu mua Lưới Làm Giàn Leo Cây thì có được giảm giá chứ
+    - tôi muốn mua Lưới Làm Giàn Leo Cây thế có được giảm giá không 
+    - giảm giá gì cho Lưới Làm Giàn Leo Cây không
+    - Hàng Lưới Làm Giàn Leo Cây bên mình có giải giám chút nào không
+    - giảm giá Lưới Làm Giàn Leo Cây đi
+    - discount với Lưới Làm Giàn Leo Cây không?
+    - khuyến mãi gì với Lưới Làm Giàn Leo Cây không vậy
+    - Tôi muốn biết thông tin giảm giá Lưới Làm Giàn Leo Cây được không 
+    - Về mặt hàng Lưới Làm Giàn Leo Cây có giảm giá gì không?
+    - khi mua Lưới Làm Giàn Leo Cây nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Lưới Làm Giàn Leo Cây được không 
+    - khi mua Lưới Làm Giàn Leo Cây thì giảm bao nhiêu %
+    - Hôm nay Tấm lót sàn nhựa ban công 3T-Eco có giảm giá không nhỉ 
+    - Tấm lót sàn nhựa ban công 3T-Eco gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Tấm lót sàn nhựa ban công 3T-Eco không
+    - Nếu mua Tấm lót sàn nhựa ban công 3T-Eco thì có được giảm giá chứ
+    - tôi muốn mua Tấm lót sàn nhựa ban công 3T-Eco thế có được giảm giá không 
+    - giảm giá gì cho Tấm lót sàn nhựa ban công 3T-Eco không
+    - Hàng Tấm lót sàn nhựa ban công 3T-Eco bên mình có giải giám chút nào không
+    - giảm giá Tấm lót sàn nhựa ban công 3T-Eco đi
+    - discount với Tấm lót sàn nhựa ban công 3T-Eco không?
+    - khuyến mãi gì với Tấm lót sàn nhựa ban công 3T-Eco không vậy
+    - Tôi muốn biết thông tin giảm giá Tấm lót sàn nhựa ban công 3T-Eco được không 
+    - Về mặt hàng Tấm lót sàn nhựa ban công 3T-Eco có giảm giá gì không?
+    - khi mua Tấm lót sàn nhựa ban công 3T-Eco nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Tấm lót sàn nhựa ban công 3T-Eco được không 
+    - khi mua Tấm lót sàn nhựa ban công 3T-Eco thì giảm bao nhiêu %
+    - Hôm nay Xẻng Làm Vườn Không Gỉ JPK có giảm giá không nhỉ 
+    - Xẻng Làm Vườn Không Gỉ JPK gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Xẻng Làm Vườn Không Gỉ JPK không
+    - Nếu mua Xẻng Làm Vườn Không Gỉ JPK thì có được giảm giá chứ
+    - tôi muốn mua Xẻng Làm Vườn Không Gỉ JPK thế có được giảm giá không 
+    - giảm giá gì cho Xẻng Làm Vườn Không Gỉ JPK không
+    - Hàng Xẻng Làm Vườn Không Gỉ JPK bên mình có giải giám chút nào không
+    - giảm giá Xẻng Làm Vườn Không Gỉ JPK đi
+    - discount với Xẻng Làm Vườn Không Gỉ JPK không?
+    - khuyến mãi gì với Xẻng Làm Vườn Không Gỉ JPK không vậy
+    - Tôi muốn biết thông tin giảm giá Xẻng Làm Vườn Không Gỉ JPK được không 
+    - Về mặt hàng Xẻng Làm Vườn Không Gỉ JPK có giảm giá gì không?
+    - khi mua Xẻng Làm Vườn Không Gỉ JPK nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Xẻng Làm Vườn Không Gỉ JPK được không 
+    - khi mua Xẻng Làm Vườn Không Gỉ JPK thì giảm bao nhiêu %
+    - Hôm nay Xẻng Trồng Cây Mini Gardena có giảm giá không nhỉ 
+    - Xẻng Trồng Cây Mini Gardena gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Xẻng Trồng Cây Mini Gardena không
+    - Nếu mua Xẻng Trồng Cây Mini Gardena thì có được giảm giá chứ
+    - tôi muốn mua Xẻng Trồng Cây Mini Gardena thế có được giảm giá không 
+    - giảm giá gì cho Xẻng Trồng Cây Mini Gardena không
+    - Hàng Xẻng Trồng Cây Mini Gardena bên mình có giải giám chút nào không
+    - giảm giá Xẻng Trồng Cây Mini Gardena đi
+    - discount với Xẻng Trồng Cây Mini Gardena không?
+    - khuyến mãi gì với Xẻng Trồng Cây Mini Gardena không vậy
+    - Tôi muốn biết thông tin giảm giá Xẻng Trồng Cây Mini Gardena được không 
+    - Về mặt hàng Xẻng Trồng Cây Mini Gardena có giảm giá gì không?
+    - khi mua Xẻng Trồng Cây Mini Gardena nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Xẻng Trồng Cây Mini Gardena được không 
+    - khi mua Xẻng Trồng Cây Mini Gardena thì giảm bao nhiêu %
+    - Hôm nay Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp có giảm giá không nhỉ 
+    - Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp không
+    - Nếu mua Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp thì có được giảm giá chứ
+    - tôi muốn mua Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp thế có được giảm giá không 
+    - giảm giá gì cho Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp không
+    - Hàng Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp bên mình có giải giám chút nào không
+    - giảm giá Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp đi
+    - discount với Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp không?
+    - khuyến mãi gì với Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp không vậy
+    - Tôi muốn biết thông tin giảm giá Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp được không 
+    - Về mặt hàng Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp có giảm giá gì không?
+    - khi mua Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp được không 
+    - khi mua Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp thì giảm bao nhiêu %
+

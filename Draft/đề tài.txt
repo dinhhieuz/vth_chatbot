@@ -1,0 +1,12 @@
+1 - Công ty cổ phần công nghệ dữ liệu DSA (Đà nẵng)
+2 - Đề tài cá nhân
+3- Xây dựng Chatbot theo dõi tình hình hoạt động của doanh nghiệp
+- Cụ thể: 
+	- Sữ dụng framework Rasa (hỗ trợ nhận diện Natural Language Undestanding và xác định ngữ cảnh và nội dung người dùng bằng mô hình neron hay phân cụm, while broad), 
+	- Ngôn ngữ python để xữ lý những yêu cầu phức tạp (Truy vấn Database, tạo chart, table, PDF, crawer dữ lịu web,...)
+	- Và nên tảng mạng xã hội Facebooks để kết nối và sữ dụng thông qua API của Facebooks
+	- Quản lý dữ lịu bằng cơ sở dữ lịu SQL Server (có thể là microsoft azure)
+	-  Chuyển đổi dữ liệu bằng microsoft SSIS để ETL và làm Dataware House với lịch chạy 15p/1 lần (Vì với dữ liệu của doanh nghiệp để phụ vụ cho nghiệp vụ nên cần này để chuyển đổi với mục đích chatbot dể hơn)
+4. Sản phẩm dự kiến: Chatbot cho Pages trên nền tảng FB với tính năng
+	- Trả lời những thông tin liên quan đến hoạt động kinh doanh của doanh nghiệp (vd: Cửa hàng bán quần áo -> Doanh thu hôm ni thế nào, năm trước boa nhiêu, so sánh 2 cửa hàng trong năm vừa rồi) - nội dung trả về: Table, chart hoặc giá trị, có thể chi tiết là PDF
+	 

@@ -1,0 +1,47 @@
+version: "2.0"
+nlu:
+#-> Giới thiệu doanh nghiệp VTH
+- intent: ask_page_intro
+  examples: |
+    - Trang này là trang gì vậy
+    - Vũ trụ hạt là gì?
+    - VTH là gì vậy?
+    - VTH kinh doanh cái gì vậy
+    - Page này là gì vậy?
+  
+#-> Thông tin liên lạc VTH
+- intent: ask_page_contact
+  examples: |
+    - Làm sao để liên lạc với vũ trụ hạt
+    - Địa chỉ ở đây ở đâu vậy
+    - VTH có cơ sở ở đây không
+    - Làm sao để liên lạc nhân viên Vũ trụ hạt 
+    - Vũ trụ hạt có ở Đà Nẵng không
+    - Vũ trụ hạt có ở Hồ Chí Minh Không
+    - Vũ trụ hạt có ở đây không
+    - Tôi muốn liên hệ với vũ trụ hạt
+    - Mình muốn thông tin liên hệ vũ trụ hạt
+    - Liên hệ vũ trụ hạt bằng cách nào
+    - VTH có website của riêng mình không
+    - Vũ trụ hạt có web không
+#-> work-time of VTH
+- intent: ask_page_timework
+  examples: |
+    - Bên mình làm việc khi nào đấy
+    - Vũ trụ hạt có đang làm việc đó không
+    - VTH hôm nay có làm việc không
+    - Chúng tôi có thể liên lạc với bạn vào khung giờ nào nhỉ
+    - Mình có thể liên hệ shop vào lúc nào nhỉ
+    - Giờ bạn tôi gọi được không
+    - Giờ tôi có thể liên lạc được không
+    - Tôi muốn gọi cho page nhưng không biết bên mình có mở cửa không nhỉ
+    - Tôi có thể sang bạn được chứ
+    - Bên mình có mở cửa lúc này không
+    - admin có nhà đó không
+    - shop đang mở cửa chứ
+    - Shop làm việc tới khi nào
+    - Shop mở cửa chứ
+    - Giờ mình chạy sang shop được không
+    - Có phải shop đang mở không
+    - Shop mở cửa thì mình chạy sang hì
+# intent: ask_page_

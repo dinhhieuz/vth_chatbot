@@ -1,0 +1,1 @@
+(SQL - Dữ liệu website bán hàng) ---> (SSIS - Xữ lý dữ liệu thô) ---> (SQL - Dữ liệu phân tích) ---> Python (Dashboach - Machine learning(Forecast)) ---> HTML, CSS, JS, PHP,... (Website - Phân tích hoạt động kinh doanh) ---> Chatbot (RASA) ---> Kết hợp Rasa + Speech-to-text (Trả lời bằng giọng nói)

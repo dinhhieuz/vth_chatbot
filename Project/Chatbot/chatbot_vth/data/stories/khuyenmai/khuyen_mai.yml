@@ -1,0 +1,76 @@
+#? Khuyến mãi
+
+version: "2.0"
+
+stories:
+
+#> General Menu
+- story: Khuyến mãi (menu)
+  steps:
+  - intent: ask_khuyenmai_menu
+  - action: utter_plc_khuyenmai_menu
+
+#-> sen đá & hạt giống
+
+- story: khuyến mãi (sen đá & hạt giống) with Menu
+  steps:
+  - intent: ask_khuyenmai_hatgiong_menu
+  - action: utter_plc_khuyenmai_hatgiong_menu
+
+#-> SEN ĐÁ
+
+- story: khuyến mãi sen đá
+  steps:
+  - intent: ask_khuyenmai_senda
+  - action: act_plc_khuyenmai_web
+
+- story: khuyến mãi hạt giống sen đá - Chi tiết
+  steps:
+  - intent: ask_khuyenmai_senda_details
+  - action: act_plc_khuyenmai_web_details
+
+#-> RAU XANH
+
+- story: khuyến mãi hạt giống rau xanh
+  steps:
+  - intent: ask_khuyenmai_hatgiong_rauxanh
+  - action: act_plc_khuyenmai_web
+
+- story: khuyến mãi hạt giống rauxanh - Chi tiết
+  steps:
+  - intent: ask_khuyenmai_hatgiong_rauxanh_details
+  - action: act_plc_khuyenmai_web_details
+
+#-> CỦ QUẢ
+
+- story: khuyến mãi hạt giống củ quả
+  steps:
+  - intent: ask_khuyenmai_hatgiong_cuqua
+  - action: act_plc_khuyenmai_web
+
+- story: khuyến mãi hạt giống củ quả - Chi tiết
+  steps:
+  - intent: ask_khuyenmai_hatgiong_cuqua_details
+  - action: act_plc_khuyenmai_web_details
+
+#-> DỤNG CỤ
+
+- story: khuyến mãi dụng cụ
+  steps:
+  - intent: ask_khuyenmai_dungcu
+  - action: act_plc_khuyenmai_web
+
+- story: khuyến mãi hạt giống dụng cụ - Chi tiết
+  steps:
+  - intent: ask_khuyenmai_dungcu_details
+  - action: act_plc_khuyenmai_web_details
+
+
+#-> KHÁC
+
+- story: khuyến mãi khác
+  steps:
+  - intent: ask_khuyenmai_others
+  - action: utter_plc_khuyenmai_others
+
+

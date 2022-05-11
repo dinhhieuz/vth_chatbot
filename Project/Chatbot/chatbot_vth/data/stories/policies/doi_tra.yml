@@ -1,0 +1,20 @@
+version: "2.0"
+
+stories:
+
+- story: Thông tin đổi trả (menu)
+  steps:
+  - intent: ask_plc_doitra_menu
+  - action: utter_plc_doitra_menu
+
+- story: Khi nào được đổi trả (when)
+  steps:
+  - intent: ask_plc_doitra_when
+  - action: utter_plc_doitra_when
+  # - action: utter_page_contact
+
+- story: Có trả phí đổi trả không
+  steps:
+  - intent: ask_plc_doitra_fee
+  - action: utter_plc_doitra_fee
+  # - action: utter_page_contact

@@ -1,0 +1,37 @@
+version: "2.0"
+
+stories:
+
+- story: xin chào
+  steps:
+  - intent: chat_greating
+  - action: act_chat_greating
+
+- story: Tạm biệt
+  steps:
+  - intent: chat_bye
+  - action: utter_chat_bye
+
+- story: Lời khen cho sản phẩm
+  steps:
+  - intent: chat_praise
+  - action: utter_chat_praise
+
+- story: Chê sản phẩm 
+  steps:
+  - intent: chat_damn
+  - action: utter_chat_damn
+    
+
+- story: Cảm ơn với shop
+  steps:
+  - intent: chat_thank
+  - action: utter_chat_thank
+
+- story: Đồng ý (khi chatchit)
+  steps:
+  - intent: chat_agree
+  - action: utter_chat_agree
+
+
+

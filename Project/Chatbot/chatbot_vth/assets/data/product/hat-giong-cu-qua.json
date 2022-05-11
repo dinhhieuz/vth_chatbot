@@ -1,0 +1,41 @@
+{
+    "type": "HẠT GIỐNG CỦ QUẢ",
+    "time": "2022-04-26",
+    "data": [
+        {
+            "name": "Hạt Giống Bí Đỏ Hồ Lô",
+            "price": "19,000₫ 10,000₫",
+            "link": "https://vutruhat.com/san-pham/hat-giong-bi-do-ho-lo/",
+            "image": "https://vutruhat.com/wp-content/uploads/2021/11/HAT-GIONG-BI-DO-300x300.png",
+            "status": "Còn hàng"
+        },
+        {
+            "name": "Hạt Giống Dưa Leo",
+            "price": "14,000₫",
+            "link": "https://vutruhat.com/san-pham/hat-giong-dua-leo/",
+            "image": "https://vutruhat.com/wp-content/uploads/2021/11/HAT-GIONG-DUA-LEO-300x300.png",
+            "status": "Còn hàng"
+        },
+        {
+            "name": "Hạt Giống Khổ Qua",
+            "price": "55₫ – 5,555₫",
+            "link": "https://vutruhat.com/san-pham/hat-giong-kho-qua/",
+            "image": "https://vutruhat.com/wp-content/uploads/2021/11/HAT-GIONG-MUOP-DANG-300x300.png",
+            "status": "Còn hàng"
+        },
+        {
+            "name": "Hạt Giống Mướp Ngọt",
+            "price": "28,000₫ 14,000₫",
+            "link": "https://vutruhat.com/san-pham/hat-giong-muop-ngot/",
+            "image": "https://vutruhat.com/wp-content/uploads/2021/11/HAT-GIONG-MUOP-NGOT-300x300.png",
+            "status": "Còn hàng"
+        },
+        {
+            "name": "Hạt Giống Ớt Hiểm",
+            "price": "17,000₫ 9,000₫",
+            "link": "https://vutruhat.com/san-pham/hat-giong-ot-hiem/",
+            "image": "https://vutruhat.com/wp-content/uploads/2021/11/hAT-GIONG-OT-HIEM-300x300.png",
+            "status": "Còn hàng"
+        }
+    ]
+}

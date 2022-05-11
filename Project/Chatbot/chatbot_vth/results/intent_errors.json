@@ -1,0 +1,18 @@
+[
+  {
+    "text": "Chatbot xịn quá ta",
+    "intent": "chat_positive",
+    "intent_prediction": {
+      "name": "chat_damn",
+      "confidence": 0.4863293766975403
+    }
+  },
+  {
+    "text": "Mua nhiều có được giảm giá không shop",
+    "intent": "ask_khuyenmai_menu",
+    "intent_prediction": {
+      "name": "ask_khuyenmai_others",
+      "confidence": 0.5249730348587036
+    }
+  }
+]

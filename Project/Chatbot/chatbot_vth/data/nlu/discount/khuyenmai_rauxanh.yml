@@ -1,0 +1,314 @@
+version: "2.0"
+nlu:
+#-> Thông tin khuyến mãi rau xanh
+
+#NOTE: Thêm các loại râu vào đây (dư thời gian thì kiểm tra từng loại rau)
+- intent: ask_khuyenmai_hatgiong_rauxanh
+  examples: |
+    - Rau xanh bửa nay có khuyến mãi không
+    - Rau nay có khuyến mãi không nhỉ
+    - Nay rau có khuyển mãi không
+    - Hôm nay hạt giống rau xanh có giảm giá không nhỉ 
+    - hạt giống rau xanh gì đấy có giảm giá không
+    - khuyến mãi gì khi mua hạt giống rau xanh không
+    - Nếu mua hạt giống rau xanh thì có được giảm giá chứ
+    - tôi muốn mua hạt giống rau xanh thế có được giảm giá không 
+    - giảm giá gì cho hạt giống rau xanh không
+    - Hàng hạt giống rau xanh bên mình có giải giám chút nào không
+    - giảm giá hạt giống rau xanh đi
+    - discount với hạt giống rau xanh không?
+    - khuyến mãi gì với hạt giống rau xanh không vậy
+    - Tôi muốn biết thông tin giảm giá hạt giống rau xanh được không 
+    - Về mặt hàng hạt giống rau xanh có giảm giá gì không?
+    - khi mua hạt giống rau xanh nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng hạt giống rau xanh được không 
+    - khi mua hạt giống rau xanh thì giảm bao nhiêu %
+    - Hôm nay hạt giống rau có giảm giá không nhỉ 
+    - hạt giống rau gì đấy có giảm giá không
+    - khuyến mãi gì khi mua hạt giống rau không
+    - Nếu mua hạt giống rau thì có được giảm giá chứ
+    - tôi muốn mua hạt giống rau thế có được giảm giá không 
+    - giảm giá gì cho hạt giống rau không
+    - Hàng hạt giống rau bên mình có giải giám chút nào không
+    - giảm giá hạt giống rau đi
+    - discount với hạt giống rau không?
+    - khuyến mãi gì với hạt giống rau không vậy
+    - Tôi muốn biết thông tin giảm giá hạt giống rau được không 
+    - Về mặt hàng hạt giống rau có giảm giá gì không?
+    - khi mua hạt giống rau nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng hạt giống rau được không 
+    - khi mua hạt giống rau thì giảm bao nhiêu %
+
+
+- intent: ask_khuyenmai_hatgiong_rauxanh_details
+  examples: |
+    - Hôm nay Hạt Giống Cây Cà Chua Bạch Tuộc có giảm giá không nhỉ 
+    - Hạt Giống Cây Cà Chua Bạch Tuộc gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Hạt Giống Cây Cà Chua Bạch Tuộc không
+    - Nếu mua Hạt Giống Cây Cà Chua Bạch Tuộc thì có được giảm giá chứ
+    - tôi muốn mua Hạt Giống Cây Cà Chua Bạch Tuộc thế có được giảm giá không 
+    - giảm giá gì cho Hạt Giống Cây Cà Chua Bạch Tuộc không
+    - Hàng Hạt Giống Cây Cà Chua Bạch Tuộc bên mình có giải giám chút nào không
+    - giảm giá Hạt Giống Cây Cà Chua Bạch Tuộc đi
+    - discount với Hạt Giống Cây Cà Chua Bạch Tuộc không?
+    - khuyến mãi gì với Hạt Giống Cây Cà Chua Bạch Tuộc không vậy
+    - Tôi muốn biết thông tin giảm giá Hạt Giống Cây Cà Chua Bạch Tuộc được không 
+    - Về mặt hàng Hạt Giống Cây Cà Chua Bạch Tuộc có giảm giá gì không?
+    - khi mua Hạt Giống Cây Cà Chua Bạch Tuộc nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Hạt Giống Cây Cà Chua Bạch Tuộc được không 
+    - khi mua Hạt Giống Cây Cà Chua Bạch Tuộc thì giảm bao nhiêu %
+    - Hôm nay Hạt Giống Rau Cải Kale có giảm giá không nhỉ 
+    - Hạt Giống Rau Cải Kale gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Hạt Giống Rau Cải Kale không
+    - Nếu mua Hạt Giống Rau Cải Kale thì có được giảm giá chứ
+    - tôi muốn mua Hạt Giống Rau Cải Kale thế có được giảm giá không 
+    - giảm giá gì cho Hạt Giống Rau Cải Kale không
+    - Hàng Hạt Giống Rau Cải Kale bên mình có giải giám chút nào không
+    - giảm giá Hạt Giống Rau Cải Kale đi
+    - discount với Hạt Giống Rau Cải Kale không?
+    - khuyến mãi gì với Hạt Giống Rau Cải Kale không vậy
+    - Tôi muốn biết thông tin giảm giá Hạt Giống Rau Cải Kale được không 
+    - Về mặt hàng Hạt Giống Rau Cải Kale có giảm giá gì không?
+    - khi mua Hạt Giống Rau Cải Kale nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Hạt Giống Rau Cải Kale được không 
+    - khi mua Hạt Giống Rau Cải Kale thì giảm bao nhiêu %
+    - Hôm nay Hạt giống Rau Cải Ngọt có giảm giá không nhỉ 
+    - Hạt giống Rau Cải Ngọt gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Hạt giống Rau Cải Ngọt không
+    - Nếu mua Hạt giống Rau Cải Ngọt thì có được giảm giá chứ
+    - tôi muốn mua Hạt giống Rau Cải Ngọt thế có được giảm giá không 
+    - giảm giá gì cho Hạt giống Rau Cải Ngọt không
+    - Hàng Hạt giống Rau Cải Ngọt bên mình có giải giám chút nào không
+    - giảm giá Hạt giống Rau Cải Ngọt đi
+    - discount với Hạt giống Rau Cải Ngọt không?
+    - khuyến mãi gì với Hạt giống Rau Cải Ngọt không vậy
+    - Tôi muốn biết thông tin giảm giá Hạt giống Rau Cải Ngọt được không 
+    - Về mặt hàng Hạt giống Rau Cải Ngọt có giảm giá gì không?
+    - khi mua Hạt giống Rau Cải Ngọt nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Hạt giống Rau Cải Ngọt được không 
+    - khi mua Hạt giống Rau Cải Ngọt thì giảm bao nhiêu %
+    - Hôm nay Hạt Giống Rau Càng Cua có giảm giá không nhỉ 
+    - Hạt Giống Rau Càng Cua gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Hạt Giống Rau Càng Cua không
+    - Nếu mua Hạt Giống Rau Càng Cua thì có được giảm giá chứ
+    - tôi muốn mua Hạt Giống Rau Càng Cua thế có được giảm giá không 
+    - giảm giá gì cho Hạt Giống Rau Càng Cua không
+    - Hàng Hạt Giống Rau Càng Cua bên mình có giải giám chút nào không
+    - giảm giá Hạt Giống Rau Càng Cua đi
+    - discount với Hạt Giống Rau Càng Cua không?
+    - khuyến mãi gì với Hạt Giống Rau Càng Cua không vậy
+    - Tôi muốn biết thông tin giảm giá Hạt Giống Rau Càng Cua được không 
+    - Về mặt hàng Hạt Giống Rau Càng Cua có giảm giá gì không?
+    - khi mua Hạt Giống Rau Càng Cua nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Hạt Giống Rau Càng Cua được không 
+    - khi mua Hạt Giống Rau Càng Cua thì giảm bao nhiêu %
+    - Hôm nay Hạt Giống Rau Dền Đỏ có giảm giá không nhỉ 
+    - Hạt Giống Rau Dền Đỏ gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Hạt Giống Rau Dền Đỏ không
+    - Nếu mua Hạt Giống Rau Dền Đỏ thì có được giảm giá chứ
+    - tôi muốn mua Hạt Giống Rau Dền Đỏ thế có được giảm giá không 
+    - giảm giá gì cho Hạt Giống Rau Dền Đỏ không
+    - Hàng Hạt Giống Rau Dền Đỏ bên mình có giải giám chút nào không
+    - giảm giá Hạt Giống Rau Dền Đỏ đi
+    - discount với Hạt Giống Rau Dền Đỏ không?
+    - khuyến mãi gì với Hạt Giống Rau Dền Đỏ không vậy
+    - Tôi muốn biết thông tin giảm giá Hạt Giống Rau Dền Đỏ được không 
+    - Về mặt hàng Hạt Giống Rau Dền Đỏ có giảm giá gì không?
+    - khi mua Hạt Giống Rau Dền Đỏ nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Hạt Giống Rau Dền Đỏ được không 
+    - khi mua Hạt Giống Rau Dền Đỏ thì giảm bao nhiêu %
+    - Hôm nay Hạt Giống Rau Má có giảm giá không nhỉ 
+    - Hạt Giống Rau Má gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Hạt Giống Rau Má không
+    - Nếu mua Hạt Giống Rau Má thì có được giảm giá chứ
+    - tôi muốn mua Hạt Giống Rau Má thế có được giảm giá không 
+    - giảm giá gì cho Hạt Giống Rau Má không
+    - Hàng Hạt Giống Rau Má bên mình có giải giám chút nào không
+    - giảm giá Hạt Giống Rau Má đi
+    - discount với Hạt Giống Rau Má không?
+    - khuyến mãi gì với Hạt Giống Rau Má không vậy
+    - Tôi muốn biết thông tin giảm giá Hạt Giống Rau Má được không 
+    - Về mặt hàng Hạt Giống Rau Má có giảm giá gì không?
+    - khi mua Hạt Giống Rau Má nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Hạt Giống Rau Má được không 
+    - khi mua Hạt Giống Rau Má thì giảm bao nhiêu %
+    - Hôm nay Hạt Giống Rau Mồng Tơi Lá To có giảm giá không nhỉ 
+    - Hạt Giống Rau Mồng Tơi Lá To gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Hạt Giống Rau Mồng Tơi Lá To không
+    - Nếu mua Hạt Giống Rau Mồng Tơi Lá To thì có được giảm giá chứ
+    - tôi muốn mua Hạt Giống Rau Mồng Tơi Lá To thế có được giảm giá không 
+    - giảm giá gì cho Hạt Giống Rau Mồng Tơi Lá To không
+    - Hàng Hạt Giống Rau Mồng Tơi Lá To bên mình có giải giám chút nào không
+    - giảm giá Hạt Giống Rau Mồng Tơi Lá To đi
+    - discount với Hạt Giống Rau Mồng Tơi Lá To không?
+    - khuyến mãi gì với Hạt Giống Rau Mồng Tơi Lá To không vậy
+    - Tôi muốn biết thông tin giảm giá Hạt Giống Rau Mồng Tơi Lá To được không 
+    - Về mặt hàng Hạt Giống Rau Mồng Tơi Lá To có giảm giá gì không?
+    - khi mua Hạt Giống Rau Mồng Tơi Lá To nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Hạt Giống Rau Mồng Tơi Lá To được không 
+    - khi mua Hạt Giống Rau Mồng Tơi Lá To thì giảm bao nhiêu %
+    - Hôm nay Hạt Giống Rau Muống có giảm giá không nhỉ 
+    - Hạt Giống Rau Muống gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Hạt Giống Rau Muống không
+    - Nếu mua Hạt Giống Rau Muống thì có được giảm giá chứ
+    - tôi muốn mua Hạt Giống Rau Muống thế có được giảm giá không 
+    - giảm giá gì cho Hạt Giống Rau Muống không
+    - Hàng Hạt Giống Rau Muống bên mình có giải giám chút nào không
+    - giảm giá Hạt Giống Rau Muống đi
+    - discount với Hạt Giống Rau Muống không?
+    - khuyến mãi gì với Hạt Giống Rau Muống không vậy
+    - Tôi muốn biết thông tin giảm giá Hạt Giống Rau Muống được không 
+    - Về mặt hàng Hạt Giống Rau Muống có giảm giá gì không?
+    - khi mua Hạt Giống Rau Muống nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Hạt Giống Rau Muống được không 
+    - khi mua Hạt Giống Rau Muống thì giảm bao nhiêu %
+    - Hôm nay Hạt Giống Rau Ngò Rí có giảm giá không nhỉ 
+    - Hạt Giống Rau Ngò Rí gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Hạt Giống Rau Ngò Rí không
+    - Nếu mua Hạt Giống Rau Ngò Rí thì có được giảm giá chứ
+    - tôi muốn mua Hạt Giống Rau Ngò Rí thế có được giảm giá không 
+    - giảm giá gì cho Hạt Giống Rau Ngò Rí không
+    - Hàng Hạt Giống Rau Ngò Rí bên mình có giải giám chút nào không
+    - giảm giá Hạt Giống Rau Ngò Rí đi
+    - discount với Hạt Giống Rau Ngò Rí không?
+    - khuyến mãi gì với Hạt Giống Rau Ngò Rí không vậy
+    - Tôi muốn biết thông tin giảm giá Hạt Giống Rau Ngò Rí được không 
+    - Về mặt hàng Hạt Giống Rau Ngò Rí có giảm giá gì không?
+    - khi mua Hạt Giống Rau Ngò Rí nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Hạt Giống Rau Ngò Rí được không 
+    - khi mua Hạt Giống Rau Ngò Rí thì giảm bao nhiêu %
+    - Hôm nay Cây Cà Chua Bạch Tuộc có giảm giá không nhỉ 
+    - Cây Cà Chua Bạch Tuộc gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Cây Cà Chua Bạch Tuộc không
+    - Nếu mua Cây Cà Chua Bạch Tuộc thì có được giảm giá chứ
+    - tôi muốn mua Cây Cà Chua Bạch Tuộc thế có được giảm giá không 
+    - giảm giá gì cho Cây Cà Chua Bạch Tuộc không
+    - Hàng Cây Cà Chua Bạch Tuộc bên mình có giải giám chút nào không
+    - giảm giá Cây Cà Chua Bạch Tuộc đi
+    - discount với Cây Cà Chua Bạch Tuộc không?
+    - khuyến mãi gì với Cây Cà Chua Bạch Tuộc không vậy
+    - Tôi muốn biết thông tin giảm giá Cây Cà Chua Bạch Tuộc được không 
+    - Về mặt hàng Cây Cà Chua Bạch Tuộc có giảm giá gì không?
+    - khi mua Cây Cà Chua Bạch Tuộc nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Cây Cà Chua Bạch Tuộc được không 
+    - khi mua Cây Cà Chua Bạch Tuộc thì giảm bao nhiêu %
+    - Hôm nay Rau Cải Kale có giảm giá không nhỉ 
+    - Rau Cải Kale gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Rau Cải Kale không
+    - Nếu mua Rau Cải Kale thì có được giảm giá chứ
+    - tôi muốn mua Rau Cải Kale thế có được giảm giá không 
+    - giảm giá gì cho Rau Cải Kale không
+    - Hàng Rau Cải Kale bên mình có giải giám chút nào không
+    - giảm giá Rau Cải Kale đi
+    - discount với Rau Cải Kale không?
+    - khuyến mãi gì với Rau Cải Kale không vậy
+    - Tôi muốn biết thông tin giảm giá Rau Cải Kale được không 
+    - Về mặt hàng Rau Cải Kale có giảm giá gì không?
+    - khi mua Rau Cải Kale nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Rau Cải Kale được không 
+    - khi mua Rau Cải Kale thì giảm bao nhiêu %
+    - Hôm nay Rau Cải Ngọt có giảm giá không nhỉ 
+    - Rau Cải Ngọt gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Rau Cải Ngọt không
+    - Nếu mua Rau Cải Ngọt thì có được giảm giá chứ
+    - tôi muốn mua Rau Cải Ngọt thế có được giảm giá không 
+    - giảm giá gì cho Rau Cải Ngọt không
+    - Hàng Rau Cải Ngọt bên mình có giải giám chút nào không
+    - giảm giá Rau Cải Ngọt đi
+    - discount với Rau Cải Ngọt không?
+    - khuyến mãi gì với Rau Cải Ngọt không vậy
+    - Tôi muốn biết thông tin giảm giá Rau Cải Ngọt được không 
+    - Về mặt hàng Rau Cải Ngọt có giảm giá gì không?
+    - khi mua Rau Cải Ngọt nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Rau Cải Ngọt được không 
+    - khi mua Rau Cải Ngọt thì giảm bao nhiêu %
+    - Hôm nay Rau Càng Cua có giảm giá không nhỉ 
+    - Rau Càng Cua gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Rau Càng Cua không
+    - Nếu mua Rau Càng Cua thì có được giảm giá chứ
+    - tôi muốn mua Rau Càng Cua thế có được giảm giá không 
+    - giảm giá gì cho Rau Càng Cua không
+    - Hàng Rau Càng Cua bên mình có giải giám chút nào không
+    - giảm giá Rau Càng Cua đi
+    - discount với Rau Càng Cua không?
+    - khuyến mãi gì với Rau Càng Cua không vậy
+    - Tôi muốn biết thông tin giảm giá Rau Càng Cua được không 
+    - Về mặt hàng Rau Càng Cua có giảm giá gì không?
+    - khi mua Rau Càng Cua nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Rau Càng Cua được không 
+    - khi mua Rau Càng Cua thì giảm bao nhiêu %
+    - Hôm nay Rau Dền Đỏ có giảm giá không nhỉ 
+    - Rau Dền Đỏ gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Rau Dền Đỏ không
+    - Nếu mua Rau Dền Đỏ thì có được giảm giá chứ
+    - tôi muốn mua Rau Dền Đỏ thế có được giảm giá không 
+    - giảm giá gì cho Rau Dền Đỏ không
+    - Hàng Rau Dền Đỏ bên mình có giải giám chút nào không
+    - giảm giá Rau Dền Đỏ đi
+    - discount với Rau Dền Đỏ không?
+    - khuyến mãi gì với Rau Dền Đỏ không vậy
+    - Tôi muốn biết thông tin giảm giá Rau Dền Đỏ được không 
+    - Về mặt hàng Rau Dền Đỏ có giảm giá gì không?
+    - khi mua Rau Dền Đỏ nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Rau Dền Đỏ được không 
+    - khi mua Rau Dền Đỏ thì giảm bao nhiêu %
+    - Hôm nay Rau Má có giảm giá không nhỉ 
+    - Rau Má gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Rau Má không
+    - Nếu mua Rau Má thì có được giảm giá chứ
+    - tôi muốn mua Rau Má thế có được giảm giá không 
+    - giảm giá gì cho Rau Má không
+    - Hàng Rau Má bên mình có giải giám chút nào không
+    - giảm giá Rau Má đi
+    - discount với Rau Má không?
+    - khuyến mãi gì với Rau Má không vậy
+    - Tôi muốn biết thông tin giảm giá Rau Má được không 
+    - Về mặt hàng Rau Má có giảm giá gì không?
+    - khi mua Rau Má nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Rau Má được không 
+    - khi mua Rau Má thì giảm bao nhiêu %
+    - Hôm nay Rau Mồng Tơi Lá To có giảm giá không nhỉ 
+    - Rau Mồng Tơi Lá To gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Rau Mồng Tơi Lá To không
+    - Nếu mua Rau Mồng Tơi Lá To thì có được giảm giá chứ
+    - tôi muốn mua Rau Mồng Tơi Lá To thế có được giảm giá không 
+    - giảm giá gì cho Rau Mồng Tơi Lá To không
+    - Hàng Rau Mồng Tơi Lá To bên mình có giải giám chút nào không
+    - giảm giá Rau Mồng Tơi Lá To đi
+    - discount với Rau Mồng Tơi Lá To không?
+    - khuyến mãi gì với Rau Mồng Tơi Lá To không vậy
+    - Tôi muốn biết thông tin giảm giá Rau Mồng Tơi Lá To được không 
+    - Về mặt hàng Rau Mồng Tơi Lá To có giảm giá gì không?
+    - khi mua Rau Mồng Tơi Lá To nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Rau Mồng Tơi Lá To được không 
+    - khi mua Rau Mồng Tơi Lá To thì giảm bao nhiêu %
+    - Hôm nay Rau Muống có giảm giá không nhỉ 
+    - Rau Muống gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Rau Muống không
+    - Nếu mua Rau Muống thì có được giảm giá chứ
+    - tôi muốn mua Rau Muống thế có được giảm giá không 
+    - giảm giá gì cho Rau Muống không
+    - Hàng Rau Muống bên mình có giải giám chút nào không
+    - giảm giá Rau Muống đi
+    - discount với Rau Muống không?
+    - khuyến mãi gì với Rau Muống không vậy
+    - Tôi muốn biết thông tin giảm giá Rau Muống được không 
+    - Về mặt hàng Rau Muống có giảm giá gì không?
+    - khi mua Rau Muống nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Rau Muống được không 
+    - khi mua Rau Muống thì giảm bao nhiêu %
+    - Hôm nay Rau Ngò Rí có giảm giá không nhỉ 
+    - Rau Ngò Rí gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Rau Ngò Rí không
+    - Nếu mua Rau Ngò Rí thì có được giảm giá chứ
+    - tôi muốn mua Rau Ngò Rí thế có được giảm giá không 
+    - giảm giá gì cho Rau Ngò Rí không
+    - Hàng Rau Ngò Rí bên mình có giải giám chút nào không
+    - giảm giá Rau Ngò Rí đi
+    - discount với Rau Ngò Rí không?
+    - khuyến mãi gì với Rau Ngò Rí không vậy
+    - Tôi muốn biết thông tin giảm giá Rau Ngò Rí được không 
+    - Về mặt hàng Rau Ngò Rí có giảm giá gì không?
+    - khi mua Rau Ngò Rí nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Rau Ngò Rí được không 
+    - khi mua Rau Ngò Rí thì giảm bao nhiêu %

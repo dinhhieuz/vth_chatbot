@@ -1,0 +1,339 @@
+#!----------------------------- " TƯ VẤN CỦ QUẢ " 
+version: "2.0"
+nlu:
+#-> Thông tin tư vấn CỦ QUẢ
+- intent: ask_tuvan_cuqua
+  examples: |
+    - sản phẩm cây củ quả bên mình như nào ấy nhỉ
+    - Tôi muốn biết thông tin về cây củ quả
+    - cây củ quả có còn bán không
+    - Hiện tại bên mình có cây củ quả không
+    - Bạn cho tôi biết thêm về cây củ quả đi
+    - cây củ quả thì có bán không
+    - cây củ quả bên mình bán như nào ấy nhỉ?
+    - cho mình hỏi ni chút về cây củ với?
+    - tôi muốn biết các cây củ quả bên bạn
+    - tư vấn cây củ quả cho mình đi
+    - tôi muốn tư vấn cây củ quả , oke?
+    - tư vấn cây củ quả đi
+    - shop có đó không, tư vấn cây củ quả cho mình với
+    - mình chưa bt nên mua cây củ quả như nào bạn giúp mình với
+    - bạn ơi, bạn giúp mình tư vấn cây củ quả được không, mình không biết nên mua như nào cả
+    - tôi muốn được tư vấn cây củ quả
+    - tôi muốn bạn tư vấn cây củ quả cho tôi
+    - tôi có thể được tư vấn cây củ quả chứ
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn cây củ quả
+    - tư vấn cây củ quả cho tôi được chứ
+    - Mình đang phân vân k biết nên mua cây củ quả như nào, bạn có thể tư vấn giúp mình được không
+    - bên mình có hỗ trợ tư vấn cây củ quả không
+    - Bạn có thể tư vấn sản phẩm cây củ quả bên mình cho mình được không
+    - bạn gì đó ơi, bạn giúp mình tư vấn cây củ quả với
+    - bạn ơi, mình muốn mua sản phẩm cây củ quả bên bạn nhưng không biết nó như nào
+    - Shop mình có bán cây củ quả không?
+    - Shop còn bán cây củ quả không nhỉ
+    - Shop còn hàng cây củ quả không
+
+
+#-> Tư vấn chi tiết cho CỦ QUẢ
+- intent: ask_tuvan_cuqua_details
+  examples: |
+    - sản phẩm hạt giống bí đỏ hồ lô bên mình như nào ấy nhỉ
+    - sản phẩm bí đỏ hồ lô bên mình như nào ấy nhỉ
+    - sản phẩm hạt giống dưa leo bên mình như nào ấy nhỉ
+    - sản phẩm dưa leo bên mình như nào ấy nhỉ
+    - sản phẩm hạt giống khổ qua bên mình như nào ấy nhỉ
+    - sản phẩm khổ qua bên mình như nào ấy nhỉ
+    - sản phẩm hạt giống mướp ngọt bên mình như nào ấy nhỉ
+    - sản phẩm mướp ngọt bên mình như nào ấy nhỉ
+    - sản phẩm hạt giống ớt hiểm bên mình như nào ấy nhỉ
+    - sản phẩm ớt hiểm bên mình như nào ấy nhỉ
+    - Tôi muốn biết thông tin về hạt giống bí đỏ hồ lô
+    - Tôi muốn biết thông tin về bí đỏ hồ lô
+    - Tôi muốn biết thông tin về hạt giống dưa leo
+    - Tôi muốn biết thông tin về dưa leo
+    - Tôi muốn biết thông tin về hạt giống khổ qua
+    - Tôi muốn biết thông tin về khổ qua
+    - Tôi muốn biết thông tin về hạt giống mướp ngọt
+    - Tôi muốn biết thông tin về mướp ngọt
+    - Tôi muốn biết thông tin về hạt giống ớt hiểm
+    - Tôi muốn biết thông tin về ớt hiểm
+    - hạt giống bí đỏ hồ lô có còn bán không
+    - bí đỏ hồ lô có còn bán không
+    - hạt giống dưa leo có còn bán không
+    - dưa leo có còn bán không
+    - hạt giống khổ qua có còn bán không
+    - khổ qua có còn bán không
+    - hạt giống mướp ngọt có còn bán không
+    - mướp ngọt có còn bán không
+    - hạt giống ớt hiểm có còn bán không
+    - ớt hiểm có còn bán không
+    - Hiện tại bên mình có hạt giống bí đỏ hồ lô không
+    - Hiện tại bên mình có bí đỏ hồ lô không
+    - Hiện tại bên mình có hạt giống dưa leo không
+    - Hiện tại bên mình có dưa leo không
+    - Hiện tại bên mình có hạt giống khổ qua không
+    - Hiện tại bên mình có khổ qua không
+    - Hiện tại bên mình có hạt giống mướp ngọt không
+    - Hiện tại bên mình có mướp ngọt không
+    - Hiện tại bên mình có hạt giống ớt hiểm không
+    - Hiện tại bên mình có ớt hiểm không
+    - Bạn cho tôi biết thêm về hạt giống bí đỏ hồ lô đi
+    - Bạn cho tôi biết thêm về bí đỏ hồ lô đi
+    - Bạn cho tôi biết thêm về hạt giống dưa leo đi
+    - Bạn cho tôi biết thêm về dưa leo đi
+    - Bạn cho tôi biết thêm về hạt giống khổ qua đi
+    - Bạn cho tôi biết thêm về khổ qua đi
+    - Bạn cho tôi biết thêm về hạt giống mướp ngọt đi
+    - Bạn cho tôi biết thêm về mướp ngọt đi
+    - Bạn cho tôi biết thêm về hạt giống ớt hiểm đi
+    - Bạn cho tôi biết thêm về ớt hiểm đi
+    - hạt giống bí đỏ hồ lô thì có bán không
+    - bí đỏ hồ lô thì có bán không
+    - hạt giống dưa leo thì có bán không
+    - dưa leo thì có bán không
+    - hạt giống khổ qua thì có bán không
+    - khổ qua thì có bán không
+    - hạt giống mướp ngọt thì có bán không
+    - mướp ngọt thì có bán không
+    - hạt giống ớt hiểm thì có bán không
+    - ớt hiểm thì có bán không
+    - hạt giống bí đỏ hồ lô bên mình bán như nào ấy nhỉ?
+    - bí đỏ hồ lô bên mình bán như nào ấy nhỉ?
+    - hạt giống dưa leo bên mình bán như nào ấy nhỉ?
+    - dưa leo bên mình bán như nào ấy nhỉ?
+    - hạt giống khổ qua bên mình bán như nào ấy nhỉ?
+    - khổ qua bên mình bán như nào ấy nhỉ?
+    - hạt giống mướp ngọt bên mình bán như nào ấy nhỉ?
+    - mướp ngọt bên mình bán như nào ấy nhỉ?
+    - hạt giống ớt hiểm bên mình bán như nào ấy nhỉ?
+    - ớt hiểm bên mình bán như nào ấy nhỉ?
+    - cho mình hỏi ni chút về hạt giống bí đỏ hồ lô với? 
+    - cho mình hỏi ni chút về bí đỏ hồ lô với? 
+    - cho mình hỏi ni chút về hạt giống dưa leo với? 
+    - cho mình hỏi ni chút về dưa leo với? 
+    - cho mình hỏi ni chút về hạt giống khổ qua với? 
+    - cho mình hỏi ni chút về khổ qua với? 
+    - cho mình hỏi ni chút về hạt giống mướp ngọt với? 
+    - cho mình hỏi ni chút về mướp ngọt với? 
+    - cho mình hỏi ni chút về hạt giống ớt hiểm với? 
+    - cho mình hỏi ni chút về ớt hiểm với? 
+    - tôi muốn biết các hạt giống bí đỏ hồ lô bên bạn
+    - tôi muốn biết các bí đỏ hồ lô bên bạn
+    - tôi muốn biết các hạt giống dưa leo bên bạn
+    - tôi muốn biết các dưa leo bên bạn
+    - tôi muốn biết các hạt giống khổ qua bên bạn
+    - tôi muốn biết các khổ qua bên bạn
+    - tôi muốn biết các hạt giống mướp ngọt bên bạn
+    - tôi muốn biết các mướp ngọt bên bạn
+    - tôi muốn biết các hạt giống ớt hiểm bên bạn
+    - tôi muốn biết các ớt hiểm bên bạn
+    - tư vấn hạt giống bí đỏ hồ lô cho mình đi
+    - tư vấn bí đỏ hồ lô cho mình đi
+    - tư vấn hạt giống dưa leo cho mình đi
+    - tư vấn dưa leo cho mình đi
+    - tư vấn hạt giống khổ qua cho mình đi
+    - tư vấn khổ qua cho mình đi
+    - tư vấn hạt giống mướp ngọt cho mình đi
+    - tư vấn mướp ngọt cho mình đi
+    - tư vấn hạt giống ớt hiểm cho mình đi
+    - tư vấn ớt hiểm cho mình đi
+    - tôi muốn tư vấn hạt giống bí đỏ hồ lô , oke?
+    - tôi muốn tư vấn bí đỏ hồ lô , oke?
+    - tôi muốn tư vấn hạt giống dưa leo , oke?
+    - tôi muốn tư vấn dưa leo , oke?
+    - tôi muốn tư vấn hạt giống khổ qua , oke?
+    - tôi muốn tư vấn khổ qua , oke?
+    - tôi muốn tư vấn hạt giống mướp ngọt , oke?
+    - tôi muốn tư vấn mướp ngọt , oke?
+    - tôi muốn tư vấn hạt giống ớt hiểm , oke?
+    - tôi muốn tư vấn ớt hiểm , oke?
+    - tư vấn hạt giống bí đỏ hồ lô đi
+    - tư vấn bí đỏ hồ lô đi
+    - tư vấn hạt giống dưa leo đi
+    - tư vấn dưa leo đi
+    - tư vấn hạt giống khổ qua đi
+    - tư vấn khổ qua đi
+    - tư vấn hạt giống mướp ngọt đi
+    - tư vấn mướp ngọt đi
+    - tư vấn hạt giống ớt hiểm đi
+    - tư vấn ớt hiểm đi
+    - shop có đó không, tư vấn hạt giống bí đỏ hồ lô cho mình với
+    - shop có đó không, tư vấn bí đỏ hồ lô cho mình với
+    - shop có đó không, tư vấn hạt giống dưa leo cho mình với
+    - shop có đó không, tư vấn dưa leo cho mình với
+    - shop có đó không, tư vấn hạt giống khổ qua cho mình với
+    - shop có đó không, tư vấn khổ qua cho mình với
+    - shop có đó không, tư vấn hạt giống mướp ngọt cho mình với
+    - shop có đó không, tư vấn mướp ngọt cho mình với
+    - shop có đó không, tư vấn hạt giống ớt hiểm cho mình với
+    - shop có đó không, tư vấn ớt hiểm cho mình với
+    - mình chưa bt nên mua hạt giống bí đỏ hồ lô như nào bạn giúp mình với
+    - mình chưa bt nên mua bí đỏ hồ lô như nào bạn giúp mình với
+    - mình chưa bt nên mua hạt giống dưa leo như nào bạn giúp mình với
+    - mình chưa bt nên mua dưa leo như nào bạn giúp mình với
+    - mình chưa bt nên mua hạt giống khổ qua như nào bạn giúp mình với
+    - mình chưa bt nên mua khổ qua như nào bạn giúp mình với
+    - mình chưa bt nên mua hạt giống mướp ngọt như nào bạn giúp mình với
+    - mình chưa bt nên mua mướp ngọt như nào bạn giúp mình với
+    - mình chưa bt nên mua hạt giống ớt hiểm như nào bạn giúp mình với
+    - mình chưa bt nên mua ớt hiểm như nào bạn giúp mình với
+    - bạn ơi, bạn giúp mình tư vấn hạt giống bí đỏ hồ lô được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn bí đỏ hồ lô được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn hạt giống dưa leo được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn dưa leo được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn hạt giống khổ qua được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn khổ qua được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn hạt giống mướp ngọt được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn mướp ngọt được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn hạt giống ớt hiểm được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn ớt hiểm được không, mình không biết nên mua như nào cả
+    - tôi muốn được tư vấn hạt giống bí đỏ hồ lô
+    - tôi muốn được tư vấn bí đỏ hồ lô
+    - tôi muốn được tư vấn hạt giống dưa leo
+    - tôi muốn được tư vấn dưa leo
+    - tôi muốn được tư vấn hạt giống khổ qua
+    - tôi muốn được tư vấn khổ qua
+    - tôi muốn được tư vấn hạt giống mướp ngọt
+    - tôi muốn được tư vấn mướp ngọt
+    - tôi muốn được tư vấn hạt giống ớt hiểm
+    - tôi muốn được tư vấn ớt hiểm
+    - tôi muốn bạn tư vấn hạt giống bí đỏ hồ lô cho tôi
+    - tôi muốn bạn tư vấn bí đỏ hồ lô cho tôi
+    - tôi muốn bạn tư vấn hạt giống dưa leo cho tôi
+    - tôi muốn bạn tư vấn dưa leo cho tôi
+    - tôi muốn bạn tư vấn hạt giống khổ qua cho tôi
+    - tôi muốn bạn tư vấn khổ qua cho tôi
+    - tôi muốn bạn tư vấn hạt giống mướp ngọt cho tôi
+    - tôi muốn bạn tư vấn mướp ngọt cho tôi
+    - tôi muốn bạn tư vấn hạt giống ớt hiểm cho tôi
+    - tôi muốn bạn tư vấn ớt hiểm cho tôi
+    - tôi có thể được tư vấn hạt giống bí đỏ hồ lô chứ
+    - tôi có thể được tư vấn bí đỏ hồ lô chứ
+    - tôi có thể được tư vấn hạt giống dưa leo chứ
+    - tôi có thể được tư vấn dưa leo chứ
+    - tôi có thể được tư vấn hạt giống khổ qua chứ
+    - tôi có thể được tư vấn khổ qua chứ
+    - tôi có thể được tư vấn hạt giống mướp ngọt chứ
+    - tôi có thể được tư vấn mướp ngọt chứ
+    - tôi có thể được tư vấn hạt giống ớt hiểm chứ
+    - tôi có thể được tư vấn ớt hiểm chứ
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn hạt giống bí đỏ hồ lô
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn bí đỏ hồ lô
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn hạt giống dưa leo
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn dưa leo
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn hạt giống khổ qua
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn khổ qua
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn hạt giống mướp ngọt
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn mướp ngọt
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn hạt giống ớt hiểm
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn ớt hiểm
+    - tư vấn hạt giống bí đỏ hồ lô cho tôi được chứ
+    - tư vấn bí đỏ hồ lô cho tôi được chứ
+    - tư vấn hạt giống dưa leo cho tôi được chứ
+    - tư vấn dưa leo cho tôi được chứ
+    - tư vấn hạt giống khổ qua cho tôi được chứ
+    - tư vấn khổ qua cho tôi được chứ
+    - tư vấn hạt giống mướp ngọt cho tôi được chứ
+    - tư vấn mướp ngọt cho tôi được chứ
+    - tư vấn hạt giống ớt hiểm cho tôi được chứ
+    - tư vấn ớt hiểm cho tôi được chứ
+    - Mình đang phân vân k biết nên mua hạt giống bí đỏ hồ lô như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua bí đỏ hồ lô như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua hạt giống dưa leo như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua dưa leo như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua hạt giống khổ qua như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua khổ qua như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua hạt giống mướp ngọt như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua mướp ngọt như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua hạt giống ớt hiểm như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua ớt hiểm như nào, bạn có thể tư vấn giúp mình được không
+    - Bạn có thể tư vấn sản phẩm hạt giống bí đỏ hồ lô bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm bí đỏ hồ lô bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm hạt giống dưa leo bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm dưa leo bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm hạt giống khổ qua bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm khổ qua bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm hạt giống mướp ngọt bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm mướp ngọt bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm hạt giống ớt hiểm bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm ớt hiểm bên mình cho mình được không
+    - bạn gì đó ơi, bạn giúp mình tư vấn hạt giống bí đỏ hồ lô với
+    - bạn gì đó ơi, bạn giúp mình tư vấn bí đỏ hồ lô với
+    - bạn gì đó ơi, bạn giúp mình tư vấn hạt giống dưa leo với
+    - bạn gì đó ơi, bạn giúp mình tư vấn dưa leo với
+    - bạn gì đó ơi, bạn giúp mình tư vấn hạt giống khổ qua với
+    - bạn gì đó ơi, bạn giúp mình tư vấn khổ qua với
+    - bạn gì đó ơi, bạn giúp mình tư vấn hạt giống mướp ngọt với
+    - bạn gì đó ơi, bạn giúp mình tư vấn mướp ngọt với
+    - bạn gì đó ơi, bạn giúp mình tư vấn hạt giống ớt hiểm với
+    - bạn gì đó ơi, bạn giúp mình tư vấn ớt hiểm với
+    - bạn ơi, mình muốn mua sản phẩm hạt giống bí đỏ hồ lô bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm bí đỏ hồ lô bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm hạt giống dưa leo bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm dưa leo bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm hạt giống khổ qua bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm khổ qua bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm hạt giống mướp ngọt bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm mướp ngọt bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm hạt giống ớt hiểm bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm ớt hiểm bên bạn nhưng không biết nó như nào
+    - Shop mình có bán hạt giống bí đỏ hồ lô không?
+    - Shop mình có bán bí đỏ hồ lô không?
+    - Shop mình có bán hạt giống dưa leo không?
+    - Shop mình có bán dưa leo không?
+    - Shop mình có bán hạt giống khổ qua không?
+    - Shop mình có bán khổ qua không?
+    - Shop mình có bán hạt giống mướp ngọt không?
+    - Shop mình có bán mướp ngọt không?
+    - Shop mình có bán hạt giống ớt hiểm không?
+    - Shop mình có bán ớt hiểm không?
+    - Shop còn bán hạt giống bí đỏ hồ lô không nhỉ
+    - Shop còn bán bí đỏ hồ lô không nhỉ
+    - Shop còn bán hạt giống dưa leo không nhỉ
+    - Shop còn bán dưa leo không nhỉ
+    - Shop còn bán hạt giống khổ qua không nhỉ
+    - Shop còn bán khổ qua không nhỉ
+    - Shop còn bán hạt giống mướp ngọt không nhỉ
+    - Shop còn bán mướp ngọt không nhỉ
+    - Shop còn bán hạt giống ớt hiểm không nhỉ
+    - Shop còn bán ớt hiểm không nhỉ
+    - Shop còn hàng hạt giống bí đỏ hồ lô không
+    - Shop còn hàng bí đỏ hồ lô không
+    - Shop còn hàng hạt giống dưa leo không
+    - Shop còn hàng dưa leo không
+    - Shop còn hàng hạt giống khổ qua không
+    - Shop còn hàng khổ qua không
+    - Shop còn hàng hạt giống mướp ngọt không
+    - Shop còn hàng mướp ngọt không
+    - Shop còn hàng hạt giống ớt hiểm không
+    - Shop còn hàng ớt hiểm không
+    - Mình muốn mua hạt giống bí đỏ hồ lô nhưng không biết nó như nào
+    - Mình muốn mua bí đỏ hồ lô nhưng không biết nó như nào
+    - Mình muốn mua hạt giống dưa leo nhưng không biết nó như nào
+    - Mình muốn mua dưa leo nhưng không biết nó như nào
+    - Mình muốn mua hạt giống khổ qua nhưng không biết nó như nào
+    - Mình muốn mua khổ qua nhưng không biết nó như nào
+    - Mình muốn mua hạt giống mướp ngọt nhưng không biết nó như nào
+    - Mình muốn mua mướp ngọt nhưng không biết nó như nào
+    - Mình muốn mua hạt giống ớt hiểm nhưng không biết nó như nào
+    - Mình muốn mua ớt hiểm nhưng không biết nó như nào
+    - Bên mình còn bán hạt giống bí đỏ hồ lô không ta
+    - Bên mình còn bán bí đỏ hồ lô không ta
+    - Bên mình còn bán hạt giống dưa leo không ta
+    - Bên mình còn bán dưa leo không ta
+    - Bên mình còn bán hạt giống khổ qua không ta
+    - Bên mình còn bán khổ qua không ta
+    - Bên mình còn bán hạt giống mướp ngọt không ta
+    - Bên mình còn bán mướp ngọt không ta
+    - Bên mình còn bán hạt giống ớt hiểm không ta
+    - Bên mình còn bán ớt hiểm không ta
+    - Cho tôi biết thêm về hạt giống bí đỏ hồ lô đi
+    - Cho tôi biết thêm về bí đỏ hồ lô đi
+    - Cho tôi biết thêm về hạt giống dưa leo đi
+    - Cho tôi biết thêm về dưa leo đi
+    - Cho tôi biết thêm về hạt giống khổ qua đi
+    - Cho tôi biết thêm về khổ qua đi
+    - Cho tôi biết thêm về hạt giống mướp ngọt đi
+    - Cho tôi biết thêm về mướp ngọt đi
+    - Cho tôi biết thêm về hạt giống ớt hiểm đi
+    - Cho tôi biết thêm về ớt hiểm đi

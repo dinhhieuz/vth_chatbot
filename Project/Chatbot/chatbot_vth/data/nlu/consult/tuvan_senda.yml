@@ -1,0 +1,460 @@
+#!----------------------------- " TƯ VẤN SEN ĐÁ " 
+version: "2.0"
+nlu:
+#-> Thông tin tư vấn SEN ĐÁ
+- intent: ask_tuvan_senda
+  examples: |
+    - sản phẩm sen đá bên mình như nào ấy nhỉ
+    - Tôi muốn biết thông tin về sen đá
+    - sen đá có còn bán không
+    - Hiện tại bên mình có sen đá không
+    - Bạn cho tôi biết thêm về sen đá đi
+    - sen đá thì có bán không
+    - sen đá bên mình bán như nào ấy nhỉ?
+    - cho mình hỏi ni chút về sen đá với?
+    - tôi muốn biết các sen đá bên bạn
+    - tư vấn sen đá cho mình đi
+    - tôi muốn tư vấn sen đá , oke?
+    - tư vấn sen đá đi
+    - shop có đó không, tư vấn sen đá cho mình với
+    - mình chưa bt nên mua sen đá như nào bạn giúp mình với
+    - bạn ơi, bạn giúp mình tư vấn sen đá được không, mình không biết nên mua như nào cả
+    - tôi muốn được tư vấn sen đá
+    - tôi muốn bạn tư vấn sen đá cho tôi
+    - tôi có thể được tư vấn sen đá chứ
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn sen đá
+    - tư vấn sen đá cho tôi được chứ
+    - Mình đang phân vân k biết nên mua sen đá như nào, bạn có thể tư vấn giúp mình được không
+    - bên mình có hỗ trợ tư vấn sen đá không
+    - Bạn có thể tư vấn sản phẩm sen đá bên mình cho mình được không
+    - bạn gì đó ơi, bạn giúp mình tư vấn sen đá với
+    - bạn ơi, mình muốn mua sản phẩm sen đá bên bạn nhưng không biết nó như nào
+    - Shop mình có bán sen đá không?
+    - Shop còn bán sen đá không nhỉ
+    - Shop còn hàng sen đá không
+
+
+
+#-> Tư vấn chi tiết cho SEN ĐÁ
+- intent: ask_tuvan_senda_details
+  examples: |
+    - sản phẩm sen đá cánh bướm bên mình như nào ấy nhỉ
+    - sản phẩm cánh bướm bên mình như nào ấy nhỉ
+    - sản phẩm sen đá chuỗi ngọc bên mình như nào ấy nhỉ
+    - sản phẩm chuỗi ngọc bên mình như nào ấy nhỉ
+    - sản phẩm sen đá đất xanh bên mình như nào ấy nhỉ
+    - sản phẩm đất xanh bên mình như nào ấy nhỉ
+    - sản phẩm sen đá kim cương bên mình như nào ấy nhỉ
+    - sản phẩm kim cương bên mình như nào ấy nhỉ
+    - sản phẩm sen đá móng rồng sọc trắng bên mình như nào ấy nhỉ
+    - sản phẩm móng rồng sọc trắng bên mình như nào ấy nhỉ
+    - sản phẩm sen đá ngọc bích bên mình như nào ấy nhỉ
+    - sản phẩm ngọc bích bên mình như nào ấy nhỉ
+    - sản phẩm sen đá nhật nguyệt bên mình như nào ấy nhỉ
+    - sản phẩm nhật nguyệt bên mình như nào ấy nhỉ
+    - Tôi muốn biết thông tin về sen đá cánh bướm
+    - Tôi muốn biết thông tin về cánh bướm
+    - Tôi muốn biết thông tin về sen đá chuỗi ngọc
+    - Tôi muốn biết thông tin về chuỗi ngọc
+    - Tôi muốn biết thông tin về sen đá đất xanh
+    - Tôi muốn biết thông tin về đất xanh
+    - Tôi muốn biết thông tin về sen đá kim cương
+    - Tôi muốn biết thông tin về kim cương
+    - Tôi muốn biết thông tin về sen đá móng rồng sọc trắng
+    - Tôi muốn biết thông tin về móng rồng sọc trắng
+    - Tôi muốn biết thông tin về sen đá ngọc bích
+    - Tôi muốn biết thông tin về ngọc bích
+    - Tôi muốn biết thông tin về sen đá nhật nguyệt
+    - Tôi muốn biết thông tin về nhật nguyệt
+    - sen đá cánh bướm có còn bán không
+    - cánh bướm có còn bán không
+    - sen đá chuỗi ngọc có còn bán không
+    - chuỗi ngọc có còn bán không
+    - sen đá đất xanh có còn bán không
+    - đất xanh có còn bán không
+    - sen đá kim cương có còn bán không
+    - kim cương có còn bán không
+    - sen đá móng rồng sọc trắng có còn bán không
+    - móng rồng sọc trắng có còn bán không
+    - sen đá ngọc bích có còn bán không
+    - ngọc bích có còn bán không
+    - sen đá nhật nguyệt có còn bán không
+    - nhật nguyệt có còn bán không
+    - Hiện tại bên mình có sen đá cánh bướm không
+    - Hiện tại bên mình có cánh bướm không
+    - Hiện tại bên mình có sen đá chuỗi ngọc không
+    - Hiện tại bên mình có chuỗi ngọc không
+    - Hiện tại bên mình có sen đá đất xanh không
+    - Hiện tại bên mình có đất xanh không
+    - Hiện tại bên mình có sen đá kim cương không
+    - Hiện tại bên mình có kim cương không
+    - Hiện tại bên mình có sen đá móng rồng sọc trắng không
+    - Hiện tại bên mình có móng rồng sọc trắng không
+    - Hiện tại bên mình có sen đá ngọc bích không
+    - Hiện tại bên mình có ngọc bích không
+    - Hiện tại bên mình có sen đá nhật nguyệt không
+    - Hiện tại bên mình có nhật nguyệt không
+    - Bạn cho tôi biết thêm về sen đá cánh bướm đi
+    - Bạn cho tôi biết thêm về cánh bướm đi
+    - Bạn cho tôi biết thêm về sen đá chuỗi ngọc đi
+    - Bạn cho tôi biết thêm về chuỗi ngọc đi
+    - Bạn cho tôi biết thêm về sen đá đất xanh đi
+    - Bạn cho tôi biết thêm về đất xanh đi
+    - Bạn cho tôi biết thêm về sen đá kim cương đi
+    - Bạn cho tôi biết thêm về kim cương đi
+    - Bạn cho tôi biết thêm về sen đá móng rồng sọc trắng đi
+    - Bạn cho tôi biết thêm về móng rồng sọc trắng đi
+    - Bạn cho tôi biết thêm về sen đá ngọc bích đi
+    - Bạn cho tôi biết thêm về ngọc bích đi
+    - Bạn cho tôi biết thêm về sen đá nhật nguyệt đi
+    - Bạn cho tôi biết thêm về nhật nguyệt đi
+    - sen đá cánh bướm thì có bán không
+    - cánh bướm thì có bán không
+    - sen đá chuỗi ngọc thì có bán không
+    - chuỗi ngọc thì có bán không
+    - sen đá đất xanh thì có bán không
+    - đất xanh thì có bán không
+    - sen đá kim cương thì có bán không
+    - kim cương thì có bán không
+    - sen đá móng rồng sọc trắng thì có bán không
+    - móng rồng sọc trắng thì có bán không
+    - sen đá ngọc bích thì có bán không
+    - ngọc bích thì có bán không
+    - sen đá nhật nguyệt thì có bán không
+    - nhật nguyệt thì có bán không
+    - sen đá cánh bướm bên mình bán như nào ấy nhỉ?
+    - cánh bướm bên mình bán như nào ấy nhỉ?
+    - sen đá chuỗi ngọc bên mình bán như nào ấy nhỉ?
+    - chuỗi ngọc bên mình bán như nào ấy nhỉ?
+    - sen đá đất xanh bên mình bán như nào ấy nhỉ?
+    - đất xanh bên mình bán như nào ấy nhỉ?
+    - sen đá kim cương bên mình bán như nào ấy nhỉ?
+    - kim cương bên mình bán như nào ấy nhỉ?
+    - sen đá móng rồng sọc trắng bên mình bán như nào ấy nhỉ?
+    - móng rồng sọc trắng bên mình bán như nào ấy nhỉ?
+    - sen đá ngọc bích bên mình bán như nào ấy nhỉ?
+    - ngọc bích bên mình bán như nào ấy nhỉ?
+    - sen đá nhật nguyệt bên mình bán như nào ấy nhỉ?
+    - nhật nguyệt bên mình bán như nào ấy nhỉ?
+    - cho mình hỏi ni chút về sen đá cánh bướm với? 
+    - cho mình hỏi ni chút về cánh bướm với? 
+    - cho mình hỏi ni chút về sen đá chuỗi ngọc với? 
+    - cho mình hỏi ni chút về chuỗi ngọc với? 
+    - cho mình hỏi ni chút về sen đá đất xanh với? 
+    - cho mình hỏi ni chút về đất xanh với? 
+    - cho mình hỏi ni chút về sen đá kim cương với? 
+    - cho mình hỏi ni chút về kim cương với? 
+    - cho mình hỏi ni chút về sen đá móng rồng sọc trắng với? 
+    - cho mình hỏi ni chút về móng rồng sọc trắng với? 
+    - cho mình hỏi ni chút về sen đá ngọc bích với? 
+    - cho mình hỏi ni chút về ngọc bích với? 
+    - cho mình hỏi ni chút về sen đá nhật nguyệt với? 
+    - cho mình hỏi ni chút về nhật nguyệt với? 
+    - tôi muốn biết các sen đá cánh bướm bên bạn
+    - tôi muốn biết các cánh bướm bên bạn
+    - tôi muốn biết các sen đá chuỗi ngọc bên bạn
+    - tôi muốn biết các chuỗi ngọc bên bạn
+    - tôi muốn biết các sen đá đất xanh bên bạn
+    - tôi muốn biết các đất xanh bên bạn
+    - tôi muốn biết các sen đá kim cương bên bạn
+    - tôi muốn biết các kim cương bên bạn
+    - tôi muốn biết các sen đá móng rồng sọc trắng bên bạn
+    - tôi muốn biết các móng rồng sọc trắng bên bạn
+    - tôi muốn biết các sen đá ngọc bích bên bạn
+    - tôi muốn biết các ngọc bích bên bạn
+    - tôi muốn biết các sen đá nhật nguyệt bên bạn
+    - tôi muốn biết các nhật nguyệt bên bạn
+    - tư vấn sen đá cánh bướm cho mình đi
+    - tư vấn cánh bướm cho mình đi
+    - tư vấn sen đá chuỗi ngọc cho mình đi
+    - tư vấn chuỗi ngọc cho mình đi
+    - tư vấn sen đá đất xanh cho mình đi
+    - tư vấn đất xanh cho mình đi
+    - tư vấn sen đá kim cương cho mình đi
+    - tư vấn kim cương cho mình đi
+    - tư vấn sen đá móng rồng sọc trắng cho mình đi
+    - tư vấn móng rồng sọc trắng cho mình đi
+    - tư vấn sen đá ngọc bích cho mình đi
+    - tư vấn ngọc bích cho mình đi
+    - tư vấn sen đá nhật nguyệt cho mình đi
+    - tư vấn nhật nguyệt cho mình đi
+    - tôi muốn tư vấn sen đá cánh bướm , oke?
+    - tôi muốn tư vấn cánh bướm , oke?
+    - tôi muốn tư vấn sen đá chuỗi ngọc , oke?
+    - tôi muốn tư vấn chuỗi ngọc , oke?
+    - tôi muốn tư vấn sen đá đất xanh , oke?
+    - tôi muốn tư vấn đất xanh , oke?
+    - tôi muốn tư vấn sen đá kim cương , oke?
+    - tôi muốn tư vấn kim cương , oke?
+    - tôi muốn tư vấn sen đá móng rồng sọc trắng , oke?
+    - tôi muốn tư vấn móng rồng sọc trắng , oke?
+    - tôi muốn tư vấn sen đá ngọc bích , oke?
+    - tôi muốn tư vấn ngọc bích , oke?
+    - tôi muốn tư vấn sen đá nhật nguyệt , oke?
+    - tôi muốn tư vấn nhật nguyệt , oke?
+    - tư vấn sen đá cánh bướm đi
+    - tư vấn cánh bướm đi
+    - tư vấn sen đá chuỗi ngọc đi
+    - tư vấn chuỗi ngọc đi
+    - tư vấn sen đá đất xanh đi
+    - tư vấn đất xanh đi
+    - tư vấn sen đá kim cương đi
+    - tư vấn kim cương đi
+    - tư vấn sen đá móng rồng sọc trắng đi
+    - tư vấn móng rồng sọc trắng đi
+    - tư vấn sen đá ngọc bích đi
+    - tư vấn ngọc bích đi
+    - tư vấn sen đá nhật nguyệt đi
+    - tư vấn nhật nguyệt đi
+    - shop có đó không, tư vấn sen đá cánh bướm cho mình với
+    - shop có đó không, tư vấn cánh bướm cho mình với
+    - shop có đó không, tư vấn sen đá chuỗi ngọc cho mình với
+    - shop có đó không, tư vấn chuỗi ngọc cho mình với
+    - shop có đó không, tư vấn sen đá đất xanh cho mình với
+    - shop có đó không, tư vấn đất xanh cho mình với
+    - shop có đó không, tư vấn sen đá kim cương cho mình với
+    - shop có đó không, tư vấn kim cương cho mình với
+    - shop có đó không, tư vấn sen đá móng rồng sọc trắng cho mình với
+    - shop có đó không, tư vấn móng rồng sọc trắng cho mình với
+    - shop có đó không, tư vấn sen đá ngọc bích cho mình với
+    - shop có đó không, tư vấn ngọc bích cho mình với
+    - shop có đó không, tư vấn sen đá nhật nguyệt cho mình với
+    - shop có đó không, tư vấn nhật nguyệt cho mình với
+    - mình chưa bt nên mua sen đá cánh bướm như nào bạn giúp mình với
+    - mình chưa bt nên mua cánh bướm như nào bạn giúp mình với
+    - mình chưa bt nên mua sen đá chuỗi ngọc như nào bạn giúp mình với
+    - mình chưa bt nên mua chuỗi ngọc như nào bạn giúp mình với
+    - mình chưa bt nên mua sen đá đất xanh như nào bạn giúp mình với
+    - mình chưa bt nên mua đất xanh như nào bạn giúp mình với
+    - mình chưa bt nên mua sen đá kim cương như nào bạn giúp mình với
+    - mình chưa bt nên mua kim cương như nào bạn giúp mình với
+    - mình chưa bt nên mua sen đá móng rồng sọc trắng như nào bạn giúp mình với
+    - mình chưa bt nên mua móng rồng sọc trắng như nào bạn giúp mình với
+    - mình chưa bt nên mua sen đá ngọc bích như nào bạn giúp mình với
+    - mình chưa bt nên mua ngọc bích như nào bạn giúp mình với
+    - mình chưa bt nên mua sen đá nhật nguyệt như nào bạn giúp mình với
+    - mình chưa bt nên mua nhật nguyệt như nào bạn giúp mình với
+    - bạn ơi, bạn giúp mình tư vấn sen đá cánh bướm được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn cánh bướm được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn sen đá chuỗi ngọc được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn chuỗi ngọc được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn sen đá đất xanh được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn đất xanh được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn sen đá kim cương được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn kim cương được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn sen đá móng rồng sọc trắng được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn móng rồng sọc trắng được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn sen đá ngọc bích được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn ngọc bích được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn sen đá nhật nguyệt được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn nhật nguyệt được không, mình không biết nên mua như nào cả
+    - tôi muốn được tư vấn sen đá cánh bướm
+    - tôi muốn được tư vấn cánh bướm
+    - tôi muốn được tư vấn sen đá chuỗi ngọc
+    - tôi muốn được tư vấn chuỗi ngọc
+    - tôi muốn được tư vấn sen đá đất xanh
+    - tôi muốn được tư vấn đất xanh
+    - tôi muốn được tư vấn sen đá kim cương
+    - tôi muốn được tư vấn kim cương
+    - tôi muốn được tư vấn sen đá móng rồng sọc trắng
+    - tôi muốn được tư vấn móng rồng sọc trắng
+    - tôi muốn được tư vấn sen đá ngọc bích
+    - tôi muốn được tư vấn ngọc bích
+    - tôi muốn được tư vấn sen đá nhật nguyệt
+    - tôi muốn được tư vấn nhật nguyệt
+    - tôi muốn bạn tư vấn sen đá cánh bướm cho tôi
+    - tôi muốn bạn tư vấn cánh bướm cho tôi
+    - tôi muốn bạn tư vấn sen đá chuỗi ngọc cho tôi
+    - tôi muốn bạn tư vấn chuỗi ngọc cho tôi
+    - tôi muốn bạn tư vấn sen đá đất xanh cho tôi
+    - tôi muốn bạn tư vấn đất xanh cho tôi
+    - tôi muốn bạn tư vấn sen đá kim cương cho tôi
+    - tôi muốn bạn tư vấn kim cương cho tôi
+    - tôi muốn bạn tư vấn sen đá móng rồng sọc trắng cho tôi
+    - tôi muốn bạn tư vấn móng rồng sọc trắng cho tôi
+    - tôi muốn bạn tư vấn sen đá ngọc bích cho tôi
+    - tôi muốn bạn tư vấn ngọc bích cho tôi
+    - tôi muốn bạn tư vấn sen đá nhật nguyệt cho tôi
+    - tôi muốn bạn tư vấn nhật nguyệt cho tôi
+    - tôi có thể được tư vấn sen đá cánh bướm chứ
+    - tôi có thể được tư vấn cánh bướm chứ
+    - tôi có thể được tư vấn sen đá chuỗi ngọc chứ
+    - tôi có thể được tư vấn chuỗi ngọc chứ
+    - tôi có thể được tư vấn sen đá đất xanh chứ
+    - tôi có thể được tư vấn đất xanh chứ
+    - tôi có thể được tư vấn sen đá kim cương chứ
+    - tôi có thể được tư vấn kim cương chứ
+    - tôi có thể được tư vấn sen đá móng rồng sọc trắng chứ
+    - tôi có thể được tư vấn móng rồng sọc trắng chứ
+    - tôi có thể được tư vấn sen đá ngọc bích chứ
+    - tôi có thể được tư vấn ngọc bích chứ
+    - tôi có thể được tư vấn sen đá nhật nguyệt chứ
+    - tôi có thể được tư vấn nhật nguyệt chứ
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn sen đá cánh bướm
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn cánh bướm
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn sen đá chuỗi ngọc
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn chuỗi ngọc
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn sen đá đất xanh
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn đất xanh
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn sen đá kim cương
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn kim cương
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn sen đá móng rồng sọc trắng
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn móng rồng sọc trắng
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn sen đá ngọc bích
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn ngọc bích
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn sen đá nhật nguyệt
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn nhật nguyệt
+    - tư vấn sen đá cánh bướm cho tôi được chứ
+    - tư vấn cánh bướm cho tôi được chứ
+    - tư vấn sen đá chuỗi ngọc cho tôi được chứ
+    - tư vấn chuỗi ngọc cho tôi được chứ
+    - tư vấn sen đá đất xanh cho tôi được chứ
+    - tư vấn đất xanh cho tôi được chứ
+    - tư vấn sen đá kim cương cho tôi được chứ
+    - tư vấn kim cương cho tôi được chứ
+    - tư vấn sen đá móng rồng sọc trắng cho tôi được chứ
+    - tư vấn móng rồng sọc trắng cho tôi được chứ
+    - tư vấn sen đá ngọc bích cho tôi được chứ
+    - tư vấn ngọc bích cho tôi được chứ
+    - tư vấn sen đá nhật nguyệt cho tôi được chứ
+    - tư vấn nhật nguyệt cho tôi được chứ
+    - Mình đang phân vân k biết nên mua sen đá cánh bướm như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua cánh bướm như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua sen đá chuỗi ngọc như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua chuỗi ngọc như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua sen đá đất xanh như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua đất xanh như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua sen đá kim cương như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua kim cương như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua sen đá móng rồng sọc trắng như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua móng rồng sọc trắng như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua sen đá ngọc bích như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua ngọc bích như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua sen đá nhật nguyệt như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua nhật nguyệt như nào, bạn có thể tư vấn giúp mình được không
+    - Bạn có thể tư vấn sản phẩm sen đá cánh bướm bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm cánh bướm bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm sen đá chuỗi ngọc bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm chuỗi ngọc bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm sen đá đất xanh bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm đất xanh bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm sen đá kim cương bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm kim cương bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm sen đá móng rồng sọc trắng bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm móng rồng sọc trắng bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm sen đá ngọc bích bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm ngọc bích bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm sen đá nhật nguyệt bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm nhật nguyệt bên mình cho mình được không
+    - bạn gì đó ơi, bạn giúp mình tư vấn sen đá cánh bướm với
+    - bạn gì đó ơi, bạn giúp mình tư vấn cánh bướm với
+    - bạn gì đó ơi, bạn giúp mình tư vấn sen đá chuỗi ngọc với
+    - bạn gì đó ơi, bạn giúp mình tư vấn chuỗi ngọc với
+    - bạn gì đó ơi, bạn giúp mình tư vấn sen đá đất xanh với
+    - bạn gì đó ơi, bạn giúp mình tư vấn đất xanh với
+    - bạn gì đó ơi, bạn giúp mình tư vấn sen đá kim cương với
+    - bạn gì đó ơi, bạn giúp mình tư vấn kim cương với
+    - bạn gì đó ơi, bạn giúp mình tư vấn sen đá móng rồng sọc trắng với
+    - bạn gì đó ơi, bạn giúp mình tư vấn móng rồng sọc trắng với
+    - bạn gì đó ơi, bạn giúp mình tư vấn sen đá ngọc bích với
+    - bạn gì đó ơi, bạn giúp mình tư vấn ngọc bích với
+    - bạn gì đó ơi, bạn giúp mình tư vấn sen đá nhật nguyệt với
+    - bạn gì đó ơi, bạn giúp mình tư vấn nhật nguyệt với
+    - bạn ơi, mình muốn mua sản phẩm sen đá cánh bướm bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm cánh bướm bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm sen đá chuỗi ngọc bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm chuỗi ngọc bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm sen đá đất xanh bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm đất xanh bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm sen đá kim cương bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm kim cương bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm sen đá móng rồng sọc trắng bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm móng rồng sọc trắng bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm sen đá ngọc bích bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm ngọc bích bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm sen đá nhật nguyệt bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm nhật nguyệt bên bạn nhưng không biết nó như nào
+    - Shop mình có bán sen đá cánh bướm không?
+    - Shop mình có bán cánh bướm không?
+    - Shop mình có bán sen đá chuỗi ngọc không?
+    - Shop mình có bán chuỗi ngọc không?
+    - Shop mình có bán sen đá đất xanh không?
+    - Shop mình có bán đất xanh không?
+    - Shop mình có bán sen đá kim cương không?
+    - Shop mình có bán kim cương không?
+    - Shop mình có bán sen đá móng rồng sọc trắng không?
+    - Shop mình có bán móng rồng sọc trắng không?
+    - Shop mình có bán sen đá ngọc bích không?
+    - Shop mình có bán ngọc bích không?
+    - Shop mình có bán sen đá nhật nguyệt không?
+    - Shop mình có bán nhật nguyệt không?
+    - Shop còn bán sen đá cánh bướm không nhỉ
+    - Shop còn bán cánh bướm không nhỉ
+    - Shop còn bán sen đá chuỗi ngọc không nhỉ
+    - Shop còn bán chuỗi ngọc không nhỉ
+    - Shop còn bán sen đá đất xanh không nhỉ
+    - Shop còn bán đất xanh không nhỉ
+    - Shop còn bán sen đá kim cương không nhỉ
+    - Shop còn bán kim cương không nhỉ
+    - Shop còn bán sen đá móng rồng sọc trắng không nhỉ
+    - Shop còn bán móng rồng sọc trắng không nhỉ
+    - Shop còn bán sen đá ngọc bích không nhỉ
+    - Shop còn bán ngọc bích không nhỉ
+    - Shop còn bán sen đá nhật nguyệt không nhỉ
+    - Shop còn bán nhật nguyệt không nhỉ
+    - Shop còn hàng sen đá cánh bướm không
+    - Shop còn hàng cánh bướm không
+    - Shop còn hàng sen đá chuỗi ngọc không
+    - Shop còn hàng chuỗi ngọc không
+    - Shop còn hàng sen đá đất xanh không
+    - Shop còn hàng đất xanh không
+    - Shop còn hàng sen đá kim cương không
+    - Shop còn hàng kim cương không
+    - Shop còn hàng sen đá móng rồng sọc trắng không
+    - Shop còn hàng móng rồng sọc trắng không
+    - Shop còn hàng sen đá ngọc bích không
+    - Shop còn hàng ngọc bích không
+    - Shop còn hàng sen đá nhật nguyệt không
+    - Shop còn hàng nhật nguyệt không
+    - Mình muốn mua sen đá cánh bướm nhưng không biết nó như nào
+    - Mình muốn mua cánh bướm nhưng không biết nó như nào
+    - Mình muốn mua sen đá chuỗi ngọc nhưng không biết nó như nào
+    - Mình muốn mua chuỗi ngọc nhưng không biết nó như nào
+    - Mình muốn mua sen đá đất xanh nhưng không biết nó như nào
+    - Mình muốn mua đất xanh nhưng không biết nó như nào
+    - Mình muốn mua sen đá kim cương nhưng không biết nó như nào
+    - Mình muốn mua kim cương nhưng không biết nó như nào
+    - Mình muốn mua sen đá móng rồng sọc trắng nhưng không biết nó như nào
+    - Mình muốn mua móng rồng sọc trắng nhưng không biết nó như nào
+    - Mình muốn mua sen đá ngọc bích nhưng không biết nó như nào
+    - Mình muốn mua ngọc bích nhưng không biết nó như nào
+    - Mình muốn mua sen đá nhật nguyệt nhưng không biết nó như nào
+    - Mình muốn mua nhật nguyệt nhưng không biết nó như nào
+    - Bên mình còn bán sen đá cánh bướm không ta
+    - Bên mình còn bán cánh bướm không ta
+    - Bên mình còn bán sen đá chuỗi ngọc không ta
+    - Bên mình còn bán chuỗi ngọc không ta
+    - Bên mình còn bán sen đá đất xanh không ta
+    - Bên mình còn bán đất xanh không ta
+    - Bên mình còn bán sen đá kim cương không ta
+    - Bên mình còn bán kim cương không ta
+    - Bên mình còn bán sen đá móng rồng sọc trắng không ta
+    - Bên mình còn bán móng rồng sọc trắng không ta
+    - Bên mình còn bán sen đá ngọc bích không ta
+    - Bên mình còn bán ngọc bích không ta
+    - Bên mình còn bán sen đá nhật nguyệt không ta
+    - Bên mình còn bán nhật nguyệt không ta
+    - Cho tôi biết thêm về sen đá cánh bướm đi
+    - Cho tôi biết thêm về cánh bướm đi
+    - Cho tôi biết thêm về sen đá chuỗi ngọc đi
+    - Cho tôi biết thêm về chuỗi ngọc đi
+    - Cho tôi biết thêm về sen đá đất xanh đi
+    - Cho tôi biết thêm về đất xanh đi
+    - Cho tôi biết thêm về sen đá kim cương đi
+    - Cho tôi biết thêm về kim cương đi
+    - Cho tôi biết thêm về sen đá móng rồng sọc trắng đi
+    - Cho tôi biết thêm về móng rồng sọc trắng đi
+    - Cho tôi biết thêm về sen đá ngọc bích đi
+    - Cho tôi biết thêm về ngọc bích đi
+    - Cho tôi biết thêm về sen đá nhật nguyệt đi
+    - Cho tôi biết thêm về nhật nguyệt đi

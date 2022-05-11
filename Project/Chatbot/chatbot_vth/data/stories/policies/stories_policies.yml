@@ -1,0 +1,8 @@
+version: "2.0"
+
+stories:
+
+- story: Thông tin chính sách
+  steps:
+  - intent: ask_plc_menu
+  - action: utter_plc_menu

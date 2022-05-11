@@ -1,0 +1,53 @@
+version: "2.0"
+nlu:
+#-> Chính sách vận chuyển
+- intent: ask_plc_vanchuyen_menu
+  examples: |
+    - Chính sách vận chuyển
+    - Tôi muốn biết về chính sách vận chuyển của công ty mình
+    - Mình có những chính sách vận chuyển nào shop nhỉ
+    - Shop có những thông tin chính sách vận chuyển nào vậy
+    - Xem thông tin chính sách vận chuyển
+    - Tôi muốn biết thêm thông tin chính sách vận chuyển
+
+#-> Chính sách phí vận chuyển
+- intent: ask_plc_vanchuyen_fee
+  examples: |
+    - Tiền vận chuyển là bao nhiêu
+    - Tiền ship là bao nhiêu shop nhỉ
+    - Phí vận chuyện là bao nhiêu?
+    - Tiền ship hết bao nhiêu ấy nhỉ
+    - Tiền ship nhiêu
+
+#-> Giao hàng trong bao lâu
+- intent: ask_plc_vanchuyen_howlong
+  examples: |
+    - Hàng hóa được giao trong bao lâu
+    - Thời gian giao hàng là bao lâu
+    - Khi nào thì tôi sẽ nhận được hàng
+    - Nhận được hàng khi nào 
+    - Cở tầm thứ mấy là tôi nhận được hàng
+    - Tôi muốn biết nào nhận được hàng
+    - Bao lâu thì nhận được?
+    - Thời gian nhận là trong bao lâu
+    - Nhận hàng thì mất bao lâu
+    - Bao lâu thì hàng tới nhà
+    - Lúc nào tôi sẽ có đơn hàng của mình
+    - Tôi nhận đơn hàng khi nào
+
+#-> Chính sách kiểm tra đơn hàng
+- intent: ask_plc_vanchuyen_check
+  examples: | 
+    - Tôi có được kiểm tra đơn hàng trước không
+    - Tôi có được kiểm tra hàng không
+    - Hàng tới có được xem không
+    - Tôi có thể xem hàng trước chứ
+    - Xem hàng trước được không
+    - Kiểm tra hàng có được không
+    - Được kiểm tra hàng khi nhận hàng chứ
+    - Nếu hàng tới thì được kiểm tra hàng không
+    - Nếu đơn hàng tới, tôi được kiểm tra hàng chứ
+    - Có được kiểm tra hàng không
+    - Tôi muốn kiểm tra hàng khi đơn hàng tới
+    - Tôi muốn được xem hàng rồi mới nhận, lỡ hàng không đúng sao
+    - Lỡ hàng không đúng tôi được kiểm tra chứ

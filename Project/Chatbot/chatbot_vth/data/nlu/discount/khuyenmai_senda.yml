@@ -1,0 +1,259 @@
+version: "2.0"
+nlu:
+
+#->  Khuyến mãi sen đá
+- intent: ask_khuyenmai_senda
+  examples: |
+    - Sen đá có giảm giá không
+    - đang có loại sen đá nào giảm giá vậy
+    - Chẳn thấy sen đá giảm giá nhỉ
+    - Hôm nay sen đá có giảm giá không nhỉ 
+    - sen đá gì đấy có giảm giá không
+    - khuyến mãi gì khi mua sen đá không
+    - Nếu mua sen đá thì có được giảm giá chứ
+    - tôi muốn mua sen đá thế có được giảm giá không 
+    - giảm giá gì cho sen đá không
+    - Hàng sen đá bên mình có giải giám chút nào không
+    - giảm giá sen đá đi
+    - discount với sen đá không?
+    - khuyến mãi gì với sen đá không vậy
+    - Tôi muốn biết thông tin giảm giá sen đá được không 
+    - Về mặt hàng sen đá có giảm giá gì không?
+    - khi mua sen đá nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng sen đá được không 
+    - khi mua sen đá thì giảm bao nhiêu %
+    - Hôm nay sen có giảm giá không nhỉ 
+    - sen gì đấy có giảm giá không
+    - khuyến mãi gì khi mua sen không
+    - Nếu mua sen thì có được giảm giá chứ
+    - tôi muốn mua sen thế có được giảm giá không 
+    - giảm giá gì cho sen không
+    - Hàng sen bên mình có giải giám chút nào không
+    - giảm giá sen đi
+    - discount với sen không?
+    - khuyến mãi gì với sen không vậy
+    - Tôi muốn biết thông tin giảm giá sen được không 
+    - Về mặt hàng sen có giảm giá gì không?
+    - khi mua sen nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng sen được không 
+    - khi mua sen thì giảm bao nhiêu %
+
+
+
+- intent: ask_khuyenmai_senda_details
+  examples: |
+    - Hôm nay Sen đá cánh bướm có giảm giá không nhỉ 
+    - Sen đá cánh bướm gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Sen đá cánh bướm không
+    - Nếu mua Sen đá cánh bướm thì có được giảm giá chứ
+    - tôi muốn mua Sen đá cánh bướm thế có được giảm giá không 
+    - giảm giá gì cho Sen đá cánh bướm không
+    - Hàng Sen đá cánh bướm bên mình có giải giám chút nào không
+    - giảm giá Sen đá cánh bướm đi
+    - discount với Sen đá cánh bướm không?
+    - khuyến mãi gì với Sen đá cánh bướm không vậy
+    - Tôi muốn biết thông tin giảm giá Sen đá cánh bướm được không 
+    - Về mặt hàng Sen đá cánh bướm có giảm giá gì không?
+    - khi mua Sen đá cánh bướm nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Sen đá cánh bướm được không 
+    - khi mua Sen đá cánh bướm thì giảm bao nhiêu %
+    - Hôm nay Sen đá chuỗi ngọc có giảm giá không nhỉ 
+    - Sen đá chuỗi ngọc gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Sen đá chuỗi ngọc không
+    - Nếu mua Sen đá chuỗi ngọc thì có được giảm giá chứ
+    - tôi muốn mua Sen đá chuỗi ngọc thế có được giảm giá không 
+    - giảm giá gì cho Sen đá chuỗi ngọc không
+    - Hàng Sen đá chuỗi ngọc bên mình có giải giám chút nào không
+    - giảm giá Sen đá chuỗi ngọc đi
+    - discount với Sen đá chuỗi ngọc không?
+    - khuyến mãi gì với Sen đá chuỗi ngọc không vậy
+    - Tôi muốn biết thông tin giảm giá Sen đá chuỗi ngọc được không 
+    - Về mặt hàng Sen đá chuỗi ngọc có giảm giá gì không?
+    - khi mua Sen đá chuỗi ngọc nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Sen đá chuỗi ngọc được không 
+    - khi mua Sen đá chuỗi ngọc thì giảm bao nhiêu %
+    - Hôm nay Sen đá đất xanh có giảm giá không nhỉ 
+    - Sen đá đất xanh gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Sen đá đất xanh không
+    - Nếu mua Sen đá đất xanh thì có được giảm giá chứ
+    - tôi muốn mua Sen đá đất xanh thế có được giảm giá không 
+    - giảm giá gì cho Sen đá đất xanh không
+    - Hàng Sen đá đất xanh bên mình có giải giám chút nào không
+    - giảm giá Sen đá đất xanh đi
+    - discount với Sen đá đất xanh không?
+    - khuyến mãi gì với Sen đá đất xanh không vậy
+    - Tôi muốn biết thông tin giảm giá Sen đá đất xanh được không 
+    - Về mặt hàng Sen đá đất xanh có giảm giá gì không?
+    - khi mua Sen đá đất xanh nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Sen đá đất xanh được không 
+    - khi mua Sen đá đất xanh thì giảm bao nhiêu %
+    - Hôm nay Sen đá kim cương có giảm giá không nhỉ 
+    - Sen đá kim cương gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Sen đá kim cương không
+    - Nếu mua Sen đá kim cương thì có được giảm giá chứ
+    - tôi muốn mua Sen đá kim cương thế có được giảm giá không 
+    - giảm giá gì cho Sen đá kim cương không
+    - Hàng Sen đá kim cương bên mình có giải giám chút nào không
+    - giảm giá Sen đá kim cương đi
+    - discount với Sen đá kim cương không?
+    - khuyến mãi gì với Sen đá kim cương không vậy
+    - Tôi muốn biết thông tin giảm giá Sen đá kim cương được không 
+    - Về mặt hàng Sen đá kim cương có giảm giá gì không?
+    - khi mua Sen đá kim cương nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Sen đá kim cương được không 
+    - khi mua Sen đá kim cương thì giảm bao nhiêu %
+    - Hôm nay Sen đá móng rồng sọc trắng có giảm giá không nhỉ 
+    - Sen đá móng rồng sọc trắng gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Sen đá móng rồng sọc trắng không
+    - Nếu mua Sen đá móng rồng sọc trắng thì có được giảm giá chứ
+    - tôi muốn mua Sen đá móng rồng sọc trắng thế có được giảm giá không 
+    - giảm giá gì cho Sen đá móng rồng sọc trắng không
+    - Hàng Sen đá móng rồng sọc trắng bên mình có giải giám chút nào không
+    - giảm giá Sen đá móng rồng sọc trắng đi
+    - discount với Sen đá móng rồng sọc trắng không?
+    - khuyến mãi gì với Sen đá móng rồng sọc trắng không vậy
+    - Tôi muốn biết thông tin giảm giá Sen đá móng rồng sọc trắng được không 
+    - Về mặt hàng Sen đá móng rồng sọc trắng có giảm giá gì không?
+    - khi mua Sen đá móng rồng sọc trắng nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Sen đá móng rồng sọc trắng được không 
+    - khi mua Sen đá móng rồng sọc trắng thì giảm bao nhiêu %
+    - Hôm nay Sen đá ngọc bích có giảm giá không nhỉ 
+    - Sen đá ngọc bích gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Sen đá ngọc bích không
+    - Nếu mua Sen đá ngọc bích thì có được giảm giá chứ
+    - tôi muốn mua Sen đá ngọc bích thế có được giảm giá không 
+    - giảm giá gì cho Sen đá ngọc bích không
+    - Hàng Sen đá ngọc bích bên mình có giải giám chút nào không
+    - giảm giá Sen đá ngọc bích đi
+    - discount với Sen đá ngọc bích không?
+    - khuyến mãi gì với Sen đá ngọc bích không vậy
+    - Tôi muốn biết thông tin giảm giá Sen đá ngọc bích được không 
+    - Về mặt hàng Sen đá ngọc bích có giảm giá gì không?
+    - khi mua Sen đá ngọc bích nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Sen đá ngọc bích được không 
+    - khi mua Sen đá ngọc bích thì giảm bao nhiêu %
+    - Hôm nay Sen đá nhật nguyệt có giảm giá không nhỉ 
+    - Sen đá nhật nguyệt gì đấy có giảm giá không
+    - khuyến mãi gì khi mua Sen đá nhật nguyệt không
+    - Nếu mua Sen đá nhật nguyệt thì có được giảm giá chứ
+    - tôi muốn mua Sen đá nhật nguyệt thế có được giảm giá không 
+    - giảm giá gì cho Sen đá nhật nguyệt không
+    - Hàng Sen đá nhật nguyệt bên mình có giải giám chút nào không
+    - giảm giá Sen đá nhật nguyệt đi
+    - discount với Sen đá nhật nguyệt không?
+    - khuyến mãi gì với Sen đá nhật nguyệt không vậy
+    - Tôi muốn biết thông tin giảm giá Sen đá nhật nguyệt được không 
+    - Về mặt hàng Sen đá nhật nguyệt có giảm giá gì không?
+    - khi mua Sen đá nhật nguyệt nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng Sen đá nhật nguyệt được không 
+    - khi mua Sen đá nhật nguyệt thì giảm bao nhiêu %
+    - Hôm nay cánh bướm có giảm giá không nhỉ 
+    - cánh bướm gì đấy có giảm giá không
+    - khuyến mãi gì khi mua cánh bướm không
+    - Nếu mua cánh bướm thì có được giảm giá chứ
+    - tôi muốn mua cánh bướm thế có được giảm giá không 
+    - giảm giá gì cho cánh bướm không
+    - Hàng cánh bướm bên mình có giải giám chút nào không
+    - giảm giá cánh bướm đi
+    - discount với cánh bướm không?
+    - khuyến mãi gì với cánh bướm không vậy
+    - Tôi muốn biết thông tin giảm giá cánh bướm được không 
+    - Về mặt hàng cánh bướm có giảm giá gì không?
+    - khi mua cánh bướm nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng cánh bướm được không 
+    - khi mua cánh bướm thì giảm bao nhiêu %
+    - Hôm nay chuỗi ngọc có giảm giá không nhỉ 
+    - chuỗi ngọc gì đấy có giảm giá không
+    - khuyến mãi gì khi mua chuỗi ngọc không
+    - Nếu mua chuỗi ngọc thì có được giảm giá chứ
+    - tôi muốn mua chuỗi ngọc thế có được giảm giá không 
+    - giảm giá gì cho chuỗi ngọc không
+    - Hàng chuỗi ngọc bên mình có giải giám chút nào không
+    - giảm giá chuỗi ngọc đi
+    - discount với chuỗi ngọc không?
+    - khuyến mãi gì với chuỗi ngọc không vậy
+    - Tôi muốn biết thông tin giảm giá chuỗi ngọc được không 
+    - Về mặt hàng chuỗi ngọc có giảm giá gì không?
+    - khi mua chuỗi ngọc nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng chuỗi ngọc được không 
+    - khi mua chuỗi ngọc thì giảm bao nhiêu %
+    - Hôm nay đất xanh có giảm giá không nhỉ 
+    - đất xanh gì đấy có giảm giá không
+    - khuyến mãi gì khi mua đất xanh không
+    - Nếu mua đất xanh thì có được giảm giá chứ
+    - tôi muốn mua đất xanh thế có được giảm giá không 
+    - giảm giá gì cho đất xanh không
+    - Hàng đất xanh bên mình có giải giám chút nào không
+    - giảm giá đất xanh đi
+    - discount với đất xanh không?
+    - khuyến mãi gì với đất xanh không vậy
+    - Tôi muốn biết thông tin giảm giá đất xanh được không 
+    - Về mặt hàng đất xanh có giảm giá gì không?
+    - khi mua đất xanh nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng đất xanh được không 
+    - khi mua đất xanh thì giảm bao nhiêu %
+    - Hôm nay kim cương có giảm giá không nhỉ 
+    - kim cương gì đấy có giảm giá không
+    - khuyến mãi gì khi mua kim cương không
+    - Nếu mua kim cương thì có được giảm giá chứ
+    - tôi muốn mua kim cương thế có được giảm giá không 
+    - giảm giá gì cho kim cương không
+    - Hàng kim cương bên mình có giải giám chút nào không
+    - giảm giá kim cương đi
+    - discount với kim cương không?
+    - khuyến mãi gì với kim cương không vậy
+    - Tôi muốn biết thông tin giảm giá kim cương được không 
+    - Về mặt hàng kim cương có giảm giá gì không?
+    - khi mua kim cương nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng kim cương được không 
+    - khi mua kim cương thì giảm bao nhiêu %
+    - Hôm nay móng rồng sọc trắng có giảm giá không nhỉ 
+    - móng rồng sọc trắng gì đấy có giảm giá không
+    - khuyến mãi gì khi mua móng rồng sọc trắng không
+    - Nếu mua móng rồng sọc trắng thì có được giảm giá chứ
+    - tôi muốn mua móng rồng sọc trắng thế có được giảm giá không 
+    - giảm giá gì cho móng rồng sọc trắng không
+    - Hàng móng rồng sọc trắng bên mình có giải giám chút nào không
+    - giảm giá móng rồng sọc trắng đi
+    - discount với móng rồng sọc trắng không?
+    - khuyến mãi gì với móng rồng sọc trắng không vậy
+    - Tôi muốn biết thông tin giảm giá móng rồng sọc trắng được không 
+    - Về mặt hàng móng rồng sọc trắng có giảm giá gì không?
+    - khi mua móng rồng sọc trắng nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng móng rồng sọc trắng được không 
+    - khi mua móng rồng sọc trắng thì giảm bao nhiêu %
+    - Hôm nay ngọc bích có giảm giá không nhỉ 
+    - ngọc bích gì đấy có giảm giá không
+    - khuyến mãi gì khi mua ngọc bích không
+    - Nếu mua ngọc bích thì có được giảm giá chứ
+    - tôi muốn mua ngọc bích thế có được giảm giá không 
+    - giảm giá gì cho ngọc bích không
+    - Hàng ngọc bích bên mình có giải giám chút nào không
+    - giảm giá ngọc bích đi
+    - discount với ngọc bích không?
+    - khuyến mãi gì với ngọc bích không vậy
+    - Tôi muốn biết thông tin giảm giá ngọc bích được không 
+    - Về mặt hàng ngọc bích có giảm giá gì không?
+    - khi mua ngọc bích nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng ngọc bích được không 
+    - khi mua ngọc bích thì giảm bao nhiêu %
+    - Hôm nay nhật nguyệt có giảm giá không nhỉ 
+    - nhật nguyệt gì đấy có giảm giá không
+    - khuyến mãi gì khi mua nhật nguyệt không
+    - Nếu mua nhật nguyệt thì có được giảm giá chứ
+    - tôi muốn mua nhật nguyệt thế có được giảm giá không 
+    - giảm giá gì cho nhật nguyệt không
+    - Hàng nhật nguyệt bên mình có giải giám chút nào không
+    - giảm giá nhật nguyệt đi
+    - discount với nhật nguyệt không?
+    - khuyến mãi gì với nhật nguyệt không vậy
+    - Tôi muốn biết thông tin giảm giá nhật nguyệt được không 
+    - Về mặt hàng nhật nguyệt có giảm giá gì không?
+    - khi mua nhật nguyệt nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng nhật nguyệt được không 
+    - khi mua nhật nguyệt thì giảm bao nhiêu %
+
+
+
+
+

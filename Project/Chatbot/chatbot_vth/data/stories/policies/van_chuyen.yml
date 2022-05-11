@@ -1,0 +1,24 @@
+version: "2.0"
+
+stories:
+
+- story: thông tin chính sách vận chuyển
+  steps:
+  - intent: ask_plc_vanchuyen_menu
+  - action: utter_plc_vanchuyen_menu
+
+- story: Phí vận chuyển hết bao lâu
+  steps:
+  - intent: ask_plc_vanchuyen_fee
+  - action: utter_plc_vanchuyen_fee
+
+
+- story: Vận chuyển mất bao lâu
+  steps:
+  - intent: ask_plc_vanchuyen_howlong
+  - action: utter_plc_vanchuyen_howlong
+
+- story: Có được xem hàng trước không
+  steps:
+  - intent: ask_plc_vanchuyen_check
+  - action: utter_plc_vanchuyen_check

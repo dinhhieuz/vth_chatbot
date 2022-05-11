@@ -1,0 +1,609 @@
+#!----------------------------- " TƯ VẤN RAU XANH " 
+version: "2.0"
+nlu:
+#-> Thông tin tư vấn RAU XANH
+- intent: ask_tuvan_rauxanh
+  examples: |
+    - sản phẩm rau xanh bên mình như nào ấy nhỉ
+    - Tôi muốn biết thông tin về rau xanh
+    - rau xanh có còn bán không
+    - Hiện tại bên mình có rau xanh không
+    - Bạn cho tôi biết thêm về rau xanh đi
+    - rau xanh thì có bán không
+    - rau xanh bên mình bán như nào ấy nhỉ?
+    - cho mình hỏi ni chút về rau xanh với?
+    - tôi muốn biết các rau xanh bên bạn
+    - tư vấn rau xanh cho mình đi
+    - tôi muốn tư vấn rau xanh , oke?
+    - tư vấn rau xanh đi
+    - shop có đó không, tư vấn rau xanh cho mình với
+    - mình chưa bt nên mua rau xanh như nào bạn giúp mình với
+    - bạn ơi, bạn giúp mình tư vấn rau xanh được không, mình không biết nên mua như nào cả
+    - tôi muốn được tư vấn rau xanh
+    - tôi muốn bạn tư vấn rau xanh cho tôi
+    - tôi có thể được tư vấn rau xanh chứ
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn rau xanh
+    - tư vấn rau xanh cho tôi được chứ
+    - Mình đang phân vân k biết nên mua rau xanh như nào, bạn có thể tư vấn giúp mình được không
+    - bên mình có hỗ trợ tư vấn rau xanh không
+    - Bạn có thể tư vấn sản phẩm rau xanh bên mình cho mình được không
+    - bạn gì đó ơi, bạn giúp mình tư vấn rau xanh với
+    - bạn ơi, mình muốn mua sản phẩm rau xanh bên bạn nhưng không biết nó như nào
+    - Shop mình có bán rau xanh không?
+    - Shop còn bán rau xanh không nhỉ
+    - Shop còn hàng rau xanh không
+    - sản phẩm cây rau bên mình như nào ấy nhỉ
+    - Tôi muốn biết thông tin về cây rau
+    - cây rau có còn bán không
+    - Hiện tại bên mình có cây rau không
+    - Bạn cho tôi biết thêm về cây rau đi
+    - cây rau thì có bán không
+    - cây rau bên mình bán như nào ấy nhỉ?
+    - cho mình hỏi ni chút về cây rau với?
+    - tôi muốn biết các cây rau bên bạn
+    - tư vấn cây rau cho mình đi
+    - tôi muốn tư vấn cây rau , oke?
+    - tư vấn cây rau đi
+    - shop có đó không, tư vấn cây rau cho mình với
+    - mình chưa bt nên mua cây rau như nào bạn giúp mình với
+    - bạn ơi, bạn giúp mình tư vấn cây rau được không, mình không biết nên mua như nào cả
+    - tôi muốn được tư vấn cây rau
+    - tôi muốn bạn tư vấn cây rau cho tôi
+    - tôi có thể được tư vấn cây rau chứ
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn cây rau
+    - tư vấn cây rau cho tôi được chứ
+    - Mình đang phân vân k biết nên mua cây rau như nào, bạn có thể tư vấn giúp mình được không
+    - bên mình có hỗ trợ tư vấn cây rau không
+    - Bạn có thể tư vấn sản phẩm cây rau bên mình cho mình được không
+    - bạn gì đó ơi, bạn giúp mình tư vấn cây rau với
+    - bạn ơi, mình muốn mua sản phẩm cây rau bên bạn nhưng không biết nó như nào
+    - Shop mình có bán cây rau không?
+    - Shop còn bán cây rau không nhỉ
+    - Shop còn hàng cây rau không
+
+
+
+#-> Tư vấn chi tiết cho RAU XANH
+- intent: ask_tuvan_rauxanh_details
+  examples: |
+
+    - sản phẩm hạt giống cây cà chua bạch tuộc bên mình như nào ấy nhỉ
+    - sản phẩm cây cà chua bạch tuộc bên mình như nào ấy nhỉ
+    - sản phẩm hạt giống rau cải kale bên mình như nào ấy nhỉ
+    - sản phẩm rau cải kale bên mình như nào ấy nhỉ
+    - sản phẩm hạt giống rau cải ngọt bên mình như nào ấy nhỉ
+    - sản phẩm rau cải ngọt bên mình như nào ấy nhỉ
+    - sản phẩm hạt giống rau càng cua bên mình như nào ấy nhỉ
+    - sản phẩm rau càng cua bên mình như nào ấy nhỉ
+    - sản phẩm hạt giống rau dền đỏ bên mình như nào ấy nhỉ
+    - sản phẩm rau dền đỏ bên mình như nào ấy nhỉ
+    - sản phẩm hạt giống rau má bên mình như nào ấy nhỉ
+    - sản phẩm rau má bên mình như nào ấy nhỉ
+    - sản phẩm hạt giống rau mồng tơi lá to bên mình như nào ấy nhỉ
+    - sản phẩm rau mồng tơi lá to bên mình như nào ấy nhỉ
+    - sản phẩm hạt giống rau muống bên mình như nào ấy nhỉ
+    - sản phẩm rau muống bên mình như nào ấy nhỉ
+    - sản phẩm hạt giống rau ngò rí bên mình như nào ấy nhỉ
+    - sản phẩm rau ngò rí bên mình như nào ấy nhỉ
+    - Tôi muốn biết thông tin về hạt giống cây cà chua bạch tuộc
+    - Tôi muốn biết thông tin về cây cà chua bạch tuộc
+    - Tôi muốn biết thông tin về hạt giống rau cải kale
+    - Tôi muốn biết thông tin về rau cải kale
+    - Tôi muốn biết thông tin về hạt giống rau cải ngọt
+    - Tôi muốn biết thông tin về rau cải ngọt
+    - Tôi muốn biết thông tin về hạt giống rau càng cua
+    - Tôi muốn biết thông tin về rau càng cua
+    - Tôi muốn biết thông tin về hạt giống rau dền đỏ
+    - Tôi muốn biết thông tin về rau dền đỏ
+    - Tôi muốn biết thông tin về hạt giống rau má
+    - Tôi muốn biết thông tin về rau má
+    - Tôi muốn biết thông tin về hạt giống rau mồng tơi lá to
+    - Tôi muốn biết thông tin về rau mồng tơi lá to
+    - Tôi muốn biết thông tin về hạt giống rau muống
+    - Tôi muốn biết thông tin về rau muống
+    - Tôi muốn biết thông tin về hạt giống rau ngò rí
+    - Tôi muốn biết thông tin về rau ngò rí
+    - hạt giống cây cà chua bạch tuộc có còn bán không
+    - cây cà chua bạch tuộc có còn bán không
+    - hạt giống rau cải kale có còn bán không
+    - rau cải kale có còn bán không
+    - hạt giống rau cải ngọt có còn bán không
+    - rau cải ngọt có còn bán không
+    - hạt giống rau càng cua có còn bán không
+    - rau càng cua có còn bán không
+    - hạt giống rau dền đỏ có còn bán không
+    - rau dền đỏ có còn bán không
+    - hạt giống rau má có còn bán không
+    - rau má có còn bán không
+    - hạt giống rau mồng tơi lá to có còn bán không
+    - rau mồng tơi lá to có còn bán không
+    - hạt giống rau muống có còn bán không
+    - rau muống có còn bán không
+    - hạt giống rau ngò rí có còn bán không
+    - rau ngò rí có còn bán không
+    - Hiện tại bên mình có hạt giống cây cà chua bạch tuộc không
+    - Hiện tại bên mình có cây cà chua bạch tuộc không
+    - Hiện tại bên mình có hạt giống rau cải kale không
+    - Hiện tại bên mình có rau cải kale không
+    - Hiện tại bên mình có hạt giống rau cải ngọt không
+    - Hiện tại bên mình có rau cải ngọt không
+    - Hiện tại bên mình có hạt giống rau càng cua không
+    - Hiện tại bên mình có rau càng cua không
+    - Hiện tại bên mình có hạt giống rau dền đỏ không
+    - Hiện tại bên mình có rau dền đỏ không
+    - Hiện tại bên mình có hạt giống rau má không
+    - Hiện tại bên mình có rau má không
+    - Hiện tại bên mình có hạt giống rau mồng tơi lá to không
+    - Hiện tại bên mình có rau mồng tơi lá to không
+    - Hiện tại bên mình có hạt giống rau muống không
+    - Hiện tại bên mình có rau muống không
+    - Hiện tại bên mình có hạt giống rau ngò rí không
+    - Hiện tại bên mình có rau ngò rí không
+    - Bạn cho tôi biết thêm về hạt giống cây cà chua bạch tuộc đi
+    - Bạn cho tôi biết thêm về cây cà chua bạch tuộc đi
+    - Bạn cho tôi biết thêm về hạt giống rau cải kale đi
+    - Bạn cho tôi biết thêm về rau cải kale đi
+    - Bạn cho tôi biết thêm về hạt giống rau cải ngọt đi
+    - Bạn cho tôi biết thêm về rau cải ngọt đi
+    - Bạn cho tôi biết thêm về hạt giống rau càng cua đi
+    - Bạn cho tôi biết thêm về rau càng cua đi
+    - Bạn cho tôi biết thêm về hạt giống rau dền đỏ đi
+    - Bạn cho tôi biết thêm về rau dền đỏ đi
+    - Bạn cho tôi biết thêm về hạt giống rau má đi
+    - Bạn cho tôi biết thêm về rau má đi
+    - Bạn cho tôi biết thêm về hạt giống rau mồng tơi lá to đi
+    - Bạn cho tôi biết thêm về rau mồng tơi lá to đi
+    - Bạn cho tôi biết thêm về hạt giống rau muống đi
+    - Bạn cho tôi biết thêm về rau muống đi
+    - Bạn cho tôi biết thêm về hạt giống rau ngò rí đi
+    - Bạn cho tôi biết thêm về rau ngò rí đi
+    - hạt giống cây cà chua bạch tuộc thì có bán không
+    - cây cà chua bạch tuộc thì có bán không
+    - hạt giống rau cải kale thì có bán không
+    - rau cải kale thì có bán không
+    - hạt giống rau cải ngọt thì có bán không
+    - rau cải ngọt thì có bán không
+    - hạt giống rau càng cua thì có bán không
+    - rau càng cua thì có bán không
+    - hạt giống rau dền đỏ thì có bán không
+    - rau dền đỏ thì có bán không
+    - hạt giống rau má thì có bán không
+    - rau má thì có bán không
+    - hạt giống rau mồng tơi lá to thì có bán không
+    - rau mồng tơi lá to thì có bán không
+    - hạt giống rau muống thì có bán không
+    - rau muống thì có bán không
+    - hạt giống rau ngò rí thì có bán không
+    - rau ngò rí thì có bán không
+    - hạt giống cây cà chua bạch tuộc bên mình bán như nào ấy nhỉ?
+    - cây cà chua bạch tuộc bên mình bán như nào ấy nhỉ?
+    - hạt giống rau cải kale bên mình bán như nào ấy nhỉ?
+    - rau cải kale bên mình bán như nào ấy nhỉ?
+    - hạt giống rau cải ngọt bên mình bán như nào ấy nhỉ?
+    - rau cải ngọt bên mình bán như nào ấy nhỉ?
+    - hạt giống rau càng cua bên mình bán như nào ấy nhỉ?
+    - rau càng cua bên mình bán như nào ấy nhỉ?
+    - hạt giống rau dền đỏ bên mình bán như nào ấy nhỉ?
+    - rau dền đỏ bên mình bán như nào ấy nhỉ?
+    - hạt giống rau má bên mình bán như nào ấy nhỉ?
+    - rau má bên mình bán như nào ấy nhỉ?
+    - hạt giống rau mồng tơi lá to bên mình bán như nào ấy nhỉ?
+    - rau mồng tơi lá to bên mình bán như nào ấy nhỉ?
+    - hạt giống rau muống bên mình bán như nào ấy nhỉ?
+    - rau muống bên mình bán như nào ấy nhỉ?
+    - hạt giống rau ngò rí bên mình bán như nào ấy nhỉ?
+    - rau ngò rí bên mình bán như nào ấy nhỉ?
+    - cho mình hỏi ni chút về hạt giống cây cà chua bạch tuộc với? 
+    - cho mình hỏi ni chút về cây cà chua bạch tuộc với? 
+    - cho mình hỏi ni chút về hạt giống rau cải kale với? 
+    - cho mình hỏi ni chút về rau cải kale với? 
+    - cho mình hỏi ni chút về hạt giống rau cải ngọt với? 
+    - cho mình hỏi ni chút về rau cải ngọt với? 
+    - cho mình hỏi ni chút về hạt giống rau càng cua với? 
+    - cho mình hỏi ni chút về rau càng cua với? 
+    - cho mình hỏi ni chút về hạt giống rau dền đỏ với? 
+    - cho mình hỏi ni chút về rau dền đỏ với? 
+    - cho mình hỏi ni chút về hạt giống rau má với? 
+    - cho mình hỏi ni chút về rau má với? 
+    - cho mình hỏi ni chút về hạt giống rau mồng tơi lá to với? 
+    - cho mình hỏi ni chút về rau mồng tơi lá to với? 
+    - cho mình hỏi ni chút về hạt giống rau muống với? 
+    - cho mình hỏi ni chút về rau muống với? 
+    - cho mình hỏi ni chút về hạt giống rau ngò rí với? 
+    - cho mình hỏi ni chút về rau ngò rí với? 
+    - tôi muốn biết các hạt giống cây cà chua bạch tuộc bên bạn
+    - tôi muốn biết các cây cà chua bạch tuộc bên bạn
+    - tôi muốn biết các hạt giống rau cải kale bên bạn
+    - tôi muốn biết các rau cải kale bên bạn
+    - tôi muốn biết các hạt giống rau cải ngọt bên bạn
+    - tôi muốn biết các rau cải ngọt bên bạn
+    - tôi muốn biết các hạt giống rau càng cua bên bạn
+    - tôi muốn biết các rau càng cua bên bạn
+    - tôi muốn biết các hạt giống rau dền đỏ bên bạn
+    - tôi muốn biết các rau dền đỏ bên bạn
+    - tôi muốn biết các hạt giống rau má bên bạn
+    - tôi muốn biết các rau má bên bạn
+    - tôi muốn biết các hạt giống rau mồng tơi lá to bên bạn
+    - tôi muốn biết các rau mồng tơi lá to bên bạn
+    - tôi muốn biết các hạt giống rau muống bên bạn
+    - tôi muốn biết các rau muống bên bạn
+    - tôi muốn biết các hạt giống rau ngò rí bên bạn
+    - tôi muốn biết các rau ngò rí bên bạn
+    - tư vấn hạt giống cây cà chua bạch tuộc cho mình đi
+    - tư vấn cây cà chua bạch tuộc cho mình đi
+    - tư vấn hạt giống rau cải kale cho mình đi
+    - tư vấn rau cải kale cho mình đi
+    - tư vấn hạt giống rau cải ngọt cho mình đi
+    - tư vấn rau cải ngọt cho mình đi
+    - tư vấn hạt giống rau càng cua cho mình đi
+    - tư vấn rau càng cua cho mình đi
+    - tư vấn hạt giống rau dền đỏ cho mình đi
+    - tư vấn rau dền đỏ cho mình đi
+    - tư vấn hạt giống rau má cho mình đi
+    - tư vấn rau má cho mình đi
+    - tư vấn hạt giống rau mồng tơi lá to cho mình đi
+    - tư vấn rau mồng tơi lá to cho mình đi
+    - tư vấn hạt giống rau muống cho mình đi
+    - tư vấn rau muống cho mình đi
+    - tư vấn hạt giống rau ngò rí cho mình đi
+    - tư vấn rau ngò rí cho mình đi
+    - tôi muốn tư vấn hạt giống cây cà chua bạch tuộc , oke?
+    - tôi muốn tư vấn cây cà chua bạch tuộc , oke?
+    - tôi muốn tư vấn hạt giống rau cải kale , oke?
+    - tôi muốn tư vấn rau cải kale , oke?
+    - tôi muốn tư vấn hạt giống rau cải ngọt , oke?
+    - tôi muốn tư vấn rau cải ngọt , oke?
+    - tôi muốn tư vấn hạt giống rau càng cua , oke?
+    - tôi muốn tư vấn rau càng cua , oke?
+    - tôi muốn tư vấn hạt giống rau dền đỏ , oke?
+    - tôi muốn tư vấn rau dền đỏ , oke?
+    - tôi muốn tư vấn hạt giống rau má , oke?
+    - tôi muốn tư vấn rau má , oke?
+    - tôi muốn tư vấn hạt giống rau mồng tơi lá to , oke?
+    - tôi muốn tư vấn rau mồng tơi lá to , oke?
+    - tôi muốn tư vấn hạt giống rau muống , oke?
+    - tôi muốn tư vấn rau muống , oke?
+    - tôi muốn tư vấn hạt giống rau ngò rí , oke?
+    - tôi muốn tư vấn rau ngò rí , oke?
+    - tư vấn hạt giống cây cà chua bạch tuộc đi
+    - tư vấn cây cà chua bạch tuộc đi
+    - tư vấn hạt giống rau cải kale đi
+    - tư vấn rau cải kale đi
+    - tư vấn hạt giống rau cải ngọt đi
+    - tư vấn rau cải ngọt đi
+    - tư vấn hạt giống rau càng cua đi
+    - tư vấn rau càng cua đi
+    - tư vấn hạt giống rau dền đỏ đi
+    - tư vấn rau dền đỏ đi
+    - tư vấn hạt giống rau má đi
+    - tư vấn rau má đi
+    - tư vấn hạt giống rau mồng tơi lá to đi
+    - tư vấn rau mồng tơi lá to đi
+    - tư vấn hạt giống rau muống đi
+    - tư vấn rau muống đi
+    - tư vấn hạt giống rau ngò rí đi
+    - tư vấn rau ngò rí đi
+    - shop có đó không, tư vấn hạt giống cây cà chua bạch tuộc cho mình với
+    - shop có đó không, tư vấn cây cà chua bạch tuộc cho mình với
+    - shop có đó không, tư vấn hạt giống rau cải kale cho mình với
+    - shop có đó không, tư vấn rau cải kale cho mình với
+    - shop có đó không, tư vấn hạt giống rau cải ngọt cho mình với
+    - shop có đó không, tư vấn rau cải ngọt cho mình với
+    - shop có đó không, tư vấn hạt giống rau càng cua cho mình với
+    - shop có đó không, tư vấn rau càng cua cho mình với
+    - shop có đó không, tư vấn hạt giống rau dền đỏ cho mình với
+    - shop có đó không, tư vấn rau dền đỏ cho mình với
+    - shop có đó không, tư vấn hạt giống rau má cho mình với
+    - shop có đó không, tư vấn rau má cho mình với
+    - shop có đó không, tư vấn hạt giống rau mồng tơi lá to cho mình với
+    - shop có đó không, tư vấn rau mồng tơi lá to cho mình với
+    - shop có đó không, tư vấn hạt giống rau muống cho mình với
+    - shop có đó không, tư vấn rau muống cho mình với
+    - shop có đó không, tư vấn hạt giống rau ngò rí cho mình với
+    - shop có đó không, tư vấn rau ngò rí cho mình với
+    - mình chưa bt nên mua hạt giống cây cà chua bạch tuộc như nào bạn giúp mình với
+    - mình chưa bt nên mua cây cà chua bạch tuộc như nào bạn giúp mình với
+    - mình chưa bt nên mua hạt giống rau cải kale như nào bạn giúp mình với
+    - mình chưa bt nên mua rau cải kale như nào bạn giúp mình với
+    - mình chưa bt nên mua hạt giống rau cải ngọt như nào bạn giúp mình với
+    - mình chưa bt nên mua rau cải ngọt như nào bạn giúp mình với
+    - mình chưa bt nên mua hạt giống rau càng cua như nào bạn giúp mình với
+    - mình chưa bt nên mua rau càng cua như nào bạn giúp mình với
+    - mình chưa bt nên mua hạt giống rau dền đỏ như nào bạn giúp mình với
+    - mình chưa bt nên mua rau dền đỏ như nào bạn giúp mình với
+    - mình chưa bt nên mua hạt giống rau má như nào bạn giúp mình với
+    - mình chưa bt nên mua rau má như nào bạn giúp mình với
+    - mình chưa bt nên mua hạt giống rau mồng tơi lá to như nào bạn giúp mình với
+    - mình chưa bt nên mua rau mồng tơi lá to như nào bạn giúp mình với
+    - mình chưa bt nên mua hạt giống rau muống như nào bạn giúp mình với
+    - mình chưa bt nên mua rau muống như nào bạn giúp mình với
+    - mình chưa bt nên mua hạt giống rau ngò rí như nào bạn giúp mình với
+    - mình chưa bt nên mua rau ngò rí như nào bạn giúp mình với
+    - bạn ơi, bạn giúp mình tư vấn hạt giống cây cà chua bạch tuộc được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn cây cà chua bạch tuộc được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn hạt giống rau cải kale được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn rau cải kale được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn hạt giống rau cải ngọt được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn rau cải ngọt được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn hạt giống rau càng cua được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn rau càng cua được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn hạt giống rau dền đỏ được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn rau dền đỏ được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn hạt giống rau má được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn rau má được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn hạt giống rau mồng tơi lá to được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn rau mồng tơi lá to được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn hạt giống rau muống được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn rau muống được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn hạt giống rau ngò rí được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình tư vấn rau ngò rí được không, mình không biết nên mua như nào cả
+    - tôi muốn được tư vấn hạt giống cây cà chua bạch tuộc
+    - tôi muốn được tư vấn cây cà chua bạch tuộc
+    - tôi muốn được tư vấn hạt giống rau cải kale
+    - tôi muốn được tư vấn rau cải kale
+    - tôi muốn được tư vấn hạt giống rau cải ngọt
+    - tôi muốn được tư vấn rau cải ngọt
+    - tôi muốn được tư vấn hạt giống rau càng cua
+    - tôi muốn được tư vấn rau càng cua
+    - tôi muốn được tư vấn hạt giống rau dền đỏ
+    - tôi muốn được tư vấn rau dền đỏ
+    - tôi muốn được tư vấn hạt giống rau má
+    - tôi muốn được tư vấn rau má
+    - tôi muốn được tư vấn hạt giống rau mồng tơi lá to
+    - tôi muốn được tư vấn rau mồng tơi lá to
+    - tôi muốn được tư vấn hạt giống rau muống
+    - tôi muốn được tư vấn rau muống
+    - tôi muốn được tư vấn hạt giống rau ngò rí
+    - tôi muốn được tư vấn rau ngò rí
+    - tôi muốn bạn tư vấn hạt giống cây cà chua bạch tuộc cho tôi
+    - tôi muốn bạn tư vấn cây cà chua bạch tuộc cho tôi
+    - tôi muốn bạn tư vấn hạt giống rau cải kale cho tôi
+    - tôi muốn bạn tư vấn rau cải kale cho tôi
+    - tôi muốn bạn tư vấn hạt giống rau cải ngọt cho tôi
+    - tôi muốn bạn tư vấn rau cải ngọt cho tôi
+    - tôi muốn bạn tư vấn hạt giống rau càng cua cho tôi
+    - tôi muốn bạn tư vấn rau càng cua cho tôi
+    - tôi muốn bạn tư vấn hạt giống rau dền đỏ cho tôi
+    - tôi muốn bạn tư vấn rau dền đỏ cho tôi
+    - tôi muốn bạn tư vấn hạt giống rau má cho tôi
+    - tôi muốn bạn tư vấn rau má cho tôi
+    - tôi muốn bạn tư vấn hạt giống rau mồng tơi lá to cho tôi
+    - tôi muốn bạn tư vấn rau mồng tơi lá to cho tôi
+    - tôi muốn bạn tư vấn hạt giống rau muống cho tôi
+    - tôi muốn bạn tư vấn rau muống cho tôi
+    - tôi muốn bạn tư vấn hạt giống rau ngò rí cho tôi
+    - tôi muốn bạn tư vấn rau ngò rí cho tôi
+    - tôi có thể được tư vấn hạt giống cây cà chua bạch tuộc chứ
+    - tôi có thể được tư vấn cây cà chua bạch tuộc chứ
+    - tôi có thể được tư vấn hạt giống rau cải kale chứ
+    - tôi có thể được tư vấn rau cải kale chứ
+    - tôi có thể được tư vấn hạt giống rau cải ngọt chứ
+    - tôi có thể được tư vấn rau cải ngọt chứ
+    - tôi có thể được tư vấn hạt giống rau càng cua chứ
+    - tôi có thể được tư vấn rau càng cua chứ
+    - tôi có thể được tư vấn hạt giống rau dền đỏ chứ
+    - tôi có thể được tư vấn rau dền đỏ chứ
+    - tôi có thể được tư vấn hạt giống rau má chứ
+    - tôi có thể được tư vấn rau má chứ
+    - tôi có thể được tư vấn hạt giống rau mồng tơi lá to chứ
+    - tôi có thể được tư vấn rau mồng tơi lá to chứ
+    - tôi có thể được tư vấn hạt giống rau muống chứ
+    - tôi có thể được tư vấn rau muống chứ
+    - tôi có thể được tư vấn hạt giống rau ngò rí chứ
+    - tôi có thể được tư vấn rau ngò rí chứ
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn hạt giống cây cà chua bạch tuộc
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn cây cà chua bạch tuộc
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn hạt giống rau cải kale
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn rau cải kale
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn hạt giống rau cải ngọt
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn rau cải ngọt
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn hạt giống rau càng cua
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn rau càng cua
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn hạt giống rau dền đỏ
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn rau dền đỏ
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn hạt giống rau má
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn rau má
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn hạt giống rau mồng tơi lá to
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn rau mồng tơi lá to
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn hạt giống rau muống
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn rau muống
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn hạt giống rau ngò rí
+    - bây giờ bạn có rảnh không, tôi muốn tư vấn rau ngò rí
+    - tư vấn hạt giống cây cà chua bạch tuộc cho tôi được chứ
+    - tư vấn cây cà chua bạch tuộc cho tôi được chứ
+    - tư vấn hạt giống rau cải kale cho tôi được chứ
+    - tư vấn rau cải kale cho tôi được chứ
+    - tư vấn hạt giống rau cải ngọt cho tôi được chứ
+    - tư vấn rau cải ngọt cho tôi được chứ
+    - tư vấn hạt giống rau càng cua cho tôi được chứ
+    - tư vấn rau càng cua cho tôi được chứ
+    - tư vấn hạt giống rau dền đỏ cho tôi được chứ
+    - tư vấn rau dền đỏ cho tôi được chứ
+    - tư vấn hạt giống rau má cho tôi được chứ
+    - tư vấn rau má cho tôi được chứ
+    - tư vấn hạt giống rau mồng tơi lá to cho tôi được chứ
+    - tư vấn rau mồng tơi lá to cho tôi được chứ
+    - tư vấn hạt giống rau muống cho tôi được chứ
+    - tư vấn rau muống cho tôi được chứ
+    - tư vấn hạt giống rau ngò rí cho tôi được chứ
+    - tư vấn rau ngò rí cho tôi được chứ
+    - Mình đang phân vân k biết nên mua hạt giống cây cà chua bạch tuộc như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua cây cà chua bạch tuộc như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua hạt giống rau cải kale như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua rau cải kale như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua hạt giống rau cải ngọt như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua rau cải ngọt như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua hạt giống rau càng cua như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua rau càng cua như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua hạt giống rau dền đỏ như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua rau dền đỏ như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua hạt giống rau má như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua rau má như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua hạt giống rau mồng tơi lá to như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua rau mồng tơi lá to như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua hạt giống rau muống như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua rau muống như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua hạt giống rau ngò rí như nào, bạn có thể tư vấn giúp mình được không
+    - Mình đang phân vân k biết nên mua rau ngò rí như nào, bạn có thể tư vấn giúp mình được không
+    - Bạn có thể tư vấn sản phẩm hạt giống cây cà chua bạch tuộc bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm cây cà chua bạch tuộc bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm hạt giống rau cải kale bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm rau cải kale bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm hạt giống rau cải ngọt bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm rau cải ngọt bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm hạt giống rau càng cua bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm rau càng cua bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm hạt giống rau dền đỏ bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm rau dền đỏ bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm hạt giống rau má bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm rau má bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm hạt giống rau mồng tơi lá to bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm rau mồng tơi lá to bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm hạt giống rau muống bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm rau muống bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm hạt giống rau ngò rí bên mình cho mình được không
+    - Bạn có thể tư vấn sản phẩm rau ngò rí bên mình cho mình được không
+    - bạn gì đó ơi, bạn giúp mình tư vấn hạt giống cây cà chua bạch tuộc với
+    - bạn gì đó ơi, bạn giúp mình tư vấn cây cà chua bạch tuộc với
+    - bạn gì đó ơi, bạn giúp mình tư vấn hạt giống rau cải kale với
+    - bạn gì đó ơi, bạn giúp mình tư vấn rau cải kale với
+    - bạn gì đó ơi, bạn giúp mình tư vấn hạt giống rau cải ngọt với
+    - bạn gì đó ơi, bạn giúp mình tư vấn rau cải ngọt với
+    - bạn gì đó ơi, bạn giúp mình tư vấn hạt giống rau càng cua với
+    - bạn gì đó ơi, bạn giúp mình tư vấn rau càng cua với
+    - bạn gì đó ơi, bạn giúp mình tư vấn hạt giống rau dền đỏ với
+    - bạn gì đó ơi, bạn giúp mình tư vấn rau dền đỏ với
+    - bạn gì đó ơi, bạn giúp mình tư vấn hạt giống rau má với
+    - bạn gì đó ơi, bạn giúp mình tư vấn rau má với
+    - bạn gì đó ơi, bạn giúp mình tư vấn hạt giống rau mồng tơi lá to với
+    - bạn gì đó ơi, bạn giúp mình tư vấn rau mồng tơi lá to với
+    - bạn gì đó ơi, bạn giúp mình tư vấn hạt giống rau muống với
+    - bạn gì đó ơi, bạn giúp mình tư vấn rau muống với
+    - bạn gì đó ơi, bạn giúp mình tư vấn hạt giống rau ngò rí với
+    - bạn gì đó ơi, bạn giúp mình tư vấn rau ngò rí với
+    - bạn ơi, mình muốn mua sản phẩm hạt giống cây cà chua bạch tuộc bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm cây cà chua bạch tuộc bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm hạt giống rau cải kale bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm rau cải kale bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm hạt giống rau cải ngọt bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm rau cải ngọt bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm hạt giống rau càng cua bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm rau càng cua bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm hạt giống rau dền đỏ bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm rau dền đỏ bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm hạt giống rau má bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm rau má bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm hạt giống rau mồng tơi lá to bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm rau mồng tơi lá to bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm hạt giống rau muống bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm rau muống bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm hạt giống rau ngò rí bên bạn nhưng không biết nó như nào
+    - bạn ơi, mình muốn mua sản phẩm rau ngò rí bên bạn nhưng không biết nó như nào
+    - Shop mình có bán hạt giống cây cà chua bạch tuộc không?
+    - Shop mình có bán cây cà chua bạch tuộc không?
+    - Shop mình có bán hạt giống rau cải kale không?
+    - Shop mình có bán rau cải kale không?
+    - Shop mình có bán hạt giống rau cải ngọt không?
+    - Shop mình có bán rau cải ngọt không?
+    - Shop mình có bán hạt giống rau càng cua không?
+    - Shop mình có bán rau càng cua không?
+    - Shop mình có bán hạt giống rau dền đỏ không?
+    - Shop mình có bán rau dền đỏ không?
+    - Shop mình có bán hạt giống rau má không?
+    - Shop mình có bán rau má không?
+    - Shop mình có bán hạt giống rau mồng tơi lá to không?
+    - Shop mình có bán rau mồng tơi lá to không?
+    - Shop mình có bán hạt giống rau muống không?
+    - Shop mình có bán rau muống không?
+    - Shop mình có bán hạt giống rau ngò rí không?
+    - Shop mình có bán rau ngò rí không?
+    - Shop còn bán hạt giống cây cà chua bạch tuộc không nhỉ
+    - Shop còn bán cây cà chua bạch tuộc không nhỉ
+    - Shop còn bán hạt giống rau cải kale không nhỉ
+    - Shop còn bán rau cải kale không nhỉ
+    - Shop còn bán hạt giống rau cải ngọt không nhỉ
+    - Shop còn bán rau cải ngọt không nhỉ
+    - Shop còn bán hạt giống rau càng cua không nhỉ
+    - Shop còn bán rau càng cua không nhỉ
+    - Shop còn bán hạt giống rau dền đỏ không nhỉ
+    - Shop còn bán rau dền đỏ không nhỉ
+    - Shop còn bán hạt giống rau má không nhỉ
+    - Shop còn bán rau má không nhỉ
+    - Shop còn bán hạt giống rau mồng tơi lá to không nhỉ
+    - Shop còn bán rau mồng tơi lá to không nhỉ
+    - Shop còn bán hạt giống rau muống không nhỉ
+    - Shop còn bán rau muống không nhỉ
+    - Shop còn bán hạt giống rau ngò rí không nhỉ
+    - Shop còn bán rau ngò rí không nhỉ
+    - Shop còn hàng hạt giống cây cà chua bạch tuộc không
+    - Shop còn hàng cây cà chua bạch tuộc không
+    - Shop còn hàng hạt giống rau cải kale không
+    - Shop còn hàng rau cải kale không
+    - Shop còn hàng hạt giống rau cải ngọt không
+    - Shop còn hàng rau cải ngọt không
+    - Shop còn hàng hạt giống rau càng cua không
+    - Shop còn hàng rau càng cua không
+    - Shop còn hàng hạt giống rau dền đỏ không
+    - Shop còn hàng rau dền đỏ không
+    - Shop còn hàng hạt giống rau má không
+    - Shop còn hàng rau má không
+    - Shop còn hàng hạt giống rau mồng tơi lá to không
+    - Shop còn hàng rau mồng tơi lá to không
+    - Shop còn hàng hạt giống rau muống không
+    - Shop còn hàng rau muống không
+    - Shop còn hàng hạt giống rau ngò rí không
+    - Shop còn hàng rau ngò rí không
+    - Mình muốn mua hạt giống cây cà chua bạch tuộc nhưng không biết nó như nào
+    - Mình muốn mua cây cà chua bạch tuộc nhưng không biết nó như nào
+    - Mình muốn mua hạt giống rau cải kale nhưng không biết nó như nào
+    - Mình muốn mua rau cải kale nhưng không biết nó như nào
+    - Mình muốn mua hạt giống rau cải ngọt nhưng không biết nó như nào
+    - Mình muốn mua rau cải ngọt nhưng không biết nó như nào
+    - Mình muốn mua hạt giống rau càng cua nhưng không biết nó như nào
+    - Mình muốn mua rau càng cua nhưng không biết nó như nào
+    - Mình muốn mua hạt giống rau dền đỏ nhưng không biết nó như nào
+    - Mình muốn mua rau dền đỏ nhưng không biết nó như nào
+    - Mình muốn mua hạt giống rau má nhưng không biết nó như nào
+    - Mình muốn mua rau má nhưng không biết nó như nào
+    - Mình muốn mua hạt giống rau mồng tơi lá to nhưng không biết nó như nào
+    - Mình muốn mua rau mồng tơi lá to nhưng không biết nó như nào
+    - Mình muốn mua hạt giống rau muống nhưng không biết nó như nào
+    - Mình muốn mua rau muống nhưng không biết nó như nào
+    - Mình muốn mua hạt giống rau ngò rí nhưng không biết nó như nào
+    - Mình muốn mua rau ngò rí nhưng không biết nó như nào
+    - Bên mình còn bán hạt giống cây cà chua bạch tuộc không ta
+    - Bên mình còn bán cây cà chua bạch tuộc không ta
+    - Bên mình còn bán hạt giống rau cải kale không ta
+    - Bên mình còn bán rau cải kale không ta
+    - Bên mình còn bán hạt giống rau cải ngọt không ta
+    - Bên mình còn bán rau cải ngọt không ta
+    - Bên mình còn bán hạt giống rau càng cua không ta
+    - Bên mình còn bán rau càng cua không ta
+    - Bên mình còn bán hạt giống rau dền đỏ không ta
+    - Bên mình còn bán rau dền đỏ không ta
+    - Bên mình còn bán hạt giống rau má không ta
+    - Bên mình còn bán rau má không ta
+    - Bên mình còn bán hạt giống rau mồng tơi lá to không ta
+    - Bên mình còn bán rau mồng tơi lá to không ta
+    - Bên mình còn bán hạt giống rau muống không ta
+    - Bên mình còn bán rau muống không ta
+    - Bên mình còn bán hạt giống rau ngò rí không ta
+    - Bên mình còn bán rau ngò rí không ta
+    - Cho tôi biết thêm về hạt giống cây cà chua bạch tuộc đi
+    - Cho tôi biết thêm về cây cà chua bạch tuộc đi
+    - Cho tôi biết thêm về hạt giống rau cải kale đi
+    - Cho tôi biết thêm về rau cải kale đi
+    - Cho tôi biết thêm về hạt giống rau cải ngọt đi
+    - Cho tôi biết thêm về rau cải ngọt đi
+    - Cho tôi biết thêm về hạt giống rau càng cua đi
+    - Cho tôi biết thêm về rau càng cua đi
+    - Cho tôi biết thêm về hạt giống rau dền đỏ đi
+    - Cho tôi biết thêm về rau dền đỏ đi
+    - Cho tôi biết thêm về hạt giống rau má đi
+    - Cho tôi biết thêm về rau má đi
+    - Cho tôi biết thêm về hạt giống rau mồng tơi lá to đi
+    - Cho tôi biết thêm về rau mồng tơi lá to đi
+    - Cho tôi biết thêm về hạt giống rau muống đi
+    - Cho tôi biết thêm về rau muống đi
+    - Cho tôi biết thêm về hạt giống rau ngò rí đi
+    - Cho tôi biết thêm về rau ngò rí đi

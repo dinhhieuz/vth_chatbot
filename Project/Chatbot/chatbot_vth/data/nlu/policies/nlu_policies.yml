@@ -1,0 +1,10 @@
+version: "2.0"
+nlu:
+#-> Giới thiệu chính sách 
+- intent: ask_plc_menu
+  examples: |
+    - tôi muốn trọ giúp chính sách 
+    - Bên mình có những chính sách nào
+    - Chính sách của pages là gì
+    - pages có những chính sách nào
+    - làm sao để hiểu được chính sách của VTH
