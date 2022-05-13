@@ -1,0 +1,42 @@
+#!----------------------------- " BLOGS NẤU ĂN  " 
+version: "2.0"
+nlu:
+
+#-> Thông tin blog (Vào bếp cùng Vũ trụ hạt)
+- intent: ask_blog_cook
+  examples: |
+    - Bên mình có bài viết nấu ăn nào không
+    - Có cái blogs nào về nấu ăn không admin
+    - ad cho em hỏi, bên mình có bài blog về nấu ăn không ta
+    - Về blogs nấu ăn thì bên mình có viết không
+    - Các blogs về nấu ăn đi ad
+    - Tôi muốn xem blog về nấu ăn
+    - Nấu ăn thì có bài viết nào không
+    - Với các loại cây này thì nấu các món gì
+    - Xem bài viết về nấu ăn của vũ trụ hạt
+    - Vụ trụ hạt có bài viết nào về nấu ăn không đấy
+    - xem bài viết nấu ăn từ vũ trụ hạt đi
+    - Trông cây rồi thì có nấu ăn được từ cây không ad
+    - Xem bài blog nấu ăn đi ad
+    - Xem bài viết về nấu ăn
+    - Nấu ăn ấy, chứ mấy loại ni tôi xem rồi fen
+    - Nấu ăn đi, mấy bài ni chán quá
+    - Bài viết về nấu ăn
+#-> Thông tin blog (Vào bếp cùng Vũ trụ hạt) - mới nhất
+- intent: ask_blog_cook_new
+  examples: |
+    - Bên mình có bài viết nấu ăn nào mới nhất không
+    - Có cái blogs mới mới nào về nấu ăn không admin
+    - ad cho em hỏi, bên mình có bài blog gần đây về nấu ăn không ta
+    - Về blogs nấu ăn thì bên mình có viết không, mới một tí đi
+    - Các blogs mới nhất về nấu ăn đi ad
+    - Tôi muốn xem blog về nấu ăn ad ơi
+    - Nấu ăn thì có bài viết nào mới nhất về cái đấy không
+    - Xem bài viết mới nhất về nấu ăn của vũ trụ hạt
+    - Vụ trụ hạt có bài viết mới nhất nào về nấu ăn không đấy
+    - xem bài viết mới nhất từ nấu ăn từ vũ trụ hạt đi
+    - Xem bài blog mới về nấu ăn đi ad
+    - Xem bài viết mới nhất về nấu ăn đi bạn ơi
+    - Bài viết nấu ăn mới nhất ấy, chứ mấy loại ni tôi xem rồi fen
+    - Nấu ăn mới nhất đi, mấy bài ni chán quá
+    - Bài viết về nấu ăn mới nhất

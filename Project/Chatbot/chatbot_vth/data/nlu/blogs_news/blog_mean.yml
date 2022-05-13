@@ -1,0 +1,38 @@
+#!----------------------------- " BLOGS Ý NGHĨA CỦA CÁC CÂY" 
+version: "2.0"
+nlu:
+
+#-> Thông tin blog (Ý nghĩa vũ trụ hạt)
+- intent: ask_blog_mean
+  examples: |
+    - Mấy cái cây này ý nghĩa như nào ấy nhể
+    - Mấy cái cây này có bài viết gì liên quan đến ý nghĩa không
+    - Tôi muốn xem ý nghĩa của từng cây 
+    - Bên mình có bài viết nào về ý nghĩa cây không
+    - Blog về ý nghĩa cây đi admin
+    - Cái blog về ý nghĩa cây đi 
+    - Xin blog về ý nghĩa của các loại cây
+    - Hàm ý của từng nhóm cây đi admin
+    - Vũ trụ hạt có bài viết nào liên quan đến ý nghãi của cây không
+    - Tôi muốn xem bài blog về ý nghĩa loại cây
+    - Xem thông tin bài viết về ý nghĩa cây
+    - Nếu được thì xin phép được xem ý nghĩa cây đi fen
+    - Xem ý nghĩa cây thì có bài viết nào không fen
+    - Về ý nghĩa cây thì có bài viết nào liên quan không đó 
+    
+#-> Thông tin blog (Ý nghĩa cây) - mới nhất
+- intent: ask_blog_mean_new
+  examples: |
+    - Mấy cái cây này có bài viết mới mới nào liên quan đến ý nghĩa không
+    - Tôi muốn xem ý nghĩa của từng cây, bài mới ấy
+    - Bên mình có bài viết mới nhất nào về ý nghĩa cây không
+    - Blog mới nhất về ý nghĩa cây đi admin
+    - Cái blog mới nhất về ý nghĩa cây đi 
+    - Xin blog mới nhất về ý nghĩa của các loại cây
+    - Hàm ý của từng nhóm cây đi admin, bài mới nhất ấy
+    - Vũ trụ hạt có bài viết nào gần đây liên quan đến ý nghãi của cây không
+    - Tôi muốn xem bài blog mới về ý nghĩa loại cây
+    - Xem thông tin bài viết mới nhất về ý nghĩa cây
+    - Nếu được thì xin phép được xem ý nghĩa cây đi fen, bài mới ớ
+    - Xem ý nghĩa cây thì có bài viết nào mới mới không fen
+    - Về ý nghĩa cây thì có bài viết gần đây nào liên quan không đó 

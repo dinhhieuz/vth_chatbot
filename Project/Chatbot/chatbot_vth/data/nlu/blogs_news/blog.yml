@@ -1,0 +1,39 @@
+# Bài viết mới nhất (Theo từng nhóm loại)
+# Các bài viết liên quan đến nhóm
+
+
+
+# Công dụng của loại rau quả
+# Chăm sóc cây trồng
+# Vào bếp cùng vũ trụ hạt
+# Ý nghĩa loại cây
+#!----------------------------- " BLOGS CHUNG " 
+version: "2.0"
+nlu:
+#-> Thông tin tư vấn
+- intent: ask_blog_menu
+  examples: |
+    - Có bài viết gì không
+    - Có blog gì liên quan tới cây không
+    - Bên mình có bài viết gì không nhỉ
+    - Cho mình xem mấy bài viết về cây được không
+    - Xem blog đi
+    - Bot ơi, bot có blog nào không
+    - Bot có bài viết nào hay không
+    - Xem blog của các cây 
+
+#-> Thông tin blog (Tất cả loại) - mới nhất
+- intent: ask_blog_new
+  examples: |
+    - Có bài viết nào mới nhất không fen
+    - Blog mới nhất đi bạn ơi
+    - Blog nào mới mới ấy
+    - Có cái bài viết nào mới hơn không, chứ cũ quá rồi
+    - Cho cái bài viết mới đi fen
+    - Gì mà chán thế, có bài viết nào mới hơn không
+    - Cho xem cái bài viết mới nhất đe
+    - Xem bài blogs nào mới mới ớ
+    - Bot cho mình xem cái bài blogs mới mới tí nha
+    - Bài blog mới nhất của mình là gì đấy
+
+

@@ -26,8 +26,10 @@ catagory = {
     "dụng cụ" : "dung-cu",
     "công cụ" : "dung-cu",
     "củ quả" : "hat-giong-cu-qua",
+    "củ" : "hat-giong-cu-qua",
     "cây củ" : "hat-giong-cu-qua",
-    "rau " : "hat-giong",
+    "rau" : "hat-giong",
+    "rau xanh" : "hat-giong",
 
 }
 

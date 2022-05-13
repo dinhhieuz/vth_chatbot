@@ -1,11 +1,11 @@
-# Feature: tư vấn
-    1. Theo nhóm: đưa ra các loại cây theo nhóm và link
-    2. Theo chi tiết: người dùng hỏi chi tiết cây cần tư vấn
-    3. Tư vấn theo từng nhóm: Người dùng chưa bt và trả lời theo từng nhóm
-# NOTE: 
-    1. Không crawl làm file cứng: K cần thiết chỉ dùng 1 lần
-    2. Dựa trên 2 yêu cầu như khuyến mãi: tương tự
-    3. Tạo các câu hỏi theo nhóm: lấy câu hỏi bằng class để lưu trữ
+# # Feature: tư vấn
+#     1. Theo nhóm: đưa ra các loại cây theo nhóm và link
+#     2. Theo chi tiết: người dùng hỏi chi tiết cây cần tư vấn
+#     3. Tư vấn theo từng nhóm: Người dùng chưa bt và trả lời theo từng nhóm
+# # NOTE: 
+#     1. Không crawl làm file cứng: K cần thiết chỉ dùng 1 lần
+#     2. Dựa trên 2 yêu cầu như khuyến mãi: tương tự
+#     3. Tạo các câu hỏi theo nhóm: lấy câu hỏi bằng class để lưu trữ
 
 #!----------------------------- " TƯ VẤN CHUNG " 
 version: "2.0"

@@ -13,14 +13,7 @@ from rasa_sdk.executor import CollectingDispatcher
 
 # handle package
 import gc
-import json
-from datetime import datetime, date, timedelta
 from requests import delete
-
-import asyncio
-
-#class custome
-from actions.act_help.crawl import crawl
 
 
 class act_chat_greating(Action):
@@ -41,11 +34,11 @@ class act_chat_greating(Action):
                 "title": "Chính Sách",
                 "payload": "làm sao để hiểu được chính sách của VTH"
             },
-            # {
-            #     "type":"postback",
-            #     "title":"📞 Liên hệ nhân sự",
-            #     "payload":" Liên hệ phòng nhân sự"
-            # },
+            {
+                "type":"postback",
+                "title":"📞 Liên hệ nhân sự",
+                "payload":" Liên hệ phòng nhân sự"
+            },
             {
                 "type":"postback",
                 "title":"Khuyến Mãi",
@@ -57,7 +50,6 @@ class act_chat_greating(Action):
             text = "Xin chào Vũ Trụ Hạt rất vui được nói chuyện với bạn!!!\nChúng tôi có thể giúp gì cho bạn nào"
             , buttons = button
         )
-
         # #---> Generic Template 
         # res = {
         #     "attachment":{
@@ -203,7 +195,37 @@ class act_chat_greating(Action):
         #         }
         #     }
         # }
-
+        # res ={
+        #     "attachment":{
+        #     "type":"template",
+        #     "payload":{
+        #         "template_type":"generic",
+        #         "elements":[
+        #         {
+        #             "title":"Welcome!",
+        #             "image_url":"https://raw.githubusercontent.com/fbsamples/original-coast-clothing/main/public/styles/male-work.jpg",
+        #             "subtitle":"We have the right hat for everyone.123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789",
+        #             "default_action": {
+        #             "type": "web_url",
+        #             "url": "https://www.originalcoastclothing.com/",
+        #             "webview_height_ratio": "tall",
+        #             },
+        #             "buttons":[
+        #             {
+        #                 "type":"web_url",
+        #                 "url":"https://www.originalcoastclothing.com/",
+        #                 "title":"View Website"
+        #             },{
+        #                 "type":"postback",
+        #                 "title":"Start Chatting",
+        #                 "payload":"DEVELOPER_DEFINED_PAYLOAD"
+        #             }              
+        #             ]      
+        #         }
+        #         ]
+        #     }
+        #     }
+        # }
         # dispatcher.utter_message(json_message = res)
         gc.collect()
         return []

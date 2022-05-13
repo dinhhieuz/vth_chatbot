@@ -29,7 +29,7 @@ from actions.act_help.seek import seek
 class act_plc_khuyenmai_web(Action):
 
     def name(self) -> Text:
-        return "act_plc_khuyenmai_web"
+        return "act_khuyenmai_web"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -41,12 +41,12 @@ class act_plc_khuyenmai_web(Action):
         # returns JSON object as
         catagory = None
         for item in cf.catagory.keys():
-            if tracker.latest_message['text'].find(item):
+            if tracker.latest_message['text'].lower().replace("?","").find(item) > -1:
                 catagory = cf.catagory.get(item)
                 break
             
         if catagory is not None:
-            
+            print(catagory)
             with open(f'./assets/data/product/{catagory}.json', encoding='utf-8') as json_file:
                 data = json.load(json_file) #type: dict
                 """{
@@ -72,64 +72,105 @@ class act_plc_khuyenmai_web(Action):
                 loop = asyncio.get_event_loop()
                 loop.create_task(crawl.product(path=catagory, name_j=catagory))
             
-            #--> Tạo Template
-            elements = []
-            num = 0
-            for item in data["data"]:
-                if item["price"].find("–") == -1 and item["price"].find(" ") > -1:
-                    elements.append(
-                        {
-                            "title": item["name"],
-                            "image_url": item["image"],
-                            "subtitle": "Giá: " + item["price"].replace(" ", " giảm -> ") + "\nTrạng thái: " + item["status"],
-                            "default_action": {
-                                "type": "web_url",
-                                "url": item["link"],
-                                "webview_height_ratio": "tall",
-                            },
-                            "buttons":[
-                                {
-                                    "type":"web_url",
+            #element giới hạn 10 trong 1 lần gửi
+            #Kiểm tra xem có tìm được dữ liệu không
+            if len(data["data"]) > 0:
+                #--> Tạo Template
+                elements = []
+                num = 0
+                for item in data["data"]:
+                    if item["price"].find("–") == -1 and item["price"].find(" ") > -1:
+                        elements.append(
+                            {
+                                "title": item["name"],
+                                "image_url": item["image"],
+                                "subtitle": "Giá: " + item["price"].replace(" ", " giảm -> ") + "\nTrạng thái: " + item["status"],
+                                "default_action": {
+                                    "type": "web_url",
                                     "url": item["link"],
-                                    "title":"Xem thêm"
-                                },{
-                                    "type":"postback",
-                                    "title":"Liên hệ admin để chốt đơn",
-                                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                                }              
-                            ]      
+                                    "webview_height_ratio": "tall",
+                                },
+                                "buttons":[
+                                    {
+                                        "type":"web_url",
+                                        "url": item["link"],
+                                        "title":"Xem thêm"
+                                    },{
+                                        "type":"postback",
+                                        "title":"Liên hệ admin để chốt đơn",
+                                        "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                                    }              
+                                ]      
+                            }
+                        )
+                    #!
+                    #     num += 1
+                    # # mười element thì dừng vì fb chỉ cho 10 element
+                    # if num == 10: break
+                    #!
+                
+                # Kiểm tra xem có sản phẩm không
+                new_elm = []
+                # Vì facebook giới hạn chỉ được 10 elements cho 1 lần gửi
+                # Cứ 10 element sẽ được gửi 1 lần, những cái cuối k chia hết cho 10 nữa thì được gửi cuối cùng
+                for i in range(1,len(elements)+1):
+                    if i%10==0:
+                        new_elm.append(elements[i-1])
+                        res = {
+                            "attachment":{
+                                "type":"template",
+                                "payload":{
+                                    "template_type":"generic",
+                                    "elements": new_elm
+                                }
+                            }
                         }
-                    )
-                    num += 1
-                # mười element thì dừng vì fb chỉ cho 10 element
-                if num == 10: break
-        
-            #Respond to user
-            dispatcher.utter_message(
-                text = "KHUYẾN MÃI " + data["type"]
-            )
-            # Kiểm tra xem có khuyến mãi không
-            if len(elements) > 0 :
-                res = {
-                    "attachment":{
-                        "type":"template",
-                        "payload":{
-                            "template_type":"generic",
-                            "elements": elements
+                        dispatcher.utter_message(
+                            json_message = res
+                        )
+                        new_elm = []
+                    else:
+                        new_elm.append(elements[i-1])
+                    if i == len(elements):
+                        res = {
+                            "attachment":{
+                                "type":"template",
+                                "payload":{
+                                    "template_type":"generic",
+                                    "elements": new_elm
+                                }
+                            }
                         }
-                    }
-                }
-                dispatcher.utter_message(
-                    json_message = res
-                )
-                del res
+                        dispatcher.utter_message(
+                            json_message = res
+                        )
+                del res, new_elm, elements
+                #!
+                # #Respond to user
+                # dispatcher.utter_message(
+                #     text = "KHUYẾN MÃI " + data["type"]
+                # )
+                # res = {
+                #     "attachment":{
+                #         "type":"template",
+                #         "payload":{
+                #             "template_type":"generic",
+                #             "elements": elements
+                #         }
+                #     }
+                # }
+                # dispatcher.utter_message(
+                #     json_message = res
+                # )
+                # del res, elements, num
+                #!
             else: 
                 dispatcher.utter_message(
                     text = "Rất tiết hiện chúng tôi không có khuyến mãi cho loại này:("
                 )
 
-            del elements, num
             if 'data' in locals(): del data
+
         else:
             dispatcher.utter_message(
                 text = "Rất tiết, loại khuyến mãi bạn tìm không có :("
@@ -144,7 +185,7 @@ class act_plc_khuyenmai_web(Action):
 class act_plc_khuyenmai_web_details(Action):
 
     def name(self) -> Text:
-        return "act_plc_khuyenmai_web_details"
+        return "act_khuyenmai_web_details"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -153,7 +194,7 @@ class act_plc_khuyenmai_web_details(Action):
 
         #1. Get name intent and then set condition to finding catagory 
         
-        list_i, seek_i, catagory, time = seek.khuyenmai(intent = tracker.latest_message['intent']['name'], 
+        list_i, seek_i, catagory, time =  seek.product(intent = tracker.latest_message['intent']['name'], 
                                 message = tracker.latest_message['text'].lower().replace("?",""))
                 #--> Tạo Template
         elements = []
@@ -171,58 +212,97 @@ class act_plc_khuyenmai_web_details(Action):
                 loop = asyncio.get_event_loop()
                 loop.create_task(crawl.product(path=catagory, name_j=catagory))
             
-
-            for item in list_i:
-                if item["price"].find("–") == -1 and item["price"].find(" ") > -1:
-                    elements.append(
-                        {
-                            "title": item["name"],
-                            "image_url": item["image"],
-                            "subtitle": "Giá: " + item["price"].replace(" ", " giảm -> ") + "\nTrạng thái: " + item["status"],
-                            "default_action": {
-                                "type": "web_url",
-                                "url": item["link"],
-                                "webview_height_ratio": "tall",
-                            },
-                            "buttons":[
-                                {
-                                    "type":"web_url",
+            if len(list_i) > 0:
+                for item in list_i:
+                    if item["price"].find("–") == -1 and item["price"].find(" ") > -1:
+                        elements.append(
+                            {
+                                "title": item["name"],
+                                "image_url": item["image"],
+                                "subtitle": "Giá: " + item["price"].replace(" ", " giảm -> ") + "\nTrạng thái: " + item["status"],
+                                "default_action": {
+                                    "type": "web_url",
                                     "url": item["link"],
-                                    "title":"Xem thêm"
-                                },{
-                                    "type":"postback",
-                                    "title":"Liên hệ admin để chốt đơn",
-                                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                                }              
-                            ]      
-                        }
-                    )
-                    num += 1
-                # mười element thì dừng vì fb chỉ cho 10 element
-                if num == 10: break
-        
-            #Respond to user
-            dispatcher.utter_message(
-                text = "KHUYẾN MÃI " + seek_i.upper()
-            )
-            # Kiểm tra xem có khuyến mãi không
-            if len(elements) > 0 :
-                res = {
-                    "attachment":{
-                        "type":"template",
-                        "payload":{
-                            "template_type":"generic",
-                            "elements": elements
-                        }
-                    }
-                }
+                                    "webview_height_ratio": "tall",
+                                },
+                                "buttons":[
+                                    {
+                                        "type":"web_url",
+                                        "url": item["link"],
+                                        "title":"Xem thêm"
+                                    },{
+                                        "type":"postback",
+                                        "title":"Liên hệ admin để chốt đơn",
+                                        "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                                    }              
+                                ]      
+                            }
+                        )
+                    #!
+                    #     num += 1
+                    # # mười element thì dừng vì fb chỉ cho 10 element
+                    # if num == 10: break
+                    #!
+                
+                #Respond to user
                 dispatcher.utter_message(
-                    json_message = res
+                    text = "KHUYẾN MÃI " + seek_i.upper()
                 )
-                del res
+
+                new_elm = []
+                # Vì facebook giới hạn chỉ được 10 elements cho 1 lần gửi
+                # Cứ 10 element sẽ được gửi 1 lần, những cái cuối k chia hết cho 10 nữa thì được gửi cuối cùng
+                for i in range(1,len(elements)+1):
+                    if i%10==0:
+                        new_elm.append(elements[i-1])
+                        res = {
+                            "attachment":{
+                                "type":"template",
+                                "payload":{
+                                    "template_type":"generic",
+                                    "elements": new_elm
+                                }
+                            }
+                        }
+                        dispatcher.utter_message(
+                            json_message = res
+                        )
+                        new_elm = []
+                    else:
+                        new_elm.append(elements[i-1])
+                    if i == len(elements):
+                        res = {
+                            "attachment":{
+                                "type":"template",
+                                "payload":{
+                                    "template_type":"generic",
+                                    "elements": new_elm
+                                }
+                            }
+                        }
+                        dispatcher.utter_message(
+                            json_message = res
+                        )
+                del res, new_elm
+                #!
+                # res = {
+                #     "attachment":{
+                #         "type":"template",
+                #         "payload":{
+                #             "template_type":"generic",
+                #             "elements": elements
+                #         }
+                #     }
+                # }
+                # dispatcher.utter_message(
+                #     json_message = res
+                # )
+                # del res
+                #!
+
             else: 
                 dispatcher.utter_message(
-                    text = "Rất tiết hiện chúng tôi không có khuyến mãi :("
+                    text = "Rất tiết hiện chúng tôi tìm thấy sản phẩm hay khuyến mãi cho sản phẩm này :("
                 )
         else:
             dispatcher.utter_message(

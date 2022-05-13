@@ -1,0 +1,45 @@
+#!----------------------------- " BLOGS CÔNG DỤNG LOẠI RAU " 
+version: "2.0"
+nlu:
+
+
+#-> Thông tin blog (Công dụng của loại râu)
+- intent: ask_blog_use
+  examples: |
+    - Tôi muốn xem bài viết liên quan đến công dụng của loại râu
+    - Cái bài viết mà liên quan đến công dụng của cây rau ấy
+    - Xem bài viết mà về công dụng loại râu 
+    - Có bài viết công dụng của cây rau nào không
+    - Làm thế nào để biết thêm về công dụng của cây râu
+    - Mấy cái cây rau này có công dụng gì ấy nhỉ
+    - Mấy cây rau này dùng làm gì đấy
+    - Rau này giúp được gì không ta
+    - Xem công dụng loại rau thì làm sao ta
+    - Muốn biết công dụng của cây rau thì có bài viết nào đi kèm không
+    - Có blog nào về công dụng hay không ta
+    - Xem bài công dụng cây thì phải làm sao
+    - Muốn xem bài công dụng cây ghê ớ
+    - Bài viết về công dụng cây đi chứ ba cái này coi rồi
+    - Bài công dụng loại rau
+    - Bài blog về công dụ rau xanh
+    - Các bài blog công dụ rau xanh ấy ớ
+#-> Thông tin blog (Công dụng của loại râu) - mới nhất
+- intent: ask_blog_use_new
+  examples: |
+    - Tôi muốn xem bài viết liên quan đến công dụng của loại râu mới nhất
+    - Cái bài viết mà liên quan đến công dụng của cây rau ấy, kiểu mới mới tí
+    - Xem bài viết mà về công dụng loại râu mới nhất
+    - Có bài viết công dụng của cây rau nào mới nhất không
+    - Làm thế nào để biết thêm về công dụng của cây râu mới nhất
+    - Mấy cái cây rau này có công dụng gì ấy nhỉ, bài mới ớ
+    - Xem bài viết về công dụng loại rau mới nhất thì làm sao ta
+    - Muốn biết công dụng của cây rau thì có bài viết nào đi kèm không, mới mới ớ
+    - Có blog nào mới về công dụng hay không ta
+    - Xem bài mới về công dụng cây thì phải làm sao
+    - Muốn xem bài công dụng cây mới nhất ghê ớ
+    - Bài viết về công dụng cây mới mới đi chứ ba cái này coi rồi
+    - Bài công dụng loại rau gần đây ấy
+    - Bài blog về công dụ rau xanh mới nhất mà ban có đi
+    - Các bài blog công dụ rau xanh mới nhất ớ
+    - bài viết mới toanh về công dụ rau xanh của vũ trụ hạt là gì đấy
+    - Xem bài rau xanh mới nhất của vũ trụ hạt đi

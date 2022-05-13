@@ -66,7 +66,6 @@ nlu:
 #-> Tư vấn chi tiết cho RAU XANH
 - intent: ask_tuvan_rauxanh_details
   examples: |
-
     - sản phẩm hạt giống cây cà chua bạch tuộc bên mình như nào ấy nhỉ
     - sản phẩm cây cà chua bạch tuộc bên mình như nào ấy nhỉ
     - sản phẩm hạt giống rau cải kale bên mình như nào ấy nhỉ

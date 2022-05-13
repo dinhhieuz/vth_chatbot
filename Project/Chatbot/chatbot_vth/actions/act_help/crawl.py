@@ -13,7 +13,7 @@ import asyncio
 option = webdriver.ChromeOptions()
 option.add_argument('headless')
 #turn off log of selenium
-option.add_experimental_option("excludeSwitches", ["enable-logging"])
+# option.add_experimental_option("excludeSwitches", ["enable-logging"])
 #Chạy chương trình giả lập Chrome
 
 class crawl:
@@ -72,3 +72,15 @@ class crawl:
             print("[class: crawl/product] -> Done")
         except:
             print("[class: crawl/product] -> Lỗi crawl dữ liệu ")
+
+
+    ''' Crawl BLOGS'''
+    async def blogs():
+        try:
+            await asyncio.sleep(10)
+            print("[class Crawl/blogs ->")
+            #content
+            print("[class: crawl/blogs] -> Done")
+        except:
+            #error
+            print("[class: crawl/blogs] -> Lỗi crawl dữ liệu ")

@@ -63,6 +63,8 @@ nlu:
     - Bận rồi, mình nói sâu nha bot
     - mình nhắn lại sau nhá
     - Bái bai bạn nhá
+    - tao mệt m quá đi, bái bai nha
+    - oke cảm ơn, bái bai bot
 
 - intent: chat_thank
   examples: |
