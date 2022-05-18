@@ -1,7 +1,7 @@
 #! 1. Khởi động Rasa server
 pushd D:\Năm 4 - Thực tập tốt nghiệp\Project\Chatbot\chatbot_vth
 conda activate rasa-chatbot
-rasa run -m models --endpoints endpoints.yml --credentials credentials.yml
+rasa train && rasa train run -m models --endpoints endpoints.yml --credentials credentials.yml
 
 
 # rasa run -m models --endpoints endpoints.yml --port 9999 --credentials credentials.yml

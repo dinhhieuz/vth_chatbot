@@ -36,7 +36,7 @@
     "support": 3,
     "confused_with": {}
   },
-  "ask_khuyenmai_hatgiong_menu": {
+  "ask_khuyenmai_hatgiong": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,

@@ -26,7 +26,7 @@ from actions.act_help.seek import seek
 
 #!------------------------------------- """ KHUYẾN MÃI """
 """ Khuyến mãi chung theo loại """
-class act_plc_khuyenmai_web(Action):
+class act_khuyenmai_web(Action):
 
     def name(self) -> Text:
         return "act_khuyenmai_web"
@@ -97,18 +97,17 @@ class act_plc_khuyenmai_web(Action):
                                         "title":"Xem thêm"
                                     },{
                                         "type":"postback",
-                                        "title":"Liên hệ admin để chốt đơn",
-                                        "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                                        "title":"Mua ngay 💪",
+                                        "payload":"/ask_accept_buy"
                                     }              
                                 ]      
                             }
                         )
-                    #!
-                    #     num += 1
-                    # # mười element thì dừng vì fb chỉ cho 10 element
-                    # if num == 10: break
-                    #!
-                
+
+                #Respond to user
+                dispatcher.utter_message(
+                    text = "KHUYẾN MÃI " + data["type"].upper()
+                )
                 # Kiểm tra xem có sản phẩm không
                 new_elm = []
                 # Vì facebook giới hạn chỉ được 10 elements cho 1 lần gửi
@@ -145,25 +144,6 @@ class act_plc_khuyenmai_web(Action):
                             json_message = res
                         )
                 del res, new_elm, elements
-                #!
-                # #Respond to user
-                # dispatcher.utter_message(
-                #     text = "KHUYẾN MÃI " + data["type"]
-                # )
-                # res = {
-                #     "attachment":{
-                #         "type":"template",
-                #         "payload":{
-                #             "template_type":"generic",
-                #             "elements": elements
-                #         }
-                #     }
-                # }
-                # dispatcher.utter_message(
-                #     json_message = res
-                # )
-                # del res, elements, num
-                #!
             else: 
                 dispatcher.utter_message(
                     text = "Rất tiết hiện chúng tôi không có khuyến mãi cho loại này:("
@@ -182,7 +162,7 @@ class act_plc_khuyenmai_web(Action):
 
 
 """ Khuyến mãi theo từng mặt hàng trong loại """
-class act_plc_khuyenmai_web_details(Action):
+class act_khuyenmai_web_details(Action):
 
     def name(self) -> Text:
         return "act_khuyenmai_web_details"
@@ -232,8 +212,8 @@ class act_plc_khuyenmai_web_details(Action):
                                         "title":"Xem thêm"
                                     },{
                                         "type":"postback",
-                                        "title":"Liên hệ admin để chốt đơn",
-                                        "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                                        "title":"Mua ngay 💪",
+                                        "payload":"/ask_accept_buy"
                                     }              
                                 ]      
                             }

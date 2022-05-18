@@ -10,9 +10,18 @@
 #!----------------------------- " TƯ VẤN CHUNG " 
 version: "2.0"
 nlu:
-#-> Thông tin tư vấn
+
+#-> Tư vấn sản phẩm
 - intent: ask_tuvan_menu
   examples: |
+    - tôi muốn biết các sản phẩm bên bạn
+    - bạn ơi, mình muốn mua sản phẩm bên bạn nhưng không biết nên mua gì
+    - Bạn có thể tư vấn sản phẩm bên mình cho mình được không
+    - sản phẩm bên mình bán như nào ấy nhỉ?
+    - tư vấn sản phẩm cho mình đi
+    - Mặt hàng bên mình bán như thế nào vậy ta
+    - Sản phẩm bên mình có mấy loại đấy
+    - Các sản phẩm bên mình có còn bán không
     - cho mình hỏi ni chút về sản phẩm với?
     - bên mình hỗ trợ tư vấn gì đấy
     - tư vấn cho mình đi
@@ -30,18 +39,6 @@ nlu:
     - bên mình có hỗ trợ tư vấn không
     - bạn gì đó ơi, bạn giúp mình tư vấn với
 
-#-> Tư vấn sản phẩm
-- intent: ask_tuvan_sanpham
-  examples: |
-    - tôi muốn biết các sản phẩm bên bạn
-    - bạn ơi, mình muốn mua sản phẩm bên bạn nhưng không biết nên mua gì
-    - Bạn có thể tư vấn sản phẩm bên mình cho mình được không
-    - sản phẩm bên mình bán như nào ấy nhỉ?
-    - tư vấn sản phẩm cho mình đi
-    - Mặt hàng bên mình bán như thế nào vậy ta
-    - Sản phẩm bên mình có mấy loại đấy
-    - Các sản phẩm bên mình có còn bán không
-    
 #-> Tư vấn hạt giống
 - intent: ask_tuvan_hatgiong
   examples: |
@@ -70,10 +67,3 @@ nlu:
     - Bạn có thể tư vấn sản phẩm hạt giống bên mình cho mình được không
     - bạn gì đó ơi, bạn giúp mình tư vấn hạt giống với
     - bạn ơi, mình muốn mua sản phẩm hạt giống bên bạn nhưng không biết nó như nào
-
-
-#-> Tư vấn theo nhóm câu hỏi
-- intent: ask_tuvan_question
-  examples: |
-
-  #Hỏi có muốn tiến hành tư vấn hay không, yes hoặc no

@@ -1,3 +1,4 @@
+
 """ Thông tin khuyến mãi - Chung theo loại """
 #--------------------" LOẠI "
 catagory = {
@@ -6,6 +7,10 @@ catagory = {
     "/ask_tuvan_dungcu" : "dung-cu",
     "/ask_tuvan_cuqua" : "hat-giong-cu-qua",
     "/ask_tuvan_rauxanh" : "hat-giong",
+    "ask_tuvan_senda" : "sen-da",
+    "ask_tuvan_dungcu" : "dung-cu",
+    "ask_tuvan_cuqua" : "hat-giong-cu-qua",
+    "ask_tuvan_rauxanh" : "hat-giong",
 
     "ask_tuvan_senda_details" : "sen-da",
     "ask_tuvan_dungcu_details" : "dung-cu",
@@ -16,6 +21,10 @@ catagory = {
     "/ask_khuyenmai_dungcu" : "dung-cu",
     "/ask_khuyenmai_hatgiong_cuqua" : "hat-giong-cu-qua",
     "/ask_khuyenmai_hatgiong_rauxanh" : "hat-giong",
+    "ask_khuyenmai_senda": "sen-da",
+    "ask_khuyenmai_dungcu" : "dung-cu",
+    "ask_khuyenmai_hatgiong_cuqua" : "hat-giong-cu-qua",
+    "ask_khuyenmai_hatgiong_rauxanh" : "hat-giong",
 
     "ask_khuyenmai_senda_details": "sen-da",
     "ask_khuyenmai_dungcu_details" : "dung-cu",
@@ -30,6 +39,30 @@ catagory = {
     "cây củ" : "hat-giong-cu-qua",
     "rau" : "hat-giong",
     "rau xanh" : "hat-giong",
+
+}
+''' LOẠI BLOG '''
+ctg_blog = {
+
+    "/ask_blog_care" : "cham-soc-cay-trong",
+    "/ask_blog_cook" : "vao-bep-cung-vu-tru-hat",
+    "/ask_blog_mean" : "y-nghia-loai-cay",
+    "/ask_blog_use" : "cong-dung-cua-cac-loai-rau-qua",
+
+    "ask_blog_care" : "cham-soc-cay-trong",
+    "ask_blog_cook" : "vao-bep-cung-vu-tru-hat",
+    "ask_blog_mean" : "y-nghia-loai-cay",
+    "ask_blog_use" : "cong-dung-cua-cac-loai-rau-qua",
+
+    "ask_blog_care_new" : "cham-soc-cay-trong",
+    "ask_blog_cook_new" : "vao-bep-cung-vu-tru-hat",
+    "ask_blog_mean_new" : "y-nghia-loai-cay",
+    "ask_blog_use_new" : "cong-dung-cua-cac-loai-rau-qua",
+
+    "chăm": "cham-soc-cay-trong",
+    "nấu" : "vao-bep-cung-vu-tru-hat",
+    "ý nghĩa" : "y-nghia-loai-cay",
+    "công dụng" : "cong-dung-cua-cac-loai-rau-qua",
 
 }
 
@@ -114,7 +147,7 @@ item_dungcu = [
     {"găng tay nông nghiệp có móng vuốt để làm vườn" : "Găng Tay Nông Nghiệp Có Móng Vuốt Chuyên Dụng Làm Vườn" },
     {"găng tay nông nghiệp có móng vuốt" : "Găng Tay Nông Nghiệp Có Móng Vuốt Chuyên Dụng Làm Vườn" },
     {"găng tay nông nghiệp" : "Găng Tay Nông Nghiệp Có Móng Vuốt Chuyên Dụng Làm Vườn" },
-    {"găng tay  có móng vuốt chuyên dụng làm vườn" : "Găng Tay Nông Nghiệp Có Móng Vuốt Chuyên Dụng Làm Vườn" },
+    {"găng tay có móng vuốt chuyên dụng làm vườn" : "Găng Tay Nông Nghiệp Có Móng Vuốt Chuyên Dụng Làm Vườn" },
     {"găng tay có móng vuốt để làm vườn" : "Găng Tay Nông Nghiệp Có Móng Vuốt Chuyên Dụng Làm Vườn" },
     {"găng tay có móng vuốt" : "Găng Tay Nông Nghiệp Có Móng Vuốt Chuyên Dụng Làm Vườn" },
     {"găng tay" : "Găng Tay Nông Nghiệp Có Móng Vuốt Chuyên Dụng Làm Vườn" },

@@ -12,7 +12,9 @@ import json
 option = webdriver.ChromeOptions()
 option.add_argument('headless')
 #turn off log of selenium
-option.add_experimental_option("excludeSwitches", ["enable-logging"])
+
+# option.add_experimental_option("excludeSwitches", ["enable-logging"])
+
 #Chạy chương trình giả lập Chrome
 
 #Truy cập trang web
@@ -66,4 +68,68 @@ def product(path, name_j):
     with open(f"{name_j}.json","w", encoding='utf-8') as jsonfile:
         json.dump(data, jsonfile, ensure_ascii=False, indent=4)
 
-product("sen-da", "dungcu")
+# product("sen-d
+#---------------------------------------------------------------------------
+catagory = {
+        "sen-da" : "CHĂM SỐC CÂY TRỒNG",
+        "dung-cu" : "CÔNG DỤNG CỦA CÁC LOẠI RAU QUẢ",
+        "hat-giong-cu-qua" : "VÀO BẾP CÙNG VŨ TRỤ HẠT",
+        "hat-giong" : "Ý NGHĨA LOẠI CÂY"
+    }
+
+data ={ 
+    "type": "Ý NGHĨA LOẠI CÂY", 
+    "time" : date.today().isoformat(),
+    "data": []
+} 
+
+browser = webdriver.Chrome(executable_path="D:\\Năm 4 - Thực tập tốt nghiệp\\Project\\Chatbot\\chatbot_vth\\others\\chromedriver", options=option)
+browser.get(f"https://vutruhat.com/category/y-nghia-loai-cay/")
+#Đợi load
+sleep(2)
+
+num = 1
+for i in browser.find_elements(By.XPATH, "//a[@class='plain']"):
+    #---> IMAGE
+    IMAGE = i.find_element(By.CLASS_NAME, "image-cover").get_attribute('innerHTML')
+    IMAGE = IMAGE[IMAGE.find('srcset="')+8:]
+    # Tìm loại thích hợp vs đui ảnh
+    if IMAGE.find('jpg') > -1:
+        f = IMAGE.find('jpg') + 3
+    elif IMAGE.find('png') > -1:
+        f = IMAGE.find('png') + 3
+    elif IMAGE.find('jpeg') > -1:
+        f = IMAGE.find('jpeg') + 4
+    #!
+
+    data["data"].append(
+        {
+            "stt" : num,
+            "title" : i.find_element(By.TAG_NAME, "h5").text,
+            "desc" : i.find_element(By.TAG_NAME, "p").text.replace("[...]","...").rstrip(),
+            "link" : i.get_attribute('href'),
+            "image" : IMAGE[:f]
+        }
+    )
+    num += 1
+
+browser.close()
+with open(f"dungcu.json","w", encoding='utf-8') as jsonfile:
+        json.dump(data, jsonfile, ensure_ascii=False, indent=4)
+
+#1 . stt (tăng dần)
+#2. Tên tiêu đề
+#3. Mô tả
+#4. Hình ảnh 
+# 5. Link
+
+
+
+#----RUN
+# """
+
+#         D:\Năm 4 - Thực tập tốt nghiệp\Project\Chatbot\chatbot_vth\others\draft
+#         conda activate rasa-chatbot
+#         python api_1.py
+
+# """

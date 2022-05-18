@@ -10,12 +10,6 @@ stories:
   - intent: ask_tuvan_menu
   - action: utter_tuvan_menu
 
-#---> 1.1 Menu tư vấn (Theo sản phẩm)
-- story: Menu tư vấn (Theo sản phẩm)
-  steps:
-  - intent: ask_tuvan_sanpham
-  - action: utter_tuvan_sanpham
-
 #---> 1.1.1 Tư vấn (Dung cụ làm vườn)
 - story: Tư vấn (Dung cụ làm vườn)
   steps:
@@ -58,18 +52,12 @@ stories:
 #---> 1.1.2.3 Tư vấn (Sen đá)
 - story: Tư vấn (Sen đá)
   steps:
-  - intent: ask_khuyenmai_senda
+  - intent: ask_tuvan_senda
   - action: act_tuvan_web
 
 - story: Tư vấn (Sen đá) - Chi tiết
   steps:
-  - intent: ask_khuyenmai_senda_details
+  - intent: ask_tuvan_senda_details
   - action: act_tuvan_web_details
 
 
-
-#---> 1.2 Tư vấn theo câu hỏi
-- story: Tư vấn theo câu hỏi
-  steps:
-  - intent: ask_khuyenmai_menu
-  - action: utter_plc_khuyenmai_menu

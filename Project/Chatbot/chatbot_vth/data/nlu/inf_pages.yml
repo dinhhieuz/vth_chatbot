@@ -1,5 +1,12 @@
 version: "2.0"
 nlu:
+
+- intent: ask_page_menu
+  examples: |
+    - Tôi muốn biết thêm về vũ trụ hạt
+    - bạn cho tôi biết thông tin bên mình được không
+    - Làm sao để hiểu hơn về vũ trụ hạt
+    - Các thông tin liên quan đến Vũ trụ hạt
 #-> Giới thiệu doanh nghiệp VTH
 - intent: ask_page_intro
   examples: |

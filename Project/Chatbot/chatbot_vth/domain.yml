@@ -3,8 +3,12 @@ version: "2.0"
 #-------------------> Feature: LIST OF INTENTS <-----------
 
 intents:
+  - chat_bye
+# CHẤP NHẬN MUA HÀNG
+  - ask_accept_buy
   
 # INF OF COMMERCIAL
+  - ask_page_menu
   - ask_page_intro
   - ask_page_contact
   - ask_page_timework
@@ -19,9 +23,7 @@ intents:
   - ask_tuvan_senda_details
   - ask_tuvan_senda
   - ask_tuvan_menu
-  - ask_tuvan_sanpham
   - ask_tuvan_hatgiong
-  - ask_tuvan_question
 
 # BÀI BLOGS
   - ask_blog_menu
@@ -52,7 +54,7 @@ intents:
 
 # KHUYẾN MÃI
 
-  - ask_khuyenmai_hatgiong_menu
+  - ask_khuyenmai_hatgiong
   - ask_khuyenmai_hatgiong_rauxanh
   - ask_khuyenmai_hatgiong_rauxanh_details
   - ask_khuyenmai_hatgiong_cuqua
@@ -66,13 +68,12 @@ intents:
 
 # CHATCHIT
   - chat_bye
-  - chat_damn
   - chat_greating
   - chat_thank
   - chat_negative
   - chat_positive
-  - chat_praise
   - chat_agree
+
 
 
 
@@ -85,39 +86,35 @@ responses:
   #!-------------> CHATCHIT
   utter_chat_bye:
   - text: "Tạm biệt bạn, chúc bạn một ngày tốt lành 🧡 !!!"
+  - text: "Hẹn gặp lại bạn, chúc bạn ngày tốt lành 🧡"
+  - text: "Tạm biệt, cảm ơn bạn đã ghé thăm page 🧡"
   - text: "Tạm biệt nhá, hãy liên hệ chúng tôi nếu bạn cần gì đó 🧡"
-
-  utter_chat_praise:
-  - text: "Cảm ơn, chúng tôi rất vui vì bạn thích nó 😚\nHãy chia sẽ chúng cho bạn bè cùng biết nhé!!!"
-
-  utter_chat_damn:
-  - text: "Rất xin lỗi bạn, chúng tôi sẽ lưu ý và cải thiện chúng 😩"
 
   utter_chat_thank:
   - text: "Không có gì, shop cũng rất vui khi giúp được một chút gì đó cho bạn"
-
+  - text: "Không có gì bạn, shop cũng vui khi được giúp bạn"
+  - text: "Vâng, shop cũng rất vui vì được giúp bạn"
+  
   utter_chat_positive:
   - text: "Cảm ơn bạn đã thích Shop, rất vui và cảm kích bạn 🤗"
+  - text: "Cảm ơn, chúng tôi rất vui vì bạn thích nó 😚\nHãy chia sẽ chúng cho bạn bè cùng biết nhé!!!"
 
   utter_chat_negative:
   - text: "Xin lỗi, chúng tôi rất tiết vì đã khiến bạn không vui 😭"
+  - text: "Rất xin lỗi bạn, chúng tôi sẽ lưu ý và cải thiện chúng 😩"
 
   utter_chat_agree:
   - text: 👍👍👍
+  
 
   #!-------------> CONSULT TO CUSTOMES
-  utter_tuvan_menu:
-  - text: "Các thông tin có thể được tư vấn của Vũ Trụ Hạt: "
-    buttons: 
-    - title: "Tư vấn theo sản phẩm"
-      payload: "/ask_tuvan_sanpham"
-    - title: "Tư vấn bằng câu hỏi"
-      payload: "/ask_tuvan_question"
 
-  utter_tuvan_sanpham:
+  utter_tuvan_menu:
   - text: "Các nhóm sản phẩm của Vũ Trụ Hạt: "
     buttons: 
-    - title: "Hạt giống và Sen"
+    - title: "Sen đá"
+      payload: "/ask_tuvan_senda"
+    - title: "Hạt giống rau và củ"
       payload: "/ask_tuvan_hatgiong"
     - title: "Dụng cụ làm vườn"
       payload: "/ask_tuvan_dungcu"
@@ -125,8 +122,6 @@ responses:
   utter_tuvan_hatgiong:
   - text: "Các loại hạt giống của Vũ Trụ Hạt: "
     buttons:
-    - title: "Sen đá"
-      payload: "/ask_tuvan_senda"
     - title: "Hạt giống rau xanh"
       payload: "/ask_tuvan_rauxanh"
     - title: "Hạt giống củ quả"
@@ -136,6 +131,17 @@ responses:
 
 
   #!-------------> PAGE OF INFORMATIONS 
+  utter_page_menu:
+  - text: "Các thông tin về Vũ Trụ Hạt: "
+    buttons:
+    - title: "Vũ trụ hạt là gì?"
+      payload: "/ask_page_intro"
+    - title: "Làm sao để liên lạc?"
+      payload: "/ask_page_contact"
+    - title: "Còn hoạt động không?"
+      payload: "/ask_page_timework"
+
+
   utter_page_intro:
   - text: |
       Vũ Trụ Hạt là một trang thương mại điện tử.
@@ -178,9 +184,9 @@ responses:
   utter_plc_thanhtoan_menu:
   - text: "Các câu hỏi thường gặp về thanh toán" 
     buttons:
-    - title: "Có hình thức thanh toán nào?"
+    - title: "Hình thức thanh toán?"
       payload: "/ask_plc_thanhtoan_opt"
-    - title: "Làm sao thanh toán online?"
+    - title: "Sao thanh toán online?"
       payload: "/ask_plc_thanhtoan_onl"
 
   utter_plc_thanhtoan_opt:
@@ -247,18 +253,18 @@ responses:
       Vũ Trụ Hạt luôn tạo điều kiện tốt nhất cho khách hàng. 
 
   #!-------------> KHUYẾN MÃI
-  utter_plc_khuyenmai_menu: #NOTE: Sữ dụng slot để lưu trữ và dùng chung 1 action 
+  utter_khuyenmai_menu: #NOTE: Sữ dụng slot để lưu trữ và dùng chung 1 action 
   - text: "Các nhóm khuyển mãi:"
     buttons:
     - title: "Sen đá & Hạt giống"
-      payload: "/ask_khuyenmai_hatgiong_menu"
+      payload: "/ask_khuyenmai_hatgiong"
     - title: "Dụng cụ làm vườn"
       payload: "/ask_khuyenmai_dungcu"
     - title: "Khác..."
       payload: "/ask_khuyenmai_others"
 
   #?-> Menu khuyến mãi vạy hạt giống
-  utter_plc_khuyenmai_hatgiong_menu: 
+  utter_khuyenmai_hatgiong: 
   - text: "Các nhóm khuyến mãi Sen và Hạt:"
     buttons:
     - title: "Sen đá"
@@ -269,7 +275,7 @@ responses:
       payload: "/ask_khuyenmai_hatgiong_cuqua"
 
   #?-> Menu khuyến mãi khác 
-  utter_plc_khuyenmai_others:
+  utter_khuyenmai_others:
   - text: |
       Các khuyến mãi khác:
         ⭐ Vận chuyển miễn phí: 
@@ -293,10 +299,18 @@ session_config:
 #-------------------> Feature: CUSTOM ACTIONS <-----------
 actions:
   - act_chat_greating
+
+  - act_accept_buy
+ 
   - act_khuyenmai_web
   - act_khuyenmai_web_details
+  
   - act_tuvan_web
   - act_tuvan_web_details
+  
+  - act_blogs
+  - act_blogs_web
+  
   - act_unknown
 
 

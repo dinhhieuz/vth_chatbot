@@ -2,9 +2,10 @@
 
 1. Version: 
     - Rasa: 2.8.13
-    - Python: 3.8.10
+    - Python: 3.7.7
     - selenium: 4.1.3
-    - bs4: 0.0.1
+    - pyYAML: 6.0
+    - pymssql: 2.2.5
 
 2. Enviroment:
     - 

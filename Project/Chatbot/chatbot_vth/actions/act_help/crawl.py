@@ -13,22 +13,22 @@ import asyncio
 option = webdriver.ChromeOptions()
 option.add_argument('headless')
 #turn off log of selenium
-# option.add_experimental_option("excludeSwitches", ["enable-logging"])
+option.add_experimental_option("excludeSwitches", ["enable-logging"])
 #Chạy chương trình giả lập Chrome
 
 class crawl:
     async def product(path, name_j):
         try:
-            await asyncio.sleep(10)
+            await asyncio.sleep(5)
             print("[class Crawl/product ->")
             catagory = {
                         "sen-da" : "SEN ĐÁ",
                         "dung-cu" : "DỤNG CỤ LÀM VƯỜN",
                         "hat-giong-cu-qua" : "HẠT GIỐNG CỦ QUẢ",
                         "hat-giong" : "HẠT GIỐNG RAU XANH"
-                    }
+                    }.get(path)
             data ={ 
-                "type": catagory.get(path), 
+                "type": catagory, 
                 "time" : date.today().isoformat(),
                 "data": []
             } 
@@ -38,10 +38,7 @@ class crawl:
                 if browser.title.find("Không tìm thấy trang") > -1:
                     break
                 else:
-                    # list_item = browser.find_element_by_class_name("col-inner")
-                    # list_item = browser.find_elements_by_xpath("//div[@class='col-inner'")
-                    # driver.find_element_by_xpath("//form[@id='loginForm']")
-                    sleep(1.5)
+                    sleep(2)
                     list_item = browser.find_elements(By.XPATH, "//div[@class='product-small box ']")
 
                     for i in list_item:
@@ -62,7 +59,7 @@ class crawl:
                                 "status" :  "Hết hàng" if len(item) == 5 else "Còn hàng",
                             }
                         )
-                        print("\t 1+ data: "+  catagory.get(path))
+                        print("\t 1+ data: "+  catagory)
                     # Đóng trình duyệt
                     browser.close()
 
@@ -75,11 +72,59 @@ class crawl:
 
 
     ''' Crawl BLOGS'''
-    async def blogs():
+    async def blogs(name_j):
         try:
-            await asyncio.sleep(10)
+            await asyncio.sleep(5)
             print("[class Crawl/blogs ->")
             #content
+            
+            catagory = {
+                    "cham-soc-cay-trong" : "CHĂM SỐC CÂY TRỒNG",
+                    "cong-dung-cua-cac-loai-rau-qua" : "CÔNG DỤNG CỦA CÁC LOẠI RAU QUẢ",
+                    "vao-bep-cung-vu-tru-hat" : "VÀO BẾP CÙNG VŨ TRỤ HẠT",
+                    "y-nghia-loai-cay" : "Ý NGHĨA LOẠI CÂY"
+                }.get(name_j)
+
+            data ={ 
+                "type": catagory, 
+                "time" : date.today().isoformat(),
+                "data": []
+            } 
+            print(catagory)
+            browser = webdriver.Chrome(executable_path="D:\\Năm 4 - Thực tập tốt nghiệp\\Project\\Chatbot\\chatbot_vth\\others\\chromedriver", options=option)
+            browser.get(f"https://vutruhat.com/category/{name_j}/")
+            #Đợi load
+            sleep(2)
+
+            num = 1
+            for i in browser.find_elements(By.XPATH, "//a[@class='plain']"):
+                #---> IMAGE
+                IMAGE = i.find_element(By.CLASS_NAME, "image-cover").get_attribute('innerHTML')
+                IMAGE = IMAGE[IMAGE.find('srcset="')+8:]
+                # Tìm loại thích hợp vs đui ảnh
+                if IMAGE.find('jpg') > -1:
+                    f = IMAGE.find('jpg') + 3
+                elif IMAGE.find('png') > -1:
+                    f = IMAGE.find('png') + 3
+                elif IMAGE.find('jpeg') > -1:
+                    f = IMAGE.find('jpeg') + 4
+                #thêm dữ liệu
+                data["data"].append(
+                    {
+                        "stt" : num,
+                        "title" : i.find_element(By.TAG_NAME, "h5").text,
+                        "desc" : i.find_element(By.TAG_NAME, "p").text.replace("[...]","...").rstrip(),
+                        "link" : i.get_attribute('href'),
+                        "image" : IMAGE[:f]
+                    }
+                )
+                num += 1
+                print("\t 1+ data: "+  catagory)
+
+            browser.close()
+            with open(f"./assets/data/blog/{name_j}.json","w", encoding='utf-8') as jsonfile:
+                    json.dump(data, jsonfile, ensure_ascii=False, indent=4)
+
             print("[class: crawl/blogs] -> Done")
         except:
             #error

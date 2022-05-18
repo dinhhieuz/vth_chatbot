@@ -15,6 +15,17 @@ from rasa_sdk.executor import CollectingDispatcher
 import gc
 from requests import delete
 
+import json
+from xmlrpc.client import FastParser
+import yaml
+import requests
+
+from datetime import datetime, date
+
+secret_key = "WAWCLyzhGJ1McGPc6prN"
+app_id = "1882365302811688917"
+
+#!-------------------> XIN CHÀO
 
 class act_chat_greating(Action):
 
@@ -27,211 +38,160 @@ class act_chat_greating(Action):
         
         print('[%s] <- %s' % (self.name(), tracker.latest_message['text']))
         #----->
-
-        button = [
+        button_main = [
             {
                 "type":"postback",
-                "title": "Chính Sách",
-                "payload": "làm sao để hiểu được chính sách của VTH"
+                "title": "Tư vấn",
+                "payload": "/ask_tuvan_menu"
             },
             {
                 "type":"postback",
-                "title":"📞 Liên hệ nhân sự",
-                "payload":" Liên hệ phòng nhân sự"
-            },
-            {
-                "type":"postback",
-                "title":"Khuyến Mãi",
+                "title":"Khuyến mãi",
                 "payload": "/ask_khuyenmai_menu"
-            }
+            },
+            {
+                "type":"postback",
+                "title":"Blogs",
+                "payload":"/ask_blog_menu"
+            },
         ]
 
         dispatcher.utter_message(
-            text = "Xin chào Vũ Trụ Hạt rất vui được nói chuyện với bạn!!!\nChúng tôi có thể giúp gì cho bạn nào"
-            , buttons = button
+            text = "Xin chào Vũ Trụ Hạt rất vui được nói chuyện với bé Hòa đáng yêu 🖐️🖐️!!!\nChúng tôi có thể giúp gì cho bạn nào"
+            , buttons = button_main
         )
-        # #---> Generic Template 
-        # res = {
-        #     "attachment":{
-        #         "type":"template",
-        #         "payload":{
-        #             "template_type":"generic",
-        #             "elements":[
-        #                 {
-        #                     "title":"cái ni là gì 1",
-        #                     "image_url":"https://raw.githubusercontent.com/fbsamples/original-coast-clothing/main/public/styles/male-work.jpg",
-        #                     "subtitle":"Đây là tiêu đề 1",
-        #                     "default_action": {
-        #                         "type": "web_url",
-        #                         "url": "https://www.originalcoastclothing.com/",
-        #                         "webview_height_ratio": "tall",
-        #                     },
-        #                     "buttons":[
-        #                         {
-        #                             "type":"web_url",
-        #                             "url":"https://www.originalcoastclothing.com/",
-        #                             "title":"button 1"
-        #                         },{
-        #                             "type":"postback",
-        #                             "title":"số button 2",
-        #                             "payload":"DEVELOPER_DEFINED_PAYLOAD"
-        #                         }              
-        #                     ]      
-        #                 },
-        #                 {
-        #                     "title":"cái ni là gì 2",
-        #                     "image_url":"https://raw.githubusercontent.com/fbsamples/original-coast-clothing/main/public/styles/male-work.jpg",
-        #                     "subtitle":"Đây là tiêu đề 2.",
-        #                     "default_action": {
-        #                         "type": "web_url",
-        #                         "url": "https://www.originalcoastclothing.com/",
-        #                         "webview_height_ratio": "tall",
-        #                     },
-        #                     "buttons":[
-        #                         {
-        #                             "type":"web_url",
-        #                             "url":"https://www.originalcoastclothing.com/",
-        #                             "title":"View Website"
-        #                         },{
-        #                             "type":"postback",
-        #                             "title":"Start Chatting",
-        #                             "payload":"DEVELOPER_DEFINED_PAYLOAD"
-        #                         }              
-        #                     ]      
-        #                 }
-        #             ]
-        #         }
-        #     }
-        # }
-        # dispatcher.utter_message(json_message = res)
 
-        # #--> Receipt template
-        # res = {
-        #     "attachment":{
-        #         "type":"template",
-        #         "payload":{
-        #             "template_type":"receipt",
-        #             "recipient_name":"Stephane Crozatier",
-        #             "order_number":"12345678902",
-        #             "currency":"USD",
-        #             "payment_method":"Visa 2345",        
-        #             "order_url":"http://originalcoastclothing.com/order?order_id=123456",
-        #             "timestamp":"1428444852",         
-        #             "address":{
-        #                 "street_1":"1 Hacker Way",
-        #                 "street_2":"",
-        #                 "city":"Menlo Park",
-        #                 "postal_code":"94025",
-        #                 "state":"CA",
-        #                 "country":"US"
-        #             },
-        #             "summary":{
-        #             "subtotal":75.00,
-        #             "shipping_cost":4.95,
-        #             "total_tax":6.19,
-        #             "total_cost":56.14
-        #             },
-        #             "adjustments":[
-        #                 {
-        #                     "name":"New Customer Discount",
-        #                     "amount":20
-        #                 },
-        #                 {
-        #                     "name":"$10 Off Coupon",
-        #                     "amount":10
-        #                 }
-        #             ],
-        #             "elements":[
-        #             {
-        #                 "title":"Classic White T-Shirt",
-        #                 "subtitle":"100% Soft and Luxurious Cotton",
-        #                 "quantity":2,
-        #                 "price":50,
-        #                 "currency":"USD",
-        #                 "image_url":"http://originalcoastclothing.com/img/whiteshirt.png"
-        #             },
-        #             {
-        #                 "title":"Classic Gray T-Shirt",
-        #                 "subtitle":"100% Soft and Luxurious Cotton",
-        #                 "quantity":1,
-        #                 "price":25,
-        #                 "currency":"USD",
-        #                 "image_url":"http://originalcoastclothing.com/img/grayshirt.png"
-        #             }
-        #             ]
-        #         }
-        #     }
-        # }
-        # dispatcher.utter_message(json_message = res)
+        res = {
+            "attachment":{
+                "type":"template",
+                "payload":{
+                    "template_type":"button",
+                    "text":"Các trợ giúp khác: ",
+                    "buttons":[
+                        {
+                            "type":"postback",
+                            "title": "Chính Sách",
+                            "payload": "/ask_plc_menu"
+                        },
+                        {
+                            "type":"phone_number",
+                            "title":"📞 Liên hệ admin",
+                            "payload":"+84763792207"
+                        },
+                    ]
+                }
+            }
+        }
+        dispatcher.utter_message(json_message=res)
 
-        # #--> Feedback
-        # res = {
-        #     "attachment": {
-        #         "type": "template",
-        #         "payload": {
-        #             "template_type": "customer_feedback",
-        #             "title": "Rate your experience with Original Coast Clothing.",
-        #             "subtitle": "Let Original Coast Clothing know how they are doing by answering two questions",
-        #             "button_title": "Rate Experience",
-        #             "feedback_screens": [{
-        #             "questions":[{
-        #                 "id": "hauydmns8",
-        #                 "type": "csat",
-        #                 "title": "How would you rate your experience with Original Coast Clothing?",
-        #                 "score_label": "neg_pos",
-        #                 "score_option": "five_stars",
-        #                 "follow_up":
-        #                 {
-        #                 "type": "free_form", 
-        #                 "placeholder": "Give additional feedback"
-        #                 }
-        #             }]
-        #             }],
-        #             "business_privacy": 
-        #             {
-        #                 "url": "https://www.google.com.vn/?hl=vi"
-        #             },
-        #             "expires_in_days" : 3
-        #         }
-        #     }
-        # }
-        # res ={
-        #     "attachment":{
-        #     "type":"template",
-        #     "payload":{
-        #         "template_type":"generic",
-        #         "elements":[
-        #         {
-        #             "title":"Welcome!",
-        #             "image_url":"https://raw.githubusercontent.com/fbsamples/original-coast-clothing/main/public/styles/male-work.jpg",
-        #             "subtitle":"We have the right hat for everyone.123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789",
-        #             "default_action": {
-        #             "type": "web_url",
-        #             "url": "https://www.originalcoastclothing.com/",
-        #             "webview_height_ratio": "tall",
-        #             },
-        #             "buttons":[
-        #             {
-        #                 "type":"web_url",
-        #                 "url":"https://www.originalcoastclothing.com/",
-        #                 "title":"View Website"
-        #             },{
-        #                 "type":"postback",
-        #                 "title":"Start Chatting",
-        #                 "payload":"DEVELOPER_DEFINED_PAYLOAD"
-        #             }              
-        #             ]      
-        #         }
-        #         ]
-        #     }
-        #     }
-        # }
-        # dispatcher.utter_message(json_message = res)
+        del button_main, res
         gc.collect()
         return []
 
+#!------------------------------------ CHẤP NHẬN MUA HÀNG
+
+class act_accept_buy(Action):
+
+    def name(self) -> Text:
+        return "act_accept_buy"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        print('[%s] <- %s' % (self.name(), tracker.latest_message['text']))
+ 
+        #--> Không hiểu tra Google
+        result = send_manager(tracker.sender_id)
+
+        if result == True:
+            text = "Cảm ơn bạn rất nhiều 🥰\nchúng tôi sẽ lên đơn cho bạn, hãy đợi chút nhé 😍"
+        else:
+            text = "Cảm ơn bạn rất nhiêu 🥰\nhiện tại hệ thông đang bận, mình sẽ chủ động liên lạc cho bạn trong thời gian sớm nhất, chân thành xin lỗi 😔"
+        dispatcher.utter_message(
+            text = text
+        )
+
+        del text, result
+
+        gc.collect()
+        return []
+
+#---> Handle Function
 
 
+''' GỬI YÊU CẦU MUA HÀNG ĐẾN NHÀ QUẢN LÝ'''
+def send_manager(id_user):
+    ''' Lấy tên người dùng tại Facebook'''
+    # try: 
+    # Đọc file YAML để lấy access token
+    with open(r"credentials.yml") as fh:
+        rd_acstoken = yaml.load(fh, Loader=yaml.FullLoader)
+    profile = requests.get("https://graph.facebook.com/{}?fields=first_name,last_name,middle_name, name, name_format, short_name,profile_pic,location&access_token={}".format(id_user, rd_acstoken["facebook"]["page-access-token"]))
+    
+    #Kiểm tra lấy được profile người dùng chưa
+    if profile.ok:
+        now = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+        profile = profile.json()
+        #đọc file zalo
+        with open(f'./assets/other/zalo.json', encoding='utf-8') as json_file:
+            data = json.load(json_file)
+
+        if data["time"] != date.today().isoformat():
+            #call new access 
+            headers = { 
+                "Content-Type": "application/x-www-form-urlencoded",
+                "secret_key": secret_key
+            }
+            payload = {
+                "refresh_token" : data["refresh_token"],
+                "app_id" : app_id,
+                "grant_type" : "refresh_token"
+            }
+            response = requests.post("https://oauth.zaloapp.com/v4/oa/access_token", data=payload, headers = headers).json()
+            #Save into file
+            print(response)
+            get_acs = {
+                "time": date.today().isoformat(),
+                "access_token": response["access_token"],
+                "refresh_token":  response["refresh_token"],
+            }
+            with open(f"./assets/other/zalo.json","w", encoding='utf-8') as jsonfile:
+                json.dump(get_acs, jsonfile, ensure_ascii=False, indent=4)
+
+            #đọc access lần mới nhất
+            with open(f'./assets/other/zalo.json', encoding='utf-8') as json_file:
+                data = json.load(json_file)
+
+        '''Gửi yêu cầu tới Zalo'''
+        headers = { "access_token": data["access_token"] }
+        payload = {"recipient": {
+            "user_id": "8668477534363029464"
+            },
+            "message": {
+            "text": "YÊU CẦU MUA HÀNG: "+ profile["name"] + " | " + now,
+            "attachment": {
+                "type": "template",
+                "payload": {
+                    "template_type": "media",
+                    "elements": [{
+                        "media_type": "image",
+                        # "attachment_id": response.json()["data"].get("attachment_id"),
+                        "url": profile["profile_pic"]
+                    }]
+                }
+            }
+            }
+        }
+        response = requests.post("https://openapi.zalo.me/v2.0/oa/message", data=json.dumps(payload), headers = headers)
+        
+        if response.ok: return True
+        else: return False
+    else: 
+        return False
+    # except Exception as Error:
+    #     print(Error)
+    #     print("[ERROR: func]-> action/send_manager")
 #!-------------------------------------FALL BACK
 class act_unknown(Action):
 
@@ -247,16 +207,42 @@ class act_unknown(Action):
         #--> Không hiểu tra Google
         messeger_user = tracker.latest_message['text']
         url = "https://www.google.com.vn/search?q='" + messeger_user.replace(" ", "%20") + "'"
-        search = {
-            "type": "web_url",
-            "url": f"{url}",
-            "title": "Search Google",
-        }
+
         dispatcher.utter_message(
-            text="Xin lỗi bạn vì hiện tại tôi chưa hiểu bạn muốn gì! Bạn hãy bấm vào đây để tôi nhờ chị Google giải đáp nhé: "
-            , buttons= [search])
+            text="Xin lỗi bạn vì hiện tại tôi chưa hiểu bạn muốn gì!"
+        )
         
-        del url, search, messeger_user
+        res = {
+            "attachment":{
+                "type":"template",
+                "payload":{
+                    "template_type":"button",
+                    "text":"Các lựa chọn khác: ",
+                    "buttons":[
+                        {
+                            "type": "web_url",
+                            "url": "https://vutruhat.com/",
+                            "title": "🛒 Website",
+                        },
+                        {
+                            "type":"phone_number",
+                            "title":"📞 Liên hệ admin",
+                            "payload":"+84763792207"
+                        },
+                        {
+                            "type": "web_url",
+                            "url": f"{url}",
+                            "title": "🔎 Search Google",
+                        },
+                    ]
+                }
+            }
+        }
+        dispatcher.utter_message(json_message=res)
+        del url, res, messeger_user
 
         gc.collect()
         return []
+
+
+

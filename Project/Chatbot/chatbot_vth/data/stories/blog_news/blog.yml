@@ -1,0 +1,61 @@
+version: "2.0"
+
+stories:
+#--> Menu bài viết
+- story: blogs (menu)
+  steps:
+  - intent: ask_blog_menu
+  - action: act_blogs
+
+#--> Menu bài viết - Mới
+- story: blogs (menu) - new
+  steps:
+  - intent: ask_blog_new
+  - action: act_blogs_web
+
+#--> Chăm sốc
+- story: blogs (chăm sốc)
+  steps:
+  - intent: ask_blog_care
+  - action: act_blogs_web
+
+- story: blogs (chăm sốc) - mới nhất
+  steps:
+  - intent: ask_blog_care_new
+  - action: act_blogs_web
+
+#--> Nấu ăn
+- story: blogs (nấu ăn)
+  steps:
+  - intent: ask_blog_cook
+  - action: act_blogs_web
+
+- story: blogs (nấu ăn)  - mới nhất
+  steps:
+  - intent: ask_blog_cook_new
+  - action: act_blogs_web
+
+#--> Ý nghĩa
+- story: blogs (ý nghĩa)
+  steps:
+  - intent: ask_blog_mean
+  - action: act_blogs_web
+
+- story: blogs (ý nghĩa) - mới nhất
+  steps:
+  - intent: ask_blog_mean_new
+  - action: act_blogs_web
+
+#--> Tận dụng
+- story: blogs (tận dụng)
+  steps:
+  - intent: ask_blog_use
+  - action: act_blogs_web
+
+- story: blogs (tận dụng) - mới nhất
+  steps:
+  - intent: ask_blog_use_new
+  - action: act_blogs_web
+
+  
+  

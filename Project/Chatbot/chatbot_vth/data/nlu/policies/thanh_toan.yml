@@ -7,6 +7,12 @@ nlu:
     - Chính sách thanh toán này như nào ấy nhỉ
     - Tôi muốn hiểu hơn về chính sách thanh toán bên mình
     - Mình muốn hiểu hơn về thanh toán bên mình 
+    - Xem thanh toán bạn ơi
+    - xem thanh toán đi bot
+    - Cho mình xem thanh toán
+    - Cho mình xem chính sách về thanh toán
+    - Chính sách thanh toán bên mình nhưu nào đấy
+    - Chính sách thanh toán đe
 
 #-> Chính sách thanh toán của VTH
 - intent: ask_plc_thanhtoan_opt
@@ -18,6 +24,7 @@ nlu:
     - Trả tiền cho shipper hay là phải chuyển tiền mặt shop nhỉ
     - Trả tiền qua thẻ hay là nhận hàng rồi mới trả shop nhỉ
     - Cửa hàng có những hình thức thanh toán nào
+    - Thanh toán bên mình như nào đấy
 
 
 #-> Chính sách trả tiền Online

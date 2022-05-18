@@ -1,8 +1,6 @@
 
 version: "2.0"
-
 nlu:
-
 - intent: chat_greating
   examples: |
     - Xin chào
@@ -33,23 +31,6 @@ nlu:
     - fen ơi 
     - Xin chào fen 
 
-- intent: chat_praise
-  examples: |
-    - Đẹp quá
-    - Xịn quá
-    - Hay quá admin ơi
-    - Bé này đẹp quá 
-    - Con hàng này xinh quá
-    - con hàng này ngon quá
-    - Hàng chất lượng quá fen ơi
-
-- intent: chat_damn
-  examples: |
-    - Xấu quá đi
-    - sao mà xấu thế nhỉ
-    - Xấu quá admin ơi
-    - Hàng gì trong chán thế nhở
-    - Hàng trong phèn quá
 
 - intent: chat_bye
   examples: |
@@ -76,13 +57,33 @@ nlu:
     - được quá cảm ơn nhá
     - Rất cảm ơn
     - cảm và ơn
+    - cảm ơn nhiều nha
+    - chân thành cảm ơn
+    - xin cảm ơn
+    - c.ơn nha 
+    - thank shop
+    - được quá shop, cảm ơn ha 
 
 - intent: chat_positive
   examples: |
-    - Shop bạn đồ xịn ghê
+    - Shop bán đồ xịn ghê
     - Shop bán toàn đồ xịn thôi
     - Vũ trụ hạt có vẻ xịn nhỉ
     - Chatbot xịn quá ta
+    - Đẹp quá
+    - Xịn quá
+    - Hay quá admin ơi
+    - Bé này đẹp quá 
+    - Con hàng này xinh quá
+    - con hàng này ngon quá
+    - Hàng chất lượng quá fen ơi
+    - Đỉnh quá ấy ơi
+    - Hàng xịn thật sự
+    - Cái cây này xịn quá
+    - Cái cây này đẹp quá shop ơi
+    - Tại sao lại có loại xinh như vậy được nhỉ
+    - Đây là lần đầu tiên mình thấy cây xinh thế đấy
+    - Xịn quá ấy ơi
 
 - intent: chat_negative
   examples: |
@@ -97,7 +98,12 @@ nlu:
     - Tệ quá shop ơi
     - Trong chán thật sự
     - Thôi dẹp mẹ đi không mua gì hết
-
+    - Xấu quá đi
+    - sao mà xấu thế nhỉ
+    - Xấu quá admin ơi
+    - Hàng gì trong chán thế nhở
+    - Hàng trong phèn quá
+    
 - intent: chat_agree
   examples: |
     - ok bạn
@@ -111,3 +117,30 @@ nlu:
     - ok nhá
     - đồng ý 
 
+
+#-------- MUA HÀNG
+- intent: ask_accept_buy
+  examples: |
+    - lấy cái sản phẩm này cho mình đe
+    - Ok, chốt giúp mình cái này nhá
+    - Cho mình 3 chậu đi bạn trẽ
+    - Lấy cho mình 4 chậy nhá ad
+    - Lấy cho tôi 2 cái với
+    - Lấy cho mình hết đi
+    - Mỗi thứ lấy 1 cái nha ad
+    - ok, đặt giúp mình 5 cái với nhá
+    - Được rồi, hàng đẹp đấy cho 3 cái nào
+    - Cho 2 túi hạt giống bí ngô đi
+    - Cho mình 5 túi với ad
+    - Shop bán cho mình 2 cái chậu ni với ạ
+    - Bạn cho mình xin 5 chậu nhé
+    - Bạn lấy cho mình 2 bé này với nha
+    - Nhìn cưng quá, cho mình lấy hết với nhá
+    - Được quá, cho mình 4 cái sẻn vs nha
+    - Hàng đẹp đấy, lấy cho mình 5 cái chậu đi
+    - Xịn quá, cho mình 4 bình sịt nước đi
+    - Cho mình 4 bình xịn đi, nhà mình hết rồi
+    - Mình đang thiếu, cho mình 1 cái các loại với
+    - Mình muốn mua hàng, bạn lên đơn cho mình nhá
+    - Bạn cho mình lên đơn với ạ, đã quá đi
+    - Khá đẹp, mình muốn đặt 2 cái chậu quá

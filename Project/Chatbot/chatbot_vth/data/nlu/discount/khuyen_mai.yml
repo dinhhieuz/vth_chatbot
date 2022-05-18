@@ -34,7 +34,7 @@ nlu:
 
 
 #-> Khuyến mãi hạt giống
-- intent: ask_khuyenmai_hatgiong_menu
+- intent: ask_khuyenmai_hatgiong
   examples: |
     - Hạt giống có khuyến mãi gì không ta
     - Hạt giống có khuyến mãi gì không nhỉ

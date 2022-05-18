@@ -11,18 +11,7 @@ stories:
   steps:
   - intent: chat_bye
   - action: utter_chat_bye
-
-- story: Lời khen cho sản phẩm
-  steps:
-  - intent: chat_praise
-  - action: utter_chat_praise
-
-- story: Chê sản phẩm 
-  steps:
-  - intent: chat_damn
-  - action: utter_chat_damn
-    
-
+  
 - story: Cảm ơn với shop
   steps:
   - intent: chat_thank
@@ -32,6 +21,23 @@ stories:
   steps:
   - intent: chat_agree
   - action: utter_chat_agree
+
+- story: Phản hồi phản ánh tích cực của người dùng
+  steps:
+  - intent: chat_positive
+  - action: utter_chat_positive
+
+- story: Phản hồi phản ánh tiêu cực của người dùng
+  steps:
+  - intent: chat_negative
+  - action: utter_chat_negative
+
+
+#------------------------
+- story: Chấp nhận mua hàng
+  steps:
+  - intent: ask_accept_buy
+  - action: act_accept_buy
 
 
 

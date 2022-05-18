@@ -201,9 +201,9 @@ class act_tuvan_web_details(Action):
                 # open mutual stream to crawl data
                 loop = asyncio.get_event_loop()
                 loop.create_task(crawl.product(path=catagory, name_j=catagory))
-            
+                
             if len(list_i) > 0:
-                for item in list_i["data"]:
+                for item in list_i:
                     #Mô tả giá
                     if item["price"].find("–") == -1 and item["price"].find(" ") > -1:
                         #Giá giảm
