@@ -4,6 +4,9 @@ nlu:
 #->  Khuyến mãi sen đá
 - intent: ask_khuyenmai_senda
   examples: |
+    - giảm giá gì cho sen không
+    - Hàng sen bên mình có giải giám chút nào không
+    - giảm giá sen đi
     - Sen đá có giảm giá không
     - đang có loại sen đá nào giảm giá vậy
     - Chẳn thấy sen đá giảm giá nhỉ
@@ -27,9 +30,6 @@ nlu:
     - khuyến mãi gì khi mua sen không
     - Nếu mua sen thì có được giảm giá chứ
     - tôi muốn mua sen thế có được giảm giá không 
-    - giảm giá gì cho sen không
-    - Hàng sen bên mình có giải giám chút nào không
-    - giảm giá sen đi
     - discount với sen không?
     - khuyến mãi gì với sen không vậy
     - Tôi muốn biết thông tin giảm giá sen được không 

@@ -83,7 +83,7 @@ data ={
     "data": []
 } 
 
-browser = webdriver.Chrome(executable_path="D:\\Năm 4 - Thực tập tốt nghiệp\\Project\\Chatbot\\chatbot_vth\\others\\chromedriver", options=option)
+browser = webdriver.Chrome(executable_path=r".//chromedriver.exe", options=option)
 browser.get(f"https://vutruhat.com/category/y-nghia-loai-cay/")
 #Đợi load
 sleep(2)

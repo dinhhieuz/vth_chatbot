@@ -25,13 +25,12 @@ nlu:
     - giảm giá mặt hàng đi
     - discount với mặt hàng không?
     - khuyến mãi gì với mặt hàng không vậy
-    - Tôi muốn biết thông tin giảm giámặt hàng được không 
+    - Tôi muốn biết thông tin giảm giá mặt hàng được không 
     - Về mặt hàng mặt hàng có giảm giá gì không?
     - khi mua mặt hàng nhưng không biết được giảm giá chứ
     - Tôi muốn giảm giá mặt hàng mặt hàng được không 
     - khi mua mặt hàng thì giảm bao nhiêu %
-
-
+    - Khuyến mãi
 
 #-> Khuyến mãi hạt giống
 - intent: ask_khuyenmai_hatgiong
@@ -39,6 +38,9 @@ nlu:
     - Hạt giống có khuyến mãi gì không ta
     - Hạt giống có khuyến mãi gì không nhỉ
     - Nay có khuyến mãi hạt giống không
+    - Khuyến mãi hạt giống
+    - Xem khuyến mãi hạt giống đe
+    - Cho xem khuyến mãi hạt giống với
 
 
 #-> Khuyến mãi khác
@@ -49,5 +51,11 @@ nlu:
     - Giảm giá được khi nào thế
     - Giảm giá có được áp dụng khi mua nhiều đồ không nhỉ
     - Bên mình có được giảm giá khi mua nhiều không nhỉ
-
-
+    - mua nhiều có được giảm vận chuyển không
+    - Hóa đơn trên bao nhiêu là được giảm giá
+    - Giảm giá có được khi mua nhiều không
+    - Tư vấn như này có mất tiền không
+    - Tư vấn bên mình lấy tiền chứ
+    - Bên mình tư vấn lấy tiền phải không
+    - Giảm giá bao nhiêu phần trăm cho hóa đơn đấy
+    - Vận chuyển như nào thì được miễn phí

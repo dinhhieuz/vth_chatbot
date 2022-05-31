@@ -21,7 +21,7 @@ nlu:
     - Bot ơi, bot có blog nào không
     - Bot có bài viết nào hay không
     - Xem blog của các cây 
-
+    - bài viết
 #-> Thông tin blog (Tất cả loại) - mới nhất
 - intent: ask_blog_new
   examples: |

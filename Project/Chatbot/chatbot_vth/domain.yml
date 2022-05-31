@@ -3,7 +3,6 @@ version: "2.0"
 #-------------------> Feature: LIST OF INTENTS <-----------
 
 intents:
-  - chat_bye
 # CHẤP NHẬN MUA HÀNG
   - ask_accept_buy
   
@@ -42,11 +41,9 @@ intents:
   - ask_plc_thanhtoan_menu
   - ask_plc_thanhtoan_opt
   - ask_plc_thanhtoan_onl
-  
   - ask_plc_doitra_menu
   - ask_plc_doitra_when
   - ask_plc_doitra_fee
-
   - ask_plc_vanchuyen_menu
   - ask_plc_vanchuyen_check
   - ask_plc_vanchuyen_howlong
@@ -140,7 +137,6 @@ responses:
       payload: "/ask_page_contact"
     - title: "Còn hoạt động không?"
       payload: "/ask_page_timework"
-
 
   utter_page_intro:
   - text: |
@@ -253,7 +249,7 @@ responses:
       Vũ Trụ Hạt luôn tạo điều kiện tốt nhất cho khách hàng. 
 
   #!-------------> KHUYẾN MÃI
-  utter_khuyenmai_menu: #NOTE: Sữ dụng slot để lưu trữ và dùng chung 1 action 
+  utter_khuyenmai_menu:
   - text: "Các nhóm khuyển mãi:"
     buttons:
     - title: "Sen đá & Hạt giống"

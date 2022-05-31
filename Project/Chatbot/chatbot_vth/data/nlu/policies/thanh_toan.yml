@@ -25,7 +25,8 @@ nlu:
     - Trả tiền qua thẻ hay là nhận hàng rồi mới trả shop nhỉ
     - Cửa hàng có những hình thức thanh toán nào
     - Thanh toán bên mình như nào đấy
-
+    - Tôi có thể thanh toán bằng cách nào nhỉ
+    - Làm sao để thanh toán nhỉ
 
 #-> Chính sách trả tiền Online
 
@@ -43,8 +44,4 @@ nlu:
     - Tôi muốn chuyển tiền 
     - Chuyển tiền sang ngân hàng
   
-#-> Cửa hàng có những hình thức thanh toán nào
-- intent: ask_plc_thanhtoan_opt
-  examples: |
-    - Tôi có thể thanh toán bằng cách nào nhỉ
-    - Làm sao để thanh toán nhỉ
+

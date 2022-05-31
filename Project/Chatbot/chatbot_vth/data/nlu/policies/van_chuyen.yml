@@ -18,6 +18,9 @@ nlu:
     - Phí vận chuyện là bao nhiêu?
     - Tiền ship hết bao nhiêu ấy nhỉ
     - Tiền ship nhiêu
+    - Hết nhiêu tiền đấy
+    - Chi phí vận chuyển 
+    - Tiền ship bao nhiêu
 
 #-> Giao hàng trong bao lâu
 - intent: ask_plc_vanchuyen_howlong

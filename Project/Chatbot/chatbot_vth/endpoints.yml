@@ -18,13 +18,16 @@ action_endpoint:
 # https://rasa.com/docs/rasa/tracker-stores
 
 ##--->: CONNECT SQL SERVER
-tracker_store:
-    type: SQL
-    dialect: "SQL" # the dialect used to interact with the db
-    url: "mssql+pymssql://sa:z01202590921@localhost:1433/vth_chatbot"  # (optional) host of the sql db, e.g. "localhost"
+# tracker_store:
+#     type: SQL
+#     dialect: "SQL" # the dialect used to interact with the db
+#     url: "mssql+pymssql://<tài khoản>:<mật khẩu>@<Địa chỉ>:<port>/<tên database>"  # (optional) host of the sql db, e.g. "localhost"
     # db: "rasa"  # path to your db
     # username: "sa" # username used for authentication
     # password: "hieuvippro123"
+
+
+    
 #tracker_store:
 #    type: redis
 #    url: <host of the redis instance, e.g. localhost>

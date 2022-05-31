@@ -25,17 +25,17 @@ nlu:
 #-> Thông tin blog (Chăm sốc cây trồng) - mới nhất
 - intent: ask_blog_care_new
   examples: |
+    - Làm thế nào để biết thêm về chăm sốc cây mới nhất
+    - Xem chăm sốc mới nhất thì làm sao ta
+    - Bài chăm sốc cây trồng mới tí đi
     - Tôi muốn xem bài viết liên quan đến chăm sốc cây cảnh mới nhất
     - Cái bài viết mà liên quan đến chăm sốc cây trồng ấy, kiểu mới mới tí
     - Xem bài viết mà về chăm sốc cây mới nhất
     - Có bài viết chăm sốc cây nào mới nhất không
-    - Làm thế nào để biết thêm về chăm sốc cây mới nhất
-    - Xem chăm sốc mới nhất thì làm sao ta
     - Để chăm sốc cây thì có bài viết nào đi kèm không, mới mới ớ
     - Có blog nào về chăm sốc cây hay mới ra không ta
     - Xem bài chăm sốc cây mới nhất thì phải làm sao
     - Muốn xem bài chăm sốc cây ghê ớ, mới tí
     - Bài viết về chăm sốc cây gần đây đi chứ ba cái này coi rồi
-    - Bài chăm sốc cây trồng mới tí đi
     - Bài blog về chăm sốc cây mới mới chút
     - Các bài blog chăm sốc cây hay, mới nhất không

@@ -67,7 +67,6 @@ stories:
 
 
 #-> KHÁC
-
 - story: khuyến mãi khác
   steps:
   - intent: ask_khuyenmai_others

@@ -4,6 +4,10 @@ nlu:
 
 - intent: ask_khuyenmai_dungcu
   examples: |
+    - khi mua dụng cụ thì giảm bao nhiêu %
+    - Hôm nay công cụ có giảm giá không nhỉ 
+    - công cụ gì đấy có giảm giá không
+    - khuyến mãi gì khi mua công cụ không
     - Dụng cụ bên mình có giảm giá không
     - Dụng cụ giảm giá thì tốt quá
     - Chẳn biết nay shop có dụng cụ nào giảm giá không
@@ -21,10 +25,6 @@ nlu:
     - Về mặt hàng dụng cụ có giảm giá gì không?
     - khi mua dụng cụ nhưng không biết được giảm giá chứ
     - Tôi muốn giảm giá mặt hàng dụng cụ được không 
-    - khi mua dụng cụ thì giảm bao nhiêu %
-    - Hôm nay công cụ có giảm giá không nhỉ 
-    - công cụ gì đấy có giảm giá không
-    - khuyến mãi gì khi mua công cụ không
     - Nếu mua công cụ thì có được giảm giá chứ
     - tôi muốn mua công cụ thế có được giảm giá không 
     - giảm giá gì cho công cụ không
@@ -41,6 +41,9 @@ nlu:
 
 - intent: ask_khuyenmai_dungcu_details
   examples: |
+    - giảm giá bình tưới cây đi
+    - discount với bình tưới cây không?
+    - khuyến mãi gì với bình tưới cây không vậy
     - Hôm nay bình tưới cây có giảm giá không nhỉ 
     - bình tưới cây gì đấy có giảm giá không
     - khuyến mãi gì khi mua bình tưới cây không
@@ -48,9 +51,6 @@ nlu:
     - tôi muốn mua bình tưới cây thế có được giảm giá không 
     - giảm giá gì cho bình tưới cây không
     - Hàng bình tưới cây bên mình có giải giám chút nào không
-    - giảm giá bình tưới cây đi
-    - discount với bình tưới cây không?
-    - khuyến mãi gì với bình tưới cây không vậy
     - Tôi muốn biết thông tin giảm giá bình tưới cây được không 
     - Về mặt hàng bình tưới cây có giảm giá gì không?
     - khi mua bình tưới cây được giảm giá chứ

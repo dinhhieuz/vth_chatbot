@@ -2,7 +2,6 @@
 """ Thông tin khuyến mãi - Chung theo loại """
 #--------------------" LOẠI "
 catagory = {
-
     "/ask_tuvan_senda" : "sen-da",
     "/ask_tuvan_dungcu" : "dung-cu",
     "/ask_tuvan_cuqua" : "hat-giong-cu-qua",
@@ -39,11 +38,10 @@ catagory = {
     "cây củ" : "hat-giong-cu-qua",
     "rau" : "hat-giong",
     "rau xanh" : "hat-giong",
-
 }
+
 ''' LOẠI BLOG '''
 ctg_blog = {
-
     "/ask_blog_care" : "cham-soc-cay-trong",
     "/ask_blog_cook" : "vao-bep-cung-vu-tru-hat",
     "/ask_blog_mean" : "y-nghia-loai-cay",
@@ -63,10 +61,7 @@ ctg_blog = {
     "nấu" : "vao-bep-cung-vu-tru-hat",
     "ý nghĩa" : "y-nghia-loai-cay",
     "công dụng" : "cong-dung-cua-cac-loai-rau-qua",
-
 }
-
-
 """ Thông tin khuyến mãi - Từ loại - từng sản phẩm """
 #--------------------" CỦ QUẢ "
 item_cuqua = [
@@ -102,7 +97,6 @@ item_rauxanh = [
     {"rau mồng tơi lá to" : "Hạt Giống Rau Mồng Tơi Lá To" },
     {"rau muống" : "Hạt Giống Rau Muống" },
     {"rau ngò rí" : "Hạt Giống Rau Ngò Rí" },
-
 ]
 #--------------------" SEN ĐÁ "
 item_senda = [
@@ -114,7 +108,6 @@ item_senda = [
     {"ngọc bích" : "Sen Đá Ngọc Bích"},
     {"nhật nguyệt" : "Sen Đá Nhật Nguyệt"},
 ]
-
 #--------------------" DỤNG CỤ"
 item_dungcu = [
     {"bình tưới cây" : "Bình tưới cây" },
@@ -216,6 +209,5 @@ item_dungcu = [
     {"xẻng xới đất mini" : "Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp" },
     {"xẻng xới đất" : "Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp" },
     {"xẻng" : "Xẻng Xới Đất Mini Thép Không Gỉ Cao Cấp" },
-
 ]
 

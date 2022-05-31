@@ -26,7 +26,7 @@ nlu:
 - intent: ask_blog_cook_new
   examples: |
     - Bên mình có bài viết nấu ăn nào mới nhất không
-    - Có cái blogs mới mới nào về nấu ăn không admin
+    - Có cái blogs mới mới nào  ề nấu ăn không admin
     - ad cho em hỏi, bên mình có bài blog gần đây về nấu ăn không ta
     - Về blogs nấu ăn thì bên mình có viết không, mới một tí đi
     - Các blogs mới nhất về nấu ăn đi ad

@@ -30,7 +30,7 @@ nlu:
     - hey
     - fen ơi 
     - Xin chào fen 
-
+    - GET_STARTED_PAYLOAD
 
 - intent: chat_bye
   examples: |

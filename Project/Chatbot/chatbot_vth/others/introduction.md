@@ -7,8 +7,9 @@
     - pyYAML: 6.0
     - pymssql: 2.2.5
 
-2. Enviroment:
-    - 
+2. Logs:
+    - Action:
+        rasa run actions -vv >> ./assets/other/log_RasaAction.log 2>&1
 
 3. Custom:
     - Tăng thời gian xữ lý request:

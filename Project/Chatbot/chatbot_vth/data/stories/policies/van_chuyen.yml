@@ -7,7 +7,7 @@ stories:
   - intent: ask_plc_vanchuyen_menu
   - action: utter_plc_vanchuyen_menu
 
-- story: Phí vận chuyển hết bao lâu
+- story: Phí vận chuyển hết bao nhiêu
   steps:
   - intent: ask_plc_vanchuyen_fee
   - action: utter_plc_vanchuyen_fee

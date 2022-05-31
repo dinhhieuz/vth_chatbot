@@ -38,6 +38,7 @@ nlu:
     - Mình đang phân vân k biết nên mua như nào, bạn có thể tư vấn giúp mình được không
     - bên mình có hỗ trợ tư vấn không
     - bạn gì đó ơi, bạn giúp mình tư vấn với
+    - tư vấn
 
 #-> Tư vấn hạt giống
 - intent: ask_tuvan_hatgiong
@@ -56,7 +57,8 @@ nlu:
     - tư vấn hạt giống đi
     - shop có đó không, tư vấn hạt giống cho mình với
     - mình chưa bt nên mua hạt giống như nào bạn giúp mình với
-    - bạn ơi, bạn giúp mình tư vấn hạt giống được không, mình không biết nên mua như nào cả
+    - bạn ơi, bạn giúp mình
+    - tư vấn hạt giống được không, mình không biết nên mua như nào cả
     - tôi muốn được tư vấn hạt giống
     - tôi muốn bạn tư vấn hạt giống cho tôi
     - tôi có thể được tư vấn hạt giống chứ

@@ -4,6 +4,9 @@ nlu:
 
 - intent: ask_khuyenmai_hatgiong_cuqua
   examples: |
+    - khi mua củ quả nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng củ quả được không 
+    - khi mua củ quả thì giảm bao nhiêu %
     - Củ có khuyến mãi nào không
     - Cây củ nào đang khuyến mãi vậy
     - Đang có khuyến mãi cây củ quả nào không
@@ -19,9 +22,6 @@ nlu:
     - khuyến mãi gì với củ quả không vậy
     - Tôi muốn biết thông tin giảm giá củ quả được không 
     - Về mặt hàng củ quả có giảm giá gì không?
-    - khi mua củ quả nhưng không biết được giảm giá chứ
-    - Tôi muốn giảm giá mặt hàng củ quả được không 
-    - khi mua củ quả thì giảm bao nhiêu %
     - Hôm nay cây củ có giảm giá không nhỉ 
     - cây củ gì đấy có giảm giá không
     - khuyến mãi gì khi mua cây củ không

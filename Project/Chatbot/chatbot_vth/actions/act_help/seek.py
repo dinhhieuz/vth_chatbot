@@ -28,9 +28,8 @@ class seek:
                 "sen-da" : cf.item_senda,
                 "dung-cu" : cf.item_dungcu,
                 "hat-giong-cu-qua" : cf.item_cuqua,
-                "hat-giong-rau-xanh" : cf.item_rauxanh
+                "hat-giong" : cf.item_rauxanh
             }.get(catagory)
-
             seek_i = ''
             # Lấy list danh sách đã thiết lập từ trước lấy key ra tìm trong message xem có bao nhiêu keys được tìm thấy
             for item in list_i:
@@ -44,7 +43,7 @@ class seek:
             found_i = []
             for item in np.unique(cart):
                 for inf_i in data["data"]:
-                    if inf_i["name"] == item:
+                    if inf_i["name"] == item.title():
                         found_i.append(inf_i)
             return found_i, seek_i, catagory, data["time"]
         else:

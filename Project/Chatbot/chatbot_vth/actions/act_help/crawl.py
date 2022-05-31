@@ -13,9 +13,8 @@ import asyncio
 option = webdriver.ChromeOptions()
 option.add_argument('headless')
 #turn off log of selenium
-option.add_experimental_option("excludeSwitches", ["enable-logging"])
+# option.add_experimental_option("excludeSwitches", ["enable-logging"])
 #Chạy chương trình giả lập Chrome
-
 class crawl:
     async def product(path, name_j):
         try:
@@ -33,7 +32,9 @@ class crawl:
                 "data": []
             } 
             for num_page in range(1,100):
-                browser = webdriver.Chrome(executable_path="D:\\Năm 4 - Thực tập tốt nghiệp\\Project\\Chatbot\\chatbot_vth\\others\\chromedriver", options=option)
+                browser = webdriver.Chrome(
+                    executable_path="D:\\Năm 4 - Thực tập tốt nghiệp\\Project\\Chatbot\\chatbot_vth\\others\\chromedriver", 
+                    options=option)
                 browser.get(f"https://vutruhat.com/danh-muc/{path}/page/{num_page}/")
                 if browser.title.find("Không tìm thấy trang") > -1:
                     break

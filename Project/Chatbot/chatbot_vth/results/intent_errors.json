@@ -1,10 +1,10 @@
 [
   {
-    "text": "Chatbot xịn quá ta",
-    "intent": "chat_positive",
+    "text": "Tôi muốn xem blog về nấu ăn ad ơi",
+    "intent": "ask_blog_cook_new",
     "intent_prediction": {
-      "name": "chat_damn",
-      "confidence": 0.4863293766975403
+      "name": "ask_blog_cook",
+      "confidence": 0.815507709980011
     }
   },
   {
@@ -12,7 +12,7 @@
     "intent": "ask_khuyenmai_menu",
     "intent_prediction": {
       "name": "ask_khuyenmai_others",
-      "confidence": 0.5249730348587036
+      "confidence": 0.5827083587646484
     }
   }
 ]

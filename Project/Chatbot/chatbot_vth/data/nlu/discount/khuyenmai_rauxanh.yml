@@ -5,6 +5,9 @@ nlu:
 #NOTE: Thêm các loại râu vào đây (dư thời gian thì kiểm tra từng loại rau)
 - intent: ask_khuyenmai_hatgiong_rauxanh
   examples: |
+    - khi mua hạt giống rau nhưng không biết được giảm giá chứ
+    - Tôi muốn giảm giá mặt hàng hạt giống rau được không 
+    - khi mua hạt giống rau thì giảm bao nhiêu %
     - Rau xanh bửa nay có khuyến mãi không
     - Rau nay có khuyến mãi không nhỉ
     - Nay rau có khuyển mãi không
@@ -35,13 +38,14 @@ nlu:
     - khuyến mãi gì với hạt giống rau không vậy
     - Tôi muốn biết thông tin giảm giá hạt giống rau được không 
     - Về mặt hàng hạt giống rau có giảm giá gì không?
-    - khi mua hạt giống rau nhưng không biết được giảm giá chứ
-    - Tôi muốn giảm giá mặt hàng hạt giống rau được không 
-    - khi mua hạt giống rau thì giảm bao nhiêu %
+
 
 
 - intent: ask_khuyenmai_hatgiong_rauxanh_details
   examples: |
+    - giảm giá Hạt Giống Rau Cải Kale đi
+    - discount với Hạt Giống Rau Cải Kale không?
+    - khuyến mãi gì với Hạt Giống Rau Cải Kale không vậy
     - Hôm nay Hạt Giống Cây Cà Chua Bạch Tuộc có giảm giá không nhỉ 
     - Hạt Giống Cây Cà Chua Bạch Tuộc gì đấy có giảm giá không
     - khuyến mãi gì khi mua Hạt Giống Cây Cà Chua Bạch Tuộc không
@@ -64,9 +68,6 @@ nlu:
     - tôi muốn mua Hạt Giống Rau Cải Kale thế có được giảm giá không 
     - giảm giá gì cho Hạt Giống Rau Cải Kale không
     - Hàng Hạt Giống Rau Cải Kale bên mình có giải giám chút nào không
-    - giảm giá Hạt Giống Rau Cải Kale đi
-    - discount với Hạt Giống Rau Cải Kale không?
-    - khuyến mãi gì với Hạt Giống Rau Cải Kale không vậy
     - Tôi muốn biết thông tin giảm giá Hạt Giống Rau Cải Kale được không 
     - Về mặt hàng Hạt Giống Rau Cải Kale có giảm giá gì không?
     - khi mua Hạt Giống Rau Cải Kale nhưng không biết được giảm giá chứ

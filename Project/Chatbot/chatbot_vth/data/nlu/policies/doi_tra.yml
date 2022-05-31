@@ -21,6 +21,7 @@ nlu:
     - Đến bao giờ tôi mới trả được hàng
     - Thời gian trả hàng là khi nào
     - Bao nhiêu ngày thì tôi mới trả được hàng
+    - Khi nào tôi mới được trả hàng vậy shop
 
 #-> Chính sách phí trả hàng (alone)
 - intent: ask_plc_doitra_fee

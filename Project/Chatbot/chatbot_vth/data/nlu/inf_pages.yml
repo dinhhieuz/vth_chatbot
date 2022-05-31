@@ -7,6 +7,8 @@ nlu:
     - bạn cho tôi biết thông tin bên mình được không
     - Làm sao để hiểu hơn về vũ trụ hạt
     - Các thông tin liên quan đến Vũ trụ hạt
+    - Thông tin vũ trụ hạt
+    
 #-> Giới thiệu doanh nghiệp VTH
 - intent: ask_page_intro
   examples: |
