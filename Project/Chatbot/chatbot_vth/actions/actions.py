@@ -23,6 +23,7 @@ import requests
 
 from datetime import datetime, date
 
+##inf Zalo
 secret_key = "WAWCLyzhGJ1McGPc6prN"
 app_id = "1882365302811688917"
 
@@ -60,7 +61,6 @@ class act_chat_greating(Action):
                 text = "Xin chào Vũ Trụ Hạt rất vui được nói chuyện với bạn 🖐️🖐️!!!\nChúng tôi có thể giúp gì cho bạn nào"
                 , buttons = button_main
             )
-
             res = {
                 "attachment":{
                     "type":"template",
@@ -114,16 +114,14 @@ class act_accept_buy(Action):
             #--> Không hiểu tra Google
             result = send_manager(tracker.sender_id)
 
-            if result == True:
-                text = "Cảm ơn bạn đã liên hệ 🥰\nchúng tôi sẽ lên đơn cho bạn, hãy đợi chút nhé 😍"
-            else:
-                text = "Cảm ơn bạn đã liên hệ 🥰\nhiện tại hệ thông đang bận, mình sẽ chủ động liên lạc cho bạn trong thời gian sớm nhất, chân thành xin lỗi 😔"
+            if result == True: text = "Cảm ơn bạn đã liên hệ 🥰\nchúng tôi sẽ lên đơn cho bạn, hãy đợi chút nhé 😍"
+            else: text = "Cảm ơn bạn đã liên hệ 🥰\nhiện tại hệ thông đang bận, mình sẽ chủ động liên lạc cho bạn trong thời gian sớm nhất, chân thành xin lỗi 😔"
+            
             dispatcher.utter_message(
                 text = text
             )
 
             del text, result
-
             gc.collect()
             return []
         except:
@@ -136,12 +134,11 @@ class act_accept_buy(Action):
 ''' GỬI YÊU CẦU MUA HÀNG ĐẾN NHÀ QUẢN LÝ'''
 def send_manager(id_user):
     ''' Lấy tên người dùng tại Facebook'''
-    # try: 
     # Đọc file YAML để lấy access token
     with open(r"credentials.yml") as fh:
         rd_acstoken = yaml.load(fh, Loader=yaml.FullLoader)
-    profile = requests.get("https://graph.facebook.com/{}?fields=first_name,last_name,middle_name, name, name_format, short_name,profile_pic,location&access_token={}".format(id_user, rd_acstoken["facebook"]["page-access-token"]))
-    
+    profile = requests.get(
+        "https://graph.facebook.com/{}?fields=first_name,last_name,middle_name, name, name_format, short_name,profile_pic,location&access_token={}".format(id_user, rd_acstoken["facebook"]["page-access-token"]))
     #Kiểm tra lấy được profile người dùng chưa
     if profile.ok:
         now = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
@@ -163,7 +160,6 @@ def send_manager(id_user):
             }
             response = requests.post("https://oauth.zaloapp.com/v4/oa/access_token", data=payload, headers = headers).json()
             #Save into file
-            print(response)
             get_acs = {
                 "time": date.today().isoformat(),
                 "access_token": response["access_token"],
@@ -197,7 +193,6 @@ def send_manager(id_user):
             }
         }
         response = requests.post("https://openapi.zalo.me/v2.0/oa/message", data=json.dumps(payload), headers = headers)
-        
         if response.ok: return True
         else: return False
     else: 
@@ -252,11 +247,12 @@ class act_unknown(Action):
                     }
                 }
             }
+            
             dispatcher.utter_message(json_message=res)
             del url, res, messeger_user
-
             gc.collect()
             return []
+
         except Exception as error:
             print("-->Error<--")
             print(error)

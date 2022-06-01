@@ -1,6 +1,6 @@
 
 """ Thông tin khuyến mãi - Chung theo loại """
-#--------------------" LOẠI "
+#--------------------" LOẠI SẢN PHẨM "
 catagory = {
     "/ask_tuvan_senda" : "sen-da",
     "/ask_tuvan_dungcu" : "dung-cu",
@@ -40,7 +40,7 @@ catagory = {
     "rau xanh" : "hat-giong",
 }
 
-''' LOẠI BLOG '''
+#--------------------" LOẠI BLOGS "
 ctg_blog = {
     "/ask_blog_care" : "cham-soc-cay-trong",
     "/ask_blog_cook" : "vao-bep-cung-vu-tru-hat",
@@ -62,6 +62,7 @@ ctg_blog = {
     "ý nghĩa" : "y-nghia-loai-cay",
     "công dụng" : "cong-dung-cua-cac-loai-rau-qua",
 }
+
 """ Thông tin khuyến mãi - Từ loại - từng sản phẩm """
 #--------------------" CỦ QUẢ "
 item_cuqua = [
