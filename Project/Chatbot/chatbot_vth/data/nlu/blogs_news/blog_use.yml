@@ -23,6 +23,36 @@ nlu:
     - Xem bài công dụng cây thì phải làm sao
     - Muốn xem bài công dụng cây ghê ớ
     - Bài viết về công dụng cây đi chứ ba cái này coi rồi
+    - mấy cái cây ni có công dụng gì vậy fen
+    - Mấy cái cây này dùng để làm gì đấy
+    - mấy cái loại ni có công dụng gì đấy
+    - cây râu này có công dụng gì vậy
+    - cây cà rốt có công dụng gì không
+    - cây rau này có chức năng gì không đấy
+    - cây sen có công dụng gì không 
+    - page cho hỏi là cái này có công dụng gì không
+    - công dụng của mấy sản phẩm này là gì vậy
+    - công dụng của các loại rau bạn ơi
+    - mỗi sản phẩm như này thì có công dụng gì không
+    - công dụng của các loại cây này đi
+    - cho xem thông tin về công dụng của loại rau đi fen
+    - các công dụng về loại rau của cây 
+    - các sản phẩm này có cong dụng gì không page
+    - mấy cái cây này làm được gì cho mình ấy nhỉ
+    - cây củ quả này dùng để làm gì đấy
+    - nếu như trồng được thì chúng để làm gì ấy nhỉ
+    - sao phải trồng chúng, chúng có công dụng gì cho mình không
+    - khi cây lớn thì phải làm gì với nó
+    - tại sao tôi phải trồng mấy cái cây này, nó có ích gì cho tôi không
+    - bạn ơi cho mình hỏi bài viết nào nói về mấy công dụng của nó không
+    - bạn gì đó ơi, bài viết công dụng đi ạ
+    - cho biết thông tin về blog công dụng
+    - công dụng đi
+    - bài viết công dụng ấy fen
+    - mấy bài viết công dụng loại cây page có viết không
+    - bài viết về công dụng các loại cây đi shop
+    - sao toàn mấy loại gì gì không vậy, k có bài viết về công dụng cây hả
+
 
 #-> Thông tin blog (Công dụng của loại râu) - mới nhất
 - intent: ask_blog_use_new
@@ -44,3 +74,21 @@ nlu:
     - Các bài blog công dụng rau xanh mới nhất ớ
     - bài viết mới toanh về công dụng rau xanh của vũ trụ hạt là gì đấy
     - Xem bài rau xanh mới nhất của vũ trụ hạt đi
+    - mấy bài trend về công dụng cây ấy
+    - có bài nào hot về công dụng cây trồng không
+    - bạn ơi, xem bài công dụng nhưng mới chút đi
+    - Đừng cho mình xem mấy bài cũ nữa, bài công dụng mới nhất ấy
+    - Bài viết về công dụng mới nhất 
+    - shop cho mình xem bài công dụng mới nhất đi ạ
+    - có bài viết nào mới nhất về công dụng không
+    - các bài viết liên quan đến công dụng của loại cây
+    - blog gì mới nhất của công dụng mang hết ra đây
+    - shop, đưa bài viết mới về công dụng coi
+    - shop ơi, bài viết mới nhất công dụng
+    - công dụng của loại cây mới nhất
+    - các bài viết mới nhất về công dụng của các loại cây 
+    - tại sao toàn mấy bài viết cũ vậy, blog công dụng mới nhất đâu
+    - mấy bài trending về công dụng của loại cây đâu
+    - cho xem chút bài viết về công dụng loại cây coi
+    - xem bài viết mới nhất về công dụng loại cây trồng
+    - mấy cái bài viết công dụng mới mới đi chứ coi miết cũng chán à

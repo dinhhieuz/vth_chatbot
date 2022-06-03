@@ -1,54 +1,54 @@
 {
     "type": "SEN ĐÁ",
-    "time": "2022-05-25",
+    "time": "2022-06-03",
     "data": [
         {
             "name": "Sen Đá Cánh Bướm",
             "price": "20,000₫ 10,000₫",
             "link": "https://vutruhat.com/san-pham/sen-da-canh-buom/",
-            "image": "https://vutruhat.com/wp-content/uploads/2021/09/sen-da-canh-buom-vu-tru-hat-3-300x300.jpg",
+            "image": "https://vutruhat.com/wp-content/uploads/2021/09/sen-da-canh-buom-vu-tru-hat-3-247x296.jpg",
             "status": "Hết hàng"
         },
         {
             "name": "Sen Đá Chuỗi Ngọc",
             "price": "45,000₫ 20,000₫",
             "link": "https://vutruhat.com/san-pham/sen-da-chuoi-ngoc/",
-            "image": "https://vutruhat.com/wp-content/uploads/2021/09/sen-da-chuoi-ngoc2-vu-tru-hat-scaled-300x300.jpg",
+            "image": "https://vutruhat.com/wp-content/uploads/2021/09/sen-da-chuoi-ngoc2-vu-tru-hat-scaled-247x296.jpg",
             "status": "Hết hàng"
         },
         {
             "name": "Sen Đá Đất Xanh",
             "price": "25,000₫ 15,000₫",
             "link": "https://vutruhat.com/san-pham/sen-da-dat-xanh/",
-            "image": "https://vutruhat.com/wp-content/uploads/2021/09/sen-da-dat-xanh-vu-tru-hat-3-300x300.jpg",
+            "image": "https://vutruhat.com/wp-content/uploads/2021/09/sen-da-dat-xanh-vu-tru-hat-3-247x296.jpg",
             "status": "Hết hàng"
         },
         {
             "name": "Sen Đá Kim Cương",
             "price": "30,000₫ 15,000₫",
             "link": "https://vutruhat.com/san-pham/sen-da-kim-cuong/",
-            "image": "https://vutruhat.com/wp-content/uploads/2021/09/sen-da-kim-cuong-vu-tru-hat-300x300.jpg",
+            "image": "https://vutruhat.com/wp-content/uploads/2021/09/sen-da-kim-cuong-vu-tru-hat-247x296.jpg",
             "status": "Hết hàng"
         },
         {
             "name": "Sen Đá Móng Rồng Sọc Trắng",
             "price": "25,000₫",
             "link": "https://vutruhat.com/san-pham/sen-da-mong-rong-soc-trang/",
-            "image": "https://vutruhat.com/wp-content/uploads/2021/09/sen-mong-rong-soc-trang-3-vu-tru-hat-e1635310844862-300x300.jpg",
+            "image": "https://vutruhat.com/wp-content/uploads/2021/09/sen-mong-rong-soc-trang-3-vu-tru-hat-e1635310844862-247x296.jpg",
             "status": "Hết hàng"
         },
         {
             "name": "Sen Đá Ngọc Bích",
             "price": "30,000₫ 15,000₫",
             "link": "https://vutruhat.com/san-pham/sen-da-ngoc-bich/",
-            "image": "https://vutruhat.com/wp-content/uploads/2021/09/sen-da-ngoc-bich-vu-tru-hat-300x300.jpg",
+            "image": "https://vutruhat.com/wp-content/uploads/2021/09/sen-da-ngoc-bich-vu-tru-hat-247x296.jpg",
             "status": "Hết hàng"
         },
         {
             "name": "Sen Đá Nhật Nguyệt",
             "price": "30,000₫ 15,000₫",
             "link": "https://vutruhat.com/san-pham/sen-da-nhat-nguyet/",
-            "image": "https://vutruhat.com/wp-content/uploads/2021/09/sen-da-nhat-nguyet-vu-tru-hat-e1638112813959-300x300.jpg",
+            "image": "https://vutruhat.com/wp-content/uploads/2021/09/sen-da-nhat-nguyet-vu-tru-hat-e1638112813959-247x296.jpg",
             "status": "Hết hàng"
         }
     ]

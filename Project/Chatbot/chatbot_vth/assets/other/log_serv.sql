@@ -1,8 +1,8 @@
--- Dữ liệu truyền vào
+  -- Dữ liệu truyền vào
 Declare @input_data nvarchar(max) = '
 	SELECT 
 		id, timestamp, data, 
-		'''' as text, ''1900-01-01'' as time_d
+		'' '' as text, ''1900-01-01'' as time_d
 	FROM events
 	WHERE type_name IN (''user'', ''bot'')   '
 
@@ -24,7 +24,7 @@ from datetime import datetime
 for i in range (len(InputDataSet["data"])):
     reply = yaml.safe_load(InputDataSet["data"][i])
     InputDataSet["data"][i] = str(yaml.safe_load(InputDataSet["data"][i]))
-    InputDataSet["text"][i] = reply["text"].encode("utf-8", errors="replace").decode("utf-8").replace("?","")
+    InputDataSet["text"][i] = "button" if reply["text"] is None else reply["text"].encode("utf-8", errors="replace").decode("utf-8").replace("?","")
     InputDataSet["time_d"][i] = datetime.fromtimestamp(reply["timestamp"])
     InputDataSet["timestamp"][i] = datetime.fromtimestamp(InputDataSet["timestamp"][i])
 OutputDataSet = InputDataSet
@@ -36,3 +36,6 @@ select
 	e.id, sender_id, type_name, intent_name, action_name, 
 	r.timestamp, r.text, r.time_d, r.data 
 From events e full join @RESULT_POST r ON e.id = r.id
+
+
+-- select * from events

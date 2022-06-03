@@ -22,6 +22,59 @@ nlu:
     - Bot có bài viết nào hay không
     - Xem blog của các cây 
     - bài viết
+    - bên mình có bài viết nào không
+    - xem chút blog đi bạn ơi
+    - xem bài blog đi 
+    - tôi muốn biết về thông tin blog
+    - Bài viết đi bạn ơi
+    - bên mình có bài viết không
+    - bên mình có viết bài về cây không
+    - có bài viết nào dành cho cây không
+    - tôi muốn xem bài viết kia =)))
+    - tôi muốn xem bài viết bên mình
+    - bên mình có viết bài không
+    - page có bài viết nào không
+    - blog thì bên mình có viết không
+    - tôi hay thấy mấy page hay viết blog vậy bên mình có không
+    - không biết là bên mình có bài blog nào không
+    - bài blog bên mình có không đó
+    - bình thường bên mình có viết bài blog không
+    - cho xem chút bài blog đi ấy ơi
+    - danh sách bài blog đi
+    - có mấy loại bài blog rứa
+    - bạn ơi, bên mình có mấy loại bài blog vậy
+    - sao mình không thấy bài blog nào của bên mình nhỉ
+    - bên bạn có bài viết nào không, sao mình không thấy nhỉ
+    - mình không thấy bài blog bạn cho mình xem đi
+    - bạn cho mình xem danh sách bài blog được không
+    - bạn cho mình xem bài blog đi bạn trẻ
+    - bạn trẻ bạn cho mình xem bài blog với
+    - khi nào thì bên mình mới viết bài blog vậy
+    - bth thì page sẽ có blog bên mình có không
+    - không biết page mình có bài blog không nhỉ
+    - bạn ơi, blog đi 
+    - bài viết đi bạn ơi
+    - bot ơi, tôi muốn xem danh sách bài blog
+    - bot ơi bot, tôi xem muốn xem bài blog
+    - danh sách bài blog đi bạn ơi
+    - bạn ơi cho mình xem bài blog đi
+    - bạn có bài blog nào ở đây không, cho mình xem với
+    - tôi cần xem chút thông tin về bài blog
+    - giờ tao chán rồi, tao muốn đọc blog
+    - blog
+    - blog đi cu
+    - blog đi page
+    - có cái nào vip hơn không, blog chẳn hạn
+    - Blog đi cô nương ơi
+    - blog đi cô gái ơi
+    - bài blog đi em gái ơi
+    - blog đi bạn chứ toàn gì không vậy
+    - tôi muốn xem blog chứ gửi cái gì vậy
+    - bài viết đi bạn ơi chứ bạn gửi mình cái qq gì vậy
+    - bạn không hiểu ý mình thật hả, mình muốn xem bài blog
+    
+
+
 #-> Thông tin blog (Tất cả loại) - mới nhất
 - intent: ask_blog_new
   examples: |
@@ -35,5 +88,40 @@ nlu:
     - Xem bài blogs nào mới mới ớ
     - Bot cho mình xem cái bài blogs mới mới tí nha
     - Bài blog mới nhất của mình là gì đấy
+    - bài blog nào đang hót không
+    - có bài nào đang nói không ad
+    - có bài nào đang trending không
+    - cho xem mấy bài trending ấy
+    - xem mấy bài nào hot hot tí
+    - có bài nào mới ra mắt không
+    - có bài nào nóng hổi mới ra lò không
+    - xem bài viết mới nhất của page đi fen
+    - fen ơi bài viết mới fen
+    - fen ơi bài viết mới bên mình đi
+    - cho xem bài viết mới đi fen
+    - bài viết nào mới chút coi chứ toàn mấy bài cũ quét à
+    - nào có bài viết mới thì tôi mới coi
+    - k có bài viết nào mới hơn hả ?
+    - m cho tao xem cái bài mới mới coi
+    - coi bài mới đi má chứ mấy bài ni xem chán rồi
+    - xem cái bài nào mà mới ấy
+    - toàn bài cũ trong chán bỏ mẹ, bài viết mới đi
+    - bài viết mới đi chứ mấy bài này lâu rồi mà
+    - không có bài viết nào mới hơn nữa hả
+    - sao không thấy bài viết nào mới hết vậy
+    - bài viết mới má ơi
+    - page ơi, cho em xem bài blog mới được không
+    - xem bài viết mới đi page ơi, chán quá đi
+    - khi nào có bài viết mới vậy
+    - bình thường bên mình chỉ có những bài viết này thôi hả
+    - xem mấy cái bài viết mới đi má
+    - xem chút bài viết mới đi bạn ơi
+    - bạn ơi cho mình xem bài viết mới đi
+    - bài này củ quá rồi người ơi
+    - mấy bài ni xem lâu rồi mà
+    - mấy cái blog ni từ thời nào rồi shop ơi
+    - shop xem bài nào mới mới đi chứ xem chán bỏ mẹ
+    - coi hết trơn rồi người ơi, xem cái mới đi
+    - xem cái mới ớ, chứ ni coi rồi
 
 

@@ -18,10 +18,12 @@ action_endpoint:
 # https://rasa.com/docs/rasa/tracker-stores
 
 ##--->: CONNECT SQL SERVER
-# tracker_store:
-#     type: SQL
-#     dialect: "SQL" # the dialect used to interact with the db
-#     url: "mssql+pymssql://<tài khoản>:<mật khẩu>@<Địa chỉ>:<port>/<tên database>"  # (optional) host of the sql db, e.g. "localhost"
+
+tracker_store:
+    type: SQL
+    dialect: "SQL" # the dialect used to interact with the db
+    url: "mssql+pymssql://sa:hieuvippro123@localhost:2022/rasa"  # (optional) host of the sql db, e.g. "localhost" #NOTE: (COMPANY)
+    # url: "mssql+pymssql://sa:z01202590921@localhost:1433/rasa"  # (optional) host of the sql db, e.g. "localhost" #NOTE: (CLIENT)
     # db: "rasa"  # path to your db
     # username: "sa" # username used for authentication
     # password: "hieuvippro123"

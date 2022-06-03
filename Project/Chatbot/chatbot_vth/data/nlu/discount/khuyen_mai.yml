@@ -41,6 +41,22 @@ nlu:
     - Khuyến mãi hạt giống
     - Xem khuyến mãi hạt giống đe
     - Cho xem khuyến mãi hạt giống với
+    - Cho mình chút thông tin khuyến mãi về hạt giống đi
+    - Hạt giống có khuyến mãi không
+    - Hạt giống có khuyến mãi không ta
+    - Hôm ni hạt giống có khuyến mãi không
+    - Với hạt giống thì có khuyến mãi chứ
+    - Sao không thấy khuyến mãi hạt giống nhỉ
+    - Cho xem khuyến mãi hạt giống đi
+    - Hạt giống khuyến mãi
+    - Khuyến mãi hạt giống đi ba
+    - Shop ơi, mình có khuyến mãi hạt giống khum
+    - Sao k thấy hạt giống nó khuyến mãi nhỉ
+    - Khi nào thì hạt giống khuyến mãi vậy
+    - Hạt giống mà khuyến mãi em mua hết luôn
+    - Mua hạt giống thì có khuyến mãi không
+    - Xin ít thông tin khuyến mãi về hạt giống đi
+    - Cho biết thông tin khuyến mãi của hạt giống
 
 
 #-> Khuyến mãi khác
@@ -59,3 +75,33 @@ nlu:
     - Bên mình tư vấn lấy tiền phải không
     - Giảm giá bao nhiêu phần trăm cho hóa đơn đấy
     - Vận chuyển như nào thì được miễn phí
+    - Mua nhiều có được giảm giá không nhỉ
+    - Còn khuyến mãi nào khác không
+    - Có khuyến mãi gì đi kèm không
+    - Có chính sách liên quan đến khuyến mãi chứ
+    - Với khuyến mãi thì ngoài sản phẩm ra thì còn gì nữa không
+    - Khuyến mãi ngoài sản phẩm
+    - Mua nhiều giảm giá đi má
+    - Mua nhiều mà không được giảm giá đồng nào à
+    - Sao không thấy giảm giá nhỉ mua nhiều mà
+    - Mua nhiều thì giảm giá đi
+    - Có giảm giá không chứ tôi mua nhiều mà
+    - Tư vấn này miễn phí hả
+    - Tư vấn như này có mất tiền không
+    - Tôi muốn tư vấn nhưng không muốn trả tiền có được không
+    - Tôi cần được giảm giá về vận chuyển
+    - Vận chuyển có được giảm giá không
+    - Mua nhiều có được free ship không
+    - Mua nhiều được giảm giá chứ
+    - Có được giảm giá khi mua nhiều không
+    - Khi nào giảm giá vậy chứ mua nhiều mà
+    - Tôi muốn free ship được không
+    - Mua hàng bên mình có được miễn phí ship không
+    - Mình mua nhiều bạn cho mình free ship nhé
+    - Khi nào thì tôi mới được miễn phí ship vậy
+    - Tôi được giảm giá hóa đơn chứ
+    - Khi nào tôi được giảm giá hóa đơn vậy
+    - Giảm giá hóa đơn thì có cần phải mua nhiều không
+    - Còn khuyến mãi về vận chuyển thì sao nhỉ
+    - Còn khuyến mãi về hóa đơn thì sao ta
+    - Còn khuyến mãi về mua hàng thì răng

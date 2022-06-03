@@ -110,7 +110,7 @@ class act_tuvan_web(Action):
                                     },{
                                         "type":"postback",
                                         "title":"Mua ngay 🔥",
-                                        "payload":"/ask_buy"
+                                        "payload":"/ask_accept_buy"
                                     }              
                                 ]
                             }
@@ -241,10 +241,9 @@ class act_tuvan_web_details(Action):
                                 },{
                                     "type":"postback",
                                     "title":"Mua ngay 🔥",
-                                    "payload":"/ask_buy"
+                                    "payload":"/ask_accept_buy"
                                 }              
                             ]      
-                            #NOTE: Gửi API tới zalo cho mua ngay
                         }
                     )
                 #Respond to user

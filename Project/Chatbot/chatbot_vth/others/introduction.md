@@ -23,3 +23,7 @@
 4. Note:
     - Không train không dấu: 
         mục đích vì con người nói chuyện với nhau mà không có dấu thì cũng chẳn ai hiểu được nói gì tới bot 
+
+5. Connect:
+    - Tại thư mục "Credentials.yml" sẽ có các thông tin của channel, và chúng sẽ dựa vào khóa để tìm thấy file channel phù hợp với liệt kê
+    - Ví dụ ở đây là "Facebook" chúng sẽ dựa trên từ khóa này để vào 

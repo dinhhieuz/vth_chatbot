@@ -21,6 +21,44 @@ nlu:
     - Bài chăm sốc cây trồng
     - Bài blog về chăm sốc cây
     - Các bài blog chăm sốc cây hay
+    - mấy cái cây này chăm sốc dể không
+    - tôi thấy cái cây này chăm sốc khó vl ra
+    - cây này khó chăm sốc lắm phải không
+    - mấy cây này dể chăm shop không shop
+    - mấy cái cây này chăm shop dể không shop nhỉ
+    - có cách nào chăm sốc cho mấy cây này không
+    - làm sao để cho nó không chết nhỉ
+    - làm thế nào để phát triễn mấy cây này
+    - để có thể trồng được các loại cây này thì phải làm thé nào
+    - các cây này thì nên trồng như thế nào
+    - từ các oại cây này thì nên trồng chúng nhưu nào
+    - bài viết về cách trồng cây 
+    - các cách cây trồng cây từ vũ trụ hạt
+    - mấy bài trồng cây đi shop ơi
+    - mấy cái loại này trồng như nào đấy
+    - làm thế nào mới có thể trông được chúng
+    - trồng như nào thì chúng mới không chết
+    - làm sao để trồng cây mà không sợ chúng chết
+    - làm thế nào mới có thể trồng được chúng
+    - cây này trồng dể chết không
+    - hôm bửa chết cây rồi giờ phải làm sao đây
+    - cái cây của mình bị héo rồi phải làm sao đây
+    - phải làm sao khi cây bị uốn héo
+    - cây héo thì có cứu được không
+    - làm sao khi cây bị héo
+    - làm sao để có thể trồng được loại cây ghẽ này
+    - các thông tin về trồng cây
+    - chăm sốc cây thì phải làm thế nào
+    - chăm sốc cây đi bạn ơi
+    - chăm sốc cây trồng mà không cần tưới nước được không
+    - có cần phải tưới nước nhiều không ad nhỉ
+    - có cần phải tưới nước cho chúng nhiều không shop
+    - cây này có cần phải tưới nước nhiều không
+    - mỗi loại cây thì có một cách tưới nước khác nhau đúng không nhỉ
+    - làm thế nào để biết được chúng bị héo
+    - héo thì phải làm sao shop nhỉ
+    - tại sao cây bị héo vậy, cứu với shop ơi
+    - shop ơi cây bị héo rồi cứu mình với
 
 #-> Thông tin blog (Chăm sốc cây trồng) - mới nhất
 - intent: ask_blog_care_new
@@ -39,3 +77,25 @@ nlu:
     - Bài viết về chăm sốc cây gần đây đi chứ ba cái này coi rồi
     - Bài blog về chăm sốc cây mới mới chút
     - Các bài blog chăm sốc cây hay, mới nhất không
+    - mấy bài chăm sốc cây phổ biến ấy
+    - bài viết về chăm sốc cây trending đi
+    - bài viết về trồng cây mới nhất
+    - các bài viết về trồng cây nhưng mới chút, coi mấy bài cũ chán rồi
+    - trồng cây mới nhất đi
+    - bài viết mới nhất về trồng cây
+    - bài viết về trồng cây mới nhất
+    - từ bài viết trồng cây mới nhất
+    - bài viết về cây trồng mới nhất
+    - các bài blog về trồng cây mới nhất
+    - các blog về cây trồng mới mới ấy cô nương
+    - các bài viết trông cây phổ biến ấy
+    - bài viết phổ biết về trồng cây đi shop
+    - shop có bài nào về trồng cây phổ biến không nhỉ
+    - làm sao xem được bài viết mới nhất về trông cây nhỉ shop
+    - shop cho mình hỏi bài viết đang phổ biến về chăm sốc cây là gì đấy
+    - các bài viết phổ biến về chăm sốc cây đi bạn
+    - cấc bài viết phổ biến về trồng cây đi fen
+    - nội dung về bài viết trông cây mới nhất
+    - những bài viết trồng cây mới nhất bạn ơi
+    - bài viết mới trồng cây bạn ơi
+    - bài viết mới chăm sốc cây bạn ơi

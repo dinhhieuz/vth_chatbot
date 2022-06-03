@@ -8,7 +8,19 @@ nlu:
     - Làm sao để hiểu hơn về vũ trụ hạt
     - Các thông tin liên quan đến Vũ trụ hạt
     - Thông tin vũ trụ hạt
-    
+    - vũ trụ hạt là cái qq gì vậy
+    - vũ trụ hạt là trang không gian hả
+    - VTH là cái gì đấy
+    - what is VTH?
+    - what vth 
+    - cái vũ trụ hạt này la cái gì đó
+    - bạn cho mình hỏi vũ trụ hạt là trang gì vậy
+    - danh sách trợ giúp thông tin page
+    - fanpage 
+    - list of fanpage
+    - menu fanpage
+    - thông tin page
+
 #-> Giới thiệu doanh nghiệp VTH
 - intent: ask_page_intro
   examples: |
@@ -17,6 +29,23 @@ nlu:
     - VTH là gì vậy?
     - VTH kinh doanh cái gì vậy
     - Page này là gì vậy?
+    - Vũ trụ hạt là gì đấy
+    - page mình là gì vậy
+    - page mình bán cái gì đấy
+    - trang của mình là về cái gì
+    - trong trang của mình thì nó là cái gì
+    - cái gì trong trang bạn thế 
+    - bạn bán cái gì mà trong đẹp vậy
+    - trang của mình là về vấn đề gì vậy
+    - page của mình là về nội dung gì vậy
+    - Thông tin page mình là gì đấy
+    - nội dung page của mình là gì đó
+    - bên mình là làm về cái gì đấy
+    - nội dung bên mình làm là gì vậy
+    - mình vẫn chưa hiệu page của bạn
+    - bạn có thể giải thích page giúp mình được không
+    - bạn cho mình biết nội dung page được không
+
   
 #-> Thông tin liên lạc VTH
 - intent: ask_page_contact
@@ -33,6 +62,31 @@ nlu:
     - Liên hệ vũ trụ hạt bằng cách nào
     - VTH có website của riêng mình không
     - Vũ trụ hạt có web không
+    - làm sao để liên hệ ta
+    - số điện thoại của VTH là gì đấy
+    - địa chỉ của VTH ở đâu đó
+    - cho hỏi số điện thoại
+    - sđt của mình là gì đó
+    - địa chỉ bên mình là gì đó
+    - trụ sở chính của bên mình là ở đâu
+    - bên mình nằm ở chổ nào đấy
+    - tìm vũ trụ hạt ở đâu
+    - VTH ở đà nẵng hay ở đâu vậy
+    - vũ trụ hạt nằm ở đau đó 
+    - làm sao để tới được nơi bán của mình
+    - tôi muốn tới nơi bán của mình
+    - tôi muốn tìm tới chổ của shop
+    - sang shop cho khỏe, ở đâu đó
+    - shop nằm ở chổ nào ở đà nẵng thế
+    - gọi điện bằng số nào shop nhỉ
+    - em gọi cho shop ở số trên trang đúng không ạ
+    - shop ơi có phải số này không
+    - bên mình có phải nằm ở đây đúng không
+    - bạn ơi mình thấy bạn nằm ở ngũ hành sơn bạn còn không
+    - bên mình còn nằm ở nhs không
+    - bạn ơi, vũ trụ hạt có số hotline không
+    - số hotline
+
 #-> work-time of VTH
 - intent: ask_page_timework
   examples: |
@@ -53,4 +107,20 @@ nlu:
     - Giờ mình chạy sang shop được không
     - Có phải shop đang mở không
     - Shop mở cửa thì mình chạy sang hì
+    - bên mình đóng rồi hả
+    - có còn mở cửa không fen
+    - có mở cửa đó không
+    - admin ơi sao không thấy shop mở cửa nhỉ
+    - sao bên mình khóa cửa thế
+    - sao k thấy mở cửa nhỉ
+    - Shop dẹp rồi hả
+    - shop còn hoạt động không đấy
+    - shop mình có mở liên tục không
+    - shop cho hỏi thời gian làm việc bên mình là mấy giờ đấy
+    - mình làm trong khung giờ nào vậy
+    - sáng có làm việc không
+    - tối có mở không
+    - chiều có mở không đó
+    - rứa là shop mở cả ngày hả
+    - tôi có thể qua shop lúc mấy giờ
 # intent: ask_page_

@@ -136,7 +136,6 @@ class act_accept_buy(Action):
 ''' GỬI YÊU CẦU MUA HÀNG ĐẾN NHÀ QUẢN LÝ'''
 def send_manager(id_user):
     ''' Lấy tên người dùng tại Facebook'''
-    # try: 
     # Đọc file YAML để lấy access token
     with open(r"credentials.yml") as fh:
         rd_acstoken = yaml.load(fh, Loader=yaml.FullLoader)
@@ -197,14 +196,12 @@ def send_manager(id_user):
             }
         }
         response = requests.post("https://openapi.zalo.me/v2.0/oa/message", data=json.dumps(payload), headers = headers)
-        
+
         if response.ok: return True
         else: return False
     else: 
         return False
-    # except Exception as Error:
-    #     print(Error)
-    #     print("[ERROR: func]-> action/send_manager")
+
 #!-------------------------------------FALL BACK
 class act_unknown(Action):
 

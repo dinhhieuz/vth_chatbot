@@ -2,7 +2,6 @@ version: "2.0"
 nlu:
 #-> Thông tin khuyến mãi rau xanh
 
-#NOTE: Thêm các loại râu vào đây (dư thời gian thì kiểm tra từng loại rau)
 - intent: ask_khuyenmai_hatgiong_rauxanh
   examples: |
     - khi mua hạt giống rau nhưng không biết được giảm giá chứ

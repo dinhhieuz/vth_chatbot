@@ -13,7 +13,7 @@ import asyncio
 option = webdriver.ChromeOptions()
 option.add_argument('headless')
 #turn off log of selenium
-# option.add_experimental_option("excludeSwitches", ["enable-logging"])
+option.add_experimental_option("excludeSwitches", ["enable-logging"])
 #Chạy chương trình giả lập Chrome
 class crawl:
     async def product(path, name_j):
@@ -33,7 +33,8 @@ class crawl:
             } 
             for num_page in range(1,100):
                 browser = webdriver.Chrome(
-                    executable_path="D:\\Năm 4 - Thực tập tốt nghiệp\\Project\\Chatbot\\chatbot_vth\\others\\chromedriver", 
+                    # executable_path="D:\\Năm 4 - Thực tập tốt nghiệp\\Project\\Chatbot\\chatbot_vth\\others\\chromedriver", 
+                    executable_path="D:\\HieuCali\\File of Hieu\\Project\\DSA Company\\Project\\ChatBox_RASA\\Chatbot_Vutruhat\\vth_chatbot\\Project\\\Chatbot\\chatbot_vth\\others\\serv\\chromedriver", 
                     options=option)
                 browser.get(f"https://vutruhat.com/danh-muc/{path}/page/{num_page}/")
                 if browser.title.find("Không tìm thấy trang") > -1:
@@ -46,17 +47,25 @@ class crawl:
                         item = i.text.split("\n")
                         
                         #! IMAGE
-                        IMAGE = i.find_element(By.CLASS_NAME, "image-none").get_attribute('innerHTML')
+                        img = i.find_element(By.CLASS_NAME, "image-none").find_element(By.TAG_NAME, "img").get_attribute('src')
+                        if img.find('jpg') > -1:
+                            img[img.find("https://")+8::img.find('jpg') + 3]
+                        elif img.find('png') > -1:
+                            img[img.find("https://")+8::img.find('png') + 3]
+                        elif img.find('jpeg') > -1:
+                            img[img.find("https://")+8::img.find('jpeg') + 4]
+
                         #! LINK
                         j = 1 if len(item) == 5 else 0
 
-                        img = IMAGE[IMAGE.find('srcset="')+8:]
+                        # img = IMAGE[IMAGE.find('srcset="')+8:]
                         data["data"].append(
                             {
                                 "name" : item[j+1].title(),
                                 "price" : item[j+2],
-                                "link" : IMAGE[IMAGE.find('href="')+6:IMAGE.find('">')],
-                                "image" : img[:(img.find('jpg') if img.find('jpg') > -1 else img.find('png')) +3],
+                                "link" : i.find_element(By.CLASS_NAME, "image-none").find_element(By.TAG_NAME, "a").get_attribute('href'),
+                                "image" : img,
+
                                 "status" :  "Hết hàng" if len(item) == 5 else "Còn hàng",
                             }
                         )
@@ -68,7 +77,8 @@ class crawl:
                 json.dump(data, jsonfile, ensure_ascii=False, indent=4)
                 
             print("[class: crawl/product] -> Done")
-        except:
+        except Exception as error:
+            print(error)
             print("[class: crawl/product] -> Lỗi crawl dữ liệu ")
 
 
@@ -127,6 +137,6 @@ class crawl:
                     json.dump(data, jsonfile, ensure_ascii=False, indent=4)
 
             print("[class: crawl/blogs] -> Done")
-        except:
-            #error
+        except Exception as error:
+            print(error)
             print("[class: crawl/blogs] -> Lỗi crawl dữ liệu ")

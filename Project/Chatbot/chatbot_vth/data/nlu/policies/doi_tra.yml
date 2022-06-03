@@ -1,4 +1,3 @@
-#NOTE: CÓ Thể sẽ gọp các intent chính sách lại để xữ lý chung 1 thông tin nội dung
 version: "2.0"
 nlu:
 #-> Chính sách đổi trả (Trả lời hết thông tin)
@@ -11,6 +10,57 @@ nlu:
     - Làm thế nào mới trả được hàng
     - Hàng này tệ quá tôi muốn trả lại hàng
     - Hàng hư rồi, cho trả lại hàng với
+    - tôi muốn đổi trả hàng thì phải làm sao
+    - đổi trả hàng đi
+    - cho đổi trả hàng không
+    - đổi trả 
+    - có đổi trả không 
+    - có đổi trả được không vậy
+    - bên mình có cho đổi trả không
+    - chính sách đổi trả
+    - đổi trả đi shop ơi
+    - tôi muốn trả hàng
+    - trả hàng đi shop ơi
+    - hàng như qq tôi muốn trả lại
+    - trả hàng bạn gì đó ơi
+    - tao muốn trả lại cái này
+    - trả cây sen đá ni với xấu quá
+    - mua về có được trả lại không shop 
+    - shop ơi tôi muốn trả lại hàng =)))
+    - bạn cho mình trả lại đi được không
+    - bạn cho mình trả lại hàng với
+    - tôi muốn đổi cái mới
+    - tôi muốn đổi lại chứ xấu quá
+    - đổi lại đi mà
+    - bạn ơi, tôi muốn đổi hàng
+    - tôi muốn đổi hàng vì chúng không hợp
+    - bạn ơi làm sao để đổi lại hàng nhỉ
+    - khi nào thì tôi được trả lại 
+    - tôi đổi trả nhá
+    - đổi trả hàng nhá
+    - đổi trả nhá
+    - đổi trả hỉ
+    - đổi trả đó nha
+    - shop cho đổi hàng không
+    - tôi có thể đổi hàng không nhỉ 
+    - làm thế nào mới có thể dổi hàng
+    - hàng hóa được đổi lại không
+    - bạn cho mình hỏi làm thế nào để trả được hàng
+    - mới mua giờ muốn trả được không
+    - mua về không ưng ý có đổi được không
+    - không trả lại được hàng hả shop
+    - shop ơi, hàng xấu tệ thật sự đổi lại đi
+    - bạn cho mình đổi lại với 
+    - bạn cho mình trả hàng với ạ
+    - bạn ơi, mình muốn trả hàng thì làm sao
+    - làm thế nào mình mới có thể trả lại được hàng chứ xấu thật sự
+    - có trả lại được hàng không nhỉ
+    - đổi thì phải làm sao đây nhỉ
+    - bạn có thể cho mình đổi hay trả lại hàng được không
+    - đổi mà thì cần gì đúng không shop nhỉ
+    - nghe đồn bên mình cho đổi trả đúng không
+    - đổi trả thì phải làm sao ấy nhỉ
+    - khi nào mới có thể đổi được hàng
 
 #-> Chính sách đổi trả (alone)
 - intent: ask_plc_doitra_when
@@ -22,6 +72,33 @@ nlu:
     - Thời gian trả hàng là khi nào
     - Bao nhiêu ngày thì tôi mới trả được hàng
     - Khi nào tôi mới được trả hàng vậy shop
+    - khi nào thì mới trả được hàng đấy
+    - cơ bao lâu thì tôi mới trả được hàng
+    - bạn ơi, mất bao lâu thì mới đổi trả được hàng
+    - shop ơi, đổi trả hàng trong bao lâu thế
+    - khi đổi trả thì cần phải mất bao lâu
+    - mình muốn trả hàng nhưng trong bao lâu thì mới được
+    - mới mua thì có được đổi không ta
+    - bạn cho mình hỏi là mua hàng thì bao lâu sẽ được trả lại
+    - mới mua tuần trước thì đổi được không
+    - mới mua hôm thứ 7 thì có đổi không
+    - có thể đổi hàng khi chỉ mới mua được không
+    - mới mua có cho đổi không
+    - mua hôm thứ 7 ni thì chứ có lâu đâu, đổi lại đi
+    - đổi lại đi chứ mới mua ni mà
+    - hôm bửa chứ mấy, cho đổi lại nha
+    - bạn ơi đổi lại đi, mình mới mua mà
+    - bạn cho mình đổi lại nhá chứ mình cũng mới mua đây thôi
+    - mình mua hồi chủ nhật à bạn cho đổi lại giúp mình nhé
+    - đổi lại đi má, mới mua đây mà
+    - cho đổi lại không chứ mới mua luôn ớ
+    - mới mua má ơi, đổi lại nhá
+    - trả hàng đi, mới mua đây mà
+    - bạn chấp nhận trả hàng cho mình nha mới mua đây hoi
+    - shop ơi, mua bao lâu thì mới có thể trả hàng được
+    - khi nào thì mới trả được cây sen này ấy nhỉ
+    - bạn cho mình hỏi, mất bao lâu mới trả lại được shop nhỉ
+
 
 #-> Chính sách phí trả hàng (alone)
 - intent: ask_plc_doitra_fee
@@ -35,5 +112,27 @@ nlu:
     - Nếu tôi trả hàng thì ai là người chịu phí vận chuyển
     - Phí vận chuyển là tôi trả hay là bạn trả
     - Có cần phải trả phí vận chuyển nếu như trả hàng không
+    - trả hàng thì có mất đồng nào không ta
+    - bạn cho mình hỏi đổi hàng thì ai chịu phí
+    - bạn cho mình hỏi trả hàng thì có mất phí không
+    - trả hàng mà cũng lấy tiền ship à
+    - đừng nói trả cũng lấy phí nhá
+    - từ khi nào trả hàng phải đóng phí vậy
+    - khi nào thì mới có thể không tốn phí khi đổi trả
+    - đổi hàng có tốn phí không fen
+    - shop ơi, bên mình đổi có tốn tiền không
+    - có phải bỏ ra bao nhiêu tiền cho việc đổi trả này vậy
+    - bạn cho mình hỏi đổi trả có mất phí nào không
+    - bạn ơi, trả phí có mất tiền không
+    - bạn ơi mình trả hàng thì phải thêm tiền không
+    - thêm tiền mới cho trả hàng hả shop
+    - shop ơi, hàng này trả có tốn không đấy
+    - shop ơi, có phải trả đồng nào khi trả hàng không
+    - có trả bất ỳ đồng nào cho sản phẩm này không khi trả lại
+    - có phải trả thêm chi phí nào phát sinh cho sản phẩm này không
+    - có cần trả đồng nào khi trả hàng không
+    - có cần trả đồng nào nữa không
+    - khi đổi ớ, có cần trả tiền gì nữa không
+    - bạn cho hỏi có trả phí gì không nhỉ
 
     

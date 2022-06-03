@@ -9,7 +9,66 @@ nlu:
     - Shop có những thông tin chính sách vận chuyển nào vậy
     - Xem thông tin chính sách vận chuyển
     - Tôi muốn biết thêm thông tin chính sách vận chuyển
+    - Xem vận chuyển bạn ơi
+    - xem vận chuyển đi bot
+    - Cho mình xem vận chuyển
+    - Cho mình xem chính sách về vận chuyển
+    - Chính sách vận chuyển bên mình nhưu nào đấy
+    - Chính sách vận chuyển đe
+    - bạn có thể cho mình hỏi vận chuyển được không
+    - có cái quy định nào về chính sách không
+    - tôi muốn vận chuyển
+    - tôi muốn được vận chuyển
+    - bạn cho tôi xem các nội dung về vận chuyển đi
+    - shop cho mình hỏi, các nội dung về vận chuyển là như nào
+    - bạn cho mình hỏi quy định vận chuyển đi
+    - menu vận chuyển
+    - danh sách vận chuyển
+    - list of vận chuyển
+    - vận chuyển đi má
+    - vận chuyển
+    - thông tin về chính sách vận chuyển
+    - chính sách vận chuyển
+    - nọi dung vận chuyển
+    - công thức vận chuyển
+    - thông tin quy định vận chuyển
+    - quy định về vận chuyển
+    - các thông tin quy định về nội dung vận chuyển
+    - danh sách trợ giúp vận chuyển
+    - tôi muốn được hỗ trợ vận chuyển
+    - tôi muốn được giúp đở tư vấn vận chuyển
+    - các thông tin quy định về vận chuyển 
+    - Xem giao hàng bạn ơi
+    - xem giao hàng đi bot
+    - Cho mình xem giao hàng
+    - Cho mình xem chính sách về giao hàng
+    - Chính sách giao hàng bên mình nhưu nào đấy
+    - Chính sách giao hàng đe
+    - bạn có thể cho mình hỏi giao hàng được không
+    - có cái quy định nào về chính sách không
+    - tôi muốn giao hàng
+    - tôi muốn được giao hàng
+    - bạn cho tôi xem các nội dung về giao hàng đi
+    - shop cho mình hỏi, các nội dung về giao hàng là như nào
+    - bạn cho mình hỏi quy định giao hàng đi
+    - menu giao hàng
+    - danh sách giao hàng
+    - list of giao hàng
+    - giao hàng đi má
+    - giao hàng
+    - thông tin về chính sách giao hàng
+    - chính sách giao hàng
+    - nọi dung giao hàng
+    - công thức giao hàng
+    - thông tin quy định giao hàng
+    - quy định về giao hàng
+    - các thông tin quy định về nội dung giao hàng
+    - danh sách trợ giúp giao hàng
+    - tôi muốn được hỗ trợ giao hàng
+    - tôi muốn được giúp đở tư vấn giao hàng
+    - các thông tin quy định về giao hàng 
 
+    
 #-> Chính sách phí vận chuyển
 - intent: ask_plc_vanchuyen_fee
   examples: |
@@ -21,6 +80,26 @@ nlu:
     - Hết nhiêu tiền đấy
     - Chi phí vận chuyển 
     - Tiền ship bao nhiêu
+    - vận chuyển hến bao nhiêu tiền vậy
+    - từ đà nẵng tới hà nội thì tới bao nhiêu
+    - tôi ở kiến gian thì tốn bai nhiều tiền
+    - tôi ở đà nẵng thì tới nhiêu
+    - trong nội thành thì có tốn tiền chuyển không
+    - tiền ship được tính nào nào không 
+    - shop cho mình hỏi ship tiền như nào đấy nhỉ 
+    - shop cho mình hỏi tiền ship được tính nào nào đấy
+    - bạn ơi, tiền ship ở ngoại thành thì tốn 
+    - tiền ship bao nhiêu đấy shop
+    - bạn cho mình hỏi shop hết nao nhiêu tiền vận chuyển thế
+    - bạn ơi tiền vận chuyển hến bao nhiêu tiền vậy
+    - tiền ship hết bảo nhiêu vậy ạ
+    - tôi muốn hỏi là tiền ship bên mình được tính như nào đấy
+    - cu ơi, mình tính tiền ship như nào đấy
+    - tiền ship bên mình tính như nào
+    - có thể cho biết mình tính tiền vận chuyển như nào không
+    - bạn ơi, tiền ship bao nhiêu đó
+    - tính tiền ship cho mình với
+    - tiền ship được tính bằng cách nào vậy
 
 #-> Giao hàng trong bao lâu
 - intent: ask_plc_vanchuyen_howlong
@@ -37,6 +116,26 @@ nlu:
     - Bao lâu thì hàng tới nhà
     - Lúc nào tôi sẽ có đơn hàng của mình
     - Tôi nhận đơn hàng khi nào
+    - bao lâu thì tôi mới nhận được hàng vậy
+    - mất bao lâu thì mới nhận được
+    - chú ơi, cháu nhận trong tuần này được không
+    - tôi muốn nhận trong 3 ngày nữa được không
+    - bạn ơi mình nhận được hàng trong bao nhiêu ngày vậy
+    - tầm khi nào thì mình mới nhận được hành vậy
+    - khi nào mình mới có hàng đấy
+    - mình có thể nhận được trong tuần ni được không
+    - mai mình bận đừng giao sang nhá
+    - bạn cho mình hỏi là khi nào mình mới nhận được cây
+    - cái cây này được giao trong bao lâu đó
+    - mình muốn nhận trong 4 ngày
+    - mình muốn ngày mai là co hàng luôn
+    - mình muốn giao nhanh được không
+    - có giao hàng thần tốc không
+    - có giao hàng nhanh không shop
+    - có nhưng các thức giao hàng nào nhanh không
+    - tôi muốn có liên hàng luôn được không shop nhỉ 
+
+
 
 #-> Chính sách kiểm tra đơn hàng
 - intent: ask_plc_vanchuyen_check
@@ -54,3 +153,23 @@ nlu:
     - Tôi muốn kiểm tra hàng khi đơn hàng tới
     - Tôi muốn được xem hàng rồi mới nhận, lỡ hàng không đúng sao
     - Lỡ hàng không đúng tôi được kiểm tra chứ
+    - tôi sợ bị lừa nên muốn check hàng
+    - có được check hàng không fen
+    - có được kiểm tra hàng trước không shop
+    - hàng hỏng thì sao, có được xem k
+    - cây ni vận chuyển sợ bị héo thì có được kiểm tra k
+    - kiểm tra hàng trước được không
+    - hàng về có được mở ra không
+    - có được mở ra khi hàng tới không
+    - có được mở ra chứ
+    - có được mở ra khi xem trước không đấy
+    - xem hàng trước đó nha
+    - mình muốn xem hàng trước
+    - lỡ shop lừa đão sao, xem hàng trước chứ
+    - phải xem hàng trước tôi mới mua đó
+    - tôi mua hàng được xem trước thì mới mua
+    - k cho xem hàng trước tôi không mua hàng đâu
+    - xem hàng thì mới mua đó nha
+    - mua hàng mà không cho xem hành thì đừng có trách
+    - mua hàng có được xem hàng không
+    
