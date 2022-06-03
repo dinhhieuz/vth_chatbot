@@ -13,6 +13,29 @@ nlu:
     - Cho mình xem chính sách về thanh toán
     - Chính sách thanh toán bên mình nhưu nào đấy
     - Chính sách thanh toán đe
+    - bạn có thể cho mình hỏi thanh toán được không
+    - có cái quy định nào về chính sách không
+    - tôi muốn thanh toán
+    - tôi muốn được thanh toán
+    - bạn cho tôi xem các nội dung về thanh toán đi
+    - shop cho mình hỏi, các nội dung về thanh toán là như nào
+    - bạn cho mình hỏi quy định thanh toán đi
+    - menu thanh toán
+    - danh sách thanh toán
+    - list of thanh toán
+    - thanh toán đi má
+    - thanh toán
+    - thông tin về chính sách thanh toán
+    - chính sách thanh toán
+    - nọi dung thanh toán
+    - công thức thanh toán
+    - thông tin quy định thanh toán
+    - quy định về thanh toán
+    - các thông tin quy định về nội dung thanh toán
+    - danh sách trợ giúp thanh toán
+    - tôi muốn được hỗ trợ thanh toán
+    - tôi muốn được giúp đở tư vấn thanh toán
+    - các thông tin quy định về thanh toán 
 
 #-> Chính sách thanh toán của VTH
 - intent: ask_plc_thanhtoan_opt
@@ -27,6 +50,29 @@ nlu:
     - Thanh toán bên mình như nào đấy
     - Tôi có thể thanh toán bằng cách nào nhỉ
     - Làm sao để thanh toán nhỉ
+    - có bao nhiêu hình thưc thanh toán thế
+    - tôi muốn được trả bằng tiền mặt
+    - tôi muốn được thanh toán bằng tiền mặt nhá
+    - làm sao để tôi có thể thanh toán bằng tiền mặt vậy 
+    - các lựa chọn về thanh toán
+    - tôi muốn thanh toán bằng tiền mặt có được không
+    - tôi chỉ còn tiền mặt thôi có được thanh toán không
+    - thanh toán bằng tiền mặt đi bạn trẻ
+    - bạn trẽ cho mình thanh toán bằng tiền mặt với
+    - bạn ơi mình có thể thanh toán bằng các hình thức nào
+    - mình thanh toán bằng hình thức nào vậy
+    - tôi có thể thanh toán qua đâu
+    - tôi muốn gửi tiền mặt
+    - gửi tiền mặt được không shop nhỉ
+    - bạn cho mình gửi bằng tiền mặt đi
+    - bạn ơi mình muốn gửi bằng tiền mặt
+    - shop có cho gửi COD không
+    - shop có cho thanh toán bằng COD không
+    - bạn cho mình thanh toán bằng COD nhá
+    - bạn cho mình thanh toán bằng tiền mặt nhé
+    - VTH nay có cho thanh toán bằng tiền mặt không
+    - bạn ơi mình còn mỗi tiền mặt thôi, thanh toán đươc không
+    - bạn có cho mình thanh toán bằng tiền mặt được không
 
 #-> Chính sách trả tiền Online
 
@@ -43,5 +89,35 @@ nlu:
     - Trả tiền online
     - Tôi muốn chuyển tiền 
     - Chuyển tiền sang ngân hàng
+    - mình có thể thanh toán bằng chuyển khoản chứ
+    - momo có cho chuyển không
+    - mình chuyển tiền bạn sang ngân hàng hỉ
+    - bạn cho mình chuyển qua ngân hàng với ạ
+    - shop ơi mình gửi tiền cho bạn sang đâu nhỉ
+    - bạn cho mình gửi tiền sang ngân hàng với
+    - shop cho gửi tiền bằng thẻ tính dụng không
+    - thẻ tính dụng có được thanh toán không
+    - thanh toán online bạn ơi
+    - hết tiền mặt rồi cho thanh toán online đi
+    - thanh toán online có được không ta
+    - hình thức thanh toán onl này như nào ấy nhỉ
+    - có thể cho mình biết về hình thức online đươc không
+    - mình muốn hiểu thêm về hình thức online 
+    - bạn ơi mình muốn xem phương thức thanh toán về online
+    - các phương thức chuyển trực tiếp đi bạn
+    - cho mình xem phương thức chuyển tiền online đi
+    - mình dùng thẻ ngân hàng gửi tiền cho bạn được không
+    - gửi tiền ngân hàng được chứ hỉ
+    - có thể gửi tiền để thanh toán được đúng không
+    - bạn cho mình gửi tiền được không
+    - Bạn có mình gửi tiền được không
+    - bạn có thể giúp mình gửi tiền được không 
+    - bạn ơi mình muốn gửi tiền 
+    - shop ơi, ngân hàng nào gửi tiền được vậy
+    - có thể trả cho ngân hàng nào đấy
+    - bạn ơi hình thức gửi tiền online còn được ấp dụng không
+    - sao mình không gửi được tiền nhỉ
+    - bạn cho mình chuyển khoản đi
+    - bạn cho mình xin số tìa khoảng chuyển khoản đi
   
 

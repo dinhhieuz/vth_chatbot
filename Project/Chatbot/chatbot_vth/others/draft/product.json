@@ -1,69 +1,20 @@
 {
-    "type": "HẠT GIỐNG RAU XANH",
-    "time": "2022-05-31",
+    "type": "Ý NGHĨA LOẠI CÂY",
+    "time": "2022-05-14",
     "data": [
         {
-            "name": "Hạt Giống Cây Cà Chua Bạch Tuộc",
-            "price": "20,000₫",
-            "link": "https://vutruhat.com/san-pham/hat-giong-cay-ca-chua/",
-            "image": "https://vutruhat.com/wp-content/uploads/2021/12/hat-giong-ca-chua-247x296.png",
-            "status": "Hết hàng"
+            "stt": 1,
+            "title": "Sen Đá Đột Biến – Phương Pháp Nhân Giống Sen Đá Đột Biến Hiệu Quả",
+            "desc": "Sen đá là loài cây mọng nước, thân nhỏ, thích nghi với mọi khí hậu...",
+            "link": "https://vutruhat.com/sen-da-dot-bien/",
+            "image": "https://vutruhat.com/wp-content/uploads/2021/11/sen_da_dot_bien_vu_tru_hat-min.jpg"
         },
         {
-            "name": "Hạt Giống Rau Cải Kale",
-            "price": "14,000₫ 7,000₫",
-            "link": "https://vutruhat.com/san-pham/hat-giong-rau-cai-kale/",
-            "image": "https://vutruhat.com/wp-content/uploads/2021/12/hat-giong-rau-cai-kale-247x296.png",
-            "status": "Còn hàng"
-        },
-        {
-            "name": "Hạt Giống Rau Cải Ngọt",
-            "price": "20,000₫ 10,000₫",
-            "link": "https://vutruhat.com/san-pham/hat-giong-rau-cai-ngot/",
-            "image": "https://vutruhat.com/wp-content/uploads/2021/12/hat-giong-rau-cai-ngot-247x296.png",
-            "status": "Còn hàng"
-        },
-        {
-            "name": "Hạt Giống Rau Càng Cua",
-            "price": "20,000₫ 10,000₫",
-            "link": "https://vutruhat.com/san-pham/hat-giong-rau-cang-cua/",
-            "image": "https://vutruhat.com/wp-content/uploads/2021/12/hat-giong-rau-cang-cua-247x296.png",
-            "status": "Còn hàng"
-        },
-        {
-            "name": "Hạt Giống Rau Dền Đỏ",
-            "price": "20,000₫ 7,000₫",
-            "link": "https://vutruhat.com/san-pham/hat-giong-rau-den/",
-            "image": "https://vutruhat.com/wp-content/uploads/2021/12/hat-giong-rau-den-247x296.png",
-            "status": "Còn hàng"
-        },
-        {
-            "name": "Hạt Giống Rau Má",
-            "price": "20,000₫ 17,000₫",
-            "link": "https://vutruhat.com/san-pham/hat-giong-rau-ma/",
-            "image": "https://vutruhat.com/wp-content/uploads/2021/12/hat-giong-rau-ma-247x296.png",
-            "status": "Còn hàng"
-        },
-        {
-            "name": "Hạt Giống Rau Mồng Tơi Lá To",
-            "price": "20,000₫",
-            "link": "https://vutruhat.com/san-pham/hat-giong-rau-mong-toi/",
-            "image": "https://vutruhat.com/wp-content/uploads/2021/12/Hat-giong-rau-mong-toi-247x296.png",
-            "status": "Hết hàng"
-        },
-        {
-            "name": "Hạt Giống Rau Muống",
-            "price": "30,000₫ 15,000₫",
-            "link": "https://vutruhat.com/san-pham/hat-giong-rau-muon-kho/",
-            "image": "https://vutruhat.com/wp-content/uploads/2021/12/hat-giong-rau-muong-247x296.png",
-            "status": "Còn hàng"
-        },
-        {
-            "name": "Hạt Giống Rau Ngò Rí",
-            "price": "20,000₫ 15,000₫",
-            "link": "https://vutruhat.com/san-pham/hat-giong-rau-ngo-ri/",
-            "image": "https://vutruhat.com/wp-content/uploads/2021/09/hat-giong-rau-ngo-ri-247x296.png",
-            "status": "Còn hàng"
+            "stt": 2,
+            "title": "Tặng Sen Đá Cho Người Yêu Có Ý Nghĩa Gì?",
+            "desc": "Sen đá là một loài cây có lẽ đã rất quen thuộc với mọi người....",
+            "link": "https://vutruhat.com/tang-sen-da-cho-nguoi-yeu-co-y-nghia-gi/",
+            "image": "https://vutruhat.com/wp-content/uploads/2021/09/sen-da-hoa-cuoi-min-edited-400x400.jpg"
         }
     ]
 }

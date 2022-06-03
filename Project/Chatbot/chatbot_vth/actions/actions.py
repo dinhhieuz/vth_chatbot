@@ -197,9 +197,7 @@ def send_manager(id_user):
         else: return False
     else: 
         return False
-    # except Exception as Error:
-    #     print(Error)
-    #     print("[ERROR: func]-> action/send_manager")
+
 #!-------------------------------------FALL BACK
 class act_unknown(Action):
 

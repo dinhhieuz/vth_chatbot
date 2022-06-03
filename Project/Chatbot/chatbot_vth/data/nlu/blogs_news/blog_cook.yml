@@ -22,6 +22,42 @@ nlu:
     - Nấu ăn ấy, chứ mấy loại ni tôi xem rồi fen
     - Nấu ăn đi, mấy bài ni chán quá
     - Bài viết về nấu ăn
+    - mấy cái cây này nấu được món gì đấy
+    - có hướng dẫn về nấu ăn cho cây này không
+    - mấy cây rau này nấu món gì ngon ngon ấy nhỉ
+    - các loại rau này nấu được móng nào không admin
+    - nấu ăn từ loại rau
+    - mấy cây rau này nấu được không ta
+    - rau muốn thì nấu cái gì nhỉ admin
+    - mấy cái cây này có ăn được không admin
+    - shop ơi, tôi muốn nấu ăn từ các hạt giống này
+    - làm sao để nấu ăn từ các hạt giống này vậy admin
+    - từ các hạt giống này tôi có thể nấu những món nào 
+    - với các loại rau thì tôi có thể nấu chúng với những món như thế nào 
+    - bạn có thể cho tôi xem về các bài viết về các công thức nấu ăn không
+    - có bài blog nào về công thức nấu ăn không
+    - nấu cho bạn bè ăn được mấy cái cây này không
+    - nấu ăn bằng cái cây này được chứ
+    - mấy cái bí này thì có món nào ăn được không
+    - bạn cho mình hỏi mấy cái món này nên ăn gì từ chúng
+    - bài viết về công thức nấu ăn cho các loại cây này
+    - các blog về nấu ăn khi trồng cây
+    - mấy cái cây rau này ăn với cái gì đấy
+    - bạn ơi, cho hỏi có bài viết về nấu ăn không
+    - bạn cho mình hỏi, bên mình có chỉ nấu ăn không
+    - nên ăn gì khi trông các loại rau này
+    - shop gợi ý cho mình các móng ăn với
+    - shop gợi ý cho mình vài bài viết về mấy món ăn từ loại rau với
+    - từ các loại rau thì nên ăn cái gì
+    - từ bài viết nấu ăn thì nấu được món như nào
+    - bài viết về nấu ăn đi bạn ơi
+    - coi mấy bài ni chán bỏ mẹ, nấu ăn đi
+    - bài viết nấu ăn, m không hiểu ý tao à
+    - shop làm ăn gì có mỗi bài viết nấu ăn cũng éo hiểu
+    - bài viết nấu ăn ấy, chứ cho xem mấy loại gì vậy
+    - trời đất, các công thức về nấu ăn chứ cái gì đây
+    - thông tin về nấu ăn từ các bài viết
+
 #-> Thông tin blog (Vào bếp cùng Vũ trụ hạt) - mới nhất
 - intent: ask_blog_cook_new
   examples: |
@@ -40,3 +76,31 @@ nlu:
     - Bài viết nấu ăn mới nhất ấy, chứ mấy loại ni tôi xem rồi fen
     - Nấu ăn mới nhất đi, mấy bài ni chán quá
     - Bài viết về nấu ăn mới nhất
+    - bài viết mới nhất về các công thức nấu ăn
+    - có cái món nào mới mới không từ bài viết ấy
+    - bài viết về món ăn mới nhất
+    - bài viết về nấu ăn đang hot hiện nay
+    - bài viết nay đang hot dành cho nấu ăn
+    - các bài viết về nấu ăn mới nhất
+    - bài viết nấu ăn đang trending hiện nay
+    - mấy cái ni cũ bỏ mẹ rồi, bài nấu ăn mới nhất đi
+    - bài viết nấu ăn mới nhất, xịn nhất, vip nhất
+    - bài viết nấu ăn vip nhất vũ trụ
+    - Vũ trụ hạt có bài nào mới nhất về nấu ăn không
+    - đang có bài viết nào mới về nấu ăn không
+    - dạo ni có viết bài nào về nấu ăn không
+    - bài viết mới nhất mà shop từng viết đi
+    - chán vl, bài mới nấu ăn chứ mấy ni xem rồi
+    - xem bài viết mới nhất về nấu ăn
+    - bài viết mới nấu ăn
+    - blog nấu ăn hot nhất
+    - blog công thức nấu ăn mới nhất
+    - các nội dung bài viết nấu ăn được mới nhất
+    - nội dung bài viết mới nhất về nấu ăn
+    - tôi muốn biết về các bài viết nấu ăn mới nhất
+    - vth cho xem bài viết mới nhất về nấu ăn
+    - vth xem công thức nấu ăn mới nhất
+    - bài viết gì chán bỏ mẹ, mới nhất đi
+    - bài viết gì cũ vl ra, bài nấu ăn mới đi má
+    - bài viết gì này lâu rồi mà, có bài viết nào mới mới không nhỉ
+    

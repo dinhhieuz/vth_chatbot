@@ -39,6 +39,19 @@ nlu:
     - bên mình có hỗ trợ tư vấn không
     - bạn gì đó ơi, bạn giúp mình tư vấn với
     - tư vấn
+    - tư vấn đi bạn ơi
+    - tôi muốn biết thêm về sản phẩm bên mình
+    - Chúng tôi đang quan tâm sản phẩm bên mình, bạn có thể cho chút thông tin không
+    - Tôi có thể biết thêm về thông tin sản phẩm bên mình chứ
+    - bạn gì đó ơi, sản phẩm bên mình là như nào ấy nhỉ
+    - Sản phẩm bên mình là như nào thế ta
+    - Cho biết thêm thông tin sản phẩm đi gái
+    - Cho mình biết thêm thông tin sản phẩm đi anh trai
+    - anh gì ơi, anh cho em hỏi mấy cái hàng bên mình như nào ấy ạ
+    - Anh ơi anh cho em xem sản phẩm bên mình đi
+    - heey du, m cho tao xem sản phẩm 
+    - sản phẩm bên mày là như nào đấy
+    - có thông tin sản phẩm không cho tao xem với
 
 #-> Tư vấn hạt giống
 - intent: ask_tuvan_hatgiong
@@ -57,7 +70,7 @@ nlu:
     - tư vấn hạt giống đi
     - shop có đó không, tư vấn hạt giống cho mình với
     - mình chưa bt nên mua hạt giống như nào bạn giúp mình với
-    - bạn ơi, bạn giúp mình
+    - bạn ơi, bạn giúp mình chọn hạt giống với
     - tư vấn hạt giống được không, mình không biết nên mua như nào cả
     - tôi muốn được tư vấn hạt giống
     - tôi muốn bạn tư vấn hạt giống cho tôi
@@ -69,3 +82,37 @@ nlu:
     - Bạn có thể tư vấn sản phẩm hạt giống bên mình cho mình được không
     - bạn gì đó ơi, bạn giúp mình tư vấn hạt giống với
     - bạn ơi, mình muốn mua sản phẩm hạt giống bên bạn nhưng không biết nó như nào
+    - tư vấn hạt giống
+    - tư vấn hạt giống đi bạn ơi
+    - tôi muốn biết thêm về hạt giống bên mình
+    - Chúng tôi đang quan tâm hạt giống bên mình, bạn có thể cho chút thông tin không
+    - Tôi có thể biết thêm về thông tin hạt giống bên mình chứ
+    - bạn gì đó ơi, hạt giống bên mình là như nào ấy nhỉ
+    - Hạt giống bên mình là như nào thế ta
+    - Cho biết thêm thông tin hạt giống đi gái
+    - Cho mình biết thêm thông tin hạt giống đi anh trai
+    - anh gì ơi, anh cho em hỏi mấy cái hàng bên mình như nào ấy ạ
+    - Anh ơi anh cho em xem loại hạt bên mình đi
+    - heey du, m cho tao xem hạt giống 
+    - Hạt giống bên mày là như nào đấy
+    - có thông tin hạt giống không cho tao xem với
+    - Bên mình có bán hạt giống không fen
+    - bên mình bán hạt giống chứ
+    - Bên mình có mấy loại hạt giống gì thế
+    - hạt giống bên mình bán như thế nào ấy nhỉ
+    - hạt giống bên mình bán thì sẽ ra sao
+    - cho mình ít thông tin về hạt giống với
+    - xin thông tin về hạt giống bên mình
+    - xin chút thông tin về hạt giống đi má
+    - thông tin hạt giống bạn gì đó ơi
+    - hạt giống đi bạn ơi, mình muốn mua hạt giống
+    - hạt giống bên mình thì như nào đấy
+    - Cho tôi chút thông tin về hạt giống đi page ơi
+    - anh gì ơi, anh cho em xem hạt giống công ty với
+    - Hạt giống công ty đi anh trai ơi
+    - anh trai ơi, hạt giống cây trông bên mình có loại nào thế
+    - anh ơi em muốn mua hạt giống anh tư vấn cho em đi
+    - anh ơi, em muốn mua hạt giống về trồng mà không biết loại nào cả
+    - từ khi nào bên mình bán hạt giống vậy cho mình thêm thông tin với
+    - mình muốn mua hạt giống bạn cho mình tham khảo với
+    - bạn gì đó ơi, thông tin hạt giống đi bạn ơi

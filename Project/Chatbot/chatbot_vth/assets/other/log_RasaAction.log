@@ -1,0 +1,125 @@
+2022-06-02 17:07:53 [1;30mINFO    [0m [34mrasa_sdk.endpoint[0m  - Starting action endpoint server...
+2022-06-02 17:07:53 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_chat_greating'.
+2022-06-02 17:07:53 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_accept_buy'.
+2022-06-02 17:07:53 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_unknown'.
+2022-06-02 17:07:53 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_blogs'.
+2022-06-02 17:07:53 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_blogs_web'.
+2022-06-02 17:07:53 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_khuyenmai_web'.
+2022-06-02 17:07:53 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_khuyenmai_web_details'.
+2022-06-02 17:07:53 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_tuvan_web'.
+2022-06-02 17:07:53 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_tuvan_web_details'.
+2022-06-02 17:07:53 [1;30mINFO    [0m [34mrasa_sdk.endpoint[0m  - Action endpoint is up and running on http://0.0.0.0:5055
+2022-06-02 17:07:53 [1;30mDEBUG   [0m [34mrasa_sdk.utils[0m  - Using the default number of Sanic workers (1).
+2022-06-02 17:08:29 [1;30mDEBUG   [0m [34mrasa_sdk.executor[0m  - Received request to run 'act_chat_greating'
+2022-06-02 17:08:29 [1;30mDEBUG   [0m [34mrasa_sdk.executor[0m  - Finished running 'act_chat_greating'
+2022-06-02 17:09:50 [1;30mDEBUG   [0m [34mrasa_sdk.executor[0m  - Received request to run 'act_khuyenmai_web'
+2022-06-02 17:09:50 [1;30mDEBUG   [0m [34mrasa_sdk.executor[0m  - Finished running 'act_khuyenmai_web'
+2022-06-02 17:09:55 [1;30mERROR   [0m [34masyncio[0m  - [31mTask exception was never retrieved
+future: <Task finished coro=<crawl.product() done, defined at D:\HieuCali\File of Hieu\Project\DSA Company\Project\ChatBox_RASA\Chatbot_Vutruhat\vth_chatbot\Project\Chatbot\chatbot_vth\actions\act_help\crawl.py:19> exception=UnicodeEncodeError('charmap', '[class: crawl/product] -> L\u1ed7i crawl d\u1eef li\u1ec7u ', 27, 28, 'character maps to <undefined>')>[0m
+Traceback (most recent call last):
+  File "D:\HieuCali\File of Hieu\Software\Anaconda\envs\envChatBot\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    creationflags=self.creationflags)
+  File "D:\HieuCali\File of Hieu\Software\Anaconda\envs\envChatBot\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "D:\HieuCali\File of Hieu\Software\Anaconda\envs\envChatBot\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\HieuCali\File of Hieu\Project\DSA Company\Project\ChatBox_RASA\Chatbot_Vutruhat\vth_chatbot\Project\Chatbot\chatbot_vth\actions\act_help\crawl.py", line 37, in product
+    options=option)
+  File "D:\HieuCali\File of Hieu\Software\Anaconda\envs\envChatBot\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    service_log_path, service, keep_alive)
+  File "D:\HieuCali\File of Hieu\Software\Anaconda\envs\envChatBot\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "D:\HieuCali\File of Hieu\Software\Anaconda\envs\envChatBot\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\HieuCali\File of Hieu\Project\DSA Company\Project\ChatBox_RASA\Chatbot_Vutruhat\vth_chatbot\Project\Chatbot\chatbot_vth\actions\act_help\crawl.py", line 72, in product
+    print("[class: crawl/product] -> L\u1ed7i crawl d\u1eef li\u1ec7u ")
+  File "D:\HieuCali\File of Hieu\Software\Anaconda\envs\envChatBot\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u1ed7' in position 27: character maps to <undefined>
+[act_chat_greating] <- chào nhé
+[act_khuyenmai_web] <- /ask_khuyenmai_hatgiong_cuqua
+[class Crawl/product ->
+2022-06-02 17:12:55 [1;30mINFO    [0m [34mrasa_sdk.endpoint[0m  - Starting action endpoint server...
+2022-06-02 17:12:56 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_chat_greating'.
+2022-06-02 17:12:56 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_accept_buy'.
+2022-06-02 17:12:56 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_unknown'.
+2022-06-02 17:12:56 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_blogs'.
+2022-06-02 17:12:56 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_blogs_web'.
+2022-06-02 17:12:56 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_khuyenmai_web'.
+2022-06-02 17:12:56 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_khuyenmai_web_details'.
+2022-06-02 17:12:56 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_tuvan_web'.
+2022-06-02 17:12:56 [1;30mINFO    [0m [34mrasa_sdk.executor[0m  - Registered function for 'act_tuvan_web_details'.
+2022-06-02 17:12:56 [1;30mINFO    [0m [34mrasa_sdk.endpoint[0m  - Action endpoint is up and running on http://0.0.0.0:5055
+2022-06-02 17:12:56 [1;30mDEBUG   [0m [34mrasa_sdk.utils[0m  - Using the default number of Sanic workers (1).
+2022-06-02 17:13:48 [1;30mDEBUG   [0m [34mrasa_sdk.executor[0m  - Received request to run 'act_khuyenmai_web'
+2022-06-02 17:13:49 [1;30mDEBUG   [0m [34mrasa_sdk.executor[0m  - Finished running 'act_khuyenmai_web'
+2022-06-02 17:13:54 [1;30mDEBUG   [0m [34mselenium.webdriver.remote.remote_connection[0m  - POST http://localhost:63059/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": ["headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": ["headless"]}}}
+2022-06-02 17:13:54 [1;30mDEBUG   [0m [34murllib3.connectionpool[0m  - Starting new HTTP connection (1): localhost:63059
+2022-06-02 17:13:55 [1;30mDEBUG   [0m [34murllib3.connectionpool[0m  - http://localhost:63059 "POST /session HTTP/1.1" 500 1084
+2022-06-02 17:13:55 [1;30mDEBUG   [0m [34mselenium.webdriver.remote.remote_connection[0m  - Finished Request
+2022-06-02 17:13:57 [1;30mERROR   [0m [34masyncio[0m  - [31mTask exception was never retrieved
+future: <Task finished coro=<crawl.product() done, defined at D:\HieuCali\File of Hieu\Project\DSA Company\Project\ChatBox_RASA\Chatbot_Vutruhat\vth_chatbot\Project\Chatbot\chatbot_vth\actions\act_help\crawl.py:19> exception=UnicodeEncodeError('charmap', '[class: crawl/product] -> L\u1ed7i crawl d\u1eef li\u1ec7u ', 27, 28, 'character maps to <undefined>')>[0m
+Traceback (most recent call last):
+  File "D:\HieuCali\File of Hieu\Project\DSA Company\Project\ChatBox_RASA\Chatbot_Vutruhat\vth_chatbot\Project\Chatbot\chatbot_vth\actions\act_help\crawl.py", line 38, in product
+    options=option)
+  File "D:\HieuCali\File of Hieu\Software\Anaconda\envs\envChatBot\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    service_log_path, service, keep_alive)
+  File "D:\HieuCali\File of Hieu\Software\Anaconda\envs\envChatBot\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 99, in __init__
+    options=options)
+  File "D:\HieuCali\File of Hieu\Software\Anaconda\envs\envChatBot\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 269, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "D:\HieuCali\File of Hieu\Software\Anaconda\envs\envChatBot\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 360, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "D:\HieuCali\File of Hieu\Software\Anaconda\envs\envChatBot\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "D:\HieuCali\File of Hieu\Software\Anaconda\envs\envChatBot\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 100
+Current browser version is 102.0.5005.62 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x0093C773+968563]
+	Ordinal0 [0x0093837A+951162]
+	Ordinal0 [0x00935C51+941137]
+	Ordinal0 [0x00968C80+1150080]
+	Ordinal0 [0x009688DA+1149146]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x7620FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77657A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77657A4E+238]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\HieuCali\File of Hieu\Project\DSA Company\Project\ChatBox_RASA\Chatbot_Vutruhat\vth_chatbot\Project\Chatbot\chatbot_vth\actions\act_help\crawl.py", line 73, in product
+    print("[class: crawl/product] -> L\u1ed7i crawl d\u1eef li\u1ec7u ")
+  File "D:\HieuCali\File of Hieu\Software\Anaconda\envs\envChatBot\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u1ed7' in position 27: character maps to <undefined>
+[act_khuyenmai_web] <- /ask_khuyenmai_hatgiong_cuqua
+[class Crawl/product ->

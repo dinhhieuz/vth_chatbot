@@ -32,8 +32,74 @@ nlu:
     - Shop mình có bán sen đá không?
     - Shop còn bán sen đá không nhỉ
     - Shop còn hàng sen đá không
-
-
+    - tư vấn sen đá đá đi
+    - tư vấn sen đá đi bạn ơi
+    - tôi muốn biết thêm về sen đá bên mình
+    - Chúng tôi đang quan tâm sen đá bên mình, bạn có thể cho chút thông tin không
+    - Tôi có thể biết thêm về thông tin sen đá bên mình chứ
+    - bạn gì đó ơi, sen đá bên mình là như nào ấy nhỉ
+    - sen đá bên mình là như nào thế ta
+    - Cho biết thêm thông tin sen đá đi gái
+    - Cho mình biết thêm thông tin sen đá đi anh trai
+    - anh gì ơi, anh cho em hỏi mấy cái hàng bên mình như nào ấy ạ
+    - Anh ơi anh cho em xem loại hạt bên mình đi
+    - heey du, m cho tao xem sen đá 
+    - sen đá bên mày là như nào đấy
+    - có thông tin sen đá không cho tao xem với
+    - Bên mình có bán sen đá không fen
+    - bên mình bán sen đá chứ
+    - Bên mình có mấy loại sen đá gì thế
+    - sen đá bên mình bán như thế nào ấy nhỉ
+    - sen đá bên mình bán thì sẽ ra sao
+    - cho mình ít thông tin về sen đá với
+    - xin thông tin về sen đá bên mình
+    - xin chút thông tin về sen đá đi má
+    - thông tin sen đá bạn gì đó ơi
+    - sen đá đi bạn ơi, mình muốn mua sen đá
+    - sen đá bên mình thì như nào đấy
+    - Cho tôi chút thông tin về sen đá đi page ơi
+    - anh gì ơi, anh cho em xem sen đá công ty với
+    - sen đá công ty đi anh trai ơi
+    - anh trai ơi, sen đá cây trông bên mình có loại nào thế
+    - anh ơi em muốn mua sen đá anh tư vấn cho em đi
+    - anh ơi, em muốn mua sen đá về trồng mà không biết loại nào cả
+    - từ khi nào bên mình bán sen đá vậy cho mình thêm thông tin với
+    - mình muốn mua sen đá bạn cho mình tham khảo với
+    - bạn gì đó ơi, thông tin sen đá đi bạn ơi
+    - tư vấn cây sen
+    - tư vấn cây sen đi bạn ơi
+    - tôi muốn biết thêm về cây sen bên mình
+    - Chúng tôi đang quan tâm cây sen bên mình, bạn có thể cho chút thông tin không
+    - Tôi có thể biết thêm về thông tin cây sen bên mình chứ
+    - bạn gì đó ơi, cây sen bên mình là như nào ấy nhỉ
+    - cây sen bên mình là như nào thế ta
+    - Cho biết thêm thông tin cây sen đi gái
+    - Cho mình biết thêm thông tin cây sen đi anh trai
+    - anh gì ơi, anh cho em hỏi mấy cái hàng bên mình như nào ấy ạ
+    - Anh ơi anh cho em xem loại hạt bên mình đi
+    - heey du, m cho tao xem cây sen 
+    - cây sen bên mày là như nào đấy
+    - có thông tin cây sen không cho tao xem với
+    - Bên mình có bán cây sen không fen
+    - bên mình bán cây sen chứ
+    - Bên mình có mấy loại cây sen gì thế
+    - cây sen bên mình bán như thế nào ấy nhỉ
+    - cây sen bên mình bán thì sẽ ra sao
+    - cho mình ít thông tin về cây sen với
+    - xin thông tin về cây sen bên mình
+    - xin chút thông tin về cây sen đi má
+    - thông tin cây sen bạn gì đó ơi
+    - cây sen đi bạn ơi, mình muốn mua cây sen
+    - cây sen bên mình thì như nào đấy
+    - Cho tôi chút thông tin về cây sen đi page ơi
+    - anh gì ơi, anh cho em xem cây sen công ty với
+    - cây sen công ty đi anh trai ơi
+    - anh trai ơi, cây sen cây trông bên mình có loại nào thế
+    - anh ơi em muốn mua cây sen anh tư vấn cho em đi
+    - anh ơi, em muốn mua cây sen về trồng mà không biết loại nào cả
+    - từ khi nào bên mình bán cây sen vậy cho mình thêm thông tin với
+    - mình muốn mua cây sen bạn cho mình tham khảo với
+    - bạn gì đó ơi, thông tin cây sen đi bạn ơi
 
 #-> Tư vấn chi tiết cho SEN ĐÁ
 - intent: ask_tuvan_senda_details

@@ -31,22 +31,23 @@ def product(path, name_j):
         "data": []
     } 
     for num_page in range(1,100):
-        browser = webdriver.Chrome(executable_path="D:\\Năm 4 - Thực tập tốt nghiệp\\Project\\Chatbot\\chatbot_vth\\others\\chromedriver", options=option)
+        browser = webdriver.Chrome(executable_path="D:\\HieuCali\\File of Hieu\\Project\\DSA Company\\Project\\ChatBox_RASA\\Chatbot_Vutruhat\\vth_chatbot\\Project\\Chatbot\\chatbot_vth\\others\\chromedriver", options=option)
         browser.get(f"https://vutruhat.com/danh-muc/{path}/page/{num_page}/")
         if browser.title.find("Không tìm thấy trang") > -1:
             break
         else:
             sleep(2)
+            list_item = browser.find_elements(By.XPATH, "//div[@class='product-small box ']")
 
-            for i in browser.find_elements(By.XPATH, "//div[@class='product-small box ']"):
+            for i in list_item:
                 item = i.text.split("\n")
-                # #! IMAGE
-                IMAGE = i.find_element(By.CLASS_NAME, "image-none")
-                # #! LINK
+                
+                #! IMAGE
+                IMAGE = i.find_element(By.CLASS_NAME, "image-none").get_attribute('innerHTML')
+                #! LINK
                 j = 1 if len(item) == 5 else 0
 
-                # img = IMAGE[IMAGE.find('srcset="')+8:]
-
+                img = IMAGE[IMAGE.find('srcset="')+8:]
                 data["data"].append(
                     {
                         "name" : item[j+1].title(),
@@ -86,8 +87,8 @@ def blogs(name_j):
             "data": []
         } 
         print(catagory)
-        browser = webdriver.Chrome(executable_path="D:\\Năm 4 - Thực tập tốt nghiệp\\Project\\Chatbot\\chatbot_vth\\others\\chromedriver", options=option)
-        # browser = webdriver.Chrome(executable_path="D:\\HieuCali\\File of Hieu\\Project\\DSA Company\\Project\\ChatBox_RASA\\Chatbot_Vutruhat\\vth_chatbot\\Project\\Chatbot\\chatbot_vth\\others\\chromedriver", options=option)
+        # browser = webdriver.Chrome(executable_path="D:\\Năm 4 - Thực tập tốt nghiệp\\Project\\Chatbot\\chatbot_vth\\others\\chromedriver", options=option)
+        browser = webdriver.Chrome(executable_path="D:\\HieuCali\\File of Hieu\\Project\\DSA Company\\Project\\ChatBox_RASA\\Chatbot_Vutruhat\\vth_chatbot\\Project\\Chatbot\\chatbot_vth\\others\\chromedriver", options=option)
         browser.get(f"https://vutruhat.com/category/{name_j}/")
 
         #Đợi load
@@ -127,6 +128,6 @@ def blogs(name_j):
         #error
         print("[class: crawl/blogs] -> Lỗi crawl dữ liệu ")
 
-blogs(name_j="vao-bep-cung-vu-tru-hat")
+# blogs(name_j="cham-soc-cay-trong")
 
-# product(path="hat-giong", name_j="")
+product(path="sen-da", name_j="")

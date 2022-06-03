@@ -30,6 +30,22 @@ nlu:
     - hey
     - fen ơi 
     - Xin chào fen 
+    - xin chào bro
+    - ni hao
+    - mushi mushi
+    - rất xin chào bạn
+    - chào bạn
+    - chào vth
+    - bạn ơi
+    - bạn gì đó ơi
+    - có còn ai online k
+    - có ai ở đó không
+    - xin chào thỏ
+    - hello baby
+    - hello vu tru hat
+    - hi fen
+    - hi lô 
+    - kính chào page
     - GET_STARTED_PAYLOAD
 
 - intent: chat_bye
@@ -46,6 +62,29 @@ nlu:
     - Bái bai bạn nhá
     - tao mệt m quá đi, bái bai nha
     - oke cảm ơn, bái bai bot
+    - hẹn gặp lại nhé
+    - Tạm biệt fen nhé
+    - Bye, có gì anh em mình gặp lại
+    - hẹn gặp lại
+    - gút bai
+    - báy bay
+    - tạm biệt người đẹp
+    - tạm biệt người từng thương
+    - chào tạm biệt nhé
+    - không gặp lại nữa, bai
+    - xin cáo từ
+    - cáo từ
+    - hẹn ngày không gặp lại
+    - tạm biệt nhé
+    - bot nói chuyện chán quá, bái bai nhé
+    - bot nói dở quá tạm biệt
+    - tạm biệt nha fen
+    - có duyên sẽ mua tiếp, bái bai
+    - hẹn gặp lại một ngày không xa
+    - oke, bái bai
+    - bai
+    - say bye
+    - said bye
 
 - intent: chat_thank
   examples: |
@@ -63,6 +102,16 @@ nlu:
     - c.ơn nha 
     - thank shop
     - được quá shop, cảm ơn ha 
+    - cảm ơn hen
+    - Xin chân thành cảm ơn
+    - Đội ơn em
+    - em rất cảm kích vì được shop tư vấn tận tình
+    - cảm ơn shop nhé
+    - cảm ơn vì sự tận tình
+    - cảm ơn vì đã quan tâm 
+    - cảm ơn nhiều nhé fen
+    - rất cảm ơn vũ trụ hạt
+    - rất cảm ơn page và tặng page 5 sao
 
 - intent: chat_positive
   examples: |
@@ -84,6 +133,17 @@ nlu:
     - Tại sao lại có loại xinh như vậy được nhỉ
     - Đây là lần đầu tiên mình thấy cây xinh thế đấy
     - Xịn quá ấy ơi
+    - hay quá shop ơi 10 điểm
+    - 10 điểm cho shop luôn
+    - quá xịn 10 điểm luôn
+    - hay quá 10 điểm này
+    - quá chim ưng
+    - hay quá shop ơi
+    - được quá luôn
+    - quá xuất sắt luôn
+    - con hàng này cho 10 điểm luôn
+    - quá xinh xắn
+
 
 - intent: chat_negative
   examples: |
@@ -103,6 +163,20 @@ nlu:
     - Xấu quá admin ơi
     - Hàng gì trong chán thế nhở
     - Hàng trong phèn quá
+    - thất vọng về shop quá
+    - tưởng đâu đẹp lắm ai dè
+    - không được đẹp cho lắm
+    - cũng bth chẳn có gì đặt sắc
+    - xấu thật sự
+    - eo ôi sao trong tệ vậy
+    - sao nó nhìn héo quá vậy
+    - nhìn tệ quá shop ơi
+    - nhìn xấu quá shop ơi
+    - biến mẹ m đi
+    - shop làm ăn chán vl
+    - shop làm ăn như ri thì chịu r
+    - thôi không mua nữa chịu
+    - chi ri bay, nhìn chán vl
     
 - intent: chat_agree
   examples: |
@@ -116,6 +190,16 @@ nlu:
     - ừa
     - ok nhá
     - đồng ý 
+    - oke bạn ơi
+    - oke nhé fen
+    - ocơ
+    - ô kê
+    - oke oke
+    - oke nhé
+    - ùm
+    - ừa ừa
+    - ừa oke
+    - https://scontent.xx.fbcdn.net/v/t39.1997-6/39178562_1505197616293642_5411344281094848512_n.png?stp=cp0_dst-png&_nc_cat=1&ccb=1-7&_nc_sid=ac3552&_nc_ohc=l5sZ7gF4vsoAX8mN9mC&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=00_AT_Q99-ow3IbmOj8nBcdJtUugq1aBnlFqIG69LSDwbizSA&oe=629C4F8B
 
 
 #-------- MUA HÀNG
@@ -144,3 +228,26 @@ nlu:
     - Mình muốn mua hàng, bạn lên đơn cho mình nhá
     - Bạn cho mình lên đơn với ạ, đã quá đi
     - Khá đẹp, mình muốn đặt 2 cái chậu quá
+    - yêu cầu mua hàng
+    - tôi muốn mua hàng
+    - tôi muốn được mua hàng
+    - mua hàng đi
+    - mua hàng bạn ơi
+    - cho tôi mua hàng
+    - mua hàng
+    - đặt cho tôi đi
+    - lên đơn giúp tôi với
+    - giúp tôi lên đơn đi
+    - giờ tôi muốn mua thì phải cần thông tin gì
+    - thế cho tôi đặt nhá
+    - đặt 5 gói hạt giống
+    - mua nhiêu là được ta
+    - mua được nhiêu gói shop nhỉ
+    - gọi nhân viên giúp tôi
+    - gọi quản lý ra đây
+    - tôi muốn nói chuyện với quản lý
+    - quản lý có đó không
+    - gọi quán lý giúp tôi với
+    - con bot ni ngáo rồi, gọi giúp quản lý với
+    - tôi muốn được gọi quản lý
+    - con người đâu hết rồi để cho bot nói vậy

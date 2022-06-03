@@ -19,7 +19,42 @@ nlu:
     - Nếu được thì xin phép được xem ý nghĩa cây đi fen
     - Xem ý nghĩa cây thì có bài viết nào không fen
     - Về ý nghĩa cây thì có bài viết nào liên quan không đó 
-    
+    - mấy cái cây này trồng để làm gì đấy
+    - mình thấy hình như mỗi cây sen đều có ý nghĩa riêng nhỉ
+    - mấy cây này có ý nghĩa gì đấy
+    - bài viết về ý nghĩa cây đi fen
+    - bài viết về ý nghĩa của cây sen đá
+    - blog về ý nghĩa đi bà nội
+    - loại khác đi, cho xem bài blog về ý nghĩa sen đá
+    - sen đá có ý nghĩa gì không
+    - mấy cái cây này tượng chưng cho gì đấy
+    - mấy cái cây này về mặt ý nghĩa thì chúng là gì
+    - mỗi loại cây này có ý nghĩa là gì
+    - cây sen đá là sự tượng chưng cho điều gì
+    - mỗi cây sen đá mang một ý nghĩa gì
+    - chúng tượng chưng cho điều gì vậy
+    - Khi nói về sen đá sao người ta cứ nhắc đến ý nghĩa ấy nhỉ
+    - em mỡi trồng sen nên không biết chúng có ý nghĩa gì không ấy nhỉ
+    - mỗi cây có ý nghĩa là gì đấy
+    - mối cây được xây dựng dựa trên ý nghĩa gì
+    - cho hỏi chúng có ý nghĩa gì đấy
+    - bài viết ý nghĩa của các loại cây trồng
+    - admin ơi, có bài viết nào về sự tượng trưng của các loại cây không
+    - cho hỏi bài viết nào về tượng chưng cây không
+    - bài viết ý nghĩa cây trồng
+    - bài viết tượng chưng cho cây trồng
+    - các bài viết về tượng chưng cây trồng
+    - các bài viết nói về ý nghĩa tâm linh của cây trồng
+    - nghe đồn mấy cây ni có ý nghĩa tâm linh hả
+    - mấy bài viết về ý nghĩa đi ấy ơi
+    - sen đá có hàm ý gì vậy
+    - mình thấy chúng có hàm ý về mỗi loại cây thì phải
+    - shop cho mình hỏi mấy cây sen này có hàm ý là gì vậy
+    - tại sao phải trồng nó có gì về mặt ý nghĩa này vậy
+    - mấy cây này có ý nghĩa gì không ad
+    - mấy cây sen đá này có ý nghĩa là gì đấy
+    - cây sen đá tượng chưng cho điều gì
+    - cây sen đá và ý nghĩa của chúng
 #-> Thông tin blog (Ý nghĩa cây) - mới nhất
 - intent: ask_blog_mean_new
   examples: |
@@ -36,3 +71,23 @@ nlu:
     - Nếu được thì xin phép được xem ý nghĩa cây đi fen, bài mới ớ
     - Xem ý nghĩa cây thì có bài viết nào mới mới không fen
     - Về ý nghĩa cây thì có bài viết gần đây nào liên quan không đó 
+    - mấy cái bài viết về ý nghĩa mới mới ớ
+    - bài viết mới ý nghĩa loại cây
+    - bài viết mới ý nghĩa
+    - các bài viết mới về ý nghĩa loại cây
+    - các bài viết mới về hàm ý cây sen đá
+    - mấy bài nào trending về ý nghĩa sen đá ấy
+    - cây sen đá có ý nghãi gì, bìa viết mới nhất
+    - có bài viết mới nào liên quan đến ý nghĩa của chúng không
+    - bài viết mới nhất về hàm ý cây trồng
+    - bài viết mới về ý nghĩa cân sen đá đi má
+    - sen đá có bài viết nào mới nhất không
+    - bài viết mới về sen đá và ý nghĩa của chúng
+    - các bài viết hot về ý nghĩa của sen đá
+    - bài viết liên quan đến ý nghĩa sen đá mới nhất
+    - bài viết về ý nghĩa của sen đá đang được hot hiện nay
+    - các nội dung bài viết về ý nghĩa mới nhất
+    - bài viết mới về sen đá ý nghĩa
+    - blog ý nghĩa mới nhất
+    - blog ý nghĩa mới
+    - các thông tin bài viết mới nhất về ý nghĩa cây trồng
