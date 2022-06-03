@@ -1,0 +1,37 @@
+******* Connect Rasa to Zalo *******
++ Điều kiện thực hiện
+---- Phải train được và Shell được-----
+	+ Train Model: Rasa Train (Để máy hiểu và tiếp nhận bộ dữ liệu)
+	+ Chạy Action: Rasa run action 
+	+ Kiểm tra ChatBot test được chưa: Rasa Shell (Để chạy thử)
++ Thực hiện
+Bước 1: Đăng kí Official Account
+	+ URL: https://oa.zalo.me/manage/cert
+	+ Đợi xác thực:
+		- Có thể gữi mail để xác thực: https://lucidgen.com/cach-tao-zalo-official-account/
+
+Bước 2: Đăng kí Zalo Developer
+	+ URL: https://developers.zalo.me/
+		Tạo App Zalo (liên kết tới tài khoản OA)
+			.sản phẩm/official Account/Quản lý OA : Liên kế OA
+		
+	+ Lấy access token, Refresh token: 
+		URL: https://developers.zalo.me/tools/explorer/1882365302811688917
+			. Chọn V4 để full quyền
+	+ App Secret: 
+		Path: .Cài đặt/ : Show khóa là có
+
+Bước 2: Chạy Rasa Core để mở API Webhook (Ở máy local nên Zalo k thể trỏ tới Api được)
+	+ Điền vào file Credential (Chứa link để trỏ ra bên ngoài)
+		zalo:
+			verify: "mật khẩu để liên kết"
+			secret: "App Secret"
+			page-access-token: "Acc Token"
+	+ chạy Rasa Core: Rasa run --endpoints endpoints.yml --credentials credentials.yml (Là file chứa action đến URL)
+	
+Bước 3: Cài Phần mềm ngrok (Để đưa local của máy ra ngoài, để API trỏ tới)
+	+ https://ngrok.com/download [hoặc đăng kí]
+	+ đưa cổng lên: ngrok http 5005
+Bước 4: Cài đặt địa chỉ Webhook vào Zalo App (Rasa API trỏ tới Server Zalo)
+	+ ./sản phẩm/Webhook : (URL https của ngrok)/webhooks/rest/webhook
+	+ Xin cấp quyền

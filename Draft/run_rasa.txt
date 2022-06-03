@@ -1,0 +1,13 @@
+pushd D:\Năm 4 - Thực tập tốt nghiệp\Project\Chatbot\chatbot_vth
+conda activate rasa-chatbot
+code .
+wt
+
+pushd D:\Năm 4 - Thực tập tốt nghiệp\Project\Chatbot\chatbot_vth\others\draft
+conda activate rasa-chatbot
+start cmd  
+
+pushd D:\Năm 4 - Thực tập tốt nghiệp\Project\Chatbot\chatbot_vth\others\draft\jupyter_n
+jupyter notebook
+
+

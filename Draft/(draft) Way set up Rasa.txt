@@ -1,0 +1,43 @@
+ 		SET UP RASA in Win10
+* Tải Anaconda
+* Tải visual studio C++
+
+--------------------Env Rasa (envChatBot_zalo)--------------------
+***** Tạo môi trường ảo **** (Bắt buột python 3.7.6
+conda create --name envChatBot_Zalo python==3.7.6
+conda activate envChatBot_Zalo
+
+****** Install Package ***** (Nhập theo thứ tự)
+
+conda install ujson
+conda install tensorflow 
+
+pip install --upgrade pip==20.2 --user
+
+pip3 install rasa
+
+pip install --upgrade pip
+
+pip3 install rasa
+( cho rasa 2.8.12)
+
+pip install --upgrade tensorflow --user 
+----- k lấy
+pip install --upgrade tensorflow==2.6 --user 
+pip install --upgrade tensorflow-estimator==2.6 --user
+-----
+rasa --version
+
+pushd D:\HieuCali\File of Hieu\Project\DSA Company\Project\ChatBox_RASA\dsa_chatbot_zalo
+
+rasa init
+
+vào action mở hàm ra
+tạo file .vscode
+
+--------------------------- fixing eror
+https://github.com/tensorflow/addons
+lỗi hỗ trợ tensorflow addons
+
+rasa shell
+

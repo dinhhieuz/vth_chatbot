@@ -1,0 +1,36 @@
+tăng data train >20
+- không dấu, từ địa phương, lóng
+- sai cú pháp, chính tả
+- thay đổi model tiếng việt
+Tích hợp PhoBERT vào RASA
+
+6/12 tieng
+độ chính xác
+giới thiệu kĩ rasa, tích hợp với fb, ... 
+
+#----------------> Review
+1. lấy tên intent ->
+2. xác định nhóm hàng
+3. tạo file config để tìm tên sản phẩm (sử dụng chung trong đặt hàng và tìm kiếm
+4. sữ dụng nguyên chuổi và loại bỏ kí tự đặt biệt ra khỏi và dùng để tìm sản phẩm
+5. Lấy sản phẩm cụ thể và trả về
+
+1. Xây dựng hệ thống chatbot demo
+
+1. Về kiến thức 
+	- Nắm được cách vận hành Rasa
+	- Xây dựng và build mô hình chatbot
+	- Chuyên sâu về ngôn ngữ và xữ lý với python 
+	- Năng cao kĩ năng SQL (agent, machine, sql notefication, trigger)
+	- đóng gói dữ liệu docker
+	- sử dụng ubuntu 
+	- Kho lưu trữ cache Redis
+	- Machine learning (NLU, neron network,..)
+	- Rest API
+	- có thể là cài lại win 
+2. Kĩ năng 
+	- Trình bày vấn đề và giải quyết vấn đề
+	- khả năng nghiên cứu
+	- Sắp xếp thời gian
+	- Khả năng giao tiếp và ứng xử với từng đối tượng 
+	- Nắm tâm lý đối tượng

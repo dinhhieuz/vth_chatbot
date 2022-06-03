@@ -1,0 +1,20 @@
+# Actions Server
+Là một nơi độc lập chưa tất cả các actions custom of dev, phương thức thực hiện: 
+	
+1. Người dùng gữi tin nhắn Rasa NLU sẽ nhận diện intent và sẽ đưa tới Rasa Core để xác định next action (Tất cả trong Rasa Server or Rasa Open Source). 
+2. Rasa Server sẽ gửi 1 API tới bao gồm dự đoán tên action, intent, confident, send ID, Conversion ID,... tới cho Rasa SDK
+3. Rasa SDK sẽ gọi lớp action tương ứng và thực thi, sau đó trả về API phản hồi cho người dùng 
+4. API từ Rasa SDK sẽ được Rasa Server trả về lại phía người dùng.
+
+
+## Rasa SDK
+### 1. Action:
+là 1 trong những action được custom của người dùng, bao gồm 2 methon yêu cầu phải có của lớp action. 
+
+- Def Name: dùng để đặc tên cho action custom và củng để dựa trên tên này để gọi action
+- Def Run: Sử dụng để thực hiện nội dung bên trong 1 action với trả về là một mảng
+
+### 2. Tracker:
+là nơi lưu trữ nội dung của cuộc hội thoại, cho phép lấy nội dung từ sự kiến trước hoặc hiện tại thông qua cac thuộc tính và phương thức cho trước của Tracker
+
+

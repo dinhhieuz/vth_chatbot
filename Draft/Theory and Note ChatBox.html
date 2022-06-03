@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="MarkdownViewer++" />
+        <title>Theory and Note ChatBox</title>
+        <style type="text/css">
+            
+/* Avoid page breaks inside the most common attributes, especially for exports (i.e. PDF) */
+td, h1, h2, h3, h4, h5, p, ul, ol, li {
+    page-break-inside: avoid; 
+}
+
+        </style>
+      </head>
+    <body>
+        <center><h1 style="Color:#02703f">RASA Chatbot</h1></center>
+<h2 style="color:orange">Series: #1 - Cơ bản cho bot (Bị động)</h2>
+<h3 style="color:red"> Sumary </h3>
+<ul>
+<li>Đây là mảng Natural Language Processing và sữ dụng công nghệ intent/utter (Ý đồ của người dùng/phản hồi của máy)</li>
+</ul>
+<h3 style="color:red"> 1. What is Chatbot? </h3>
+<blockquote>
+<p>Đây là một phần mền chat đối đáp với người sử dụng với nhìu mục đích khác nhau</p>
+</blockquote>
+<ol>
+<li>IF Then</li>
+<li>Rule base chatbox, áp dụng mạng NN (Neural Networks)(Hay sữ dụng)</li>
+<li>Generation based chatbot, định nghĩa đầu vào theo mẫu rồi train cho box để trả lời và không cần định nghĩa sẳn</li>
+</ol>
+<h3 style="color:red"> 1.1 Test chatbot? </h3>
+<ol type="a">
+<li><strong>thư viện hỗ trợ</strong></li>
+</ol>
+<ul>
+<li><em>AI_voicebot</em> : Nền để running  chatbox</li>
+<li><em>RASA NLU</em>: Để hiểu và sữ lý ngôn ngữ tự nhiên</li>
+<li>Bổ trợ: rasa_core(Xữ lý hội thoại theo ngữ cảnh - tương tác với train và là thuật toán học có giám xát)</li>
+<li>sklearn_crfsuite (Xác định một phần của thẻ lời nói bằng cách sữ dụng các trường ngẫu nhiên có điều kiện, Phân loại và lập ra mô hình xác xuất - 2 loại bộ phân biết (logistic regression, SVM, CRF) và Sinh lớp phân loại Naive Bayes, HMM) - Với mục đích sử dụng cho các nhiệm vụ ghi nhãn theo trình tự chuỗi và nhận dạng đối tượng được gắn vào POS(đánh dấu nhận biết chuổi theo ngữ cảnh và ý nghĩa của chúng)</li>
+<li>scacy (xữ lý ngôn ngữ tự nhiên nâng cao cho ngôn ngữ tự nhiên )</li>
+</ul>
+<ol type="a" start="2">
+<li><strong>Import packages</strong></li>
+</ol>
+<ul>
+<li><p>AI_Voicebot</p>
+<pre><code>  git clone https://github.com/thangnch/AI_Voicebot 
+</code></pre>
+</li>
+<li><p>other packages</p>
+<pre><code>  pip install rasa_core sklearn_crfsuite spacy rasa_nlu
+</code></pre>
+</li>
+<li><p>Import Spacy</p>
+<pre><code>  python -m spacy download en
+</code></pre>
+</li>
+</ul>
+<ol type="a" start="3">
+<li><p><strong>Train Mô hình NLU</strong></p>
+<blockquote>
+<p>File nlu.md (Liệt kê intent hội thoại của người dùng thường xẩy ra nhất)
+File train_nlu.py (Người dùng nhập và liên kết tới UI)</p>
+</blockquote>
+<ul>
+<li><p>Khái niệm Intent (Ý đồ mong muốn của khách hàng khi hỏi)</p>
+<p><img src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2018/01/Bot-Arch.png" alt="Workflow" /></p>
+</li>
+</ul>
+<blockquote>
+<p>Bước 1: Người dùng nhập (intent) -&gt; RASA NLU (Trích xuất thực thể ứng với ngữ cảnh ý muốn của người dùng) -&gt; Engine( gọi, ánh xạ hàm, phương thức xữ lý thực thể - Thuật toán phân loại và xác xuất để phân lớp) -&gt; Knowledge Base (chưa tất cả dữ liệu train cho mô hình) -&gt; Engine (Xữ lý câu từ và Phản hồi thông tin liên quan đến UI)</p>
+</blockquote>
+<ul>
+<li>Nhập thông điệp mong muôn của người dùng <strong>intent</strong></li>
+</ul>
+<p><img src="https://bookingvippro.000webhostapp.com/Web-users/image-destop_khonglienquandenweb/RASA_Chatbot/1.png" alt="" /></p>
+<ul>
+<li><p>Train Module NLU : Mở file train_nlu.py
+<code>ask_question(&quot;xin chào&quot;), ask_question(&quot;Cảm ơn&quot;)</code></p>
+</li>
+<li><p>Gõ lệnh python train_nlu.py để chạy, then showing result is:
+<code>{'intent': {'name': 'greet', 'confidence': 0.7056386276058646}, 'entities': [], 'intent_ranking': [{'name': 'greet', 'confidence': 0.7056386276058646}, {'name': 'thank', 'confidence': 0.16509810872298686}, {'name': 'ask_name', 'confidence': 0.05608779076688179}, {'name': 'ask_func_list', 'confidence': 0.044564258523291225}, {'name': 'bye', 'confidence': 0.028611214380975854}], 'text': 'xin chào'}</code></p>
+<p><code>{'intent': {'name': 'thank', 'confidence': 0.6630342019061172}, 'entities': [], 'intent_ranking': [{'name': 'thank', 'confidence': 0.6630342019061172}, {'name': 'greet', 'confidence': 0.3117787300867454}, {'name': 'bye', 'confidence': 0.011944368579982654}, {'name': 'ask_func_list', 'confidence': 0.010565177974582835}, {'name': 'ask_name', 'confidence': 0.0026775214525717817}], 'text': 'Cảm ơn'}</code></p>
+<p>-&gt; Phân tích intent của người dùng bằng cách so sánh tất cả intent và phân loại class và tính với mỗi ngữ cảnh sẽ ứng với một độ tin cậy nhất định, độ tin cậy càng cao thì khả năng ứng với ngữ cảnh càng lớn</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Train modul RASA Chatbot</strong></p>
+ <p><u>File domain.yml</u></p> 
+ <p>Đây là Utter đây dùng để phản hồi cho intent theo ngữ cảnh tương ứng</p>
+<ol>
+<li>Liệt kê các intent của khách hàng (Tóm tắt file nlu.md)</li>
+</ol>
+<p><img src="https://bookingvippro.000webhostapp.com/Web-users/image-destop_khonglienquandenweb/RASA_Chatbot/2.png" alt="" /></p>
+<ol start="2">
+<li>Phần templates</li>
+</ol>
+<blockquote>
+<p>Đây là phần quan trọng quyết định bot có trả lời được người sữ dụng hay không.
+Ở đây sẽ liệt kê các câu trả lời của bot cho ưng với từng intent cục thể và chúng sẽ random khi đã chọn đượn intent mong muốn</p>
+</blockquote>
+<p><img src="https://bookingvippro.000webhostapp.com/Web-users/image-destop_khonglienquandenweb/RASA_Chatbot/3.png" alt="" /></p>
+<blockquote>
+<p>Để ý ở dưới sẽ có 1 câu utter_unclear đây là câu khi bot không nhận diện được intent và sẽ trả lời thay vì im lặng như người iu cũ của bạn</p>
+</blockquote>
+<ol start="3">
+<li>Phân action</li>
+</ol>
+<blockquote>
+<p>Đây là phần sẽ liệt kê tất cả intent bên trong templates</p>
+</blockquote>
+ <p><u>File stories.md</u></p> 
+ <p> Nếu file nlu.mp là mô tả intent và domain.yml là mô tả utter thì stories.md ghép nối sẽ liệt kê ứng với mỗi intent thì sẽ bot sẽ có bao nhiêu câu utter</p>
+<ol>
+<li>Liệt kê đoạn hội thoại ứng với từng cuộc trò chuyện</li>
+</ol>
+<p><img src="https://bookingvippro.000webhostapp.com/Web-users/image-destop_khonglienquandenweb/RASA_Chatbot/4.png" alt="" /></p>
+<blockquote>
+<p>Như vậy có đã hoàn thất xong quá trình mô tả cho đoạn hội thoại</p>
+</blockquote>
+</li>
+<li><p><strong>Thực hiện test chatbot</strong></p>
+<p>Chạy file train_dialog.py để train model kiểu biên dịch chương trình</p>
+<p><code>python train_dialog.py</code></p>
+<p><code>Epoch 1/200 75/75 [==============================] - 1s 13ms/sample - loss: 2.6061 - acc: 0.0667 Epoch 2/200 75/75 [==============================] - 0s 444us/sample - loss: 2.5442 - acc: 0.2267 Epoch 3/200 75/75 [==============================] - 0s 768us/sample - loss: 2.4800 - acc: 0.2933</code></p>
+<p>Rồi sau đó chạy file test_dialog.py để hiện ra cửa số chat bot và người dùng</p>
+<p><img src="https://lh3.googleusercontent.com/87rcTeYHrRDYxpiwhsTNw5UHi8aNN7RvaDUnf25maib6CJEUH8W8Bs7KEnW8gNnfjCVq66I1gRyLcnZyH9qJSRyD5dz8Cg8jqAlAjaZlKkLmSC2k6J1WnkEawPxcVoqJ8NddvNYeULBMPehjo4ZR7tbsU69mWOqoT4oGKgpO2j49sC0NlM3HLkT-LI46Deoxcfsuh7CwnxKZRJY1vO0oqmlbP8_x38bc2opn-dns4mNYoUJK8zaNcHbHe3BUdC0otFhC4YTOB4bhP3Cj67lNenGpaohOrLKtX8pPctFBhStyq093a8Rk_iooCfvQ5bvKXCX2HKzuJHPHRfsNtHaeRLBEnUZ-VfCzGv-j18skpRgBXdrESw-dQMjUoxevBt49l_ZFTsJoYL5DrNePQmWR6NiYRn1WN3QGYgdSJu9mWP_3q35o-c2WyNPddOOncB--gcVWSYa_oHE1x3SDLbh0i_Pb3tT5is7YMrNqlEm0AuIJIdIYv7YULst_Tmp6ZJuQl6GmBm1N5zxokUqo0uA3gZLGlglolIyvkAHlqFJJe5QlgcOd-334F8MbawHHUK51_wNxI0VqtiGTIRzQgkXohBYgk12etG09NIkov81HbgZfK43mj_ie-pK7dz-q4YHNmi4zdSX32PYKjKNDfRcJc2u3jBTk-3EMT9S9ojietqVyXLSzABI9AAxW=w1820-h520-no" alt="" /></p>
+</li>
+</ol>
+<br>
+<h2 style="color:orange">Series: #2 - Năng cao cho bot (chủ động)</h2>
+<h3 style="color:red"> Sumary </h3>
+<ul>
+<li>bot sẽ chủ động chào hỏi nhắn tin cho những người mà mình đã chỉ định</li>
+<li>Có khả năng nhớ tên của khách hàng</li>
+<li>Hạn chế ở đầu chỉ trả lời những từ cố định, ở đâu chúng có thể nhận diện tên của khách hàng và thêm vào những câu họi thoại và nhiều thông tin khác</li>
+</ul>
+<h3 id="khai-niem-entity-va-slot">1. Khái niệm Entity và Slot</h3>
+<ul>
+<li>Entity : Là một thực thể mà người dùng cung cấp, một câu nói có thể nhiều thực thể, vd: &quot;Tôi muốn ăn cơm chó&quot; thì ý đồ là &quot;muốn ăn&quot; còn thực thể là &quot;Cơm chó&quot;</li>
+<li>Slot : Nơi lưu trữ ở chatbot, đây là vùng mà bot sẽ lưu dữ liệu, vd: &quot;Tên khách&quot; để lưu và sẽ sữ dụng tùy mục đính cho người lặp trình đặt trước</li>
+</ul>
+<h3 id="bai-toan-at-ra">2. Bài toán đặt ra</h3>
+<p>Kịch bản:</p>
+<ul>
+<li>người dùng: Alo</li>
+<li>chatbot: Nói đi, nghe này, xin cái tên dể xưng hô cái?</li>
+<li>người dùng: Anh là Híu</li>
+<li>Chatbot: Chào Híu đẹp trai (tùy thuộc vào anh hay chị thì sẽ xưng hô khác nhau)</li>
+</ul>
+<p>Thực hiện:</p>
+<ul>
+<li>Để tạo Entity cho nội dung câu họi thoại &quot;Anh là Híu&quot; sẽ có 2 Entity Cust_name, Cust_sex. Ta sẽ liệt kê trong file nlu.md</li>
+</ul>
+<code>
+#intent: give_name <br> 
+- [Anh](cust_sex) là [Thắng](cust_name)
+</code>
+<h3 id="sua-lai-chuong-trinh">3. Sửa lại chương trình</h3>
+<ul>
+<li><strong>File nlu.md</strong> : Thêm một intent cụ thể cho bot</li>
+</ul>
+<code>
+## intent:give_name <br>
+- [Anh](cust_sex) là [Thắng](cust_name) <br>
+- [Chị](cust_sex) là [Hằng](cust_name) <br>
+- [Em](cust_sex) là [Trang](cust_name) <br>
+- [Cô](cust_sex) [Vân](cust_name) <br>
+- [Chú](cust_sex) [Hùng](cust_name)
+</code>
+<ul>
+<li><p><strong>File domain.yml</strong> :</p>
+<ul>
+<li><p>Thêm give_name vào <em>intents:</em></p>
+</li>
+<li><p>khai báo vào <em>slots</em> và Entity . Ở đây để auto_fill: True để Entity tự động nhảy sang Slot -&gt; entity là người dùng nhập và slot sẽ dược bot dùng, bot k đụng được entity nên bot sẽ không động vào entity nên sẽ đồng bộ từ entity sang slot</p>
+<pre><code>  						slots: 
+  							cust_sex: 
+  							auto_fill: true 
+  							type: text 
+  						cust_name: 
+  							auto_fill: true
+  							type: text 
+</code></pre>
+</li>
+<li><p>Thêm câu trả lời của bot vào templates</p>
+<pre><code>  				templates:
+  				# Bot trả lời
+  				utter_greet:
+  				- text: &quot;Kính chào Quý khách! Quý khách vui lòng cho biết tên để tiện xưng hô được không ah?&quot;
+  				utter_greet_with_name:
+  				- text: &quot;Kính chào {cust_sex} {cust_name}. ABC Shop có thể giúp gì được {cust_sex} {cust_name} ạ?&quot;
+</code></pre>
+</li>
+<li><p>Liệt kê utter thêm vào ở action</p>
+</li>
+</ul>
+</li>
+<li><p><strong>File stories.yml</strong> : thêm câu chuyện hội thoại giữa người và bot</p>
+</li>
+</ul>
+<h3 id="train-va-test-module-nlu">4. Train và Test Module NLU</h3>
+<ul>
+<li>Done</li>
+</ul>
+<br>
+<h2 style="color:orange">Series: #3 - Biến bot thành bà hàng xóm (chủ động)</h2>
+<h3 style="color:red"> Sumary </h3>
+<ul>
+<li>Như một mụ hàng xóm có thể hỏi mụ thì bất cứ điều gì mụ cũng có thể biết và một số hành động phức tạp khác</li>
+<li>Lợi ích: Thay vì truy cập web để tìm kiếm chúng t chỉ cần chat cho mụ &quot; Hôm ni con bà hàng xóm đi chơi lúc mấy giờ&quot; tự động mụ bot sẽ đi tra gg để tìm ra kết quả hoạt là một công cụ tìm kiếm khác</li>
+</ul>
+<h3 id="bai-toan">1. Bài toán:</h3>
+<ul>
+<li>giờ Tèo muốn xem kết quả xổ số &quot;Hey cu, tôi muốn xem kết quả xổ số&quot;</li>
+<li>Cách thức hoạt động khi có intent, chúng ta phải kết nối tới server của Xổ số kiến thiết và dữ liệu cho Tèo và sữ dụng khái niệm mới -&gt; RASA Chatbot Action</li>
+</ul>
+<p><img src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2019/04/rasa_full4.png" alt="" /></p>
+<ul>
+<li>Người dùng sẽ đặt câu hỏi -&gt; Sau đó chuyển intent vào RASA Stack</li>
+</ul>
+<p><a href="https://miai.vn/2019/09/16/rasa-series-3-thu-lam-de-tu-rasa-chatbot-hong-ket-qua-so-xo-hang-ngay/">https://miai.vn/2019/09/16/rasa-series-3-thu-lam-de-tu-rasa-chatbot-hong-ket-qua-so-xo-hang-ngay/</a>
+<a href="https://chatbot.irtech.com.vn/conversations">https://chatbot.irtech.com.vn/conversations</a>
+<a href="https://rasa.com/docs/rasa/http-api">https://rasa.com/docs/rasa/http-api</a></p>
+
+    </body>
+</html>
+            

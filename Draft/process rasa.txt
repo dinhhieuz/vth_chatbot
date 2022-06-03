@@ -1,0 +1,2 @@
+Chào -> Hỏi tên -> Chào lại và hỏi muốn xem gì (Xuất ra lựa chọn) -> Đưa ra dữ liệu (Mysql) -> Bye
+  

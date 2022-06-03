@@ -1,0 +1,43 @@
+<h1>Enhancing Rasa NLU Moder Vietnames</h1>
+
+<h2><u> 
+	1. Mở đầu 
+</u></h2>
+Có nhìu cách thứ để tổ chức một chatbot và nó khá hữu ích trong việc khai thác thông tin:
+
+- khai thát thông tin người dùng -> xữ lý nghiệp vụ
+- đánh giá và phân tích hàng động của chatbot -> cải thiện chatbot
+- cảm súc của người dùng trong các câu thoại -> đánh giá mức độ hài lòng
+
+Trong luồng xữ lý và nhận diện ngôn ngữ bằng FastText và Bert để custom Pipline in Rasa
+
+<h2><u> 
+	2. Giới thiệu
+</u></h2>
+
+Trợ ý ảo có nhiều dạng được triển khai rộng rải như tìm kiếm thông tin hay cuộc gọi. Giao tiếp có nhiêu cách thông qua voice or text của người dùng. 
+Chatbot xây dựng truyền thống dựa trên Rule-base được dựng sẳn, nhưng khi có những nội dung nằm ngoại kịch bản thì chatbot sẽ không hiểu và đưa cho nhân viên phải hồi. 
+Một Chatbot thông minh là chatbot hiểu được ý của người dùng và không phụ thuộc và làm việc độc lập.
+
+Lời ích mang lại cho doanh nghiệp giúp tiết kiệm chi phí, thời gian, nguồn lực và tăng hiệu quả với khách hàng
+
+<h2><u> 
+	3. Công nghệ liên quan
+</u></h2>
+
+Trên thị trường có rất nhiều nền tảng hỗ trợ chatbot nhưng lý do chọn Rasa là vì:
+
+- Công cụ NLU mã nguồn mở, khả năng thích ứng với tương tác API và quản lý dữ liệu, nền tảng học có giám sát
+<h2><u> 
+	4. Mô hình
+</u></h2>
+
+Rasa là sự kết hợp giữa Rasa NLU và Neuron Networks cho việc lấy thực thể và xác định intents.
+Nó bao gồm các model được kết hợp lõng lẽo và kết hợp 1 số thư viện NLP và Machine Learning trong 1 API nhất quán
+
+### A. RASA Flatform
+Rasa là thực hiện mã nguồn mở cho Natural language procesing (NLU) và Dual intents and Entity Transformer Model(DIET -> là kiết trúc xử lý cả phân loại intent và nhận diện entity. Nó khá giống với BERT nhưng khác là chạy các bản nhúng đã được tạo từ trước. Nó giúp tăng độ chính xác và đào tạo nhanh gấp 6 lần)
+
+Rasa bao gồm 2 phần chính Rasa NLU và Rasa Core. Rasa NLU dùng để phân tích nội dung người dùng nhập, sau đó nó sẽ phân loại ý định người dùng và chiếc xuất entity, Rasa NLU kết hợp 
+
+

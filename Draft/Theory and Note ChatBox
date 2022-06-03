@@ -1,0 +1,56 @@
+<h3 style="color:red"> Sumary </h3>
+
++ Đây là mảng Natural Language Processing và sữ dụng công nghệ intent/utter (Ý muốn/thót ra)
+<h3 style="color:red"> 1. What is Chatbot? </h3>
+
+>Đây là một phần mền chat đối đáp với người sử dụng với nhìu mục đích khác nhau
+
+1. IF Then
+2. Rule base chatbox, áp dụng mạng NN (Neural Networks)(Hay sữ dụng)
+3. Generation based chatbot, định nghĩa đầu vào theo mẫu rồi train cho box để trả lời và không cần định nghĩa sẳn
+
+<h3 style="color:red"> 1.1 Test chatbot? </h3>
+
+a. **thư viện hỗ trợ**
+- *AI_voicebot* : Nền để running  chatbox
+- *RASA NLU*: Để hiểu và sữ lý ngôn ngữ tự nhiên
+- Bổ trợ: rasa_core(Xữ lý hội thoại theo ngữ cảnh - tương tác với train và là thuật toán học có giám xát)
+- sklearn_crfsuite (Xác định một phần của thẻ lời nói bằng cách sữ dụng các trường ngẫu nhiên có điều kiện, Phân loại và lập ra mô hình xác xuất - 2 loại bộ phân biết (logistic regression, SVM, CRF) và Sinh lớp phân loại Naive Bayes, HMM) - Với mục đích sử dụng cho các nhiệm vụ ghi nhãn theo trình tự chuỗi và nhận dạng đối tượng được gắn vào POS(đánh dấu nhận biết chuổi theo ngữ cảnh và ý nghĩa của chúng)
+- scacy (xữ lý ngôn ngữ tự nhiên nâng cao cho ngôn ngữ tự nhiên )
+
+b. **Import packages**
+- AI_Voicebot
+
+		git clone https://github.com/thangnch/AI_Voicebot 
+
+- other packages 
+
+		pip install rasa_core sklearn_crfsuite spacy rasa_nlu
+- Import Spacy
+
+		python -m spacy download en
+2. **Train Mô hình NLU**
+	> File nlu.md (Liệt kê intent hội thoại của người dùng thường xẩy ra nhất)
+	> File train_nlu.py (Người dùng nhập và liên kết tới UI)
+	- Khái niệm Intent (Ý đồ mong muốn của khách hàng khi hỏi) 
+		![Workflow](https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2018/01/Bot-Arch.png)
+	>Bước 1: Người dùng nhập (intent) -> RASA NLU (Trích xuất thực thể ứng với ngữ cảnh ý muốn của người dùng) -> Engine( gọi, ánh xạ hàm, phương thức xữ lý thực thể - Thuật toán phân loại và xác xuất để phân lớp) -> Knowledge Base (chưa tất cả dữ liệu train cho mô hình) -> Engine (Xữ lý câu từ và Phản hồi thông tin liên quan đến UI) 
+	- Nhập thông điệp mong muôn của người dùng **intent**
+	![](https://lh3.googleusercontent.com/T2WKp_hHogvl6zr5f-jFBC_-yT1rtECq5V046Oy-4xzmKreSgrv3Bwa2TP9qFrv6sr3oDusyaBIzVWw4450c6VXUAY4aWUmWnfYNHALmzLfb1m500oZHa3PhsBwhVx4ltRDZi0O7Avz4r2kQOlgJDI9MIpgGeE1waaQSXNzSV_LSY6NXzFkyqn1-Ra_eMzU64mni1_dx6UwrWtXq3Vi4NJI8eCbD8jifoANu1KqSwzlhoQmlcHIlI6Se5KomKfj1Prvt5KorzLsijkillsZmp7WRTxz5uP9ios2xuXsj_J0yhWzZX8vnTMbGZXlvjtjNZZkHQzqrC_hlY6V4_RGOXygT81Rigq5bD2isXkBcRo630k9mbnEsqHL3NiwapZcSa6WXaxnarZEpE-WZjqJOHDXBcnnxCXQalSWeNDBF4RQgFJc2EZOtFM9W3Myyn1RrShNL4NDhQC1FAOrUUwUM0VuU39EQjhOOR9Xh8UilZF32Ty5DjK4SYzMyxKH9OOX5OO8hK9jYfMY2B8uBZWPFUvH6f3L_uaop3LEF8-WWoPOdogccDlbC6fUboyd2Of-RY97TDJYPS8wOt-oyEssJTrBIBCbLyRi1ABeFoLQBIDnoU-cNBCeodCIBvOq9a_LKH0onHiEFX5kzvxjBkh9sDsqE9tIrHl9RcrM5LLuFWY5xi_2_CxYJwZXJ=w1418-h814-no)
+	
+	- Train Module NLU : Mở file train_nlu.py
+		`ask_question("xin chào"),
+		ask_question("Cảm ơn")`
+	- Gõ lệnh python train_nlu.py để chạy, then showing result is:
+		`
+		{'intent': {'name': 'greet', 'confidence': 0.7056386276058646}, 'entities': [], 'intent_ranking': [{'name': 'greet', 'confidence': 0.7056386276058646}, {'name': 'thank', 'confidence': 0.16509810872298686}, {'name': 'ask_name', 'confidence': 0.05608779076688179}, {'name': 'ask_func_list', 'confidence': 0.044564258523291225}, {'name': 'bye', 'confidence': 0.028611214380975854}], 'text': 'xin chào'}`
+		
+		
+		`{'intent': {'name': 'thank', 'confidence': 0.6630342019061172}, 'entities': [], 'intent_ranking': [{'name': 'thank', 'confidence': 0.6630342019061172}, {'name': 'greet', 'confidence': 0.3117787300867454}, {'name': 'bye', 'confidence': 0.011944368579982654}, {'name': 'ask_func_list', 'confidence': 0.010565177974582835}, {'name': 'ask_name', 'confidence': 0.0026775214525717817}], 'text': 'Cảm ơn'}`
+		
+		-> Phân tích intent của người dùng bằng cách so sánh tất cả intent và phân loại class và tính với mỗi ngữ cảnh sẽ ứng với một độ tin cậy nhất định, độ tin cậy càng cao thì khả năng ứng với ngữ cảnh càng lớn
+		
+3. **Train modul RASA Chatbot**
+	> File domain.yml
+	
+	> stories.md
