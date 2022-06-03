@@ -1,4 +1,3 @@
-
 from asyncio.windows_events import NULL
 from matplotlib import image
 from selenium import webdriver
@@ -53,8 +52,8 @@ def product(path, name_j):
                     {
                         "name" : item[j+1].title(),
                         "price" : item[j+2],
-                        "link" : IMAGE[IMAGE.find('href="')+6:IMAGE.find('">')],
-                        "image" : img[:(img.find('jpg') if img.find('jpg') > -1 else img.find('png')) +3],
+                        "link" : IMAGE.find_element(By.TAG_NAME, "a").get_attribute('href'),
+                        "image" : IMAGE.find_element(By.TAG_NAME, "img").get_attribute('src'),
                         "status" :  "Hết hàng" if len(item) == 5 else "Còn hàng",
                     }
                 )

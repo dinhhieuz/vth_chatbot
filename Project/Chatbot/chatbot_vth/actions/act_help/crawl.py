@@ -21,11 +21,11 @@ class crawl:
             await asyncio.sleep(5)
             print("[class Crawl/product ->")
             catagory = {
-                        "sen-da" : "SEN ĐÁ",
-                        "dung-cu" : "DỤNG CỤ LÀM VƯỜN",
-                        "hat-giong-cu-qua" : "HẠT GIỐNG CỦ QUẢ",
-                        "hat-giong" : "HẠT GIỐNG RAU XANH"
-                    }.get(path)
+                "sen-da" : "SEN ĐÁ",
+                "dung-cu" : "DỤNG CỤ LÀM VƯỜN",
+                "hat-giong-cu-qua" : "HẠT GIỐNG CỦ QUẢ",
+                "hat-giong" : "HẠT GIỐNG RAU XANH"
+            }.get(path)
             data ={ 
                 "type": catagory, 
                 "time" : date.today().isoformat(),
@@ -38,12 +38,12 @@ class crawl:
                     options=option)
                 browser.get(f"https://vutruhat.com/danh-muc/{path}/page/{num_page}/")
                 if browser.title.find("Không tìm thấy trang") > -1:
+                    browser.close()
                     break
                 else:
                     sleep(2)
-                    list_item = browser.find_elements(By.XPATH, "//div[@class='product-small box ']")
-
-                    for i in list_item:
+                    for i in browser.find_elements(By.XPATH, "//div[@class='product-small box ']"):
+                        #get value
                         item = i.text.split("\n")
                         
                         #! IMAGE
@@ -87,15 +87,14 @@ class crawl:
         try:
             await asyncio.sleep(5)
             print("[class Crawl/blogs ->")
-            #content
-            
+            #Lấy loại blogs
             catagory = {
                     "cham-soc-cay-trong" : "CHĂM SỐC CÂY TRỒNG",
                     "cong-dung-cua-cac-loai-rau-qua" : "CÔNG DỤNG CỦA CÁC LOẠI RAU QUẢ",
                     "vao-bep-cung-vu-tru-hat" : "VÀO BẾP CÙNG VŨ TRỤ HẠT",
                     "y-nghia-loai-cay" : "Ý NGHĨA LOẠI CÂY"
                 }.get(name_j)
-
+            #Tạo nơi lưu dữ liệu
             data ={ 
                 "type": catagory, 
                 "time" : date.today().isoformat(),
